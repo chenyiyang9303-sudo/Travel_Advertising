@@ -26,7 +26,7 @@ export default function ReportsPage() {
               transition={{ delay: 0.1 }}
               className="text-xl text-neutral-600 dark:text-neutral-300 mb-8"
             >
-              In-depth analysis and insights on clean energy markets, technologies, and policies
+              In-depth analysis and insights on corporate finance strategies, market trends, and best practices
               to guide your strategic decisions.
             </motion.p>
           </div>
@@ -46,7 +46,7 @@ export default function ReportsPage() {
               Stay Informed with Expert Insights
             </h2>
             <p className="text-lg text-neutral-600 dark:text-neutral-300 mb-8">
-              Read our latest analysis and expert commentary on clean energy trends and market developments.
+              Read our latest analysis and expert commentary on corporate finance trends and market developments.
             </p>
             <Link 
               href="/blog"

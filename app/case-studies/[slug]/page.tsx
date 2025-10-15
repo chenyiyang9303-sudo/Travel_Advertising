@@ -275,10 +275,10 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
       <div className="bg-neutral-900 dark:bg-neutral-800 py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Capture Clean Energy Market Opportunities?
+            Ready to Optimize Your Corporate Finance Strategy?
           </h2>
           <p className="text-neutral-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help your clean energy company achieve market breakthroughs and business growth
+            Let's discuss how we can help your company achieve financial optimization and sustainable growth
           </p>
           <Link
             href="/#contact"

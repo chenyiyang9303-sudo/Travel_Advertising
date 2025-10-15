@@ -34,7 +34,7 @@ export default function BlogPage() {
               animate={{ opacity: 1, y: 0 }}
               className="text-4xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-100 mb-6"
             >
-              Clean Energy Insights
+              Corporate Finance Insights
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -172,7 +172,7 @@ export default function BlogPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center text-white">
             <h2 className="text-3xl font-bold mb-4">
-              Stay Updated with Clean Energy Trends
+              Stay Updated with Financial Strategy Trends
             </h2>
             <p className="text-blue-100 mb-8">
               Get weekly insights, market analysis, and technology updates delivered to your inbox.

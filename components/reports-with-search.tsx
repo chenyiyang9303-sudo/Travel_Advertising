@@ -20,7 +20,7 @@ export function ReportsWithSearch() {
             Market Intelligence Reports
           </h2>
           <p className="text-lg text-accent-600 dark:text-accent-300 max-w-3xl mx-auto">
-            Deep-dive analysis and data-driven insights from the clean energy market to inform your strategic decisions.
+            Deep-dive analysis and data-driven insights from corporate finance markets to inform your strategic decisions.
           </p>
         </div>
 

@@ -211,7 +211,7 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
                     {report.author.title}
                   </p>
                   <p className="text-sm text-neutral-500 dark:text-neutral-500">
-                    Expert in clean energy markets with 10+ years of industry research experience.
+                    Expert in corporate finance with 10+ years of industry advisory experience.
                   </p>
                 </div>
               </div>
