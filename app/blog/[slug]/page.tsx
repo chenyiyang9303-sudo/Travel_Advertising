@@ -50,7 +50,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-6">
               <span className="px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">
-                {blogCategories[post.category]}
+                {blogCategories.find(cat => cat.value === post.category)?.label || post.category}
               </span>
               <div className="flex items-center gap-4 text-sm text-neutral-600 dark:text-neutral-400">
                 <div className="flex items-center gap-1">
@@ -266,7 +266,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                   </div>
                   <div className="p-6">
                     <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded mb-3 inline-block">
-                      {blogCategories[relatedPost.category]}
+                      {blogCategories.find(cat => cat.value === relatedPost.category)?.label || relatedPost.category}
                     </span>
                     <h3 className="font-bold text-neutral-800 dark:text-neutral-100 mb-2">
                       {relatedPost.title}

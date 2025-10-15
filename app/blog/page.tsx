@@ -68,9 +68,8 @@ export default function BlogPage() {
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-4 py-3 rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                <option value="all">All Categories</option>
-                {Object.entries(blogCategories).map(([key, label]) => (
-                  <option key={key} value={key}>{label}</option>
+                {blogCategories.map((category) => (
+                  <option key={category.value} value={category.value}>{category.label}</option>
                 ))}
               </select>
             </motion.div>
@@ -212,7 +211,7 @@ function FeaturedPostCard({ post }: { post: BlogPost }) {
               Featured
             </span>
             <span className="px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-full">
-              {blogCategories[post.category]}
+              {blogCategories.find(cat => cat.value === post.category)?.label || post.category}
             </span>
           </div>
         </div>
@@ -273,7 +272,7 @@ function BlogPostCard({ post }: { post: BlogPost }) {
           />
           <div className="absolute top-3 left-3">
             <span className="px-2 py-1 bg-blue-600 text-white text-xs font-medium rounded">
-              {blogCategories[post.category]}
+              {blogCategories.find(cat => cat.value === post.category)?.label || post.category}
             </span>
           </div>
           {post.featured && (

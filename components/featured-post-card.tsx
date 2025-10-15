@@ -27,7 +27,7 @@ export function FeaturedPostCard({ post }: FeaturedPostCardProps) {
               Featured
             </span>
             <span className="px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-full">
-              {blogCategories[post.category]}
+              {blogCategories.find(cat => cat.value === post.category)?.label || post.category}
             </span>
           </div>
         </div>
