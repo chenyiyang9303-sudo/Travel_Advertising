@@ -3,8 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { getAllBlogPosts } from "@/lib/blog-data";
 
 export function SimpleBlogWithGrid() {
+  // Get first 3 featured blog posts from real data
+  const blogs = getAllBlogPosts().slice(0, 3);
+
   return (
     <div className="relative overflow-hidden py-20 md:py-0">
       <div className="py-4 md:py-10 overflow-hidden relative  px-4 md:px-8">
@@ -14,7 +18,7 @@ export function SimpleBlogWithGrid() {
             Featured Articles
           </h2>
           <p className="text-lg text-accent-600 dark:text-accent-300 max-w-3xl mx-auto">
-            Latest insights and strategies from clean energy industry experts to accelerate your growth.
+            Latest insights and strategies from corporate finance experts to accelerate your growth.
           </p>
         </div>
       </div>
@@ -36,12 +40,12 @@ const Logo = () => {
       className="font-normal flex space-x-2 items-center text-sm mr-4  text-black px-2 py-1  relative z-20"
     >
       <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm" />
-      <span className="font-medium text-black dark:text-white">DevStudio</span>
+      <span className="font-medium text-black dark:text-white">OBAM</span>
     </Link>
   );
 };
 
-export const BlogCard = ({ blog }: { blog: Blog }) => {
+export const BlogCard = ({ blog }: { blog: any }) => {
   const truncate = (text: string, length: number) => {
     return text.length > length ? text.slice(0, length) + "..." : text;
   };
@@ -50,9 +54,9 @@ export const BlogCard = ({ blog }: { blog: Blog }) => {
       className="shadow-derek rounded-3xl border dark:border-neutral-800 w-full bg-white dark:bg-neutral-900  overflow-hidden  hover:scale-[1.02] transition duration-200"
       href={`/blog/${blog.slug}`}
     >
-      {blog.image ? (
+      {blog.coverImage ? (
         <BlurImage
-          src={blog.image || ""}
+          src={blog.coverImage || ""}
           alt={blog.title}
           height="800"
           width="800"
@@ -65,173 +69,121 @@ export const BlogCard = ({ blog }: { blog: Blog }) => {
       )}
       <div className="p-4 md:p-8 bg-white dark:bg-neutral-900">
         <div className="flex space-x-2 items-center  mb-2">
-          <Image
-            src={blog.authorAvatar}
-            alt={blog.author}
-            width={20}
-            height={20}
-            className="rounded-full h-5 w-5"
-          />
+          <div className="rounded-full h-5 w-5 bg-blue-600 flex items-center justify-center text-white text-xs font-bold">
+            {blog.author.name.split(' ').map((n: string) => n[0]).join('')}
+          </div>
           <p className="text-sm font-normal text-neutral-600 dark:text-neutral-400">
-            {blog.author}
+            {blog.author.name}
           </p>
         </div>
         <p className="text-lg font-bold mb-4 text-neutral-800 dark:text-neutral-100">
           {blog.title}
         </p>
         <p className="text-left text-sm mt-2 text-neutral-600 dark:text-neutral-400">
-          {truncate(blog.description, 100)}
+          {truncate(blog.excerpt, 100)}
         </p>
       </div>
     </Link>
   );
 };
 
-type Blog = {
-  title: string;
-  description: string;
-  slug: string;
-  image: string;
-  author: string;
-  authorAvatar: string;
-};
-const blogs: Blog[] = [
-  {
-    title: "Solar Energy Breakthrough: Perovskite Tandem Cells Reach 33% Efficiency",
-    description:
-      "Revolutionary perovskite-silicon tandem solar cells achieve record-breaking efficiency, potentially transforming the solar industry landscape.",
-    slug: "solar-energy-breakthrough-2024",
-    image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    author: "Dr. Sarah Chen",
-    authorAvatar: "https://i.pravatar.cc/150?img=1",
-  },
-  {
-    title: "Offshore Wind's Floating Future: Revolutionary Platform Designs",
-    description:
-      "Deep-water floating wind platforms unlock vast offshore resources, with installations reaching 15MW capacity in waters over 200m deep.",
-    slug: "offshore-wind-floating-platforms",
-    image:
-      "https://images.unsplash.com/photo-1548337138-e87d889cc369?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    author: "Michael Torres",
-    authorAvatar: "https://i.pravatar.cc/150?img=2",
-  },
-  {
-    title: "Green Hydrogen's $300B Market: Scaling Beyond the Hype",
-    description: "Analyzing the technical and economic challenges facing green hydrogen as it transitions from pilot projects to industrial scale.",
-    slug: "green-hydrogen-scaling-challenges",
-    image:
-      "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    author: "Dr. Elena Kowalski",
-    authorAvatar: "https://i.pravatar.cc/150?img=3",
-  },
-  {
-    title: "Battery Storage Revolution: Solid-State Breakthrough",
-    description:
-      "Solid-state battery technology achieves commercial viability, promising 10x energy density and 50-year lifespans for grid storage.",
-    slug: "solid-state-battery-breakthrough",
-    image:
-      "https://images.unsplash.com/photo-1624996379697-f01d168b1a52?q=80&w=4846&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    author: "James Liu",
-    authorAvatar: "https://i.pravatar.cc/150?img=4",
-  },
-  {
-    title: "Policy Alert: EU's Green Deal Industrial Plan Impact",
-    description:
-      "Comprehensive analysis of how the EU's €270B Green Deal Industrial Plan will reshape global clean energy supply chains.",
-    slug: "eu-green-deal-industrial-impact",
-    image:
-      "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?q=80&w=5069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    author: "Dr. Maria Gonzalez",
-    authorAvatar: "https://i.pravatar.cc/150?img=5",
-  },
-  {
-    title: "Smart Grid Integration: AI Optimizes 45% More Renewable Energy",
-    description:
-      "Machine learning algorithms and predictive analytics enable unprecedented renewable energy integration rates across modern power grids.",
-    slug: "ai-smart-grid-optimization",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=3212&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    author: "Dr. Alex Kim",
-    authorAvatar: "https://i.pravatar.cc/150?img=6",
-  },
-];
-
-interface IBlurImage {
-  height?: any;
-  width?: any;
-  src?: string | any;
-  objectFit?: any;
-  className?: string | any;
-  alt?: string | undefined;
-  layout?: any;
-  [x: string]: any;
-}
-
 export const BlurImage = ({
   height,
   width,
   src,
   className,
-  objectFit,
   alt,
-  layout,
   ...rest
-}: IBlurImage) => {
+}: {
+  height: string;
+  width: string;
+  src: string;
+  className?: string;
+  alt?: string;
+  [key: string]: any;
+}) => {
   const [isLoading, setLoading] = useState(true);
   return (
     <Image
       className={cn(
-        "transition duration-300 transform",
-        isLoading ? "blur-sm scale-105" : "blur-0 scale-100",
+        "transition duration-300",
+        isLoading ? "blur-sm" : "blur-0",
         className
       )}
       onLoad={() => setLoading(false)}
       src={src}
-      width={width}
-      height={height}
+      width={Number(width)}
+      height={Number(height)}
       loading="lazy"
       decoding="async"
-      blurDataURL={src}
-      layout={layout}
-      alt={alt ? alt : "Avatar"}
+      blurDataURL={typeof src === "string" ? src : undefined}
+      alt={alt ? alt : "Background of a beautiful view"}
       {...rest}
     />
   );
 };
 
-export function GridPatternContainer({ className }: { className?: string }) {
+const GridPatternContainer = ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
-        "absolute inset-0 pointer-events-none [mask-image:radial-gradient(ellipse_at_center,white,transparent)]",
+        "absolute inset-0 h-full w-full  stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_center,white,transparent)]",
         className
       )}
     >
       <GridPattern />
     </div>
   );
-}
-export function GridPattern() {
-  const columns = 30;
+};
+
+const GridPattern = () => {
+  const columns = 41;
   const rows = 11;
   return (
-    <div className="flex bg-gray-200 dark:bg-neutral-700 flex-shrink-0 flex-wrap justify-center items-center gap-x-px gap-y-px  scale-105">
-      {Array.from({ length: rows }).map((_, row) =>
-        Array.from({ length: columns }).map((_, col) => {
-          const index = row * columns + col;
-          return (
-            <div
-              key={`${col}-${row}`}
-              className={`w-10 h-10 flex flex-shrink-0 rounded-[1px] ${
-                index % 2 === 0
-                  ? "bg-gray-100 dark:bg-neutral-800"
-                  : "bg-gray-100 dark:bg-neutral-800 shadow-[0px_0px_0px_3px_rgba(255,255,255,1)_inset] dark:shadow-[0px_0px_0px_3px_rgba(0,0,0,0.2)_inset]"
-              }`}
-            />
-          );
-        })
-      )}
-    </div>
+    <svg
+      className="h-full w-full pointer-events-none absolute inset-0"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <pattern
+          id="grid-pattern"
+          width="40"
+          height="40"
+          patternUnits="userSpaceOnUse"
+          x="-1"
+          y="-1"
+        >
+          <path
+            d="M0 40L40 40L40 0"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+          />
+        </pattern>
+      </defs>
+      <rect
+        width="100%"
+        height="100%"
+        strokeWidth={0}
+        fill="url(#grid-pattern)"
+      />
+      <svg x="-1" y="-1" className="overflow-visible">
+        {Array.from({ length: rows }).map((_, row) =>
+          Array.from({ length: columns }).map((_, col) => {
+            const opacity = Math.random() * 0.5 + 0.25;
+            return (
+              <circle
+                key={`${col}-${row}`}
+                cx={col * 40}
+                cy={row * 40}
+                r="1.5"
+                fill="currentColor"
+                fillOpacity={opacity}
+              />
+            );
+          })
+        )}
+      </svg>
+    </svg>
   );
-}
+};
