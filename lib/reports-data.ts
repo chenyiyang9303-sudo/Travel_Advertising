@@ -50,9 +50,9 @@ const reports: Report[] = [
     previewPages: 10,
     fileSize: "3.2 MB",
     author: {
-      name: "戴蓉蓉 (Dai Rongrong)",
+      name: "廖治华 (Zhihua Liao)",
       title: "CEO & M&A Strategy Lead",
-      avatar: "/avatars/dai-rongrong.svg"
+      avatar: "/avatars/zhihua-liao.svg"
     },
     tags: ["M&A", "Valuation", "Corporate Finance", "Strategic Transactions"],
     coverImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&auto=format",

@@ -195,12 +195,12 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "戴蓉蓉 (Dai Rongrong)",
+                name: "廖治华 (Zhihua Liao)",
                 role: "Founder & CEO",
                 expertise: "Corporate Finance Strategy & Capital Markets",
                 bio: "15+ years leading corporate finance advisory and M&A transactions across diverse industries",
-                image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&auto=format",
-                email: "rongrong.dai@obamconsulting.com"
+                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&auto=format",
+                email: "zhihua.liao@obamconsulting.com"
               },
               {
                 name: "林志华 (Lin Zhihua)",

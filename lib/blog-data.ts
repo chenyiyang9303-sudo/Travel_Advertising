@@ -103,9 +103,9 @@ Successful M&A valuation in 2024 requires balancing analytical rigor with practi
     category: "corporate-finance",
     featured: true,
     author: {
-      name: "戴蓉蓉 (Dai Rongrong)",
+      name: "廖治华 (Zhihua Liao)",
       title: "CEO & M&A Advisory Lead",
-      avatar: "/avatars/dai-rongrong.svg",
+      avatar: "/avatars/zhihua-liao.svg",
       bio: "15+ years leading corporate finance advisory and M&A transactions across diverse industries."
     },
     tags: ["M&A", "Valuation", "Deal Structuring", "Corporate Finance", "Financial Modeling"],
