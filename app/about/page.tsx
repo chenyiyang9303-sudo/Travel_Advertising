@@ -199,7 +199,7 @@ export default function AboutPage() {
                 role: "Founder & CEO",
                 expertise: "Corporate Finance Strategy & Capital Markets",
                 bio: "15+ years leading corporate finance advisory and M&A transactions across diverse industries",
-                image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&auto=format",
+                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&auto=format",
                 email: "zhihua.liao@obamconsulting.com"
               },
               {
@@ -215,7 +215,7 @@ export default function AboutPage() {
                 role: "Risk Management Director",
                 expertise: "Enterprise Risk & Compliance Advisory",
                 bio: "Risk management specialist with 12+ years experience in regulatory compliance and internal controls",
-                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&auto=format",
+                image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&auto=format",
                 email: "yaqi.wang@obamconsulting.com"
               },
               {
