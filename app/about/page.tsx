@@ -8,14 +8,14 @@ import { Users, Target, Award, Globe, Lightbulb, TrendingUp, Heart, CheckCircle,
 // Generate avatar URLs for team members using local avatar files
 const getAvatarUrl = (name: string, index: number) => {
   const avatarFiles = [
-    '/avatars/dai-rongrong.svg',     // 戴蓉蓉 (Dai Rongrong) - CEO
-    '/avatars/lin-zhihua.svg',       // 林志华 (Lin Zhihua) - Energy Storage Director
-    '/avatars/wang-yaqi.svg',        // 王雅琪 (Wang Yaqi) - Wind Energy Lead
-    '/avatars/zhang-wenbo.svg',      // 张文博 (Zhang Wenbo) - Hydrogen Director
-    '/avatars/li-siyi.svg',          // 李思怡 (Li Siyi) - Policy Manager
-    '/avatars/chen-jiayin.svg'       // 陈佳音 (Chen Jiayin) - Market Lead
+    '/avatars/dai-rongrong.svg',
+    '/avatars/lin-zhihua.svg',
+    '/avatars/wang-yaqi.svg',
+    '/avatars/zhang-wenbo.svg',
+    '/avatars/li-siyi.svg',
+    '/avatars/chen-jiayin.svg'
   ];
-  
+
   return avatarFiles[index] || '/avatars/dai-rongrong.svg';
 };
 
@@ -23,26 +23,25 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-900">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-green-50 dark:from-blue-900/20 dark:to-green-900/20 py-20">
+      <section className="bg-gradient-to-br from-blue-50 to-slate-50 dark:from-blue-900/20 dark:to-slate-900/20 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-4xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-100 mb-6"
             >
-              Accelerating the Clean Energy Transition
+              Strategic Financial Advisory for Corporate Success
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="text-xl text-neutral-600 dark:text-neutral-300 mb-8 leading-relaxed"
             >
-              We are a leading clean energy consulting firm dedicated to helping companies navigate 
-              the rapidly evolving renewable energy landscape and achieve their sustainability goals.
+              We are a trusted corporate finance consulting firm dedicated to helping businesses optimize their financial strategies, manage risks, and achieve sustainable growth through expert advisory services.
             </motion.p>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -80,9 +79,7 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-                To accelerate the global transition to clean energy by providing strategic guidance, 
-                market intelligence, and technical expertise that empowers our clients to make 
-                informed decisions in the renewable energy sector.
+                To empower businesses with strategic financial insights and advisory services that drive informed decision-making, optimize capital structure, and ensure regulatory compliance—enabling our clients to achieve sustainable growth and maximize shareholder value.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex items-start gap-3">
@@ -92,24 +89,24 @@ export default function AboutPage() {
                       Strategic Focus
                     </h3>
                     <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                      Data-driven insights for optimal decision making
+                      Data-driven financial analysis for optimal outcomes
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Globe className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
+                  <Globe className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-1">
-                      Global Impact
+                      Client-Centric Approach
                     </h3>
                     <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                      Contributing to worldwide sustainability goals
+                      Tailored solutions for diverse business needs
                     </p>
                   </div>
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -117,8 +114,8 @@ export default function AboutPage() {
               className="relative h-96 rounded-2xl overflow-hidden"
             >
               <Image
-                src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&h=600&fit=crop&auto=format"
-                alt="Clean energy mission and vision"
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&auto=format"
+                alt="Corporate finance consulting mission"
                 fill
                 className="object-cover"
               />
@@ -138,28 +135,28 @@ export default function AboutPage() {
               These principles guide everything we do and shape how we work with our clients and partners.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: Lightbulb,
                 title: "Innovation",
-                description: "Embracing cutting-edge technologies and creative solutions to complex energy challenges."
+                description: "Leveraging cutting-edge financial tools and methodologies to deliver superior advisory services."
               },
               {
                 icon: CheckCircle,
                 title: "Integrity",
-                description: "Providing honest, transparent, and unbiased advice based on rigorous analysis."
+                description: "Providing honest, transparent, and independent advice based on rigorous financial analysis."
               },
               {
                 icon: TrendingUp,
                 title: "Excellence",
-                description: "Delivering exceptional quality in every project and exceeding client expectations."
+                description: "Delivering exceptional quality in every engagement and exceeding client expectations."
               },
               {
                 icon: Heart,
-                title: "Sustainability",
-                description: "Committed to creating a positive environmental impact through our work and operations."
+                title: "Partnership",
+                description: "Building long-term relationships through trust, collaboration, and shared success."
               }
             ].map((value, index) => (
               <motion.div
@@ -190,60 +187,60 @@ export default function AboutPage() {
               Our Expert Team
             </h2>
             <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
-              Our diverse team combines deep industry expertise with fresh perspectives 
-              to deliver innovative solutions for the clean energy sector.
+              Our diverse team combines deep financial expertise with industry knowledge
+              to deliver comprehensive corporate finance advisory services.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 name: "戴蓉蓉 (Dai Rongrong)",
                 role: "Founder & CEO",
-                expertise: "Clean Energy Strategy & Market Development",
-                bio: "15+ years leading renewable energy projects and sustainable business development initiatives",
+                expertise: "Corporate Finance Strategy & Capital Markets",
+                bio: "15+ years leading corporate finance advisory and M&A transactions across diverse industries",
                 image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&auto=format",
-                email: "rongrong.dai@ggeconsulting.net"
+                email: "rongrong.dai@obamconsulting.com"
               },
               {
                 name: "林志华 (Lin Zhihua)",
-                role: "Energy Storage Director",
-                expertise: "Battery Technology & Grid Integration",
-                bio: "Former energy systems engineer at leading automotive company with deep battery storage expertise",
+                role: "Chief Financial Officer",
+                expertise: "Financial Planning & Analysis",
+                bio: "Former CFO at multinational corporation with expertise in financial modeling and strategic planning",
                 image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&auto=format",
-                email: "zhihua.lin@ggeconsulting.net"
+                email: "zhihua.lin@obamconsulting.com"
               },
               {
                 name: "王雅琪 (Wang Yaqi)",
-                role: "Wind Energy Lead",
-                expertise: "Offshore Wind & Technology Innovation",
-                bio: "Marine engineering background with 12+ years experience in major offshore wind projects",
+                role: "Risk Management Director",
+                expertise: "Enterprise Risk & Compliance Advisory",
+                bio: "Risk management specialist with 12+ years experience in regulatory compliance and internal controls",
                 image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&auto=format",
-                email: "yaqi.wang@ggeconsulting.net"
+                email: "yaqi.wang@obamconsulting.com"
               },
               {
                 name: "张文博 (Zhang Wenbo)",
-                role: "Hydrogen Technology Director",
-                expertise: "Green Hydrogen & Industrial Applications",
-                bio: "Chemical engineering PhD from prestigious university, specializing in hydrogen production systems",
+                role: "Investment Strategy Lead",
+                expertise: "Portfolio Analysis & Investment Advisory",
+                bio: "MBA from prestigious business school, specializing in investment strategy and portfolio optimization",
                 image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&auto=format",
-                email: "wenbo.zhang@ggeconsulting.net"
+                email: "wenbo.zhang@obamconsulting.com"
               },
               {
                 name: "李思怡 (Li Siyi)",
-                role: "Policy Research Manager",
-                expertise: "Energy Policy & Regulatory Analysis",
-                bio: "Former policy analyst at national energy development agency with expertise in clean energy regulations",
+                role: "Compliance Manager",
+                expertise: "Regulatory Compliance & Internal Audit",
+                bio: "Former compliance officer at financial institution with expertise in regulatory frameworks and audit processes",
                 image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&auto=format",
-                email: "siyi.li@ggeconsulting.net"
+                email: "siyi.li@obamconsulting.com"
               },
               {
                 name: "陈佳音 (Chen Jiayin)",
-                role: "Market Intelligence Lead",
-                expertise: "Market Analysis & Investment Strategy",
-                bio: "Former consultant at top-tier consulting firm specializing in clean energy market analysis and strategy",
+                role: "Market Analysis Lead",
+                expertise: "Financial Market Research & Due Diligence",
+                bio: "Former analyst at leading investment bank specializing in market research and valuation analysis",
                 image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&auto=format",
-                email: "jiayin.chen@ggeconsulting.net"
+                email: "jiayin.chen@obamconsulting.com"
               }
             ].map((member, index) => (
               <motion.div
@@ -292,23 +289,23 @@ export default function AboutPage() {
       </section>
 
       {/* Company Stats */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">
               Our Impact in Numbers
             </h2>
             <p className="text-blue-100 text-lg max-w-2xl mx-auto">
-              Delivering measurable results for clients across the clean energy value chain.
+              Delivering measurable results for clients across industries and sectors.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { number: "500+", label: "Projects Completed", icon: CheckCircle },
-              { number: "50GW", label: "Renewable Capacity Analyzed", icon: TrendingUp },
-              { number: "$5M", label: "Investment Decisions Supported", icon: Award },
-              { number: "30+", label: "Countries Served", icon: Globe }
+              { number: "120+", label: "Advisory Projects Completed", icon: CheckCircle },
+              { number: "$5B+", label: "Transaction Value Advised", icon: TrendingUp },
+              { number: "98%", label: "Client Satisfaction Rate", icon: Award },
+              { number: "15+", label: "Years of Experience", icon: Globe }
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -337,16 +334,16 @@ export default function AboutPage() {
               Our expertise and commitment to excellence have been recognized by leading industry organizations.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              "ISO 14001 Environmental Management",
-              "IRENA Technology Collaborator",
-              "Clean Energy Ministerial Partner",
-              "B Corp Certified",
-              "Top Clean Energy Consultant 2024",
-              "Sustainability Excellence Award",
-              "Innovation in Energy Award",
+              "ISO 9001 Quality Management",
+              "CFA Institute Partner",
+              "GARP Member Institution",
+              "Certified Financial Planners",
+              "Top Finance Consultant 2024",
+              "Business Excellence Award",
+              "Innovation in Finance Award",
               "Client Choice Award 2023"
             ].map((certification, index) => (
               <motion.div
@@ -370,10 +367,10 @@ export default function AboutPage() {
       <section className="py-20 bg-neutral-900 dark:bg-neutral-800">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Accelerate Your Clean Energy Journey?
+            Ready to Optimize Your Corporate Finance Strategy?
           </h2>
           <p className="text-neutral-300 mb-8 max-w-2xl mx-auto text-lg">
-            Partner with our expert team to navigate the clean energy transition 
+            Partner with our expert team to navigate complex financial decisions
             and unlock new opportunities for sustainable growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
