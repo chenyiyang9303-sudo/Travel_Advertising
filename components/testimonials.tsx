@@ -153,87 +153,87 @@ interface Testimonial {
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Sarah Zhang",
+    name: "Michael Chen",
     quote:
-      "Their strategic consulting transformed our business completely. We went from $4.8M to $13.1M in annual revenue within 18 months and expanded to 5 countries.",
+      "Their M&A advisory was exceptional. We successfully acquired a complementary business, achieving $3.2M in annual cost synergies and strengthening our market position significantly.",
     src: "https://i.pravatar.cc/150?img=1",
-    designation: "CEO, SolarTech Energy",
+    designation: "CEO, TechManu Corp",
   },
   {
-    name: "David Wang", 
+    name: "Jennifer Li",
     quote:
-      "Their digital transformation strategy delivered incredible results - 23% efficiency gains, 35% cost reduction, and $5M in additional annual revenue.",
+      "The financial restructuring plan saved our company. EBITDA improved from -$2.1M to +$4.3M in 14 months, and we reduced debt by 56%.",
     src: "https://i.pravatar.cc/150?img=2",
-    designation: "CTO, WindPower Energy",
+    designation: "CFO, RetailMax Inc",
   },
   {
-    name: "Dr. Emily Chen",
+    name: "David Zhang",
     quote:
-      "The technology roadmap they created was game-changing. We scaled from consumer products to grid-scale solutions, growing revenue from $2.1M to $6.8M.",
+      "Their fundraising advisory was instrumental. We secured $12M Series A at a $45M valuation with 8 term sheets. Their financial modeling was world-class.",
     src: "https://i.pravatar.cc/150?img=3",
-    designation: "Founder & CTO, EnergyStore Tech",
+    designation: "Founder & CEO, FinFlow Technologies",
   },
   {
-    name: "Robert Liu",
+    name: "Dr. Sarah Martinez",
     quote:
-      "Their hydrogen market strategy was brilliant. We pivoted from small applications to heavy-duty trucks and captured 12% market share.",
+      "The compliance framework they built was comprehensive. We remediated 23 gaps, passed regulatory audits with zero major findings, and achieved full SOX compliance.",
     src: "https://i.pravatar.cc/150?img=4",
-    designation: "Chairman & CEO, HydroPower Tech",
+    designation: "Chief Compliance Officer, MedCare Systems",
   },
   {
-    name: "Maria Rodriguez",
+    name: "Robert Kim",
     quote:
-      "Outstanding market intelligence helped us identify a major opportunity in offshore wind. We're now a strong player in floating platforms.",
+      "Outstanding working capital optimization. They unlocked $2.8M in hidden cash through receivables management and inventory optimization.",
     src: "https://i.pravatar.cc/150?img=5",
-    designation: "Chief Strategy Officer, OceanWind Corp",
+    designation: "VP Finance, GlobalTrade Logistics",
   },
   {
-    name: "James Thompson",
+    name: "Amanda Rodriguez",
     quote:
-      "Their supply chain optimization reduced our costs by 28% and improved delivery times by 40%. Exceptional strategic value.",
+      "Their valuation analysis for our divestiture was spot-on. We achieved 18% premium over initial offers and closed the deal in 5 months.",
     src: "https://i.pravatar.cc/150?img=6",
-    designation: "VP Operations, GreenGrid Solutions",
+    designation: "Corporate Development Director, IndustrialTech Holdings",
   },
   {
-    name: "Lisa Park",
+    name: "James Park",
     quote:
-      "They helped us secure $1.5M in Series B funding with a compelling investment thesis. Their financial modeling was instrumental.",
+      "Debt restructuring strategy was brilliant. We refinanced $18M at 3.2% lower rates, extending maturity by 4 years and saving $1.1M annually.",
     src: "https://i.pravatar.cc/150?img=7",
-    designation: "CFO, BatteryTech Innovations",
+    designation: "CFO, UrbanDev Properties",
   },
   {
-    name: "Michael Singh",
+    name: "Lisa Thompson",
     quote:
-      "Market entry strategy for Asia-Pacific was flawless. We achieved $800k revenue in year one across 3 countries.",
+      "Financial due diligence uncovered $800K in hidden liabilities and negotiation leverage. The deal price adjusted 12% in our favor.",
     src: "https://i.pravatar.cc/150?img=8",
-    designation: "Regional Director, SolarMax International",
+    designation: "M&A Director, Pacific Ventures",
   },
   {
-    name: "Dr. Anna Kowalski",
+    name: "Dr. William Chang",
     quote:
-      "Their R&D prioritization framework helped us focus on breakthrough technologies. We now hold 12 key patents in energy storage.",
+      "Their tax optimization strategy reduced our effective rate by 7 percentage points while maintaining full compliance. Saved $1.4M in first year.",
     src: "https://i.pravatar.cc/150?img=9",
-    designation: "Head of Innovation, PowerCell Technologies",
+    designation: "CFO, BioPharmaTech Inc",
   },
   {
-    name: "Carlos Mendez",
+    name: "Maria Santos",
     quote:
-      "Operational excellence consulting delivered 35% productivity gains and reduced our time-to-market by 6 months.",
+      "Capital structure optimization improved our debt-to-equity ratio from 3.2 to 1.8, reduced interest expense by $600K annually.",
     src: "https://i.pravatar.cc/150?img=10",
-    designation: "COO, CleanTech Manufacturing",
+    designation: "Treasurer, NorthStar Manufacturing",
   },
   {
-    name: "Dr. Rachel Adams",
+    name: "Daniel Lee",
     quote:
-      "Strategic partnerships they facilitated opened doors to $5M in new business opportunities. Truly transformational.",
+      "IPO readiness program was comprehensive. We successfully listed at $220M valuation with strong institutional demand and raised $35M.",
     src: "https://i.pravatar.cc/150?img=11",
-    designation: "Business Development Director, FusionEnergy Corp",
+    designation: "CEO, CloudServe Solutions",
   },
   {
-    name: "Thomas Mueller",
+    name: "Emma Wilson",
     quote:
-      "Digital transformation roadmap they designed increased our operational efficiency by 45% and reduced maintenance costs significantly.",
+      "Financial transformation project delivered 40% faster month-end close, real-time reporting dashboards, and eliminated 95% of manual reconciliations.",
     src: "https://i.pravatar.cc/150?img=12",
-    designation: "Operations Manager, WindTech Europe",
+    designation: "Controller, MegaRetail Group",
   },
 ];

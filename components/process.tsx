@@ -23,7 +23,7 @@ export function Process() {
             Proven Path to Market Success
           </h2>
           <p className="text-lg text-accent-600 dark:text-accent-300 max-w-3xl mx-auto">
-            Our battle-tested 4-phase methodology has generated $5M+ in client value and delivered 3x faster time-to-market across 20+ clean energy projects.
+            Our battle-tested 4-phase methodology has generated $5M+ in client value and delivered 3x faster execution across 120+ corporate finance engagements.
           </p>
         </div>
 

@@ -71,7 +71,7 @@ function HexagonCover({ title, subtitle, category, publishDate, gradient }: Omit
           <div className="absolute inset-0 flex items-center justify-center">
             <Image
               src="/logo.png"
-              alt="Clean Energy Logo"
+              alt="OBAM Consulting Logo"
               width={24}
               height={24}
               className="filter brightness-0 invert"
@@ -137,7 +137,7 @@ function WaveCover({ title, subtitle, category, publishDate, gradient }: Omit<Re
         <div className="relative w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
           <Image
             src="/logo.png"
-            alt="Clean Energy Logo"
+            alt="OBAM Consulting Logo"
             width={20}
             height={20}
             className="filter brightness-0 invert"
@@ -190,7 +190,7 @@ function CircleCover({ title, subtitle, category, publishDate, gradient }: Omit<
       <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center">
         <Image
           src="/logo.png"
-          alt="Clean Energy Logo"
+          alt="OBAM Consulting Logo"
           width={32}
           height={32}
           className="filter brightness-0 invert"
@@ -244,7 +244,7 @@ function DiamondCover({ title, subtitle, category, publishDate, gradient }: Omit
           <div className="-rotate-45">
             <Image
               src="/logo.png"
-              alt="Clean Energy Logo"
+              alt="OBAM Consulting Logo"
               width={20}
               height={20}
               className="filter brightness-0 invert"
@@ -310,7 +310,7 @@ function OrganicCover({ title, subtitle, category, publishDate, gradient }: Omit
           <div className="absolute inset-0 flex items-center justify-center">
             <Image
               src="/logo.png"
-              alt="Clean Energy Logo"
+              alt="OBAM Consulting Logo"
               width={20}
               height={20}
               className="filter brightness-0 invert"

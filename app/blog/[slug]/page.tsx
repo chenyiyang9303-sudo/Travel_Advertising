@@ -228,7 +228,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                   Stay Updated
                 </h3>
                 <p className="text-blue-100 text-sm mb-4">
-                  Get weekly clean energy insights delivered to your inbox.
+                  Get weekly financial strategy insights delivered to your inbox.
                 </p>
                 <div className="space-y-3">
                   <input

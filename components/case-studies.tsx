@@ -54,7 +54,7 @@ export function CaseStudies() {
             $5M+ in Client Value Created
           </h2>
           <p className="text-lg text-accent-600 dark:text-accent-300 max-w-3xl mx-auto">
-            Real results from real companies. See how our strategic consulting has delivered transformational growth, market leadership, and breakthrough innovations for clean energy leaders worldwide.
+            Real results from real companies. See how our strategic financial advisory has delivered transformational growth, optimized capital structures, and breakthrough financial performance for corporate clients worldwide.
           </p>
         </div>
 

@@ -23,9 +23,9 @@ market opportunity?
           </span>
         </h2>
         <p className="text-left text-accent-600 dark:text-accent-300 mt-6 max-w-lg text-lg md:text-xl font-medium leading-relaxed">
-          Join 20+ clean energy leaders who've achieved{" "}
-          <span className="text-primary-600 dark:text-primary-400 font-semibold">3x faster growth</span> with our{" "}
-          <span className="text-primary-600 dark:text-primary-400 font-semibold">proven strategies</span>.
+          Join 120+ corporate clients who've achieved{" "}
+          <span className="text-primary-600 dark:text-primary-400 font-semibold">optimized capital structures</span> with our{" "}
+          <span className="text-primary-600 dark:text-primary-400 font-semibold">proven financial strategies</span>.
         </p>
 
         <div className="flex items-start sm:items-center flex-col sm:flex-row gap-4 mt-10">
@@ -54,14 +54,14 @@ market opportunity?
           </svg>
         </div>
         <p className="text-lg text-accent-700 dark:text-accent-200 leading-relaxed font-medium">
-          &quot;Their strategic consulting transformed our business completely. We went from $4.8M to $13.1M in revenue within 18 months, expanded to 5 countries, and became a market leader in distributed solar.&quot;
+          &quot;Their M&A advisory was exceptional. We successfully acquired a complementary business, achieving $3.2M in annual cost synergies and strengthening our market position significantly within 8 months.&quot;
         </p>
         <div className="flex flex-col text-sm items-start mt-6 gap-1">
           <p className="font-bold text-accent-900 dark:text-white">
-            Sarah Zhang
+            Michael Chen
           </p>
           <p className="text-accent-500 dark:text-accent-400">
-            CEO, SolarTech Energy
+            CEO, TechManu Corp
           </p>
         </div>
       </div>
