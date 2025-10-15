@@ -34,366 +34,439 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "solartech-energy",
-    company: "SolarTech Energy",
-    industry: "Solar Power",
-    challenge: "A photovoltaic manufacturing company needed to enter overseas distributed solar markets but lacked target market analysis and entry strategies.",
-    solution: "We provided global distributed solar market analysis, developed targeted market entry strategies, and assisted in establishing overseas sales networks.",
+    slug: "tech-manufacturing-ma",
+    company: "TechManu Corp",
+    industry: "Manufacturing & Technology",
+    challenge: "A mid-sized manufacturing company needed strategic M&A advisory to acquire a complementary technology firm, but lacked experience in deal structuring and valuation.",
+    solution: "We provided comprehensive M&A advisory including target identification, financial due diligence, valuation analysis, and deal structuring guidance.",
     results: [
-      { metric: "International Market Share", value: "0% → 15%" },
-      { metric: "Annual Revenue Growth", value: "$4.8M → $13.1M" },
-      { metric: "Export Countries", value: "Expanded to 5 countries" }
+      { metric: "Deal Completion", value: "Successfully closed in 8 months" },
+      { metric: "Cost Synergies Identified", value: "$3.2M annually" },
+      { metric: "Post-Merger Integration", value: "Completed within timeline" }
     ],
-    timeline: "18 months",
-    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    overview: "SolarTech Energy is a professional photovoltaic module manufacturer that needed expert market analysis and strategic guidance for international market expansion.",
-    clientBackground: "Founded in 2015, SolarTech Energy is a leading domestic PV module manufacturer with 5GW annual capacity, but 95% of business was concentrated in the domestic market. With intensifying domestic competition and policy changes, the company urgently needed to explore overseas markets for business diversification.",
-    detailedChallenge: "The main challenges faced by the company included: lack of deep understanding of overseas distributed solar markets, unfamiliarity with PV policies and certification requirements in various countries, lack of international sales channels and partners, and need to adapt product specifications and technical standards to different market demands.",
+    timeline: "8 months",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&auto=format",
+    overview: "TechManu Corp is a mid-market manufacturing company seeking to expand capabilities through strategic acquisition of a technology provider.",
+    clientBackground: "Founded in 2010, TechManu Corp is an established manufacturer with $120M annual revenue. The company identified acquisition as key growth strategy but lacked internal M&A expertise and needed independent advisory to navigate the complex transaction process.",
+    detailedChallenge: "The main challenges included: identifying suitable acquisition targets that aligned with strategic objectives, conducting comprehensive financial and operational due diligence, developing accurate valuation models considering synergies, structuring the deal to optimize tax efficiency and financing, and planning post-merger integration to capture identified synergies.",
     approach: [
-      "Global distributed solar market deep research",
-      "Target market selection and entry strategy development",
-      "Product localization adaptation guidance",
-      "International partner network establishment"
+      "Strategic target identification and screening",
+      "Comprehensive financial due diligence",
+      "Valuation analysis with multiple methodologies",
+      "Deal structure optimization and negotiation support",
+      "Post-merger integration planning"
     ],
     implementation: [
       {
-        phase: "Market Research & Analysis",
-        duration: "6 months",
+        phase: "Target Identification & Screening",
+        duration: "2 months",
         activities: [
-          "25 target countries PV policy analysis",
-          "Distributed solar market size assessment",
-          "Competitor strategy research",
-          "Price system and profit model analysis",
-          "Technical standards and certification requirements review"
+          "Defined strategic acquisition criteria",
+          "Identified and screened 15 potential targets",
+          "Conducted preliminary valuation assessments",
+          "Facilitated management meetings with shortlisted candidates",
+          "Recommended top 3 targets for detailed evaluation"
         ]
       },
       {
-        phase: "Strategic Planning",
-        duration: "4 months",
+        phase: "Due Diligence & Valuation",
+        duration: "3 months",
         activities: [
-          "Priority market selection model establishment",
-          "Differentiated competitive strategy design",
-          "Product portfolio optimization recommendations",
-          "Pricing strategy development",
-          "Risk assessment and contingency planning"
+          "Conducted financial due diligence on selected target",
+          "Performed quality of earnings analysis",
+          "Developed detailed financial models (DCF, comparable transactions)",
+          "Identified and quantified potential synergies",
+          "Assessed key risks and mitigation strategies"
         ]
       },
       {
-        phase: "Implementation Support",
-        duration: "8 months",
+        phase: "Deal Structuring & Negotiation",
+        duration: "2 months",
         activities: [
-          "Overseas distributor network establishment",
-          "Product certification guidance",
-          "Marketing material localization",
-          "Sales team training",
-          "Market entry effectiveness tracking"
+          "Designed optimal deal structure (asset vs. stock purchase)",
+          "Analyzed tax implications and optimization strategies",
+          "Evaluated financing alternatives and capital structure",
+          "Supported negotiation of purchase agreement terms",
+          "Coordinated with legal and tax advisors"
+        ]
+      },
+      {
+        phase: "Integration Planning",
+        duration: "1 month",
+        activities: [
+          "Developed 100-day integration roadmap",
+          "Identified quick-win synergy opportunities",
+          "Designed governance and reporting structures",
+          "Established KPIs for tracking integration progress",
+          "Created communication plan for stakeholders"
         ]
       }
     ],
     outcomes: [
       {
-        category: "Market Expansion Results",
-        description: "Successfully established sales network covering major global markets",
+        category: "Transaction Execution",
+        description: "Successfully completed strategic acquisition within target timeline and budget, capturing identified synergies.",
         metrics: [
-          { metric: "Overseas Revenue Share", before: "5%", after: "45%", improvement: "800%" },
-          { metric: "Export Countries", before: "3", after: "25", improvement: "733%" },
-          { metric: "Overseas Distributors", before: "5", after: "120", improvement: "2300%" }
+          { metric: "Deal Value", before: "$45M target", after: "$42M negotiated", improvement: "7% cost savings" },
+          { metric: "Time to Close", before: "12 months estimated", after: "8 months actual", improvement: "33% faster" },
+          { metric: "Due Diligence Issues", before: "Unknown risks", after: "15 issues identified & addressed", improvement: "Risk mitigation" }
         ]
       },
       {
         category: "Financial Performance",
-        description: "Achieved significant revenue growth and profitability improvement",
+        description: "Achieved target synergies and improved combined entity financial performance ahead of projections.",
         metrics: [
-          { metric: "Annual Revenue", before: "$4.8M", after: "$13.1M", improvement: "172%" },
-          { metric: "Gross Margin", before: "18%", after: "28%", improvement: "56%" },
-          { metric: "Average Overseas Order Price", before: "$0.27/W", after: "$0.36/W", improvement: "33%" }
+          { metric: "Cost Synergies", before: "$0", after: "$3.2M annually", improvement: "New value creation" },
+          { metric: "Revenue Synergies", before: "$0", after: "$1.8M Year 1", improvement: "Cross-selling success" },
+          { metric: "EBITDA Margin", before: "12%", after: "15.5%", improvement: "3.5 points expansion" }
+        ]
+      },
+      {
+        category: "Strategic Positioning",
+        description: "Enhanced market position and competitive capabilities through complementary technology acquisition.",
+        metrics: [
+          { metric: "Product Portfolio", before: "Limited offerings", after: "3 new product lines", improvement: "Market expansion" },
+          { metric: "Customer Base", before: "150 clients", after: "280 clients", improvement: "87% growth" },
+          { metric: "Market Share", before: "8%", after: "14%", improvement: "75% increase" }
         ]
       }
     ],
     testimonial: {
-      quote: "Their professional market analysis and strategic guidance helped us successfully break into international markets. We're now not just a manufacturer, but a global distributed solar solutions provider.",
-      author: "Michael Chen",
-      position: "Chairman, SolarTech Energy"
+      quote: "The M&A advisory team provided invaluable guidance throughout our first acquisition. Their expertise in valuation, deal structuring, and integration planning was instrumental in achieving a successful outcome. The synergies we've captured exceed our initial expectations.",
+      author: "David Chen",
+      position: "CEO, TechManu Corp"
     },
-    technologies: ["PV Modules", "Inverters", "Energy Storage", "Monitoring Platform", "Smart O&M"],
-    services: ["Market Research", "Strategic Consulting", "Channel Development", "Product Positioning"],
-    nextSteps: "The company is planning to establish a localized manufacturing base in Europe to further enhance market competitiveness and service capabilities."
+    technologies: ["Financial Modeling Software", "Due Diligence Platforms", "Valuation Tools", "Project Management Systems"],
+    services: ["M&A Advisory", "Financial Due Diligence", "Valuation Analysis", "Deal Structuring", "Integration Planning"],
+    nextSteps: "Continuing engagement for post-merger integration monitoring and evaluation of additional bolt-on acquisition opportunities to further strengthen market position."
   },
   {
-    slug: "windpower-solutions",
-    company: "WindPower Energy",
-    industry: "Wind Power",
-    challenge: "A wind power operator faced declining efficiency in aging wind farms and needed to develop wind farm upgrade and digital transformation strategies.",
-    solution: "We provided wind farm efficiency optimization analysis, developed phased upgrade strategies, and recommended advanced digital O&M solutions.",
+    slug: "retail-chain-restructuring",
+    company: "RetailMax Inc",
+    industry: "Retail & Consumer Goods",
+    challenge: "A regional retail chain faced declining profitability and needed comprehensive financial restructuring and capital structure optimization to restore financial health.",
+    solution: "We conducted detailed financial analysis, developed turnaround strategy, restructured debt, and implemented working capital optimization initiatives.",
     results: [
-      { metric: "Power Generation Efficiency", value: "23% increase" },
-      { metric: "O&M Cost Reduction", value: "35%" },
-      { metric: "Equipment Availability", value: "89% → 96%" }
+      { metric: "EBITDA Improvement", value: "-$2.1M → +$4.3M" },
+      { metric: "Debt Reduction", value: "$18M → $8M" },
+      { metric: "Working Capital", value: "Improved by $5.2M" }
     ],
     timeline: "12 months",
-    image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    overview: "WindPower Energy is a professional wind power operator managing multiple aging wind farms that urgently needed technology upgrades and digital transformation to improve operational efficiency.",
-    clientBackground: "Founded in 2008, WindPower Energy was one of the early entrants in China's wind power sector, operating 800MW installed capacity. However, most wind farms were built early with severe equipment aging, leading to continuous decline in power generation efficiency and economic benefits.",
-    detailedChallenge: "The core problems faced by the company included: low efficiency of aging wind turbines, high failure rates, continuously rising O&M costs, lack of effective predictive maintenance systems, low digitalization leading to poor management efficiency, and cost pressure from grid parity requirements.",
+    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop&auto=format",
+    overview: "RetailMax Inc is a multi-location retail chain requiring urgent financial restructuring to address deteriorating profitability and overleveraged balance sheet.",
+    clientBackground: "RetailMax operates 25 retail locations across three states with $85M annual revenue. Following aggressive expansion funded by debt, the company faced declining same-store sales, rising operating costs, and mounting debt service burden threatening business viability.",
+    detailedChallenge: "Critical challenges included: negative EBITDA and unsustainable debt levels requiring immediate action, working capital constraints limiting operational flexibility, underperforming locations draining corporate resources, lack of financial visibility and management reporting, and strained banking relationships requiring debt restructuring negotiations.",
     approach: [
-      "Comprehensive wind farm status assessment",
-      "Technical upgrade solution design",
-      "Digital O&M system construction",
-      "Economic benefit analysis and optimization"
+      "Comprehensive financial and operational assessment",
+      "Cash flow analysis and 13-week cash flow forecasting",
+      "Working capital optimization program",
+      "Debt restructuring and refinancing strategy",
+      "Profitability improvement initiatives"
     ],
     implementation: [
       {
-        phase: "Status Assessment",
+        phase: "Financial Assessment & Stabilization",
+        duration: "2 months",
+        activities: [
+          "Conducted rapid financial health assessment",
+          "Implemented 13-week rolling cash flow forecasting",
+          "Identified immediate cost reduction opportunities ($1.5M)",
+          "Established daily cash management protocols",
+          "Negotiated temporary covenant relief with lenders"
+        ]
+      },
+      {
+        phase: "Operational Analysis & Strategy",
         duration: "3 months",
         activities: [
-          "Wind turbine equipment condition testing",
-          "Power generation data deep analysis",
-          "O&M cost structure analysis",
-          "Technical upgrade feasibility study",
-          "Investment return calculation model establishment"
+          "Performed location-by-location profitability analysis",
+          "Assessed supply chain and inventory management",
+          "Evaluated organizational structure and overhead costs",
+          "Developed turnaround strategy and financial projections",
+          "Prioritized initiatives by impact and feasibility"
         ]
       },
       {
-        phase: "Solution Design",
-        duration: "3 months",
+        phase: "Debt Restructuring",
+        duration: "4 months",
         activities: [
-          "Wind turbine upgrade plan development",
-          "Digital monitoring platform design",
-          "Predictive maintenance system construction",
-          "Phased implementation planning",
-          "Supplier selection and negotiation support"
+          "Analyzed capital structure and refinancing alternatives",
+          "Prepared detailed lender presentation materials",
+          "Negotiated debt restructuring with existing lenders",
+          "Secured new working capital facility with improved terms",
+          "Closed refinancing transaction and reduced total debt"
         ]
       },
       {
-        phase: "Implementation",
-        duration: "6 months",
+        phase: "Performance Improvement",
+        duration: "3 months (ongoing)",
         activities: [
-          "Key wind turbine technical upgrades",
-          "Smart monitoring system deployment",
-          "O&M team training",
-          "Data analysis platform construction",
-          "Effect monitoring and optimization adjustment"
+          "Closed 4 underperforming locations",
+          "Renegotiated vendor contracts ($800K savings)",
+          "Implemented inventory optimization system",
+          "Upgraded financial reporting and KPI dashboards",
+          "Established monthly financial review cadence"
         ]
       }
     ],
     outcomes: [
       {
-        category: "Technical Performance Improvement",
-        description: "Significantly improved wind farm operational efficiency through technical upgrades and digital transformation",
+        category: "Financial Performance",
+        description: "Restored profitability and improved cash generation through comprehensive restructuring and operational improvements.",
         metrics: [
-          { metric: "Annual Power Generation", before: "180 GWh", after: "221 GWh", improvement: "23%" },
-          { metric: "Equipment Availability", before: "89%", after: "96%", improvement: "8%" },
-          { metric: "Average Fault Handling Time", before: "8 hours", after: "3.5 hours", improvement: "56%" }
+          { metric: "EBITDA", before: "-$2.1M loss", after: "$4.3M profit", improvement: "$6.4M swing" },
+          { metric: "Operating Cash Flow", before: "-$1.5M", after: "$3.8M", improvement: "$5.3M improvement" },
+          { metric: "Gross Margin", before: "28%", after: "34%", improvement: "6 points expansion" }
         ]
       },
       {
-        category: "Economic Benefits",
-        description: "Significantly reduced operational costs and improved ROI",
+        category: "Balance Sheet Strength",
+        description: "Significantly deleveraged balance sheet and improved liquidity position through debt restructuring and working capital optimization.",
         metrics: [
-          { metric: "Annual O&M Costs", before: "$4.2M", after: "$2.7M", improvement: "35%" },
-          { metric: "Unit Generation Cost", before: "$0.057/kWh", after: "$0.043/kWh", improvement: "24%" },
-          { metric: "Investment Payback Period", before: "N/A", after: "3.2 years", improvement: "Fast Recovery" }
+          { metric: "Total Debt", before: "$18M", after: "$8M", improvement: "56% reduction" },
+          { metric: "Debt/EBITDA", before: "Negative", after: "1.9x", improvement: "Sustainable level" },
+          { metric: "Working Capital", before: "$2.1M", after: "$7.3M", improvement: "$5.2M increase" }
+        ]
+      },
+      {
+        category: "Operational Efficiency",
+        description: "Streamlined operations and improved unit economics through strategic location optimization and cost management.",
+        metrics: [
+          { metric: "Store Count", before: "25 locations", after: "21 locations", improvement: "Focus on profitable units" },
+          { metric: "Same-Store Sales", before: "-8% decline", after: "+3% growth", improvement: "11 point improvement" },
+          { metric: "Operating Expenses", before: "42% of revenue", after: "36% of revenue", improvement: "6 point reduction" }
         ]
       }
     ],
     testimonial: {
-      quote: "The digital transformation completely revolutionized our O&M model. We can now predict equipment failures in advance, operational efficiency has improved dramatically, giving our aging wind farms new life.",
-      author: "David Wang",
-      position: "CTO, WindPower Energy"
+      quote: "Facing a financial crisis, we brought in this advisory team to help navigate our restructuring. Their expertise in cash management, debt negotiations, and operational improvements literally saved our business. We're now profitable and positioned for sustainable growth.",
+      author: "Sarah Martinez",
+      position: "CFO, RetailMax Inc"
     },
-    technologies: ["Smart Monitoring", "Predictive Maintenance", "Data Analytics", "Cloud Computing", "IoT Sensors"],
-    services: ["Technical Assessment", "Upgrade Solutions", "Digital Consulting", "Benefit Analysis"],
-    nextSteps: "The company plans to replicate successful experiences to other wind farms and consider investing in next-generation smart wind farm projects."
+    technologies: ["Financial Planning Software", "Cash Flow Management Tools", "Business Intelligence Platforms", "Inventory Management Systems"],
+    services: ["Financial Restructuring", "Debt Advisory", "Working Capital Management", "Turnaround Strategy", "Performance Improvement"],
+    nextSteps: "Ongoing monthly financial advisory retainer to monitor performance, optimize capital allocation, and support evaluation of strategic growth opportunities including potential acquisition targets."
   },
   {
-    slug: "energy-storage-tech",
-    company: "EnergyStore Tech",
-    industry: "Energy Storage",
-    challenge: "A battery energy storage system manufacturer faced technology roadmap selection and business model design challenges when entering the grid-scale storage market.",
-    solution: "We provided energy storage technology roadmap analysis, designed diversified business models, and developed grid-scale market entry strategies.",
+    slug: "fintech-startup-fundraising",
+    company: "FinFlow Technologies",
+    industry: "Financial Technology",
+    challenge: "An early-stage fintech startup needed to raise Series A funding but lacked investor-ready financial projections and fundraising strategy to attract institutional investors.",
+    solution: "We developed comprehensive financial models, prepared investor materials, refined valuation approach, and provided fundraising strategy guidance throughout the capital raise process.",
     results: [
-      { metric: "Market Share Growth", value: "8% → 25%" },
-      { metric: "Product Line Expansion", value: "2 → 6 product lines" },
-      { metric: "Annual Revenue Growth", value: "$3.2M → $10.2M" }
+      { metric: "Funding Raised", value: "$12M Series A" },
+      { metric: "Valuation", value: "$45M post-money" },
+      { metric: "Investor Interest", value: "8 term sheets received" }
     ],
-    timeline: "15 months",
-    image: "/EnergyStore Tech.jpg",
-    overview: "EnergyStore Tech is a professional battery energy storage system manufacturer that needed expert technical and commercial guidance when entering the grid-scale storage market.",
-    clientBackground: "Founded in 2018, EnergyStore Tech initially focused on consumer electronics and small-scale energy storage markets. With rapid development of the new energy industry, the company aimed to expand into the high-value grid-scale storage market but lacked relevant experience and technical guidance.",
-    detailedChallenge: "The main challenges faced by the company included: vast differences between grid-scale storage technical requirements and consumer-grade products, lack of deep understanding of power system and grid dispatch needs, unfamiliarity with utility procurement processes and decision mechanisms, and lack of large-scale storage project operational experience and case studies.",
+    timeline: "5 months",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format",
+    overview: "FinFlow Technologies is a high-growth fintech startup requiring strategic advisory for Series A fundraising to scale operations and expand market presence.",
+    clientBackground: "FinFlow developed an innovative payment processing platform with strong early traction (2,500 clients, $8M revenue run-rate). To capitalize on market opportunity and competitive positioning, the company needed significant capital injection but lacked experience in institutional fundraising.",
+    detailedChallenge: "Key challenges included: building credible financial projections that balanced growth ambitions with investor expectations, developing compelling unit economics and cohort analysis to demonstrate business model scalability, establishing appropriate valuation methodology and benchmarking, preparing professional-grade investor presentations and data room materials, and navigating term sheet negotiations and due diligence processes with limited in-house finance expertise.",
     approach: [
-      "Grid-scale energy storage market deep research",
-      "Technology roadmap and product planning",
-      "Business model innovation design",
-      "Partner ecosystem development"
+      "Financial model development and scenario analysis",
+      "Business plan and investor deck creation",
+      "Valuation analysis and benchmarking",
+      "Investor targeting and outreach strategy",
+      "Due diligence preparation and management"
     ],
     implementation: [
       {
-        phase: "Market Research",
-        duration: "4 months",
+        phase: "Financial Planning & Modeling",
+        duration: "6 weeks",
         activities: [
-          "National grid storage demand analysis",
-          "Policy environment and subsidy mechanism research",
-          "Competitive landscape and technology trend analysis",
-          "Utility procurement model research",
-          "Profit model and investment return analysis"
+          "Built comprehensive 5-year financial model",
+          "Developed detailed revenue buildups by product and segment",
+          "Created cohort analysis and customer lifetime value models",
+          "Established key operating metrics and KPI framework",
+          "Prepared multiple scenarios (base, upside, downside cases)"
         ]
       },
       {
-        phase: "Product Planning",
-        duration: "5 months",
+        phase: "Valuation & Positioning",
+        duration: "3 weeks",
         activities: [
-          "Technology roadmap selection and assessment",
-          "Product series planning and design",
-          "Key technology breakthrough planning",
-          "Supply chain optimization strategy",
-          "Intellectual property layout planning"
+          "Analyzed comparable fintech companies and transactions",
+          "Developed valuation framework using multiple methodologies",
+          "Established target valuation range with supporting rationale",
+          "Identified key value drivers and investment highlights",
+          "Prepared responses to common investor objections"
         ]
       },
       {
-        phase: "Market Development",
-        duration: "6 months",
+        phase: "Materials Preparation",
+        duration: "4 weeks",
         activities: [
-          "Demonstration project planning and implementation",
-          "Utility partnership establishment",
-          "Sales team specialized training",
-          "Technical service system construction",
-          "Brand influence enhancement plan"
+          "Created investor pitch deck (25 slides)",
+          "Developed executive summary and business plan",
+          "Compiled virtual data room with supporting documents",
+          "Prepared detailed financial appendix and supporting schedules",
+          "Created management presentation materials"
+        ]
+      },
+      {
+        phase: "Fundraising Execution",
+        duration: "10 weeks",
+        activities: [
+          "Identified and prioritized 45 target investors",
+          "Managed investor outreach and meeting coordination",
+          "Supported management in investor presentations",
+          "Facilitated due diligence requests and Q&A",
+          "Assisted in term sheet review and negotiation"
         ]
       }
     ],
     outcomes: [
       {
-        category: "Technology Breakthrough",
-        description: "Achieved major breakthroughs in key technology areas with industry-leading product performance",
+        category: "Fundraising Success",
+        description: "Successfully raised Series A funding exceeding target amount with favorable terms from top-tier institutional investors.",
         metrics: [
-          { metric: "Energy Density", before: "120Wh/kg", after: "180Wh/kg", improvement: "50%" },
-          { metric: "Cycle Life", before: "3000 cycles", after: "6000 cycles", improvement: "100%" },
-          { metric: "Response Time", before: "500ms", after: "100ms", improvement: "80%" }
+          { metric: "Capital Raised", before: "$0 target", after: "$12M raised", improvement: "Exceeded $10M goal" },
+          { metric: "Valuation", before: "$35M target", after: "$45M post-money", improvement: "29% premium" },
+          { metric: "Term Sheets", before: "0", after: "8 received", improvement: "Strong investor interest" }
         ]
       },
       {
-        category: "Market Performance",
-        description: "Successfully entered grid-scale storage market with breakthrough business growth",
+        category: "Investor Quality",
+        description: "Attracted high-quality institutional investors with relevant sector expertise and value-add capabilities beyond capital.",
         metrics: [
-          { metric: "Annual Order Value", before: "$3.2M", after: "$10.2M", improvement: "224%" },
-          { metric: "Large Project Count", before: "2", after: "18", improvement: "800%" },
-          { metric: "Utility Customers", before: "1", after: "12", improvement: "1100%" }
+          { metric: "Lead Investor", before: "Unknown", after: "Tier 1 VC firm", improvement: "Brand validation" },
+          { metric: "Investor Network", before: "Limited", after: "3 strategic investors", improvement: "Industry connections" },
+          { metric: "Board Composition", before: "2 founders", after: "Added 2 experienced operators", improvement: "Enhanced governance" }
+        ]
+      },
+      {
+        category: "Business Acceleration",
+        description: "Funding enabled accelerated growth plans including team expansion, product development, and market expansion.",
+        metrics: [
+          { metric: "Runway", before: "6 months", after: "24 months", improvement: "Extended operating horizon" },
+          { metric: "Hiring Capacity", before: "25 employees", after: "60 planned (18 months)", improvement: "140% team growth" },
+          { metric: "Market Expansion", before: "1 region", after: "3 regions planned", improvement: "Geographic growth" }
         ]
       }
     ],
     testimonial: {
-      quote: "Professional market guidance and technology roadmap planning helped us successfully transition from consumer-grade products to grid-scale applications. We're now a leading national energy storage system solutions provider.",
-      author: "Dr. Sarah Zhang",
-      position: "Founder & CTO, EnergyStore Tech"
+      quote: "As first-time founders, we had no experience raising institutional capital. This team guided us through every step of the process—from building our financial model to negotiating term sheets. We raised more than we expected at a better valuation with ideal investors. Worth every penny.",
+      author: "Michael Zhang",
+      position: "Co-Founder & CEO, FinFlow Technologies"
     },
-    technologies: ["Lithium Batteries", "Energy Management System", "Inverters", "Monitoring System", "Cloud Platform"],
-    services: ["Technology Roadmap", "Market Research", "Product Planning", "Business Model"],
-    nextSteps: "The company is exploring next-generation solid-state battery technology and planning overseas energy storage project deployment."
+    technologies: ["Financial Modeling Tools", "Pitch Deck Software", "Virtual Data Rooms", "Cap Table Management", "Investor CRM"],
+    services: ["Fundraising Advisory", "Financial Modeling", "Valuation Analysis", "Investor Relations", "Due Diligence Support"],
+    nextSteps: "Engaged for ongoing CFO advisory services to support post-fundraising growth phase including hiring finance team, implementing financial systems, and preparing for Series B fundraising in 18-24 months."
   },
   {
-    slug: "hydrogen-energy",
-    company: "HydroPower Tech",
-    industry: "Hydrogen Energy",
-    challenge: "A hydrogen fuel cell manufacturer needed to enter the hydrogen heavy-duty truck market but faced technology roadmap selection and market timing challenges.",
-    solution: "We provided hydrogen heavy-duty truck market analysis, developed technology development pathway planning, and assisted in establishing a complete industrial chain cooperation system.",
+    slug: "healthcare-compliance-risk",
+    company: "MedCare Systems",
+    industry: "Healthcare Services",
+    challenge: "A healthcare services provider faced regulatory compliance gaps and needed comprehensive risk assessment and internal controls framework to meet evolving regulatory requirements.",
+    solution: "We conducted enterprise-wide risk assessment, designed compliance framework, implemented internal controls, and established ongoing monitoring processes.",
     results: [
-      { metric: "Market Share", value: "0% → 12%" },
-      { metric: "Product Line Expansion", value: "Added 3 heavy-duty truck products" },
-      { metric: "Annual Revenue Growth", value: "$2.3M → $6.3M" }
+      { metric: "Compliance Gaps Remediated", value: "23 of 23 identified" },
+      { metric: "Audit Findings", value: "Zero material weaknesses" },
+      { metric: "Risk Score", value: "High → Low risk rating" }
     ],
-    timeline: "24 months",
-    image: "/Hydrogen Energy.jpg",
-    overview: "HydroPower Tech is a professional hydrogen fuel cell manufacturer that needed expert technology roadmap guidance and market strategic planning when entering the hydrogen heavy-duty truck market.",
-    clientBackground: "Founded in 2019, HydroPower Tech was one of the early entrants in China's hydrogen fuel cell sector, mainly producing small-power fuel cell systems. With increasing national hydrogen industry policy support, the company aimed to seize opportunities in the high-value hydrogen heavy-duty truck market.",
-    detailedChallenge: "The main challenges faced by the company included: vast differences between hydrogen heavy-duty truck market technical requirements and existing products, lack of high-power fuel cell system development experience, unfamiliarity with heavy-duty truck industry special needs and certification requirements, incomplete hydrogen industry chain support, difficulty in market promotion and customer education, and risk of long investment recovery cycles.",
+    timeline: "9 months",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop&auto=format",
+    overview: "MedCare Systems is a regional healthcare provider requiring comprehensive compliance and risk management framework to address regulatory requirements and operational risks.",
+    clientBackground: "MedCare operates 12 healthcare facilities with $150M annual revenue and 800 employees. Following rapid growth and regulatory changes, the organization identified significant compliance gaps and internal control deficiencies requiring immediate remediation to avoid potential penalties and reputational damage.",
+    detailedChallenge: "Critical challenges included: fragmented compliance processes across facilities with inconsistent application of policies, inadequate documentation of internal controls and compliance activities, limited risk assessment capabilities and enterprise risk visibility, outdated policies and procedures not reflecting current regulations, and insufficient training and awareness of compliance requirements among staff.",
     approach: [
-      "Hydrogen heavy-duty truck market deep analysis",
-      "Technology development pathway planning",
-      "Industrial chain cooperation system construction",
-      "Demonstration project planning and advancement"
+      "Enterprise risk assessment and gap analysis",
+      "Compliance framework design and implementation",
+      "Internal controls documentation and testing",
+      "Policy and procedure development",
+      "Training program and change management"
     ],
     implementation: [
       {
-        phase: "Market Research",
-        duration: "6 months",
+        phase: "Risk Assessment & Gap Analysis",
+        duration: "2 months",
         activities: [
-          "Hydrogen heavy-duty truck policy environment analysis",
-          "Target customer demand deep research",
-          "Technical standards and certification requirements review",
-          "Competitor technology roadmap research",
-          "Cost structure and profit model analysis"
+          "Conducted enterprise-wide risk assessment across all facilities",
+          "Identified 23 compliance gaps and control deficiencies",
+          "Assessed current state of policies and procedures",
+          "Interviewed key stakeholders and reviewed documentation",
+          "Prioritized remediation activities by risk level"
         ]
       },
       {
-        phase: "Technology Planning",
-        duration: "8 months",
+        phase: "Framework Design",
+        duration: "2 months",
         activities: [
-          "High-power fuel cell technology breakthrough",
-          "Heavy-duty truck specialized system integration design",
-          "Testing and verification system establishment",
-          "Key supplier cooperation negotiation",
-          "Intellectual property layout strategy"
+          "Designed comprehensive compliance management framework",
+          "Developed risk assessment methodology and tools",
+          "Created internal controls documentation standards",
+          "Established governance structure and reporting protocols",
+          "Defined roles and responsibilities across organization"
         ]
       },
       {
-        phase: "Market Development",
-        duration: "6 months",
-        activities: [
-          "Demonstration project partner development",
-          "Hydrogen supply chain cooperation establishment",
-          "Heavy-duty truck manufacturer strategic cooperation",
-          "Government relations and policy advocacy",
-          "Brand promotion and market education"
-        ]
-      },
-      {
-        phase: "Scale-up Promotion",
+        phase: "Implementation & Remediation",
         duration: "4 months",
         activities: [
-          "Mass production capacity construction",
-          "After-sales service network development",
-          "Commercial operation model optimization",
-          "New product iteration development",
-          "Market share expansion strategy"
+          "Remediated all 23 identified compliance gaps",
+          "Implemented new internal controls across key processes",
+          "Updated 45+ policies and procedures",
+          "Deployed compliance management software",
+          "Established monitoring and testing protocols"
+        ]
+      },
+      {
+        phase: "Training & Sustainability",
+        duration: "1 month (ongoing)",
+        activities: [
+          "Developed comprehensive training curriculum",
+          "Conducted training sessions for 800+ employees",
+          "Created ongoing compliance education program",
+          "Established annual risk assessment cycle",
+          "Implemented continuous improvement process"
         ]
       }
     ],
     outcomes: [
       {
-        category: "Technology Achievements",
-        description: "Successfully developed high-power fuel cell systems meeting heavy-duty truck application requirements",
+        category: "Compliance & Risk",
+        description: "Achieved comprehensive compliance with regulatory requirements and significantly reduced enterprise risk profile.",
         metrics: [
-          { metric: "System Power", before: "30kW", after: "120kW", improvement: "300%" },
-          { metric: "System Efficiency", before: "52%", after: "65%", improvement: "25%" },
-          { metric: "Durability", before: "5000 hours", after: "20000 hours", improvement: "300%" }
+          { metric: "Compliance Gaps", before: "23 identified", after: "0 remaining", improvement: "100% remediation" },
+          { metric: "Risk Rating", before: "High risk", after: "Low risk", improvement: "Two-level reduction" },
+          { metric: "Control Testing", before: "Not performed", after: "100% tested annually", improvement: "Ongoing assurance" }
         ]
       },
       {
-        category: "Commercial Achievements",
-        description: "Successfully entered hydrogen heavy-duty truck market and established industry leadership position",
+        category: "Operational Excellence",
+        description: "Improved operational efficiency and standardization through implementation of consistent policies and procedures.",
         metrics: [
-          { metric: "Annual Sales Revenue", before: "$2.3M", after: "$6.3M", improvement: "180%" },
-          { metric: "Heavy-duty Truck Customers", before: "0", after: "25", improvement: "New Market Entry" },
-          { metric: "Market Share", before: "0%", after: "12%", improvement: "Top 3 Industry Position" }
+          { metric: "Policies & Procedures", before: "Outdated/incomplete", after: "45+ updated documents", improvement: "Current & comprehensive" },
+          { metric: "Process Standardization", before: "Varies by facility", after: "Standardized across 12 sites", improvement: "Consistency achieved" },
+          { metric: "Documentation Quality", before: "Inadequate", after: "Meets audit standards", improvement: "Professional-grade" }
+        ]
+      },
+      {
+        category: "Regulatory Outcomes",
+        description: "Successfully passed external audits with no material findings and strengthened regulatory relationships.",
+        metrics: [
+          { metric: "External Audit Results", before: "3 material weaknesses", after: "0 material weaknesses", improvement: "Clean audit opinion" },
+          { metric: "Regulatory Inquiries", before: "2 pending", after: "Successfully resolved", improvement: "Closed all matters" },
+          { metric: "Staff Compliance Training", before: "45% completion", after: "98% completion", improvement: "53 point increase" }
         ]
       }
     ],
     testimonial: {
-      quote: "Professional market analysis and technology roadmap guidance helped us successfully transition from small-power applications to high-power heavy-duty truck markets. We're now not just fuel cell suppliers, but leaders in hydrogen heavy-duty truck solutions.",
-      author: "Robert Liu",
-      position: "Chairman & CEO, HydroPower Tech"
+      quote: "The compliance and risk advisory services we received were transformative for our organization. The team not only identified our gaps but worked alongside us to build sustainable solutions. We now have confidence in our compliance posture and strong controls that protect our patients and our business.",
+      author: "Dr. Jennifer Wu",
+      position: "Chief Compliance Officer, MedCare Systems"
     },
-    technologies: ["Hydrogen Fuel Cells", "Stack Technology", "System Integration", "Control Algorithms", "Testing & Validation"],
-    services: ["Market Analysis", "Technology Planning", "Industrial Chain Integration", "Business Model"],
-    nextSteps: "The company is developing next-generation solid oxide fuel cell technology and planning to enter marine and aviation hydrogen applications."
+    technologies: ["Compliance Management Software", "Risk Assessment Tools", "Policy Management Systems", "Training Platforms", "Audit Management"],
+    services: ["Compliance Advisory", "Enterprise Risk Management", "Internal Controls", "Regulatory Compliance", "Training & Education"],
+    nextSteps: "Continuing annual risk assessment engagement and ongoing compliance advisory retainer to maintain compliance framework, monitor regulatory changes, and support expansion into new service lines and geographic markets."
   }
 ];
 
 export function getCaseStudyBySlug(slug: string): CaseStudy | undefined {
-  return caseStudies.find(study => study.slug === slug);
+  return caseStudies.find((study) => study.slug === slug);
 }
 
-export function getAllCaseStudies(): CaseStudy[] {
-  return caseStudies;
+export function getFeaturedCaseStudies(): CaseStudy[] {
+  return caseStudies.slice(0, 3);
 }
