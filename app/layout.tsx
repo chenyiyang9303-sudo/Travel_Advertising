@@ -9,9 +9,10 @@ import { ThemeProvider } from "@/context/providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Startup Consulting | Turn Your Idea Into Reality",
+  title: "Orient Blackstone Asset Management | Corporate Finance Advisory & Risk Management",
   description:
-    "Expert consulting for seed-stage startups. We help you validate your business model, build scalable tech architecture, and prepare for funding. Get your free consultation today.",
+    "Orient Blackstone Asset Management LLC provides expert corporate finance consulting, risk management, and compliance advisory services. Strategic guidance on financial planning, investment strategy, and asset allocation to drive business growth.",
+  keywords: "Orient Blackstone, asset management, corporate finance consulting, risk management advisory, compliance consulting, financial planning, investment strategy advisory, corporate asset advisory, CFO advisory services",
 };
 
 export default function RootLayout({

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Green Giant Energy Texas Inc",
-  description: "Learn how Green Giant Energy Texas Inc collects, uses, and protects your personal information. Our comprehensive privacy policy outlines our commitment to your data protection.",
+  title: "Privacy Policy | Orient Blackstone Asset Management",
+  description: "Learn how Orient Blackstone Asset Management LLC collects, uses, and protects your personal information. Our comprehensive privacy policy outlines our commitment to your data protection.",
 };
 
 export default function PrivacyPolicy() {
@@ -20,7 +20,7 @@ export default function PrivacyPolicy() {
 
         <div className="prose prose-lg prose-neutral dark:prose-invert max-w-none">
           <p className="text-lg leading-relaxed mb-8">
-            Green Giant Energy Texas Inc ("GGE", "we", "us", "our") has created this Privacy Policy in line with our commitment to your privacy on our websites and marketing initiatives. The following discloses Green Giant Energy's information gathering, dissemination, and protection practices.
+            Orient Blackstone Asset Management LLC ("Orient Blackstone", "we", "us", "our") has created this Privacy Policy in line with our commitment to your privacy on our websites and marketing initiatives. The following discloses Orient Blackstone's information gathering, dissemination, and protection practices.
           </p>
 
           <section className="mb-8">

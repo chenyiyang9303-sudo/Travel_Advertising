@@ -52,15 +52,15 @@ export function Footer() {
 
   const services = [
     {
-      title: "Business Strategy",
+      title: "Corporate Finance",
       href: "/#services",
     },
     {
-      title: "Technical Architecture",
+      title: "Risk Management",
       href: "/#services",
     },
     {
-      title: "Funding Support",
+      title: "Compliance Advisory",
       href: "/#services",
     },
     {
@@ -72,7 +72,7 @@ export function Footer() {
   const contact = [
     {
       title: "Email Us",
-      href: "mailto:hello@ggeconsulting.net",
+      href: "mailto:contact@orientblackstone.com",
     },
     {
       title: "Schedule Consultation",
@@ -83,8 +83,8 @@ export function Footer() {
   return (
     <footer className="relative w-full overflow-hidden bg-gradient-to-br from-white via-neutral-50 to-neutral-100 dark:from-neutral-950 dark:via-neutral-900 dark:to-black">
       {/* Decorative background elements */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-green-500/5 dark:from-transparent dark:via-blue-400/10 dark:to-green-400/10" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-blue-500/20 via-transparent to-green-500/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-slate-500/5 dark:from-transparent dark:via-blue-400/10 dark:to-slate-400/10" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-blue-500/20 via-transparent to-slate-500/20" />
       
       <div className="relative border-t border-neutral-200/50 dark:border-white/[0.08] px-8 py-16">
         <div className="max-w-7xl mx-auto">
@@ -98,18 +98,18 @@ export function Footer() {
               
               {/* Updated tagline */}
               <div className="space-y-3">
-                <h3 className="text-lg font-bold bg-gradient-to-r from-blue-600 via-green-600 to-blue-800 dark:from-blue-400 dark:via-green-400 dark:to-blue-300 bg-clip-text text-transparent">
-                  Transform Clean Energy Ideas into Market Opportunities
+                <h3 className="text-lg font-bold bg-gradient-to-r from-blue-600 via-slate-600 to-blue-800 dark:from-blue-400 dark:via-slate-400 dark:to-blue-300 bg-clip-text text-transparent">
+                  Strategic Financial Guidance for Business Growth
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-md">
-                  Turning breakthrough insights into market realities. We bridge the gap between innovative clean energy concepts and scalable business success.
+                  Expert advisory services in corporate finance, risk management, and compliance. We empower businesses to make informed strategic decisions with confidence.
                 </p>
               </div>
 
               {/* Contact info */}
               <div className="space-y-2 text-sm text-neutral-500 dark:text-neutral-400">
-                <p>Green Giant Energy Texas Inc</p>
-                <p>Accelerating the Clean Energy Future</p>
+                <p>Orient Blackstone Asset Management LLC</p>
+                <p>Corporate Finance & Advisory Services</p>
               </div>
             </div>
 
@@ -140,7 +140,7 @@ export function Footer() {
                 {services.map((service, idx) => (
                   <li key={"service" + idx}>
                     <Link
-                      className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200"
+                      className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
                       href={service.href}
                     >
                       {service.title}
@@ -191,13 +191,13 @@ export function Footer() {
           <div className="pt-8 border-t border-neutral-200/50 dark:border-white/[0.08]">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="text-xs text-neutral-500 dark:text-neutral-400">
-                &copy; 2025 Green Giant Energy Texas Inc. All rights reserved.
+                &copy; 2025 Orient Blackstone Asset Management LLC. All rights reserved.
               </div>
-              
+
               <div className="flex items-center gap-6 text-xs text-neutral-500 dark:text-neutral-400">
-                <span>Built for the Clean Energy Revolution</span>
-                <span className="w-1 h-1 rounded-full bg-green-500" />
-                <span>Powered by Innovation</span>
+                <span>Trusted Financial Advisory</span>
+                <span className="w-1 h-1 rounded-full bg-blue-500" />
+                <span>Strategic Business Guidance</span>
               </div>
             </div>
           </div>

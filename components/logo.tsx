@@ -6,15 +6,20 @@ export const Logo = () => {
   return (
     <Link
       href="/"
-      className="font-normal flex space-x-2 items-center text-sm text-black px-2 py-1 relative z-20"
+      className="font-normal flex space-x-2 items-center text-sm px-2 py-1 relative z-20"
     >
-      <Image
-        src="/logo.png"
-        alt="logo"
-        width={150}
-        height={75}
-        className="h-6 w-auto md:h-8 dark:invert dark:brightness-200"
-      />
+      <div className="flex items-center gap-3">
+        <Image
+          src="/logo.png"
+          alt="OBAM Logo"
+          width={40}
+          height={40}
+          className="h-8 w-8 md:h-10 md:w-10 dark:invert dark:brightness-200"
+        />
+        <span className="text-lg md:text-xl font-bold text-neutral-900 dark:text-white tracking-wide">
+          OBAM
+        </span>
+      </div>
     </Link>
   );
 };

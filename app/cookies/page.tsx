@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | Green Giant Energy Texas Inc",
-  description: "Learn about how Green Giant Energy Texas Inc uses cookies and similar technologies on our website to improve your browsing experience.",
+  title: "Cookie Policy | Orient Blackstone Asset Management",
+  description: "Learn about how Orient Blackstone Asset Management LLC uses cookies and similar technologies on our website to improve your browsing experience.",
 };
 
 export default function CookiePolicy() {

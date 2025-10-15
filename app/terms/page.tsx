@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Green Giant Energy Texas Inc",
-  description: "Read Green Giant Energy Texas Inc's terms of service to understand the conditions for using our consulting services and website.",
+  title: "Terms of Service | Orient Blackstone Asset Management",
+  description: "Read Orient Blackstone Asset Management LLC's terms of service to understand the conditions for using our advisory services and website.",
 };
 
 export default function TermsOfService() {
@@ -24,7 +24,7 @@ export default function TermsOfService() {
               Agreement to Terms
             </h2>
             <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
-              These Terms of Service ("Terms") govern your use of Green Giant Energy Texas Inc's ("GGE", "we", "us", "our") website and consulting services. By accessing or using our services, you agree to be bound by these Terms. If you disagree with any part of these terms, then you may not access our services.
+              These Terms of Service ("Terms") govern your use of Orient Blackstone Asset Management LLC's ("Orient Blackstone", "we", "us", "our") website and advisory services. By accessing or using our services, you agree to be bound by these Terms. If you disagree with any part of these terms, then you may not access our services.
             </p>
           </section>
 
