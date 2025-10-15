@@ -105,7 +105,7 @@ Successful M&A valuation in 2024 requires balancing analytical rigor with practi
     author: {
       name: "廖治华 (Zhihua Liao)",
       title: "CEO & M&A Advisory Lead",
-      avatar: "/avatars/zhihua-liao.svg",
+      avatar: "/avatars/wang-yaqi.svg",
       bio: "15+ years leading corporate finance advisory and M&A transactions across diverse industries."
     },
     tags: ["M&A", "Valuation", "Deal Structuring", "Corporate Finance", "Financial Modeling"],
@@ -245,7 +245,7 @@ Corporate debt restructuring requires careful analysis of alternatives, realisti
     author: {
       name: "王雅琪 (Wang Yaqi)",
       title: "Risk Management Director",
-      avatar: "/avatars/wang-yaqi.svg",
+      avatar: "/avatars/dai-rongrong.svg",
       bio: "Risk management specialist with 12+ years experience in regulatory compliance and internal controls."
     },
     tags: ["Debt Restructuring", "Financial Distress", "Bankruptcy", "Corporate Finance", "Turnaround"],

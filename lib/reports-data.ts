@@ -52,7 +52,7 @@ const reports: Report[] = [
     author: {
       name: "廖治华 (Zhihua Liao)",
       title: "CEO & M&A Strategy Lead",
-      avatar: "/avatars/zhihua-liao.svg"
+      avatar: "/avatars/wang-yaqi.svg"
     },
     tags: ["M&A", "Valuation", "Corporate Finance", "Strategic Transactions"],
     coverImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&auto=format",
@@ -130,7 +130,7 @@ const reports: Report[] = [
     author: {
       name: "王雅琪 (Wang Yaqi)",
       title: "Risk Management Director",
-      avatar: "/avatars/wang-yaqi.svg"
+      avatar: "/avatars/dai-rongrong.svg"
     },
     tags: ["Debt Restructuring", "Financial Distress", "Creditor Negotiations", "Balance Sheet Optimization"],
     coverImage: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&h=600&fit=crop&auto=format",
