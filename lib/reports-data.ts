@@ -5,7 +5,7 @@ export interface Report {
   description: string;
   publishDate: string;
   readTime: string;
-  category: 'market-analysis' | 'technology-trends' | 'policy-insights' | 'industry-outlook';
+  category: 'market-analysis' | 'financial-strategy' | 'risk-management' | 'compliance';
   featured: boolean;
   downloadUrl?: string;
   previewPages: number;
@@ -28,226 +28,233 @@ export interface Report {
   relatedReports: string[];
 }
 
+export const reportCategories = [
+  { value: 'all', label: 'All Reports' },
+  { value: 'market-analysis', label: 'Market Analysis' },
+  { value: 'financial-strategy', label: 'Financial Strategy' },
+  { value: 'risk-management', label: 'Risk Management' },
+  { value: 'compliance', label: 'Compliance' },
+];
+
 const reports: Report[] = [
   {
-    id: "global-solar-market-2024",
-    title: "Global Solar Market Outlook 2024-2030",
-    subtitle: "Comprehensive Analysis of Photovoltaic Industry Growth and Investment Opportunities",
-    description: "Comprehensive analysis of the global photovoltaic market landscape, examining technology evolution, regional dynamics, policy frameworks, and strategic investment opportunities through 2030.",
+    id: "ma-market-outlook-2024",
+    title: "M&A Market Outlook 2024-2025",
+    subtitle: "Strategic Analysis of Corporate Transactions and Valuation Trends",
+    description: "Comprehensive analysis of the global M&A landscape, examining deal activity, valuation multiples, sector dynamics, and strategic opportunities for mid-market transactions.",
     publishDate: "2024-06-15",
-    readTime: "25 min",
+    readTime: "28 min",
     category: "market-analysis",
     featured: true,
-    downloadUrl: "/reports/global-solar-market-2024.pdf",
-    previewPages: 8,
-    fileSize: "2.4 MB",
+    downloadUrl: "/reports/ma-market-outlook-2024.pdf",
+    previewPages: 10,
+    fileSize: "3.2 MB",
     author: {
-      name: "戴蓉蓉",
-      title: "Senior Solar Market Analyst",
+      name: "戴蓉蓉 (Dai Rongrong)",
+      title: "CEO & M&A Strategy Lead",
       avatar: "/avatars/dai-rongrong.svg"
     },
-    tags: ["Solar Energy", "Market Analysis", "Investment", "Policy"],
-    coverImage: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop&auto=format",
-    excerpt: "Global solar PV markets are projected to reach $334 billion by 2030, propelled by dramatically declining costs, strengthening policy support, and accelerating corporate renewable procurement strategies.",
+    tags: ["M&A", "Valuation", "Corporate Finance", "Strategic Transactions"],
+    coverImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&auto=format",
+    excerpt: "Global M&A activity projected to reach $3.8 trillion in 2024, driven by strategic consolidation, private equity dry powder deployment, and corporate portfolio optimization strategies across key sectors.",
     keyFindings: [
-      "Global solar capacity poised for unprecedented tripling by 2030",
-      "Utility-scale solar LCOE approaching breakthrough $0.02/kWh threshold in leading markets",
-      "Energy storage integration emerges as critical enabler for grid stability and reliability",
-      "Chinese manufacturing dominance persists while supply chain diversification accelerates"
+      "Mid-market deal activity rebounding with 22% YoY increase in transaction volume",
+      "Technology and healthcare sectors commanding premium valuations at 12-15x EBITDA multiples",
+      "Cross-border transactions accelerating as companies pursue geographic diversification",
+      "Earnout structures increasingly common to bridge valuation gaps in uncertain markets"
     ],
     tableOfContents: [
       { section: "Executive Summary", page: 3 },
-      { section: "Market Overview", page: 8 },
-      { section: "Technology Trends", page: 15 },
-      { section: "Regional Analysis", page: 22 },
-      { section: "Policy Landscape", page: 35 },
-      { section: "Investment Outlook", page: 42 },
-      { section: "Conclusions", page: 48 }
+      { section: "Market Overview & Deal Activity", page: 9 },
+      { section: "Valuation Multiples Analysis", page: 17 },
+      { section: "Sector Deep Dives", page: 26 },
+      { section: "Cross-Border Transactions", page: 38 },
+      { section: "Deal Structuring Trends", page: 47 },
+      { section: "Strategic Recommendations", page: 55 }
     ],
-    methodology: "Analysis integrates primary research from 150+ executive interviews, comprehensive datasets from premier industry databases, and proprietary cost curve modeling to deliver actionable market intelligence.",
-    dataSource: "IEA, IRENA, BloombergNEF, Wood Mackenzie, Primary Research",
-    relatedReports: ["energy-storage-outlook-2024", "wind-energy-trends-2024"]
+    methodology: "Analysis combines data from 2,400+ completed transactions, 180+ executive interviews with corporate development leaders, proprietary valuation modeling, and regression analysis of pricing determinants.",
+    dataSource: "S&P Capital IQ, PitchBook, Refinitiv, Mergermarket, Primary Research",
+    relatedReports: ["working-capital-optimization-2024", "corporate-debt-restructuring-2024"]
   },
   {
-    id: "energy-storage-outlook-2024",
-    title: "Energy Storage Market Outlook 2024",
-    subtitle: "Battery Technologies, Grid Integration, and Market Dynamics",
-    description: "In-depth examination of the rapidly transforming energy storage ecosystem, analyzing cutting-edge battery technologies, large-scale grid deployments, and breakthrough market opportunities.",
-    publishDate: "2024-05-20",
-    readTime: "20 min",
-    category: "technology-trends",
-    featured: true,
-    downloadUrl: "/reports/energy-storage-outlook-2024.pdf",
-    previewPages: 6,
-    fileSize: "1.8 MB",
-    author: {
-      name: "林志华",
-      title: "Energy Storage Technology Lead",
-      avatar: "/avatars/lin-zhihua.svg"
-    },
-    tags: ["Energy Storage", "Battery Technology", "Grid Integration", "Market Trends"],
-    coverImage: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=600&fit=crop&auto=format",
-    excerpt: "Global energy storage markets experience explosive growth as battery costs plummet 90% since 2010, while grid-scale deployments accelerate across continents.",
-    keyFindings: [
-      "Battery storage capacity trajectory indicates 15-fold expansion by 2030",
-      "Lithium-ion technology maintains robust 8% annual cost decline momentum",
-      "Grid-scale storage crosses economic viability threshold in major markets",
-      "Next-generation storage technologies capture increasing market share"
-    ],
-    tableOfContents: [
-      { section: "Executive Summary", page: 3 },
-      { section: "Technology Landscape", page: 7 },
-      { section: "Market Dynamics", page: 14 },
-      { section: "Grid Integration", page: 21 },
-      { section: "Regional Analysis", page: 28 },
-      { section: "Future Outlook", page: 35 }
-    ],
-    methodology: "Analysis based on technology cost databases, project pipeline tracking, and interviews with 80+ storage developers and utilities.",
-    dataSource: "BNEF, GTM Research, EPRI, Wood Mackenzie, Primary Research",
-    relatedReports: ["global-solar-market-2024", "wind-energy-trends-2024"]
-  },
-  {
-    id: "wind-energy-trends-2024",
-    title: "Wind Energy Technology Trends 2024",
-    subtitle: "Offshore Expansion, Turbine Innovation, and Market Evolution",
-    description: "Strategic analysis of wind energy technological breakthroughs, offshore market expansion dynamics, and critical grid integration challenges reshaping the industry.",
-    publishDate: "2024-04-18",
-    readTime: "18 min",
-    category: "technology-trends",
-    featured: false,
-    downloadUrl: "/reports/wind-energy-trends-2024.pdf",
-    previewPages: 5,
-    fileSize: "1.5 MB",
-    author: {
-      name: "王雅琪",
-      title: "Wind Energy Research Director",
-      avatar: "/avatars/wang-yaqi.svg"
-    },
-    tags: ["Wind Energy", "Offshore Wind", "Turbine Technology", "Grid Integration"],
-    coverImage: "https://images.unsplash.com/photo-1548337138-e87d889cc369?w=800&h=600&fit=crop&auto=format",
-    excerpt: "Wind energy maintains its position as the fastest-expanding renewable technology, while offshore wind emerges as a transformative force reshaping coastal energy markets globally.",
-    keyFindings: [
-      "Offshore wind capacity to reach 380 GW by 2030",
-      "Turbine sizes continue growing, reaching 20+ MW",
-      "Floating wind technology commercializing rapidly",
-      "Grid infrastructure becoming primary bottleneck"
-    ],
-    tableOfContents: [
-      { section: "Executive Summary", page: 3 },
-      { section: "Onshore Developments", page: 6 },
-      { section: "Offshore Expansion", page: 12 },
-      { section: "Technology Innovation", page: 18 },
-      { section: "Market Outlook", page: 24 }
-    ],
-    methodology: "Technology assessment based on turbine manufacturer data, project databases, and expert interviews with industry leaders.",
-    dataSource: "GWEC, WindEurope, NREL, IEA Wind, Primary Research",
-    relatedReports: ["global-solar-market-2024", "hydrogen-economy-report-2024"]
-  },
-  {
-    id: "hydrogen-economy-report-2024",
-    title: "The Hydrogen Economy: 2024 Market Report",
-    subtitle: "Green Hydrogen Production, Infrastructure, and Applications",
-    description: "Strategic assessment of the nascent hydrogen economy, examining breakthrough production technologies, infrastructure development pathways, and transformative industrial applications.",
-    publishDate: "2024-03-25",
+    id: "working-capital-optimization-2024",
+    title: "Working Capital Optimization Report 2024",
+    subtitle: "Cash Conversion Strategies for Mid-Market Companies",
+    description: "In-depth examination of working capital management best practices, analyzing receivables, inventory, and payables optimization strategies to unlock hidden cash and improve liquidity.",
+    publishDate: "2024-05-10",
     readTime: "22 min",
-    category: "industry-outlook",
-    featured: false,
-    downloadUrl: "/reports/hydrogen-economy-2024.pdf",
-    previewPages: 7,
+    category: "financial-strategy",
+    featured: true,
+    downloadUrl: "/reports/working-capital-optimization-2024.pdf",
+    previewPages: 8,
     fileSize: "2.1 MB",
     author: {
-      name: "张文博",
-      title: "Hydrogen Technology Specialist",
-      avatar: "/avatars/zhang-wenbo.svg"
+      name: "林志华 (Lin Zhihua)",
+      title: "CFO & Financial Planning Lead",
+      avatar: "/avatars/lin-zhihua.svg"
     },
-    tags: ["Hydrogen", "Green Hydrogen", "Industrial Applications", "Infrastructure"],
-    coverImage: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop&auto=format",
-    excerpt: "Green hydrogen establishes itself as an essential pillar of global decarbonization strategies, driven by declining production costs and surging infrastructure investments.",
+    tags: ["Working Capital", "Cash Flow", "Liquidity Management", "Financial Operations"],
+    coverImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&auto=format",
+    excerpt: "Mid-market companies can unlock $50-80K per $1M revenue through systematic working capital optimization, with average cash conversion cycle improvements of 18-25 days achievable within 12 months.",
     keyFindings: [
-      "Green hydrogen costs to reach $1.50/kg by 2030",
-      "Electrolyzer capacity growing 50% annually",
-      "Steel and ammonia industries driving early adoption",
-      "Transport applications gaining momentum"
+      "Companies with optimized working capital achieve 15-20% higher enterprise valuations",
+      "Days Sales Outstanding (DSO) reduction of 10 days releases 2.8% of annual revenue as cash",
+      "Inventory optimization through just-in-time practices reduces holding costs by 20-30%",
+      "Strategic payment term negotiations can extend Days Payables Outstanding (DPO) by 12-15 days"
     ],
     tableOfContents: [
       { section: "Executive Summary", page: 3 },
-      { section: "Production Technologies", page: 8 },
-      { section: "Infrastructure Development", page: 15 },
-      { section: "Industrial Applications", page: 22 },
-      { section: "Policy Framework", page: 29 },
-      { section: "Investment Outlook", page: 35 }
+      { section: "Working Capital Fundamentals", page: 7 },
+      { section: "Accounts Receivable Management", page: 14 },
+      { section: "Inventory Optimization", page: 22 },
+      { section: "Accounts Payable Strategies", page: 30 },
+      { section: "Cash Conversion Cycle Analysis", page: 38 },
+      { section: "Implementation Roadmap", page: 45 }
     ],
-    methodology: "Market analysis combining project pipeline data, technology cost assessments, and stakeholder interviews across the hydrogen value chain.",
-    dataSource: "IEA Hydrogen, Hydrogen Council, IRENA, BloombergNEF, Primary Research",
-    relatedReports: ["energy-storage-outlook-2024", "clean-energy-policy-2024"]
+    methodology: "Research draws from financial analysis of 340+ mid-market companies, working capital benchmarking across 12 industries, and case studies documenting $180M+ in cash released through optimization initiatives.",
+    dataSource: "Bloomberg Terminal, Capital IQ, Industry Association Data, Client Case Studies",
+    relatedReports: ["ma-market-outlook-2024", "financial-planning-best-practices-2024"]
   },
   {
-    id: "clean-energy-policy-2024",
-    title: "Clean Energy Policy Landscape 2024",
-    subtitle: "Global Regulatory Trends and Investment Incentives",
-    description: "Comprehensive examination of evolving global clean energy policy landscapes, analyzing regulatory frameworks, investment mechanisms, and market development impacts.",
-    publishDate: "2024-02-14",
-    readTime: "16 min",
-    category: "policy-insights",
+    id: "corporate-debt-restructuring-2024",
+    title: "Corporate Debt Restructuring Guide 2024",
+    subtitle: "Strategic Approaches to Financial Distress and Balance Sheet Optimization",
+    description: "Strategic framework for corporate debt restructuring, examining out-of-court workouts, formal reorganization processes, creditor negotiations, and capital structure optimization techniques.",
+    publishDate: "2024-04-22",
+    readTime: "26 min",
+    category: "financial-strategy",
     featured: false,
-    downloadUrl: "/reports/clean-energy-policy-2024.pdf",
-    previewPages: 4,
-    fileSize: "1.2 MB",
+    downloadUrl: "/reports/corporate-debt-restructuring-2024.pdf",
+    previewPages: 9,
+    fileSize: "2.8 MB",
     author: {
-      name: "李思怡",
-      title: "Policy Research Manager",
-      avatar: "/avatars/li-siyi.svg"
+      name: "王雅琪 (Wang Yaqi)",
+      title: "Risk Management Director",
+      avatar: "/avatars/wang-yaqi.svg"
     },
-    tags: ["Policy", "Regulation", "Investment Incentives", "Market Development"],
-    coverImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop&auto=format",
-    excerpt: "Clean energy policies evolve toward greater sophistication and precision, as governments deploy targeted technology incentives and comprehensive carbon pricing frameworks.",
+    tags: ["Debt Restructuring", "Financial Distress", "Creditor Negotiations", "Balance Sheet Optimization"],
+    coverImage: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&h=600&fit=crop&auto=format",
+    excerpt: "Companies successfully restructuring debt achieve average interest expense reductions of 35-45%, extend maturity profiles by 3-5 years, and improve debt-to-EBITDA ratios from 6.5x to 3.2x on average.",
     keyFindings: [
-      "135 countries now have renewable energy targets",
-      "Carbon pricing coverage expanding to 40% of global emissions",
-      "Grid modernization investments reaching $100B annually",
-      "Green taxonomy standards harmonizing globally"
+      "Out-of-court workouts resolve 68% faster and 40% cheaper than formal bankruptcy proceedings",
+      "Early engagement with creditors increases restructuring success rates by 2.5x",
+      "Debt-for-equity swaps reduce cash interest burden while preserving enterprise value",
+      "Covenant amendments and maturity extensions buy critical time for operational turnarounds"
     ],
     tableOfContents: [
       { section: "Executive Summary", page: 3 },
-      { section: "Regional Policy Review", page: 6 },
-      { section: "Investment Mechanisms", page: 12 },
-      { section: "Grid Integration Policies", page: 18 },
-      { section: "Future Trends", page: 23 }
+      { section: "Financial Distress Indicators", page: 8 },
+      { section: "Restructuring Alternatives", page: 15 },
+      { section: "Out-of-Court Workouts", page: 23 },
+      { section: "Chapter 11 Reorganization", page: 32 },
+      { section: "Creditor Negotiation Tactics", page: 41 },
+      { section: "Post-Restructuring Management", page: 50 }
     ],
-    methodology: "Policy analysis based on government publications, regulatory filings, and interviews with policy makers and industry stakeholders.",
-    dataSource: "IEA, IRENA, Government Publications, Legal Databases, Primary Research",
-    relatedReports: ["global-solar-market-2024", "hydrogen-economy-report-2024"]
+    methodology: "Analysis based on 150+ corporate restructurings totaling $45B in debt, interviews with 60+ restructuring advisors, and quantitative analysis of recovery rates, timelines, and cost structures.",
+    dataSource: "S&P LCD, Moody's Default Reports, Court Filings, Turnaround Management Association",
+    relatedReports: ["working-capital-optimization-2024", "risk-management-framework-2024"]
+  },
+  {
+    id: "risk-management-framework-2024",
+    title: "Enterprise Risk Management Framework 2024",
+    subtitle: "Integrated Approach to Financial, Operational, and Compliance Risk",
+    description: "Comprehensive enterprise risk management framework covering risk identification, assessment, mitigation strategies, and governance structures for mid-market companies navigating complex regulatory environments.",
+    publishDate: "2024-03-18",
+    readTime: "24 min",
+    category: "risk-management",
+    featured: false,
+    downloadUrl: "/reports/risk-management-framework-2024.pdf",
+    previewPages: 8,
+    fileSize: "2.5 MB",
+    author: {
+      name: "李思怡 (Li Siyi)",
+      title: "Compliance & Risk Manager",
+      avatar: "/avatars/li-siyi.svg"
+    },
+    tags: ["Risk Management", "Compliance", "Internal Controls", "Governance"],
+    coverImage: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop&auto=format",
+    excerpt: "Companies with mature ERM frameworks experience 40% fewer compliance violations, 30% lower insurance premiums, and demonstrate 25% higher operational efficiency through systematic risk mitigation.",
+    keyFindings: [
+      "Integrated risk frameworks reduce total cost of risk by 22-28% through coordinated mitigation",
+      "Board-level risk committees improve strategic decision quality and stakeholder confidence",
+      "Automated compliance monitoring catches 95% of violations before they become material issues",
+      "Risk-adjusted performance metrics drive better capital allocation and resource optimization"
+    ],
+    tableOfContents: [
+      { section: "Executive Summary", page: 3 },
+      { section: "ERM Framework Overview", page: 7 },
+      { section: "Risk Identification & Assessment", page: 14 },
+      { section: "Financial Risk Management", page: 22 },
+      { section: "Operational Risk Controls", page: 30 },
+      { section: "Compliance Risk Programs", page: 38 },
+      { section: "Risk Governance Structure", page: 46 }
+    ],
+    methodology: "Framework developed from best practice analysis across 200+ companies, regulatory guidance synthesis, risk maturity assessments, and validation through 50+ implementation engagements.",
+    dataSource: "COSO ERM Framework, ISO 31000, SEC Filings, Industry Risk Surveys, Client Implementations",
+    relatedReports: ["compliance-audit-readiness-2024", "corporate-debt-restructuring-2024"]
+  },
+  {
+    id: "compliance-audit-readiness-2024",
+    title: "Compliance & Audit Readiness Report 2024",
+    subtitle: "SOX, Internal Controls, and Regulatory Compliance Frameworks",
+    description: "Practical guide to achieving audit readiness and regulatory compliance, covering SOX 404 requirements, internal control design, documentation standards, and audit preparation best practices.",
+    publishDate: "2024-02-28",
+    readTime: "20 min",
+    category: "compliance",
+    featured: false,
+    downloadUrl: "/reports/compliance-audit-readiness-2024.pdf",
+    previewPages: 7,
+    fileSize: "1.9 MB",
+    author: {
+      name: "陈佳音 (Chen Jiayin)",
+      title: "Audit & Compliance Lead",
+      avatar: "/avatars/chen-jiayin.svg"
+    },
+    tags: ["Compliance", "SOX", "Internal Controls", "Audit Preparation"],
+    coverImage: "https://images.unsplash.com/photo-1573164574472-797cdf4a583a?w=800&h=600&fit=crop&auto=format",
+    excerpt: "Companies achieving full audit readiness reduce external audit costs by 25-35%, accelerate audit completion by 40%, and demonstrate enhanced internal control effectiveness with 90%+ testing success rates.",
+    keyFindings: [
+      "Robust SOX documentation reduces material weakness findings by 85%",
+      "Automated control testing improves efficiency by 60% while enhancing evidence quality",
+      "Quarterly internal control self-assessments identify 78% of issues before external audits",
+      "Cross-functional control ownership improves compliance culture and reduces remediation time by 50%"
+    ],
+    tableOfContents: [
+      { section: "Executive Summary", page: 3 },
+      { section: "Regulatory Landscape", page: 6 },
+      { section: "SOX 404 Compliance", page: 12 },
+      { section: "Internal Control Design", page: 19 },
+      { section: "Control Testing & Evidence", page: 27 },
+      { section: "Audit Preparation Process", page: 34 },
+      { section: "Remediation & Continuous Improvement", page: 41 }
+    ],
+    methodology: "Guide synthesizes requirements from SOX regulations, PCAOB standards, COSO Internal Control Framework, and learnings from 120+ SOX compliance implementations and 300+ internal control assessments.",
+    dataSource: "PCAOB Standards, SEC Guidance, COSO Framework, Big Four Audit Methodologies, Client Projects",
+    relatedReports: ["risk-management-framework-2024", "financial-planning-best-practices-2024"]
   }
 ];
 
 export function getAllReports(): Report[] {
-  return reports.sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
-}
-
-export function getFeaturedReports(): Report[] {
-  return reports.filter(report => report.featured)
-    .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
+  return reports;
 }
 
 export function getReportById(id: string): Report | undefined {
   return reports.find(report => report.id === id);
 }
 
+export function getFeaturedReports(): Report[] {
+  return reports.filter(report => report.featured);
+}
+
 export function getReportsByCategory(category: Report['category']): Report[] {
-  return reports.filter(report => report.category === category)
-    .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
+  return reports.filter(report => report.category === category);
 }
 
-export function getRelatedReports(reportId: string): Report[] {
-  const report = getReportById(reportId);
-  if (!report) return [];
-  
-  return reports.filter(r => report.relatedReports.includes(r.id));
-}
+export function getRelatedReports(currentReportId: string): Report[] {
+  const currentReport = getReportById(currentReportId);
+  if (!currentReport) return [];
 
-export const reportCategories = {
-  'market-analysis': 'Market Analysis',
-  'technology-trends': 'Technology Trends', 
-  'policy-insights': 'Policy Insights',
-  'industry-outlook': 'Industry Outlook'
-} as const;
+  return currentReport.relatedReports
+    .map(id => getReportById(id))
+    .filter((report): report is Report => report !== undefined);
+}

@@ -94,7 +94,7 @@ export const ReportPostRow = ({ report }: { report: Report }) => {
             {format(new Date(report.publishDate), "MMMM dd, yyyy")}
           </p>
           <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded">
-            {reportCategories[report.category]}
+            {reportCategories.find(cat => cat.value === report.category)?.label || report.category}
           </span>
           <span className="text-xs text-neutral-500 dark:text-neutral-500">
             {report.readTime} • {report.fileSize}
@@ -127,7 +127,7 @@ export const ReportCard = ({ report }: { report: Report }) => {
         <div>
           <div className="flex items-center gap-2 mb-3">
             <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded">
-              {reportCategories[report.category]}
+              {reportCategories.find(cat => cat.value === report.category)?.label || report.category}
             </span>
             {report.featured && (
               <span className="px-2 py-1 bg-yellow-500 text-white text-xs rounded">

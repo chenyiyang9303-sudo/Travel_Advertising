@@ -46,7 +46,7 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
             <div className="lg:col-span-2">
               <div className="flex items-center gap-3 mb-4">
                 <span className="px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">
-                  {reportCategories[report.category]}
+                  {reportCategories.find(cat => cat.value === report.category)?.label || report.category}
                 </span>
                 {report.featured && (
                   <span className="px-3 py-1 bg-yellow-500 text-white text-sm font-medium rounded-full flex items-center gap-1">
@@ -104,7 +104,7 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
                 <ReportCover
                   title={report.title}
                   subtitle={report.subtitle}
-                  category={reportCategories[report.category]}
+                  category={reportCategories.find(cat => cat.value === report.category)?.label || report.category}
                   publishDate={report.publishDate}
                   variant="organic"
                   gradient="from-blue-600 to-green-600"
@@ -263,7 +263,7 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
                 <div className="flex justify-between">
                   <span className="text-neutral-600 dark:text-neutral-400">Category:</span>
                   <span className="font-medium text-neutral-800 dark:text-neutral-200">
-                    {reportCategories[report.category]}
+                    {reportCategories.find(cat => cat.value === report.category)?.label || report.category}
                   </span>
                 </div>
                 <div className="flex justify-between">

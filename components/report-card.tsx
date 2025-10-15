@@ -48,7 +48,7 @@ export function ReportCard({
           <ReportCover
             title={report.title}
             subtitle={report.subtitle}
-            category={reportCategories[report.category]}
+            category={reportCategories.find(cat => cat.value === report.category)?.label || report.category}
             publishDate={report.publishDate}
             variant={coverVariants[variantIndex]}
             gradient={gradients[gradientIndex]}
@@ -139,7 +139,7 @@ function FeaturedReportCard({ report, className }: { report: Report; className?:
             <ReportCover
               title={report.title}
               subtitle={report.subtitle}
-              category={reportCategories[report.category]}
+              category={reportCategories.find(cat => cat.value === report.category)?.label || report.category}
               publishDate={report.publishDate}
               variant={coverVariants[variantIndex]}
               gradient={gradients[gradientIndex]}
@@ -157,7 +157,7 @@ function FeaturedReportCard({ report, className }: { report: Report; className?:
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded">
-                  {reportCategories[report.category]}
+                  {reportCategories.find(cat => cat.value === report.category)?.label || report.category}
                 </span>
               </div>
               
@@ -224,7 +224,7 @@ export function RelatedReportCard({ report }: { report: Report }) {
           <ReportCover
             title={report.title}
             subtitle={report.subtitle}
-            category={reportCategories[report.category]}
+            category={reportCategories.find(cat => cat.value === report.category)?.label || report.category}
             publishDate={report.publishDate}
             variant={coverVariants[variantIndex]}
             gradient={gradients[gradientIndex]}
@@ -233,7 +233,7 @@ export function RelatedReportCard({ report }: { report: Report }) {
         
         <div className="p-4">
           <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded mb-2 inline-block">
-            {reportCategories[report.category]}
+            {reportCategories.find(cat => cat.value === report.category)?.label || report.category}
           </span>
           <h3 className="font-bold text-neutral-800 dark:text-neutral-100 mb-2 line-clamp-2">
             {report.title}
