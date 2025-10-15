@@ -470,3 +470,7 @@ export function getCaseStudyBySlug(slug: string): CaseStudy | undefined {
 export function getFeaturedCaseStudies(): CaseStudy[] {
   return caseStudies.slice(0, 3);
 }
+
+export function getAllCaseStudies(): CaseStudy[] {
+  return caseStudies;
+}

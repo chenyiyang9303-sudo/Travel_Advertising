@@ -43,7 +43,7 @@ export default function BlogPage() {
               className="text-xl text-neutral-600 dark:text-neutral-300 mb-8"
             >
               Expert analysis, market trends, and technology insights shaping 
-              the future of clean energy and sustainability.
+              corporate finance strategy and financial advisory.
             </motion.p>
             
             {/* Search and Filter */}

@@ -33,7 +33,7 @@ export default function TermsOfService() {
               Services Description
             </h2>
             <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-              Green Giant Energy provides strategic clean energy consulting services for solar, wind, storage, and hydrogen companies, including but not limited to:
+              Orient Blackstone Asset Management provides strategic corporate finance consulting services, including but not limited to:
             </p>
             <ul className="list-disc pl-6 space-y-2 text-neutral-700 dark:text-neutral-300">
               <li>Business strategy and validation</li>

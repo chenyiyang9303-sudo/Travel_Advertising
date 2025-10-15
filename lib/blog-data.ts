@@ -23,6 +23,15 @@ export interface BlogPost {
   relatedPosts: string[];
 }
 
+export const blogCategories = [
+  { value: 'all', label: 'All Posts' },
+  { value: 'financial-strategy', label: 'Financial Strategy' },
+  { value: 'risk-management', label: 'Risk Management' },
+  { value: 'market-analysis', label: 'Market Analysis' },
+  { value: 'corporate-finance', label: 'Corporate Finance' },
+  { value: 'compliance', label: 'Compliance' },
+];
+
 const blogPosts: BlogPost[] = [
   {
     slug: "ma-valuation-frameworks-2024",

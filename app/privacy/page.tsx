@@ -37,7 +37,7 @@ export default function PrivacyPolicy() {
               Collection of Information
             </h2>
             <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-              Green Giant Energy collects information to provide better clean energy consulting services to our clients and to better understand visitors to our websites and their interests. We collect information in the following ways:
+              Orient Blackstone Asset Management collects information to provide better corporate finance consulting services to our clients and to better understand visitors to our websites and their interests. We collect information in the following ways:
             </p>
             <ul className="list-disc pl-6 space-y-2 text-neutral-700 dark:text-neutral-300">
               <li>Information you actively choose to submit to us (such as your name, email address, company name, title, country) for the purpose of accessing various downloads, viewing specific content, subscribing to GGE newsletters, registering for events, and your preferences in receiving marketing from Green Giant Energy and its third-party partners, as well as your communication preferences. Information we have obtained about you from publicly available sources such as social media, marketing platforms, or events you attended. You will receive marketing communications from us if you have requested information from Green Giant Energy or you or your employer has purchased services from us;</li>

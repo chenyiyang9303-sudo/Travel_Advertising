@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Clean energy consulting company website targeting solar, wind, storage, and hydrogen companies. Built with Next.js 14 App Router, featuring Cal.com booking integration and WebGL 3D effects. Core business model: B2B consulting for technology breakthroughs, market expansion, and sustainable growth.
+Corporate finance consulting company website providing M&A advisory, financial restructuring, risk management, and compliance services. Built with Next.js 14 App Router, featuring Cal.com booking integration and professional gradient backgrounds. Core business model: B2B financial advisory for mid-market companies seeking expert guidance on complex financial decisions.
 
 ## Architecture & Tech Stack
 
