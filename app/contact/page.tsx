@@ -1,4 +1,4 @@
-import { ContactFormGridWithDetails } from "@/components/contact sections";
+import { ContactFormGridWithDetails } from "@/components/contact-sections";
 
 export const metadata = {
   title: "Contact Us | Startup Consulting",
