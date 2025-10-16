@@ -8,7 +8,7 @@ import { Users, Target, Award, Globe, Lightbulb, TrendingUp, Heart, CheckCircle,
 // Generate avatar URLs for team members using local avatar files
 const getAvatarUrl = (name: string, index: number) => {
   const avatarFiles = [
-    '/avatars/dai-rongrong.svg',
+    '/avatars/liao-zhihua.svg',
     '/avatars/lin-zhihua.svg',
     '/avatars/wang-yaqi.svg',
     '/avatars/zhang-wenbo.svg',
@@ -200,7 +200,7 @@ export default function AboutPage() {
                 expertise: "Corporate Finance Strategy & Capital Markets",
                 bio: "15+ years leading corporate finance advisory and M&A transactions across diverse industries",
                 image: "/avatars/liao-zhihua.svg",
-                email: "zhihua.liao@obamconsulting.com"
+                email: "zhihua.liao@orientblackstone.net"
               },
               {
                 name: "林志华 (Lin Zhihua)",
@@ -208,7 +208,7 @@ export default function AboutPage() {
                 expertise: "Financial Planning & Analysis",
                 bio: "Former CFO at multinational corporation with expertise in financial modeling and strategic planning",
                 image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&auto=format",
-                email: "zhihua.lin@obamconsulting.com"
+                email: "zhihua.lin@orientblackstone.net"
               },
               {
                 name: "王雅琪 (Wang Yaqi)",
@@ -216,7 +216,7 @@ export default function AboutPage() {
                 expertise: "Enterprise Risk & Compliance Advisory",
                 bio: "Risk management specialist with 12+ years experience in regulatory compliance and internal controls",
                 image: "/avatars/wang-yaqi.svg",
-                email: "yaqi.wang@obamconsulting.com"
+                email: "yaqi.wang@orientblackstone.net"
               },
               {
                 name: "张文博 (Zhang Wenbo)",
@@ -224,7 +224,7 @@ export default function AboutPage() {
                 expertise: "Portfolio Analysis & Investment Advisory",
                 bio: "MBA from prestigious business school, specializing in investment strategy and portfolio optimization",
                 image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&auto=format",
-                email: "wenbo.zhang@obamconsulting.com"
+                email: "wenbo.zhang@orientblackstone.net"
               },
               {
                 name: "李思怡 (Li Siyi)",
@@ -232,7 +232,7 @@ export default function AboutPage() {
                 expertise: "Regulatory Compliance & Internal Audit",
                 bio: "Former compliance officer at financial institution with expertise in regulatory frameworks and audit processes",
                 image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&auto=format",
-                email: "siyi.li@obamconsulting.com"
+                email: "siyi.li@orientblackstone.net"
               },
               {
                 name: "陈佳音 (Chen Jiayin)",
@@ -240,7 +240,7 @@ export default function AboutPage() {
                 expertise: "Financial Market Research & Due Diligence",
                 bio: "Former analyst at leading investment bank specializing in market research and valuation analysis",
                 image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&auto=format",
-                email: "jiayin.chen@obamconsulting.com"
+                email: "jiayin.chen@orientblackstone.net"
               }
             ].map((member, index) => (
               <motion.div

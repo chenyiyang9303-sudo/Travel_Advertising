@@ -71,7 +71,7 @@ function HexagonCover({ title, subtitle, category, publishDate, gradient }: Omit
           <div className="absolute inset-0 flex items-center justify-center">
             <Image
               src="/logo.png"
-              alt="OBAM Consulting Logo"
+              alt="Orient Blackstone Logo"
               width={24}
               height={24}
               className="filter brightness-0 invert"
@@ -244,7 +244,7 @@ function DiamondCover({ title, subtitle, category, publishDate, gradient }: Omit
           <div className="-rotate-45">
             <Image
               src="/logo.png"
-              alt="OBAM Consulting Logo"
+              alt="Orient Blackstone Logo"
               width={20}
               height={20}
               className="filter brightness-0 invert"
@@ -310,7 +310,7 @@ function OrganicCover({ title, subtitle, category, publishDate, gradient }: Omit
           <div className="absolute inset-0 flex items-center justify-center">
             <Image
               src="/logo.png"
-              alt="OBAM Consulting Logo"
+              alt="Orient Blackstone Logo"
               width={20}
               height={20}
               className="filter brightness-0 invert"
