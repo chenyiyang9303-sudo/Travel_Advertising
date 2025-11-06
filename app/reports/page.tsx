@@ -8,23 +8,23 @@ import { ReportsWithSearch } from "@/components/reports-with-search";
 
 export default function ReportsPage() {
   return (
-    <div className="min-h-screen bg-app">
+    <div className="min-h-screen bg-app text-fg">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-primary-50/70 via-surface-subtle to-amber-100/40 dark:from-primary-900/20 dark:via-surface-subtle dark:to-amber-900/30 py-16">
+      <div className="border-b border-white/10 bg-[#050505] pt-36 pb-24 text-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h1 
+          <div className="mx-auto max-w-4xl text-center">
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-5xl font-bold text-fg mb-6"
+              className="text-4xl font-semibold uppercase tracking-[0.35em] text-white sm:text-5xl"
             >
               Industry Reports & Research
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-muted mb-8"
+              className="mt-6 text-base leading-relaxed text-neutral-300 sm:text-lg"
             >
               In-depth analysis and insights on corporate finance strategies, market trends, and best practices
               to guide your strategic decisions.
@@ -39,18 +39,18 @@ export default function ReportsPage() {
       </section>
 
       {/* Featured Articles CTA */}
-      <section className="bg-surface-subtle py-16">
+      <section className="border-t border-white/10 bg-[#050505] py-20 text-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold text-fg mb-4">
+          <div className="mx-auto mb-12 max-w-2xl text-center">
+            <h2 className="text-3xl font-semibold uppercase tracking-[0.35em]">
               Stay Informed with Expert Insights
             </h2>
-            <p className="text-lg text-muted mb-8">
+            <p className="mt-4 text-sm uppercase tracking-[0.4em] text-neutral-400">
               Read our latest analysis and expert commentary on corporate finance trends and market developments.
             </p>
-            <Link 
+            <Link
               href="/blog"
-              className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              className="inline-flex items-center gap-3 rounded-full border border-white/20 px-8 py-3 text-xs font-semibold uppercase tracking-[0.35em] transition-all duration-200 hover:border-primary-400"
             >
               Read Articles
               <ArrowRight className="h-4 w-4" />

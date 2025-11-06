@@ -81,9 +81,9 @@ const reports: Report[] = [
       { section: "Implications & Action Checklist", page: 56 },
     ],
     methodology:
-      "Findings draw on a proprietary survey of 160 global CIOs, analysis of custodial allocation data representing $2.4T in AUM, and scenario modelling using Orient Blackstone's macroeconomic toolkit.",
+      "Findings draw on a proprietary survey of 160 global CIOs, analysis of custodial allocation data representing $2.4T in AUM, and scenario modelling using RSFM's macroeconomic toolkit.",
     dataSource:
-      "Orient Blackstone Research, Bloomberg, MSCI, Preqin, public filings, interview transcripts.",
+      "RSFM Research, Bloomberg, MSCI, Preqin, public filings, interview transcripts.",
     relatedReports: [
       "global-liquidity-risk-benchmark-2025",
       "private-markets-operations-survey-2025",
@@ -133,9 +133,9 @@ const reports: Report[] = [
       { section: "Action Framework", page: 52 },
     ],
     methodology:
-      "Survey responses from Fortune 1000 and FTSE 350 treasuries, supplemented with Orient Blackstone client benchmarks and liquidity incident post-mortems conducted between 2022-2024.",
+      "Survey responses from Fortune 1000 and FTSE 350 treasuries, supplemented with RSFM client benchmarks and liquidity incident post-mortems conducted between 2022-2024.",
     dataSource:
-      "Orient Blackstone Treasury Pulse Survey, company filings, rating agency research, industry roundtables.",
+      "RSFM Treasury Pulse Survey, company filings, rating agency research, industry roundtables.",
     relatedReports: [
       "institutional-asset-allocation-2025",
       "private-markets-operations-survey-2025",
@@ -187,7 +187,7 @@ const reports: Report[] = [
     methodology:
       "Survey of 95 private equity and private credit COOs, complemented by 30 qualitative interviews with LP operational due diligence teams and analysis of regulatory guidance in North America, Europe, and APAC.",
     dataSource:
-      "Orient Blackstone Private Markets Practice, ILPA publications, SEC & ESMA rulemaking, industry working groups.",
+      "RSFM Private Markets Practice, ILPA publications, SEC & ESMA rulemaking, industry working groups.",
     relatedReports: [
       "institutional-asset-allocation-2025",
       "global-liquidity-risk-benchmark-2025",

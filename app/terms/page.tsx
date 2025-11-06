@@ -1,265 +1,271 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
+
+const COMPANY_NAME = "Radiant Soaring Fund Management LLC";
+const SHORT_NAME = "RSFM";
+const CONTACT_EMAIL = "legal@radiantsoaringfm.com";
+const CONTACT_PHONE = "+1 (212) 555-0198";
+const STREET_ADDRESS = "575 Lexington Avenue, Suite 4200";
+const CITY_ADDRESS = "New York, NY 10022";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Orient Blackstone Asset Management",
+  title: "Terms of Service | RSFM",
   description:
-    "Review the terms governing access to Orient Blackstone Asset Management LLC’s advisory services, digital platforms, and thought leadership resources.",
+    "Review the engagement terms governing access to RSFM advisory services, market intelligence, and digital platforms.",
 };
-
-const companyName = "Orient Blackstone Asset Management LLC";
 
 export default function TermsOfService() {
   return (
-    <div className="min-h-screen bg-white py-20 px-4 dark:bg-neutral-950 md:px-8">
-      <div className="mx-auto max-w-4xl">
-        <header className="mb-12">
-          <h1 className="mb-4 text-4xl font-bold text-neutral-800 dark:text-neutral-100 md:text-5xl">
+    <div className="min-h-screen bg-app text-fg">
+      <div className="border-b border-white/10 bg-[#050505] py-24">
+        <div className="mx-auto max-w-4xl px-4 text-center">
+          <h1 className="text-4xl font-semibold uppercase tracking-[0.35em] text-white sm:text-5xl">
             Terms of Service
           </h1>
-          <p className="text-lg text-neutral-600 dark:text-neutral-400">
-            Last updated: July 13, 2025
+          <p className="mt-6 text-sm uppercase tracking-[0.4em] text-neutral-400">
+            Last updated: January 15, 2025
           </p>
-        </header>
-
-        <div className="space-y-10">
-          <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
-            These Terms of Service (“Terms”) are a binding agreement between{" "}
-            {companyName} (“Orient Blackstone”, “we”, “us”, or “our”) and any
-            individual or entity (“Client”, “you”, or “your”) that accesses our
-            websites, downloads our materials, or engages our advisory services.
-            By using our services or continuing to access our digital platforms,
-            you acknowledge that you have read, understood, and agree to be bound
-            by these Terms.
+          <p className="mt-6 text-base leading-relaxed text-neutral-300">
+            These Terms govern your access to {SHORT_NAME}&apos;s advisory services, research, and
+            digital resources. By engaging with {SHORT_NAME} ({`"${COMPANY_NAME}"`}, `"we"`, `"us"`),
+            you acknowledge that you have read, understood, and agree to comply with the clauses
+            below. When applicable, these Terms supplement a written engagement letter or mandate.
           </p>
+        </div>
+      </div>
 
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>1. Services Overview</h2>
-              <p>
-                Orient Blackstone delivers institutional asset management,
-                capital markets advisory, and strategic finance consulting
-                services. The scope, deliverables, and commercial terms of any
-                engagement are documented in a separate statement of work,
-                mandate letter, or services agreement (each, an “Engagement
-                Agreement”). These Terms supplement and, to the extent of any
-                conflict, are superseded by the applicable Engagement Agreement.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>2. Eligibility and Authority</h2>
-              <p>
-                By engaging us or using our platforms, you represent that you are
-                at least 18 years of age, legally capable of entering into
-                binding agreements, and authorised to act on behalf of your
-                organisation. If you access our materials on behalf of a legal
-                entity, you warrant that you have the authority to bind that
-                entity to these Terms.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>3. Client Responsibilities</h2>
-              <ul>
-                <li>
-                  provide accurate, complete, and timely information necessary
-                  for the delivery of services;
-                </li>
-                <li>
-                  designate qualified decision makers and ensure their reasonable
-                  availability;
-                </li>
-                <li>
-                  review deliverables promptly and provide feedback in good faith;
-                </li>
-                <li>implement recommendations at your discretion and risk; and</li>
-                <li>comply with applicable laws, regulations, and policies.</li>
-              </ul>
-              <p>
-                Orient Blackstone is entitled to rely on information provided by
-                you and is not responsible for delays or deficiencies resulting
-                from inaccurate or incomplete inputs.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>4. Fees and Payment</h2>
-              <p>
-                Fees, expenses, invoicing cadence, and payment terms are outlined
-                in the applicable Engagement Agreement. Unless otherwise agreed,
-                invoices are due within thirty (30) days of issuance. Overdue
-                amounts may accrue interest at the lesser of 1.5% per month or
-                the maximum rate permitted by law. You are responsible for all
-                taxes, duties, and levies arising from the services, excluding
-                taxes based on our net income.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>5. Confidentiality</h2>
-              <p>
-                Each party agrees to maintain the confidentiality of non-public
-                information received from the other party in connection with the
-                services, using at least the same level of care it applies to its
-                own confidential information. Confidentiality obligations do not
-                apply to information that is or becomes publicly available
-                through no fault of the receiving party, is independently
-                developed without use of confidential information, or is
-                disclosed pursuant to legal process after providing reasonable
-                notice.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>6. Intellectual Property</h2>
-              <p>
-                Orient Blackstone retains ownership of pre-existing intellectual
-                property, methodologies, models, software, templates, and
-                know-how developed in the course of providing services. Upon full
-                payment, you receive a non-exclusive, non-transferable licence to
-                use deliverables for your internal business purposes. You may not
-                distribute, sublicense, or otherwise exploit our materials
-                without prior written consent.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>7. Regulatory Compliance</h2>
-              <p>
-                Orient Blackstone operates under applicable securities,
-                investment advisory, and anti-money laundering regulations. You
-                agree to cooperate with reasonable due diligence requests,
-                including providing information necessary to satisfy “know your
-                client” obligations and sanctions screening. We reserve the right
-                to suspend or terminate services if compliance concerns arise.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>8. Disclaimer of Warranties</h2>
-              <p>
-                Services, analyses, forecasts, and recommendations are provided
-                on an “as is” and “as available” basis. Orient Blackstone
-                disclaims all warranties, express or implied, including
-                merchantability, fitness for a particular purpose, and
-                non-infringement. Financial projections and forward-looking
-                statements are inherently uncertain; we do not guarantee outcomes
-                or performance.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>9. Limitation of Liability</h2>
-              <p>
-                To the fullest extent permitted by law, neither party will be
-                liable for any indirect, consequential, incidental, punitive, or
-                special damages, including loss of profits, revenue, goodwill, or
-                data, even if advised of the possibility of such damages. Orient
-                Blackstone’s aggregate liability arising under these Terms will
-                not exceed the fees paid to us for the services giving rise to
-                the claim during the twelve (12) months preceding the event.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>10. Indemnification</h2>
-              <p>
-                You agree to indemnify and hold Orient Blackstone, its affiliates,
-                partners, and personnel harmless from and against claims,
-                liabilities, costs, and expenses (including reasonable attorneys’
-                fees) arising out of your breach of these Terms, misuse of
-                deliverables, or violation of applicable law, except to the extent
-                resulting from our gross negligence or wilful misconduct.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>11. Term and Termination</h2>
-              <p>
-                These Terms apply for as long as you access our platforms or
-                until superseded by updated terms. Either party may terminate an
-                Engagement Agreement in accordance with its terms. Upon
-                termination or expiration, you must pay outstanding invoices,
-                cease using deliverables that you have not paid for, and return
-                or destroy confidential information as requested.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>12. Governing Law and Disputes</h2>
-              <p>
-                These Terms and any disputes arising from them are governed by
-                the laws of the State of New York, United States, without regard
-                to its conflict-of-law rules. The parties consent to the
-                exclusive jurisdiction of the state and federal courts located in
-                New York County, New York, for the adjudication of any dispute,
-                subject to each party’s right to seek injunctive relief in any
-                competent court.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>13. Changes to These Terms</h2>
-              <p>
-                We may revise these Terms from time to time. The “Last updated”
-                date will always reflect the most recent version. Material
-                changes will be communicated through appropriate channels.
-                Continued use of our services after changes take effect
-                constitutes acceptance of the revised Terms.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>14. Contact</h2>
-              <p>
-                Questions regarding these Terms or our services can be directed
-                to our legal and compliance team using the details below.
-              </p>
-              <div className="not-prose rounded-lg bg-neutral-50 p-6 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200">
-                <p className="mb-2 text-lg font-bold">{companyName}</p>
-                <p>575 Lexington Avenue, Suite 4200</p>
-                <p>New York, NY 10022, USA</p>
-                <p className="mt-2">P: +1 (212) 555-0198</p>
+      <div className="mx-auto max-w-4xl px-4 py-20">
+        <div className="space-y-12">
+          <TermsCard
+            title="1. Scope"
+            body={
+              <>
                 <p>
-                  E:{" "}
-                  <a
-                    href="mailto:legal@orientblackstone.com"
-                    className="text-primary-600 hover:text-primary-700 dark:text-primary-300 dark:hover:text-primary-200"
-                  >
-                    legal@orientblackstone.com
-                  </a>
+                  These Terms apply to access and use of our website, reports, events, and investment
+                  or corporate finance advisory services. Specific mandates are documented in a
+                  statement of work, engagement letter, or advisory agreement. If a conflict exists,
+                  the executed agreement prevails.
                 </p>
-              </div>
-            </div>
-          </section>
+              </>
+            }
+          />
+
+          <TermsCard
+            title="2. Eligibility and Authority"
+            body={
+              <>
+                <p>
+                  You represent that you are authorised to engage {SHORT_NAME} on behalf of your
+                  organisation, meet all regulatory eligibility criteria, and are at least 18 years of
+                  age. If you access our materials on behalf of an entity, you confirm you can bind
+                  that entity to these Terms.
+                </p>
+              </>
+            }
+          />
+
+          <TermsCard
+            title="3. Client Responsibilities"
+            body={
+              <>
+                <ul>
+                  <li>provide timely, accurate, and complete information required for our work;</li>
+                  <li>
+                    ensure decision makers are available to review deliverables and provide feedback;
+                  </li>
+                  <li>
+                    implement recommendations at your discretion and manage resulting business or
+                    investment decisions; and
+                  </li>
+                  <li>
+                    maintain compliance with all applicable laws, including securities, data
+                    protection, and anti-corruption requirements.
+                  </li>
+                </ul>
+                <p>
+                  {SHORT_NAME} may rely on information supplied by you and is not responsible for
+                  delays or costs arising from incomplete or inaccurate inputs.
+                </p>
+              </>
+            }
+          />
+
+          <TermsCard
+            title="4. Fees and Expenses"
+            body={
+              <>
+                <p>
+                  Fees, retainers, success-based compensation, and reimbursable expenses are defined
+                  in the applicable engagement documentation. Invoices are payable within the stated
+                  period; overdue balances may accrue interest at the lesser of 1.5% per month or the
+                  maximum rate permitted by law. You are responsible for taxes associated with our
+                  services other than taxes on {SHORT_NAME}&apos;s net income.
+                </p>
+              </>
+            }
+          />
+
+          <TermsCard
+            title="5. Intellectual Property"
+            body={
+              <>
+                <p>
+                  All methodologies, analyses, models, templates, and materials developed by{" "}
+                  {SHORT_NAME} remain our intellectual property. Subject to full payment, you receive a
+                  non-exclusive, non-transferable licence to use deliverables for internal business
+                  purposes. You may not distribute, publish, or resell deliverables without written
+                  consent.
+                </p>
+              </>
+            }
+          />
+
+          <TermsCard
+            title="6. Confidentiality"
+            body={
+              <>
+                <p>
+                  Each party will protect information designated as confidential or that reasonably
+                  should be understood as confidential. Confidential information may be disclosed to
+                  affiliates, advisers, or service providers bound by comparable obligations, or when
+                  required by law, regulation, or court order.
+                </p>
+              </>
+            }
+          />
+
+          <TermsCard
+            title="7. Regulatory Compliance"
+            body={
+              <>
+                <p>
+                  You agree to cooperate with due diligence, sanctions screening, and anti-money
+                  laundering requests required by {SHORT_NAME} or applicable regulators. We may suspend
+                  or terminate services if compliance concerns arise or if information is withheld.
+                </p>
+              </>
+            }
+          />
+
+          <TermsCard
+            title="8. Disclaimers"
+            body={
+              <>
+                <p>
+                  Services are provided on an "as is" basis without warranties of merchantability,
+                  fitness for a particular purpose, or non-infringement. Financial projections and
+                  forward-looking statements are inherently uncertain; {SHORT_NAME} does not guarantee
+                  outcomes or market performance.
+                </p>
+              </>
+            }
+          />
+
+          <TermsCard
+            title="9. Limitation of Liability"
+            body={
+              <>
+                <p>
+                  To the maximum extent permitted by law, neither party will be liable for indirect,
+                  consequential, punitive, or special damages, including loss of profits, revenue, or
+                  goodwill. {SHORT_NAME}&apos;s aggregate liability under these Terms will not exceed
+                  fees paid for the services that gave rise to the claim during the twelve months prior
+                  to the event.
+                </p>
+              </>
+            }
+          />
+
+          <TermsCard
+            title="10. Indemnification"
+            body={
+              <>
+                <p>
+                  You will indemnify and hold {SHORT_NAME}, its affiliates, and personnel harmless from
+                  claims, losses, and expenses (including reasonable attorneys&apos; fees) arising out
+                  of your breach of these Terms, misuse of deliverables, or violation of law, except to
+                  the extent caused by our gross negligence or wilful misconduct.
+                </p>
+              </>
+            }
+          />
+
+          <TermsCard
+            title="11. Term and Termination"
+            body={
+              <>
+                <p>
+                  These Terms remain in effect while you access our platforms or until replaced by an
+                  updated version. Either party may terminate an engagement per the notice provisions
+                  in the governing agreement. Sections that by their nature should survive termination
+                  (including confidentiality, IP, limitation of liability, and governing law) remain in
+                  effect.
+                </p>
+              </>
+            }
+          />
+
+          <TermsCard
+            title="12. Governing Law and Dispute Resolution"
+            body={
+              <>
+                <p>
+                  These Terms are governed by the laws of the State of New York, without regard to its
+                  conflict-of-laws rules. The parties consent to the exclusive jurisdiction of state
+                  and federal courts located in New York County for disputes arising from these Terms,
+                  subject to any alternative dispute resolution process set forth in the applicable
+                  engagement agreement.
+                </p>
+              </>
+            }
+          />
+
+          <TermsCard
+            title="13. Notices"
+            body={
+              <>
+                <p>
+                  Formal notices under these Terms should be delivered in writing to the contact
+                  details below or to any updated address communicated by either party. Routine updates
+                  may be provided via email or secure client portals.
+                </p>
+                <div className="mt-6 rounded-2xl border border-white/10 bg-black/35 p-6 text-sm text-neutral-200">
+                  <p className="text-base font-semibold text-white">{COMPANY_NAME}</p>
+                  <p>{STREET_ADDRESS}</p>
+                  <p>{CITY_ADDRESS}, USA</p>
+                  <p className="mt-2">T: {CONTACT_PHONE}</p>
+                  <p className="mt-1">
+                    E:{" "}
+                    <a
+                      href={`mailto:${CONTACT_EMAIL}`}
+                      className="text-primary-300 underline decoration-primary-500/40 underline-offset-4 hover:text-primary-200"
+                    >
+                      {CONTACT_EMAIL}
+                    </a>
+                  </p>
+                </div>
+              </>
+            }
+          />
         </div>
       </div>
     </div>
+  );
+}
+
+function TermsCard({
+  title,
+  body,
+}: {
+  title: string;
+  body: ReactNode;
+}) {
+  return (
+    <section className="rounded-3xl border border-white/10 bg-[#0f0f0f] p-8 shadow-soft">
+      <div className="space-y-4 prose prose-invert max-w-none">
+        <h2 className="font-semibold text-white">{title}</h2>
+        {body}
+      </div>
+    </section>
   );
 }

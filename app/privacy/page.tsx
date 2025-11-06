@@ -1,281 +1,300 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
+
+const COMPANY_NAME = "Radiant Soaring Fund Management LLC";
+const SHORT_NAME = "RSFM";
+const CONTACT_EMAIL = "privacy@radiantsoaringfm.com";
+const CONTACT_PHONE = "+1 (212) 555-0198";
+const STREET_ADDRESS = "575 Lexington Avenue, Suite 4200";
+const CITY_ADDRESS = "New York, NY 10022";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Orient Blackstone Asset Management",
+  title: "Privacy Policy | RSFM",
   description:
-    "Understand how Orient Blackstone Asset Management LLC collects, uses, and safeguards personal data across our advisory relationships and digital properties.",
+    "Understand how RSFM collects, governs, and safeguards personal data supporting our institutional advisory mandates and digital platforms.",
 };
-
-const controllerName = "Orient Blackstone Asset Management LLC";
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-white py-20 px-4 dark:bg-neutral-950 md:px-8">
-      <div className="mx-auto max-w-4xl">
-        <header className="mb-12">
-          <h1 className="mb-4 text-4xl font-bold text-neutral-800 dark:text-neutral-100 md:text-5xl">
+    <div className="min-h-screen bg-app text-fg">
+      <div className="border-b border-white/10 bg-[#050505] py-24">
+        <div className="mx-auto max-w-4xl px-4 text-center">
+          <h1 className="text-4xl font-semibold uppercase tracking-[0.35em] text-white sm:text-5xl">
             Privacy Policy
           </h1>
-          <p className="text-lg text-neutral-600 dark:text-neutral-400">
-            Last updated: July 13, 2025
+          <p className="mt-6 text-sm uppercase tracking-[0.4em] text-neutral-400">
+            Last updated: January 15, 2025
           </p>
-        </header>
-
-        <div className="space-y-10">
-          <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
-            {controllerName} (“Orient Blackstone”, “we”, “us”, or “our”) is
-            committed to protecting the privacy of clients, prospective clients,
-            and visitors to our digital properties. This Privacy Policy explains
-            how we collect, use, disclose, and safeguard personal data in the
-            course of delivering institutional asset management and advisory
-            services.
+          <p className="mt-6 text-base leading-relaxed text-neutral-300">
+            {COMPANY_NAME} (referred to as "{SHORT_NAME}", "we", or "our") protects the confidentiality
+            of client, prospect, and website visitor information. This Privacy Policy explains how we
+            collect, use, disclose, and secure personal data across our advisory services and digital
+            experiences.
           </p>
+        </div>
+      </div>
 
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>1. Scope and Controller</h2>
-              <p>
-                This Policy applies to personal data processed by Orient
-                Blackstone in connection with our advisory services, marketing
-                initiatives, events, and the websites owned or operated by us.
-                Orient Blackstone Asset Management LLC, headquartered at 575
-                Lexington Avenue, Suite 4200, New York, NY 10022, United States,
-                is the data controller unless we notify you otherwise.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>2. Information We Collect</h2>
-              <p>
-                The personal data we collect depends on how you interact with us
-                and may include:
-              </p>
-              <ul>
-                <li>
-                  <strong>Direct interactions:</strong> contact details, role,
-                  company affiliation, investment objectives, and any information
-                  shared during consultations, diligence, or onboarding
-                  processes.
-                </li>
-                <li>
-                  <strong>Digital engagement data:</strong> technical
-                  identifiers, geolocation derived from IP address, device
-                  information, usage data, browsing patterns, and interactions
-                  with our online materials.
-                </li>
-                <li>
-                  <strong>Third-party sources:</strong> information from industry
-                  databases, event partners, referral networks, and compliance
-                  screening providers, subject to applicable law.
-                </li>
-                <li>
-                  <strong>Aggregated insights:</strong> statistical or
-                  demographic data derived from personal information that does
-                  not identify an individual unless combined with other data.
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>3. How We Use Personal Data</h2>
-              <p>We process personal data to:</p>
-              <ul>
-                <li>deliver advisory mandates and manage client relationships;</li>
-                <li>
-                  evaluate investment suitability, risk alignment, and compliance
-                  requirements;
-                </li>
-                <li>
-                  provide insights, market commentary, and thought leadership
-                  that align with your stated interests;
-                </li>
-                <li>respond to inquiries, schedule meetings, and manage events;</li>
-                <li>
-                  operate, secure, and enhance our websites and digital channels;
-                </li>
-                <li>
-                  comply with legal, regulatory, audit, and risk management
-                  obligations.
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>4. Legal Bases for Processing</h2>
-              <p>
-                Where required by applicable law, we rely on one or more of the
-                following legal bases to process personal data:
-              </p>
-              <ul>
-                <li>your consent, which you may revoke at any time;</li>
-                <li>performance of a contract or steps taken at your request;</li>
-                <li>
-                  our legitimate interests in operating and growing our business,
-                  balanced against your rights and freedoms;
-                </li>
-                <li>compliance with legal or regulatory obligations;</li>
-                <li>
-                  protection of vital interests or those of another person, when
-                  necessary.
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>5. How We Share Information</h2>
-              <p>
-                We may disclose personal data to trusted recipients, each bound
-                by appropriate confidentiality and data protection obligations,
-                including:
-              </p>
-              <ul>
-                <li>affiliated entities within the Orient Blackstone group;</li>
-                <li>
-                  professional advisers, placement agents, technology providers,
-                  and analytics partners who support our services;
-                </li>
-                <li>
-                  regulators, auditors, and other authorities when disclosure is
-                  required by law or in the defence of legal claims;
-                </li>
-                <li>
-                  potential counterparties or service providers during due
-                  diligence, subject to confidentiality controls.
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>6. International Transfers</h2>
-              <p>
-                Orient Blackstone operates globally. When personal data is
-                transferred across borders, we implement appropriate safeguards
-                such as standard contractual clauses, intra-group agreements, or
-                other mechanisms recognised by applicable data protection laws.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>7. Data Retention</h2>
-              <p>
-                We retain personal data only for as long as necessary to fulfil
-                the purposes outlined in this Policy, comply with legal and
-                regulatory requirements, and manage risk. Retention periods
-                differ depending on the type of engagement and jurisdictional
-                mandates.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>8. Safeguarding Measures</h2>
-              <p>
-                Our security programme combines administrative, technical, and
-                physical controls designed to protect personal data against
-                unauthorised access, alteration, disclosure, or destruction.
-                While we strive to protect information, no online transmission
-                or storage system can be guaranteed to be 100% secure.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>9. Marketing Preferences</h2>
-              <p>
-                We may send insights or event invitations that align with your
-                interests. You can opt out of marketing communications at any
-                time by using the unsubscribe links provided or by contacting us
-                directly. Opting out from marketing does not affect transactional
-                or service-related communications.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>10. Your Privacy Rights</h2>
-              <p>
-                Subject to local law, you may have rights to access, correct,
-                update, restrict, object to, or request deletion of your personal
-                data, as well as the right to data portability. You may also
-                lodge a complaint with your supervisory authority if you believe
-                we have processed your information in violation of applicable
-                law.
-              </p>
-              <p>
-                To exercise these rights, please contact us using the details in
-                Section 12. We will respond to legitimate requests within the
-                timeframes required by law and may request additional information
-                to verify your identity.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>11. Cookies and Similar Technologies</h2>
-              <p>
-                Our websites use cookies, pixels, and similar technologies to
-                deliver core functionality, understand engagement, and tailor
-                content. For further details, including controls available to
-                you, please refer to our Cookie Policy.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>12. Updates to This Policy</h2>
-              <p>
-                We may revise this Policy from time to time to reflect changes in
-                our practices or regulatory requirements. Any updates will be
-                posted on this page with a revised “Last updated” date. Material
-                changes may be communicated through additional channels.
-              </p>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>13. Contact Details</h2>
-              <p>
-                Please keep us informed if your personal data changes or if you
-                have questions about this Policy. You can reach our privacy
-                office at:
-              </p>
-              <div className="not-prose rounded-lg bg-neutral-50 p-6 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200">
-                <p className="mb-2 text-lg font-bold">{controllerName}</p>
-                <p>575 Lexington Avenue, Suite 4200</p>
-                <p>New York, NY 10022, USA</p>
-                <p className="mt-2">P: +1 (212) 555-0198</p>
+      <div className="mx-auto max-w-4xl px-4 py-20">
+        <div className="space-y-12">
+          <PolicyCard
+            title="1. Scope and Controller"
+            body={
+              <>
                 <p>
-                  E:{" "}
-                  <a
-                    href="mailto:privacy@orientblackstone.com"
-                    className="text-primary-600 hover:text-primary-700 dark:text-primary-300 dark:hover:text-primary-200"
-                  >
-                    privacy@orientblackstone.com
-                  </a>
+                  This Policy applies to personal data processed by {SHORT_NAME} in connection with
+                  our capital advisory mandates, thought leadership, events, and platforms located at
+                  radiantsoaringfm.com. {COMPANY_NAME}, headquartered at {STREET_ADDRESS}, {CITY_ADDRESS},
+                  acts as the data controller unless we state otherwise.
                 </p>
-              </div>
-            </div>
-          </section>
+                <p>
+                  We operate in multiple jurisdictions and maintain governance procedures to align
+                  with the privacy expectations of institutional investors, corporate counterparties,
+                  and regulatory authorities.
+                </p>
+              </>
+            }
+          />
+
+          <PolicyCard
+            title="2. Categories of Personal Data"
+            body={
+              <>
+                <p>
+                  The data we process depends on how you engage with us and may include the following
+                  categories:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Professional identifiers:</strong> name, title, organisation, contact
+                    details, and jurisdiction of residence.
+                  </li>
+                  <li>
+                    <strong>Engagement records:</strong> notes from consultations, mandate
+                    documentation, diligence materials, and communications history.
+                  </li>
+                  <li>
+                    <strong>Digital interaction data:</strong> device, browser, and IP information,
+                    site usage analytics, and preferences derived from cookies or similar
+                    technologies.
+                  </li>
+                  <li>
+                    <strong>Third-party insights:</strong> compliance screening outputs, public and
+                    proprietary database checks, and professional references obtained in accordance
+                    with law.
+                  </li>
+                </ul>
+              </>
+            }
+          />
+
+          <PolicyCard
+            title="3. Purposes of Processing"
+            body={
+              <>
+                <p>We use personal data to:</p>
+                <ul>
+                  <li>structure and execute investment or corporate finance mandates;</li>
+                  <li>communicate analyses, reporting updates, and market intelligence;</li>
+                  <li>perform diligence, suitability, anti-money-laundering, and sanctions checks;</li>
+                  <li>manage events, subscriptions, and professional networks;</li>
+                  <li>administer, secure, and enhance our digital interfaces; and</li>
+                  <li>meet legal, regulatory, audit, and risk governance obligations.</li>
+                </ul>
+              </>
+            }
+          />
+
+          <PolicyCard
+            title="4. Lawful Bases"
+            body={
+              <>
+                <p>
+                  Where required, processing is grounded in one or more lawful bases: performance of a
+                  contract, legitimate interest in operating our advisory practice, compliance with
+                  legal duties, protection of vital interests, or your explicit consent. We evaluate
+                  and balance legitimate interests against potential impacts on your rights.
+                </p>
+              </>
+            }
+          />
+
+          <PolicyCard
+            title="5. Information Sharing"
+            body={
+              <>
+                <p>We disclose personal data to trusted recipients subject to confidentiality:</p>
+                <ul>
+                  <li>
+                    affiliates and portfolio entities assisting with mandate execution or risk
+                    oversight;
+                  </li>
+                  <li>
+                    professional advisers, placement agents, technology vendors, data hosts, and
+                    analytics partners that support our operations;
+                  </li>
+                  <li>
+                    regulators, auditors, and legal authorities where required or to safeguard our
+                    rights; and
+                  </li>
+                  <li>
+                    potential transaction counterparties under strict confidentiality frameworks.
+                  </li>
+                </ul>
+                <p>
+                  We do not sell personal data, nor do we allow service providers to use it for their
+                  own unrelated marketing.
+                </p>
+              </>
+            }
+          />
+
+          <PolicyCard
+            title="6. International Data Transfers"
+            body={
+              <>
+                <p>
+                  Transfers outside your home jurisdiction may occur when leveraging our global
+                  infrastructure or third-party platforms. We apply safeguards such as standard
+                  contractual clauses, intra-group agreements, or other mechanisms recognised by the
+                  relevant authorities to protect transferred data.
+                </p>
+              </>
+            }
+          />
+
+          <PolicyCard
+            title="7. Safeguards"
+            body={
+              <>
+                <p>
+                  {SHORT_NAME} maintains layered administrative, technical, and physical controls to
+                  protect personal data against unauthorised access, alteration, or loss. These
+                  measures include restricted access, secure infrastructure, encryption, incident
+                  response protocols, and continual monitoring of cyber and operational risks.
+                </p>
+              </>
+            }
+          />
+
+          <PolicyCard
+            title="8. Retention"
+            body={
+              <>
+                <p>
+                  We retain personal data only as long as required to fulfil the purposes described in
+                  this Policy, satisfy legal or regulatory obligations, maintain accurate records, and
+                  resolve disputes. Retention schedules differ depending on mandate type and regional
+                  requirements.
+                </p>
+              </>
+            }
+          />
+
+          <PolicyCard
+            title="9. Marketing Preferences"
+            body={
+              <>
+                <p>
+                  We may send briefings or event invitations aligned with your role or interests. You
+                  can adjust preferences or opt out at any time via unsubscribe links or by emailing{" "}
+                  <a
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    className="text-primary-300 underline decoration-primary-500/40 underline-offset-4 hover:text-primary-200"
+                  >
+                    {CONTACT_EMAIL}
+                  </a>
+                  . Transactional or service notices will continue where permitted by law.
+                </p>
+              </>
+            }
+          />
+
+          <PolicyCard
+            title="10. Your Rights"
+            body={
+              <>
+                <p>
+                  Depending on your jurisdiction, you may have rights to access, correct, restrict,
+                  delete, or object to the processing of your personal data, as well as to request
+                  data portability. We will respond to verifiable requests within the timelines
+                  required by applicable regulation and may request supporting information to confirm
+                  your identity.
+                </p>
+              </>
+            }
+          />
+
+          <PolicyCard
+            title="11. Cookies and Analytics"
+            body={
+              <>
+                <p>
+                  We use cookies, pixels, and related technologies to deliver secure functionality and
+                  measure engagement. More detail, including ways to manage your preferences, is
+                  available in our Cookie Policy.
+                </p>
+              </>
+            }
+          />
+
+          <PolicyCard
+            title="12. Updates"
+            body={
+              <>
+                <p>
+                  We review this Policy periodically. Significant changes will be communicated through
+                  our website or, where appropriate, through direct outreach. The "Last updated" date
+                  reflects the latest revision.
+                </p>
+              </>
+            }
+          />
+
+          <PolicyCard
+            title="13. Contact"
+            body={
+              <>
+                <p>
+                  Questions regarding this Policy or your personal data can be directed to our privacy
+                  office using the details below.
+                </p>
+                <div className="mt-6 rounded-2xl border border-white/10 bg-black/35 p-6 text-sm text-neutral-200">
+                  <p className="text-base font-semibold text-white">{COMPANY_NAME}</p>
+                  <p>{STREET_ADDRESS}</p>
+                  <p>{CITY_ADDRESS}, USA</p>
+                  <p className="mt-2">T: {CONTACT_PHONE}</p>
+                  <p className="mt-1">
+                    E:{" "}
+                    <a
+                      href={`mailto:${CONTACT_EMAIL}`}
+                      className="text-primary-300 underline decoration-primary-500/40 underline-offset-4 hover:text-primary-200"
+                    >
+                      {CONTACT_EMAIL}
+                    </a>
+                  </p>
+                </div>
+              </>
+            }
+          />
         </div>
       </div>
     </div>
+  );
+}
+
+function PolicyCard({
+  title,
+  body,
+}: {
+  title: string;
+  body: ReactNode;
+}) {
+  return (
+    <section className="rounded-3xl border border-white/10 bg-[#0f0f0f] p-8 shadow-soft">
+      <div className="space-y-4 prose prose-invert max-w-none">
+        <h2 className="font-semibold text-white">{title}</h2>
+        {body}
+      </div>
+    </section>
   );
 }

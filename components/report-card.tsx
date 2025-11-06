@@ -40,72 +40,80 @@ export function ReportCard({
     <motion.div
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
-      className={`group bg-surface rounded-xl overflow-hidden shadow-soft hover:shadow-elevated border border-subtle transition-all duration-300 ${className}`}
+      className={`group flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-[#0f0f0f] shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary-400 ${className}`}
     >
-      <Link href={`/reports/${report.id}`}>
-        {/* Fixed aspect ratio cover - wider format */}
+      <Link href={`/reports/${report.id}`} className="flex h-full flex-col">
         <div className="relative w-full aspect-[4/3]">
           <ReportCover
             title={report.title}
             subtitle={report.subtitle}
-            category={reportCategories.find(cat => cat.value === report.category)?.label || report.category}
+            category={
+              reportCategories.find((cat) => cat.value === report.category)?.label ||
+              report.category
+            }
             publishDate={report.publishDate}
             variant={coverVariants[variantIndex]}
             gradient={gradients[gradientIndex]}
           />
           {report.featured && (
-            <div className="absolute top-3 right-3">
-              <Star className="h-5 w-5 text-yellow-500 fill-current" />
+            <div className="absolute right-4 top-4">
+              <span className="inline-flex items-center gap-1 rounded-full bg-primary-500/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.35em] text-black">
+                <Star className="h-3 w-3" />
+                Featured
+              </span>
             </div>
           )}
         </div>
-        
-        {/* Content area */}
-        <div className="p-5">
-          <h3 className="text-lg font-bold text-fg mb-2 group-hover:text-primary-600 transition-colors line-clamp-2">
-            {report.title}
-          </h3>
-          
-          {showExcerpt && (
-            <p className="text-sm text-muted mb-3 line-clamp-2">
-              {report.excerpt}
-            </p>
-          )}
-          
-          {/* Metadata */}
-          <div className="flex items-center gap-3 text-xs text-subtle mb-3">
-            <div className="flex items-center gap-1">
-              <User className="h-3 w-3" />
-              {report.author.name}
-            </div>
-            <div className="flex items-center gap-1">
-              <Calendar className="h-3 w-3" />
-              {formatDate(report.publishDate)}
-            </div>
-            <div className="flex items-center gap-1">
-              <FileText className="h-3 w-3" />
-              {report.fileSize}
-            </div>
-          </div>
-          
-          {/* Tags */}
-          <div className="flex flex-wrap gap-1 mb-3">
-            {report.tags.slice(0, 3).map((tag) => (
-              <span key={tag} className="px-2 py-1 bg-surface-subtle text-muted text-xs rounded">
-                {tag}
-              </span>
-            ))}
-            {report.tags.length > 3 && (
-              <span className="px-2 py-1 bg-surface-subtle text-muted text-xs rounded">
-                +{report.tags.length - 3}
-              </span>
+
+        <div className="flex h-full flex-col justify-between gap-6 p-6 sm:p-7">
+          <div className="space-y-3">
+            <h3 className="text-lg font-semibold uppercase tracking-[0.3em] text-white transition-colors duration-200 group-hover:text-primary-300">
+              {report.title}
+            </h3>
+
+            {showExcerpt && (
+              <p className="text-sm leading-relaxed text-neutral-400">
+                {report.excerpt}
+              </p>
             )}
           </div>
-          
-          {/* Action */}
-          <div className="flex items-center gap-2 text-primary-600 dark:text-primary-300 font-medium text-sm hover:gap-3 transition-all duration-200">
-            View Report
-            <Download className="h-4 w-4" />
+
+          <div className="space-y-4">
+            <div className="flex flex-wrap items-center gap-3 text-[11px] uppercase tracking-[0.35em] text-neutral-500">
+              <span className="flex items-center gap-1">
+                <User className="h-4 w-4 text-neutral-500" />
+                {report.author.name}
+              </span>
+              <span className="flex items-center gap-1">
+                <Calendar className="h-4 w-4 text-neutral-500" />
+                {formatDate(report.publishDate)}
+              </span>
+              <span className="flex items-center gap-1">
+                <FileText className="h-4 w-4 text-neutral-500" />
+                {report.fileSize}
+              </span>
+            </div>
+
+            <div className="flex flex-wrap gap-2 text-[10px] uppercase tracking-[0.35em] text-neutral-400">
+              {report.tags.slice(0, 4).map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-white/12 bg-black/35 px-3 py-1"
+                >
+                  {tag}
+                </span>
+              ))}
+              {report.tags.length > 4 && (
+                <span className="rounded-full border border-white/12 bg-black/35 px-3 py-1">
+                  +{report.tags.length - 4} more
+                </span>
+              )}
+            </div>
+
+            <div className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-white transition-all duration-200 group-hover:text-primary-300">
+              View Report
+              <Download className="h-4 w-4" />
+            </div>
           </div>
         </div>
       </Link>
@@ -113,84 +121,91 @@ export function ReportCard({
   );
 }
 
-function FeaturedReportCard({ report, className }: { report: Report; className?: string }) {
-  const coverVariants = ['hexagon', 'wave', 'circle', 'diamond', 'organic'] as const;
+function FeaturedReportCard({
+  report,
+  className,
+}: {
+  report: Report;
+  className?: string;
+}) {
+  const coverVariants = ["hexagon", "wave", "circle", "diamond", "organic"] as const;
   const gradients = [
-    'from-primary-600 to-amber-500',
-    'from-primary-700 to-primary-900',
-    'from-amber-500 to-primary-700',
-    'from-primary-600 to-rose-500',
-    'from-neutral-900 to-primary-600'
+    "from-primary-600 to-amber-500",
+    "from-primary-700 to-primary-900",
+    "from-amber-500 to-primary-700",
+    "from-primary-600 to-rose-500",
+    "from-neutral-900 to-primary-600",
   ];
-  
-  const variantIndex = Math.abs(report.id.split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % coverVariants.length;
-  const gradientIndex = Math.abs(report.id.split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % gradients.length;
-  
+
+  const variantIndex =
+    Math.abs(
+      report.id.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0)
+    ) % coverVariants.length;
+  const gradientIndex =
+    Math.abs(
+      report.id.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0)
+    ) % gradients.length;
+
   return (
     <motion.div
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
-      className={`group bg-surface rounded-2xl overflow-hidden shadow-soft hover:shadow-elevated border border-subtle transition-all duration-300 h-full ${className}`}
+      className={`group overflow-hidden rounded-3xl border border-white/10 bg-[#0f0f0f] shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary-400 ${className}`}
     >
-      <Link href={`/reports/${report.id}`}>
-        <div className="flex flex-col lg:flex-row h-full">
-          {/* Fixed aspect ratio cover - maintains wider ratio */}
-          <div className="lg:w-1/2 relative w-full aspect-[4/3] lg:aspect-[4/3]">
-            <ReportCover
-              title={report.title}
-              subtitle={report.subtitle}
-              category={reportCategories.find(cat => cat.value === report.category)?.label || report.category}
-              publishDate={report.publishDate}
-              variant={coverVariants[variantIndex]}
-              gradient={gradients[gradientIndex]}
-            />
-            <div className="absolute top-4 left-4">
-              <span className="px-3 py-1 bg-yellow-500 text-white text-xs font-medium rounded-full flex items-center gap-1">
-                <Star className="h-3 w-3" />
-                Featured
-              </span>
-            </div>
+      <Link href={`/reports/${report.id}`} className="flex h-full flex-col lg:flex-row">
+        <div className="relative aspect-[4/3] w-full lg:aspect-[4/3] lg:w-1/2">
+          <ReportCover
+            title={report.title}
+            subtitle={report.subtitle}
+            category={
+              reportCategories.find((cat) => cat.value === report.category)?.label ||
+              report.category
+            }
+            publishDate={report.publishDate}
+            variant={coverVariants[variantIndex]}
+            gradient={gradients[gradientIndex]}
+          />
+          <div className="absolute left-4 top-4">
+            <span className="inline-flex items-center gap-1 rounded-full bg-primary-500/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.35em] text-black">
+              <Star className="h-3 w-3" />
+              Featured
+            </span>
           </div>
-          
-          {/* Content */}
-          <div className="lg:w-1/2 p-6 lg:p-8 flex flex-col justify-between bg-surface">
-            <div>
-              <div className="flex items-center gap-2 mb-3">
-                <span className="px-2 py-1 bg-primary-100/70 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200 text-xs rounded">
-                  {reportCategories.find(cat => cat.value === report.category)?.label || report.category}
-                </span>
-              </div>
-              
-              <h3 className="text-xl font-bold text-fg mb-2 group-hover:text-primary-600 transition-colors">
-                {report.title}
-              </h3>
-              
-              <p className="text-sm text-muted mb-4 line-clamp-3">
-                {report.excerpt}
-              </p>
-            </div>
-            
-            <div>
-              <div className="flex items-center gap-4 text-xs text-subtle mb-4">
-                <div className="flex items-center gap-1">
-                  <Calendar className="h-3 w-3" />
-                  {formatDate(report.publishDate)}
-                </div>
-                <div className="flex items-center gap-1">
-                  <Clock className="h-3 w-3" />
-                  {report.readTime}
-                </div>
-                <div className="flex items-center gap-1">
-                  <FileText className="h-3 w-3" />
-                  {report.fileSize}
-                </div>
-              </div>
-              
-              <div className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
-                <Download className="h-4 w-4" />
-                View Report
-              </div>
-            </div>
+        </div>
+
+        <div className="flex h-full flex-1 flex-col justify-between gap-6 p-6 sm:p-8">
+          <div className="space-y-4">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-black/35 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.35em] text-neutral-200">
+              {reportCategories.find((cat) => cat.value === report.category)?.label ||
+                report.category}
+            </span>
+
+            <h3 className="text-2xl font-semibold uppercase tracking-[0.3em] text-white transition-colors duration-200 group-hover:text-primary-300">
+              {report.title}
+            </h3>
+
+            <p className="text-sm leading-relaxed text-neutral-400">
+              {report.excerpt}
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-between gap-4 text-[11px] uppercase tracking-[0.35em] text-neutral-500">
+            <span className="flex items-center gap-1">
+              <Calendar className="h-4 w-4 text-neutral-500" />
+              {formatDate(report.publishDate)}
+            </span>
+            <span className="flex items-center gap-1">
+              <Clock className="h-4 w-4 text-neutral-500" />
+              {report.readTime}
+            </span>
+            <span className="flex items-center gap-1">
+              <FileText className="h-4 w-4 text-neutral-500" />
+              {report.fileSize}
+            </span>
+            <span className="inline-flex items-center gap-3 rounded-full border border-white/20 px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-white transition-colors duration-200 hover:border-primary-400">
+              View Report
+              <Download className="h-4 w-4" />
+            </span>
           </div>
         </div>
       </Link>
@@ -216,42 +231,47 @@ export function RelatedReportCard({ report }: { report: Report }) {
     <motion.div
       whileHover={{ y: -3 }}
       transition={{ duration: 0.3 }}
-      className="group bg-white dark:bg-neutral-900 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+      className="group overflow-hidden rounded-3xl border border-white/10 bg-[#0f0f0f] shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary-400"
     >
-      <Link href={`/reports/${report.id}`}>
-        {/* Fixed aspect ratio cover - wider format */}
+      <Link href={`/reports/${report.id}`} className="flex h-full flex-col">
         <div className="relative w-full aspect-[4/3]">
           <ReportCover
             title={report.title}
             subtitle={report.subtitle}
-            category={reportCategories.find(cat => cat.value === report.category)?.label || report.category}
+            category={
+              reportCategories.find((cat) => cat.value === report.category)?.label ||
+              report.category
+            }
             publishDate={report.publishDate}
             variant={coverVariants[variantIndex]}
             gradient={gradients[gradientIndex]}
           />
         </div>
-        
-        <div className="p-4">
-          <span className="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200 text-xs rounded mb-2 inline-block">
-            {reportCategories.find(cat => cat.value === report.category)?.label || report.category}
+
+        <div className="flex h-full flex-col justify-between gap-4 p-6">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-black/35 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.35em] text-neutral-200">
+            {reportCategories.find((cat) => cat.value === report.category)?.label ||
+              report.category}
           </span>
-          <h3 className="font-bold text-neutral-800 dark:text-neutral-100 mb-2 line-clamp-2">
-            {report.title}
-          </h3>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-3 line-clamp-2">
-            {report.excerpt}
-          </p>
-          <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-500 mb-3">
-            <div className="flex items-center gap-1">
-              <Calendar className="h-3 w-3" />
-              {formatDate(report.publishDate)}
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="h-3 w-3" />
-              {report.readTime}
-            </div>
+          <div className="space-y-3">
+            <h3 className="text-lg font-semibold uppercase tracking-[0.3em] text-white">
+              {report.title}
+            </h3>
+            <p className="text-sm leading-relaxed text-neutral-400 line-clamp-3">
+              {report.excerpt}
+            </p>
           </div>
-          <div className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-300 font-medium text-sm hover:gap-3 transition-all duration-200">
+          <div className="flex flex-wrap items-center gap-3 text-[11px] uppercase tracking-[0.35em] text-neutral-500">
+            <span className="flex items-center gap-1">
+              <Calendar className="h-4 w-4 text-neutral-500" />
+              {formatDate(report.publishDate)}
+            </span>
+            <span className="flex items-center gap-1">
+              <Clock className="h-4 w-4 text-neutral-500" />
+              {report.readTime}
+            </span>
+          </div>
+          <div className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-white transition-all duration-200 group-hover:text-primary-300">
             View Report
             <Download className="h-4 w-4" />
           </div>

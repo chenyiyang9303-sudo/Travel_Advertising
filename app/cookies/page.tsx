@@ -1,248 +1,214 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>2. Cookies We Use</h2>
-              <p>
-                The specific cookies served may vary depending on the sections of
-                our website you visit. We categorise cookies as follows:
-              </p>
-              <ul>
-                <li>
-                  <strong>Strictly necessary:</strong> Enable core functionality
-                  such as page navigation, secure login, and session management.
-                  These cookies are essential and cannot be switched off in our
-                  systems.
-                </li>
-                <li>
-                  <strong>Performance and analytics:</strong> Collect aggregated
-                  data on how visitors use our site so we can diagnose performance
-                  issues, understand engagement, and improve content.
-                </li>
-                <li>
-                  <strong>Functional:</strong> Remember your preferences (for
-                  example, language or region) and enhance your experience.
-                </li>
-                <li>
-                  <strong>Marketing and personalisation:</strong> Support targeted
-                  communications, measure campaign effectiveness, and tailor
-                  content based on your interactions with Orient Blackstone.
-                </li>
-              </ul>
-            </div>
-          </section>
-
+const COMPANY_NAME = "Radiant Soaring Fund Management LLC";
+const SHORT_NAME = "RSFM";
+const CONTACT_EMAIL = "privacy@radiantsoaringfm.com";
+const STREET_ADDRESS = "575 Lexington Avenue, Suite 4200";
+const CITY_ADDRESS = "New York, NY 10022";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | Orient Blackstone Asset Management",
+  title: "Cookie Policy | RSFM",
   description:
-    "Learn how Orient Blackstone Asset Management LLC uses cookies and similar technologies, the categories we rely on, and the choices available to you.",
+    "Review how RSFM deploys cookies and similar technologies, the categories we rely on, and the controls available to you.",
 };
-
-const contactEmail = "privacy@orientblackstone.com";
 
 export default function CookiePolicy() {
   return (
-    <div className="min-h-screen bg-white py-20 px-4 dark:bg-neutral-950 md:px-8">
-      <div className="mx-auto max-w-4xl">
-        <header className="mb-12">
-          <h1 className="mb-4 text-4xl font-bold text-neutral-800 dark:text-neutral-100 md:text-5xl">
+    <div className="min-h-screen bg-app text-fg">
+      <div className="border-b border-white/10 bg-[#050505] py-24">
+        <div className="mx-auto max-w-4xl px-4 text-center">
+          <h1 className="text-4xl font-semibold uppercase tracking-[0.35em] text-white sm:text-5xl">
             Cookie Policy
           </h1>
-          <p className="text-lg text-neutral-600 dark:text-neutral-400">
-            Last updated: July 13, 2025
+          <p className="mt-6 text-sm uppercase tracking-[0.4em] text-neutral-400">
+            Last updated: January 15, 2025
           </p>
-        </header>
-
-        <div className="space-y-10">
-          <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
-            Orient Blackstone Asset Management LLC (“Orient Blackstone”, “we”,
-            “us”, or “our”) uses cookies and related technologies to operate and
-            enhance our websites, deliver secure experiences, and provide
-            relevant insights. This Cookie Policy explains what these
-            technologies are, why we use them, and the options available to you.
+          <p className="mt-6 text-base leading-relaxed text-neutral-300">
+            {SHORT_NAME} uses cookies, pixels, and related technologies to deliver secure experiences,
+            analyse engagement, and tailor institutional insights. This Policy explains what those
+            technologies are, how we use them, and the options available to you.
           </p>
+        </div>
+      </div>
 
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>1. What Are Cookies?</h2>
-              <p>
-                Cookies are small data files that a website stores on your device.
-                They serve numerous purposes, from remembering your preferences to
-                enabling secure areas of the site. Cookies can be “session”
-                cookies, which expire when you close your browser, or
-                “persistent” cookies, which remain on your device until they are
-                deleted or reach their expiration date.
-              </p>
-              <p>
-                We also deploy web beacons, pixels, and similar technologies that
-                operate in conjunction with cookies to gather usage analytics and
-                measure campaign effectiveness.
-              </p>
-            </div>
-          </section>
+      <div className="mx-auto max-w-4xl px-4 py-20">
+        <div className="space-y-12">
+          <CookieCard
+            title="1. What Are Cookies?"
+            body={
+              <>
+                <p>
+                  Cookies are small text files placed on your device when you visit a website. They can
+                  be session cookies (which expire when you close your browser) or persistent cookies
+                  (which remain until deleted or expired). We also use web beacons, tags, and similar
+                  technologies to measure campaign effectiveness and ensure platform resilience.
+                </p>
+              </>
+            }
+          />
 
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>2. Cookies We Use</h2>
-              <p>
-                The specific cookies served may vary depending on the sections of
-                our website you visit. We categorise cookies as follows:
-              </p>
-              <ul>
-                <li>
-                  <strong>Strictly necessary:</strong> Enable core functionality
-                  such as page navigation, secure login, and session management.
-                  These cookies are essential and cannot be switched off in our
-                  systems.
-                </li>
-                <li>
-                  <strong>Performance and analytics:</strong> Collect aggregated
-                  data on how visitors use our site so we can diagnose performance
-                  issues, understand engagement, and improve content.
-                </li>
-                <li>
-                  <strong>Functional:</strong> Remember your preferences (for
-                  example, language or region) and enhance your experience.
-                </li>
-                <li>
-                  <strong>Marketing and personalisation:</strong> Support targeted
-                  communications, measure campaign effectiveness, and tailor
-                  content based on your interactions with Orient Blackstone.
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>3. Third-Party Technologies</h2>
-              <p>
-                We partner with carefully selected third parties that place
-                cookies or use similar technologies to deliver analytics, meeting
-                booking, and infrastructure services. These providers include:
-              </p>
-              <div className="not-prose rounded-lg bg-neutral-50 p-4 text-sm text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300">
-                <ul className="space-y-2">
+          <CookieCard
+            title="2. Categories of Cookies We Use"
+            body={
+              <>
+                <ul>
                   <li>
-                    <strong>Google Analytics:</strong> audience measurement and
-                    engagement insights.
+                    <strong>Strictly necessary:</strong> Enable secure login, session management, and
+                    load balancing. These cookies are essential to deliver our services and cannot be
+                    disabled in our systems.
                   </li>
                   <li>
-                    <strong>Cal.com:</strong> scheduling and meeting management
-                    for consultations and events.
+                    <strong>Performance and analytics:</strong> Provide aggregated statistics on page
+                    performance, user flow, and content engagement so that we can refine our digital
+                    experience.
                   </li>
                   <li>
-                    <strong>Vercel Analytics:</strong> application performance
-                    monitoring and operational diagnostics.
+                    <strong>Functional:</strong> Remember preferences such as language, region, and
+                    saved form inputs to streamline repeat visits.
+                  </li>
+                  <li>
+                    <strong>Marketing and personalisation:</strong> Support relationship management and
+                    event outreach by tailoring communications to your expressed interests.
                   </li>
                 </ul>
-              </div>
-              <p>
-                Third-party cookies are subject to the privacy policies of the
-                providers placing them. We encourage you to review those policies
-                for additional information about their practices.
-              </p>
-            </div>
-          </section>
+              </>
+            }
+          />
 
-
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>4. Managing Cookies</h2>
-              <p>You have several options to control cookies:</p>
-              <ul>
-                <li>
-                  <strong>Consent management:</strong> When required by applicable
-                  law, our consent banner enables you to accept or reject
-                  non-essential cookies. Your selections can be updated at any
-                  time through the “Cookie Preferences” link in the site footer.
-                </li>
-                <li>
-                  <strong>Browser settings:</strong> Most browsers allow you to
-                  block or delete cookies through their privacy settings. Helpful
-                  resources include:
-                  <ul>
-                    <li>Chrome: Settings → Privacy &amp; Security → Cookies</li>
-                    <li>Safari: Preferences → Privacy → Manage Website Data</li>
-                    <li>Edge: Settings → Site permissions → Cookies</li>
-                    <li>Firefox: Settings → Privacy &amp; Security → Cookies</li>
+          <CookieCard
+            title="3. Third-Party Technologies"
+            body={
+              <>
+                <p>
+                  We partner with carefully selected providers that deploy cookies or similar
+                  technologies on our behalf. They process data strictly in line with contractual
+                  safeguards.
+                </p>
+                <div className="mt-6 rounded-2xl border border-white/10 bg-black/35 p-6 text-sm text-neutral-200">
+                  <ul className="space-y-3">
+                    <li>
+                      <strong>Google Analytics:</strong> Audience measurement, funnel diagnostics, and
+                      website optimisation.
+                    </li>
+                    <li>
+                      <strong>Cal.com:</strong> Meeting scheduling and confirmation workflows for
+                      client consultations.
+                    </li>
+                    <li>
+                      <strong>Vercel Analytics:</strong> Platform performance, deployment health, and
+                      operational monitoring.
+                    </li>
                   </ul>
-                </li>
-                <li>
-                  <strong>Third-party opt-outs:</strong> You can opt out of
-                  certain analytics and advertising cookies directly via tools
-                  such as the{" "}
-                  <a
-                    href="https://tools.google.com/dlpage/gaoptout"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Google Analytics Opt-out Add-on
-                  </a>{" "}
-                  or the{" "}
-                  <a
-                    href="http://optout.aboutads.info/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Digital Advertising Alliance Opt-out
-                  </a>
-                  .
-                </li>
-              </ul>
-              <p>
-                Please note that disabling certain cookies may impact the
-                functionality of our website, including access to secure areas
-                and personalised features.
-              </p>
-            </div>
-          </section>
+                </div>
+                <p className="mt-4">
+                  Third-party cookies are governed by the privacy policies of the respective providers.
+                  We encourage you to review those policies for details about their handling of data.
+                </p>
+              </>
+            }
+          />
 
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>5. Data Collected via Cookies</h2>
-              <p>
-                Information captured through cookies is typically aggregated and
-                does not, by itself, identify you. When cookie data is associated
-                with personal information, we treat it in accordance with our
-                Privacy Policy. We do not use cookies to store sensitive personal
-                information such as financial account numbers.
-              </p>
-            </div>
-          </section>
+          <CookieCard
+            title="4. Managing Preferences"
+            body={
+              <>
+                <p>You can control cookies through several mechanisms:</p>
+                <ul>
+                  <li>
+                    <strong>Consent banner:</strong> Where required by law, our cookie management tool
+                    allows you to accept or decline non-essential categories and revisit your choices at
+                    any time.
+                  </li>
+                  <li>
+                    <strong>Browser settings:</strong> Most browsers provide controls to block, delete,
+                    or alert you about cookies. Refer to the help section of your browser for specific
+                    instructions.
+                  </li>
+                  <li>
+                    <strong>Third-party opt-outs:</strong> You may use tools such as the Google
+                    Analytics opt-out browser add-on or the Digital Advertising Alliance opt-out portal
+                    to manage certain analytics or marketing cookies.
+                  </li>
+                </ul>
+                <p>
+                  Disabling some cookies may impact site functionality, including secure login areas and
+                  access to premium resources.
+                </p>
+              </>
+            }
+          />
 
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>6. Updates to This Policy</h2>
-              <p>
-                We may update this Cookie Policy from time to time to reflect
-                changes in technology, legal requirements, or our practices. A
-                revised “Last updated” date indicates when the policy was most
-                recently amended. Material changes may be highlighted through
-                banners or other notifications.
-              </p>
-            </div>
-          </section>
+          <CookieCard
+            title="5. Retention"
+            body={
+              <>
+                <p>
+                  Cookie lifespans vary by category and are set to retain data only as long as necessary
+                  to fulfil the purposes described above. Persistent cookies expire automatically after
+                  the period specified in your consent tool or earlier if you delete them.
+                </p>
+              </>
+            }
+          />
 
-          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
-            <div className="prose prose-neutral dark:prose-invert space-y-4">
-              <h2>7. Contact Us</h2>
-              <p>
-                For questions about our use of cookies or this Policy, please
-                contact us at{" "}
-                <a
-                  href={`mailto:${contactEmail}`}
-                  className="text-primary-600 hover:text-primary-700 dark:text-primary-300 dark:hover:text-primary-200"
-                >
-                  {contactEmail}
-                </a>
-                .
-              </p>
-            </div>
-          </section>
+          <CookieCard
+            title="6. Updates"
+            body={
+              <>
+                <p>
+                  We may update this Policy to reflect changes to our technology stack, regulatory
+                  developments, or business practices. We will revise the "Last updated" date and may
+                  communicate significant changes through additional notices.
+                </p>
+              </>
+            }
+          />
+
+          <CookieCard
+            title="7. Contact"
+            body={
+              <>
+                <p>
+                  Questions about this Policy or our use of cookies can be directed to the privacy team
+                  at {SHORT_NAME}.
+                </p>
+                <div className="mt-6 rounded-2xl border border-white/10 bg-black/35 p-6 text-sm text-neutral-200">
+                  <p className="text-base font-semibold text-white">{COMPANY_NAME}</p>
+                  <p>{STREET_ADDRESS}</p>
+                  <p>{CITY_ADDRESS}, USA</p>
+                  <p className="mt-2">
+                    E:{" "}
+                    <a
+                      href={`mailto:${CONTACT_EMAIL}`}
+                      className="text-primary-300 underline decoration-primary-500/40 underline-offset-4 hover:text-primary-200"
+                    >
+                      {CONTACT_EMAIL}
+                    </a>
+                  </p>
+                </div>
+              </>
+            }
+          />
         </div>
       </div>
     </div>
+  );
+}
+
+function CookieCard({
+  title,
+  body,
+}: {
+  title: string;
+  body: ReactNode;
+}) {
+  return (
+    <section className="rounded-3xl border border-white/10 bg-[#0f0f0f] p-8 shadow-soft">
+      <div className="space-y-4 prose prose-invert max-w-none">
+        <h2 className="font-semibold text-white">{title}</h2>
+        {body}
+      </div>
+    </section>
   );
 }

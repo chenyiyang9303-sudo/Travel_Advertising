@@ -2,8 +2,22 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { marked } from "marked";
-import { ArrowLeft, Calendar, Clock, User, Share2, Tag, Eye, BookOpen } from "lucide-react";
-import { getBlogPostBySlug, getAllBlogPosts, getRelatedBlogPosts, blogCategories } from "@/lib/blog-data";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Calendar,
+  Clock,
+  Eye,
+  Share2,
+  Tag,
+} from "lucide-react";
+
+import {
+  getBlogPostBySlug,
+  getAllBlogPosts,
+  getRelatedBlogPosts,
+  blogCategories,
+} from "@/lib/blog-data";
 import { formatDate } from "@/lib/utils";
 
 interface BlogPostPageProps {
@@ -13,8 +27,7 @@ interface BlogPostPageProps {
 }
 
 export async function generateStaticParams() {
-  const posts = getAllBlogPosts();
-  return posts.map((post) => ({
+  return getAllBlogPosts().map((post) => ({
     slug: post.slug,
   }));
 }
@@ -28,85 +41,86 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
   const relatedPosts = getRelatedBlogPosts(params.slug);
 
-  // Configure marked for better HTML output
   marked.setOptions({
     gfm: true,
     breaks: true,
   });
 
   return (
-    <div className="min-h-screen bg-white dark:bg-neutral-900">
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-neutral-50 to-primary-50 dark:from-neutral-800 dark:to-primary-900/20 py-16">
+    <div className="min-h-screen bg-app text-fg">
+      <section className="relative border-b border-white/10 bg-[#050505] pt-32 pb-20 text-white">
         <div className="container mx-auto px-4">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-300 hover:text-primary-700 dark:hover:text-primary-200 mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.4em] text-white/70 transition-colors duration-200 hover:text-primary-300"
           >
             <ArrowLeft className="h-4 w-4" />
-            Back to Blog
+            Back to Insights
           </Link>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="px-3 py-1 bg-primary-600 text-white text-sm font-medium rounded-full">
-                {blogCategories.find(cat => cat.value === post.category)?.label || post.category}
+
+          <div className="mt-10 max-w-4xl space-y-8">
+            <div className="flex items-center gap-3">
+              <span className="rounded-full bg-primary-500/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-black">
+                {blogCategories.find((cat) => cat.value === post.category)?.label ||
+                  post.category}
               </span>
-              <div className="flex items-center gap-4 text-sm text-neutral-600 dark:text-neutral-400">
-                <div className="flex items-center gap-1">
+              <div className="flex items-center gap-4 text-xs uppercase tracking-[0.35em] text-white/60">
+                <span className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
                   {formatDate(post.publishDate)}
-                </div>
-                <div className="flex items-center gap-1">
+                </span>
+                <span className="flex items-center gap-2">
                   <Clock className="h-4 w-4" />
                   {post.readTime}
-                </div>
+                </span>
               </div>
             </div>
-            
-            <h1 className="text-4xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-100 mb-6 leading-tight">
+
+            <h1 className="text-4xl font-semibold uppercase tracking-[0.3em] text-white sm:text-5xl">
               {post.title}
             </h1>
-            
-            <p className="text-xl text-neutral-600 dark:text-neutral-300 mb-8 leading-relaxed">
+
+            <p className="text-base leading-relaxed text-neutral-300 sm:text-lg">
               {post.excerpt}
             </p>
-            
-            {/* Author and Actions */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+
+            <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold">
-                  {post.author.name.split(' ').map(n => n[0]).join('')}
+                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-black/40 text-sm font-semibold uppercase tracking-[0.4em] text-white">
+                  {post.author.name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")}
                 </div>
                 <div>
-                  <h3 className="font-semibold text-neutral-800 dark:text-neutral-100">
+                  <h3 className="text-sm font-semibold uppercase tracking-[0.35em] text-white">
                     {post.author.name}
                   </h3>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                  <p className="text-[11px] uppercase tracking-[0.35em] text-neutral-500">
                     {post.author.title}
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-3">
-                <button className="inline-flex items-center gap-2 bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 text-neutral-800 dark:text-neutral-200 px-4 py-2 rounded-lg font-medium transition-colors">
-                  <Share2 className="h-4 w-4" />
-                  Share
-                </button>
-                <button className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
-                  <BookOpen className="h-4 w-4" />
-                  Save Article
-                </button>
+                {["LinkedIn", "Twitter / X"].map((platform) => (
+                  <button
+                    key={platform}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-white transition-colors duration-200 hover:border-primary-400"
+                  >
+                    <Share2 className="h-4 w-4" />
+                    {platform}
+                  </button>
+                ))}
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Featured Image */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="relative h-96 rounded-2xl overflow-hidden shadow-lg">
+      <section className="container mx-auto px-4 py-12">
+        <div className="mx-auto overflow-hidden rounded-3xl border border-white/10 bg-[#0f0f0f] shadow-soft">
+          <div className="relative h-96">
             <Image
               src={post.coverImage}
               alt={post.title}
@@ -115,147 +129,106 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             />
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Main Content */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-          {/* Article Content */}
-          <div className="lg:col-span-3">
-            <article className="prose prose-lg dark:prose-invert max-w-none">
-              <div 
-                className="text-neutral-700 dark:text-neutral-200 leading-relaxed
-                  [&>h1]:text-3xl [&>h1]:font-bold [&>h1]:mt-8 [&>h1]:mb-4 [&>h1]:text-neutral-900 [&>h1]:dark:text-white
-                  [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:mt-8 [&>h2]:mb-4 [&>h2]:text-neutral-900 [&>h2]:dark:text-white  
-                  [&>h3]:text-xl [&>h3]:font-bold [&>h3]:mt-6 [&>h3]:mb-3 [&>h3]:text-neutral-900 [&>h3]:dark:text-white
-                  [&>p]:mb-6 [&>p]:text-neutral-700 [&>p]:dark:text-neutral-200 [&>p]:leading-relaxed
-                  [&>strong]:font-semibold [&>strong]:text-neutral-900 [&>strong]:dark:text-neutral-100
-                  [&>code]:bg-neutral-100 [&>code]:dark:bg-neutral-800 [&>code]:px-2 [&>code]:py-1 [&>code]:rounded [&>code]:text-sm [&>code]:text-neutral-800 [&>code]:dark:text-neutral-200"
-                dangerouslySetInnerHTML={{ 
-                  __html: marked(post.content) 
-                }}
-              />
-            </article>
+      <div className="container mx-auto grid gap-12 px-4 pb-20 lg:grid-cols-4">
+        <article className="space-y-12 rounded-3xl border border-white/10 bg-[#0f0f0f] p-10 shadow-soft lg:col-span-3">
+          <div
+            className="prose prose-invert max-w-none text-neutral-200
+              [&>h1]:text-3xl [&>h1]:font-semibold [&>h1]:tracking-[0.25em] [&>h1]:uppercase
+              [&>h2]:text-2xl [&>h2]:font-semibold [&>h2]:tracking-[0.25em] [&>h2]:uppercase
+              [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:tracking-[0.25em] [&>h3]:uppercase
+              [&>p]:text-neutral-300 [&>p]:leading-8 [&>strong]:text-white
+              [&>ul]:space-y-3 [&>ul>li]:text-neutral-300 [&>ul>li]:leading-8"
+            dangerouslySetInnerHTML={{
+              __html: marked(post.content),
+            }}
+          />
 
-            {/* Tags */}
-            <div className="mt-12 pt-8 border-t border-neutral-200 dark:border-neutral-700">
-              <h3 className="text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4 flex items-center gap-2">
-                <Tag className="h-5 w-5" />
-                Tags
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {post.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200 text-sm rounded-full"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Author Bio */}
-            <div className="mt-12 p-8 bg-gradient-to-r from-primary-50 to-amber-50 dark:from-primary-900/15 dark:to-amber-900/20 rounded-2xl">
-              <div className="flex items-start gap-6">
-                <div className="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
-                  {post.author.name.split(' ').map(n => n[0]).join('')}
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-2">
-                    About {post.author.name}
-                  </h3>
-                  <p className="text-neutral-600 dark:text-neutral-400 mb-3">
-                    {post.author.title}
-                  </p>
-                  <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                    {post.author.bio}
-                  </p>
-                </div>
-              </div>
+          <div className="space-y-4 border-t border-white/10 pt-8">
+            <h3 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.4em] text-neutral-400">
+              <Tag className="h-4 w-4" />
+              Tags
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {post.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-white/10 bg-black/35 px-3 py-1 text-[11px] uppercase tracking-[0.35em] text-neutral-300"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
 
-          {/* Sidebar */}
-          <div className="lg:col-span-1">
-            <div className="sticky top-8 space-y-8">
-              {/* Table of Contents */}
-              <div className="bg-neutral-50 dark:bg-neutral-800 p-6 rounded-xl">
-                <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-4">
-                  In This Article
-                </h3>
-                <nav className="space-y-2">
-                  {/* This would be dynamically generated based on headings */}
-                  <a href="#overview" className="block text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">
-                    Technology Overview
-                  </a>
-                  <a href="#applications" className="block text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">
-                    Industrial Applications
-                  </a>
-                  <a href="#market" className="block text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">
-                    Market Development
-                  </a>
-                  <a href="#future" className="block text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">
-                    Future Outlook
-                  </a>
-                </nav>
+          <div className="rounded-2xl border border-white/10 bg-black/25 p-8">
+            <div className="flex items-start gap-6">
+              <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full border border-white/15 bg-black/40 text-sm font-semibold uppercase tracking-[0.4em] text-white">
+                {post.author.name
+                  .split(" ")
+                  .map((n) => n[0])
+                  .join("")}
               </div>
-
-              {/* Share Article */}
-              <div className="bg-neutral-50 dark:bg-neutral-800 p-6 rounded-xl">
-                <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-4">
-                  Share Article
+              <div className="space-y-3">
+                <h3 className="text-lg font-semibold uppercase tracking-[0.3em] text-white">
+                  {post.author.name}
                 </h3>
-                <div className="space-y-3">
-                  <button className="w-full flex items-center gap-3 bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg transition-colors">
-                    <Share2 className="h-4 w-4" />
-                    LinkedIn
-                  </button>
-                  <button className="w-full flex items-center gap-3 bg-neutral-700 hover:bg-neutral-800 text-white px-4 py-2 rounded-lg transition-colors">
-                    <Share2 className="h-4 w-4" />
-                    Twitter
-                  </button>
-                  <button className="w-full flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">
-                    <Share2 className="h-4 w-4" />
-                    WhatsApp
-                  </button>
-                </div>
-              </div>
-
-              {/* Newsletter Signup */}
-              <div className="bg-gradient-to-br from-primary-600 via-primary-600 to-amber-500 p-6 rounded-xl text-white">
-                <h3 className="font-semibold mb-3">
-                  Stay Updated
-                </h3>
-                <p className="text-primary-100/80 text-sm mb-4">
-                  Get weekly financial strategy insights delivered to your inbox.
+                <p className="text-[11px] uppercase tracking-[0.35em] text-neutral-500">
+                  {post.author.title}
                 </p>
-                <div className="space-y-3">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="w-full px-3 py-2 rounded-lg text-neutral-800 text-sm focus:ring-2 focus:ring-white focus:outline-none"
-                  />
-                  <button className="w-full bg-white text-primary-600 px-4 py-2 rounded-lg font-medium hover:bg-primary-50 transition-colors text-sm">
-                    Subscribe
-                  </button>
-                </div>
+                <p className="text-sm leading-relaxed text-neutral-300">
+                  {post.author.bio}
+                </p>
               </div>
             </div>
           </div>
-        </div>
+        </article>
+
+        <aside className="space-y-8">
+          <div className="space-y-4 rounded-3xl border border-white/10 bg-[#0f0f0f] p-6 shadow-soft">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.4em] text-neutral-400">
+              Article Highlights
+            </h3>
+            <div className="space-y-3 text-sm text-neutral-300">
+              <p>
+                Published {formatDate(post.publishDate)} · {post.readTime} read
+              </p>
+              <p>Author: {post.author.name}</p>
+            </div>
+          </div>
+
+          <div className="space-y-4 rounded-3xl border border-white/10 bg-[#0f0f0f] p-6 shadow-soft">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.4em] text-neutral-400">
+              Research Proposal
+            </h3>
+            <p className="text-sm text-neutral-300">
+              Discuss bespoke research or capital strategy needs with RSFM’s
+              advisory team.
+            </p>
+            <Link
+              href="/#contact"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-white transition-colors duration-200 hover:border-primary-400"
+            >
+              Engage RSFM
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </aside>
       </div>
 
-      {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <section className="bg-neutral-50 dark:bg-neutral-800 py-16">
+        <section className="border-t border-white/10 bg-[#050505] py-20 text-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-8">
+            <h2 className="text-xl font-semibold uppercase tracking-[0.4em]">
               Related Articles
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {relatedPosts.map((relatedPost) => (
-                <div key={relatedPost.slug} className="bg-white dark:bg-neutral-900 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                <div
+                  key={relatedPost.slug}
+                  className="overflow-hidden rounded-2xl border border-white/10 bg-[#0f0f0f] transition-all duration-300 hover:-translate-y-1 hover:border-primary-400"
+                >
                   <div className="relative h-48">
                     <Image
                       src={relatedPost.coverImage}
@@ -264,29 +237,30 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                       className="object-cover"
                     />
                   </div>
-                  <div className="p-6">
-                    <span className="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200 text-xs rounded mb-3 inline-block">
-                      {blogCategories.find(cat => cat.value === relatedPost.category)?.label || relatedPost.category}
+                  <div className="space-y-4 p-6">
+                    <span className="inline-block rounded-full bg-black/70 px-3 py-1 text-[10px] uppercase tracking-[0.4em] text-neutral-300">
+                      {blogCategories.find((cat) => cat.value === relatedPost.category)?.label ||
+                        relatedPost.category}
                     </span>
-                    <h3 className="font-bold text-neutral-800 dark:text-neutral-100 mb-2">
+                    <h3 className="text-lg font-semibold text-white">
                       {relatedPost.title}
                     </h3>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">
+                    <p className="text-sm text-neutral-400 line-clamp-2">
                       {relatedPost.excerpt}
                     </p>
-                    <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-500 mb-4">
-                      <div className="flex items-center gap-1">
+                    <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.35em] text-neutral-500">
+                      <span className="flex items-center gap-2">
                         <Calendar className="h-3 w-3" />
                         {formatDate(relatedPost.publishDate)}
-                      </div>
-                      <div className="flex items-center gap-1">
+                      </span>
+                      <span className="flex items-center gap-2">
                         <Clock className="h-3 w-3" />
                         {relatedPost.readTime}
-                      </div>
+                      </span>
                     </div>
                     <Link
                       href={`/blog/${relatedPost.slug}`}
-                      className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-300 font-medium text-sm hover:gap-3 transition-all duration-200"
+                      className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.35em] text-white transition-all duration-200 hover:text-primary-300"
                     >
                       Read Article
                       <Eye className="h-4 w-4" />
