@@ -25,10 +25,10 @@ export function BlogWithSearch() {
     <div className="relative overflow-hidden">
       <Container className="flex flex-col items-center justify-between pb-20">
         <div className="relative z-20 py-10 text-center">
-          <h2 className="font-display text-display-md md:text-display-lg font-bold text-accent-900 dark:text-white mb-4">
+          <h2 className="font-display text-display-md md:text-display-lg font-bold text-fg mb-4">
             Market Intelligence Reports
           </h2>
-          <p className="text-lg text-accent-600 dark:text-accent-300 max-w-3xl mx-auto">
+          <p className="text-lg text-muted max-w-3xl mx-auto">
             Deep-dive analysis and data-driven insights from corporate finance markets to inform your strategic decisions.
           </p>
         </div>
@@ -46,7 +46,7 @@ export function BlogWithSearch() {
 const BlogCard = ({ blog }: { blog: Blog }) => {
   return (
     <Link
-      className="shadow-derek rounded-3xl border dark:border-neutral-800 w-full bg-white dark:bg-neutral-900 flex flex-col md:flex-row overflow-hidden mb-20 hover:scale-[1.01] transition duration-200"
+      className="shadow-soft rounded-3xl border border-subtle w-full bg-surface flex flex-col md:flex-row overflow-hidden mb-20 hover:scale-[1.01] hover:shadow-elevated transition duration-200"
       href={`/reports/${blog.slug}`}
     >
       <div className="md:w-1/2 relative h-64 md:h-auto">
@@ -58,7 +58,7 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
           className="h-full w-full object-cover object-center"
         />
       </div>
-      <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-between">
+      <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-between bg-surface">
         <div>
           <div className="flex space-x-2 items-center mb-4">
             <Image
@@ -68,18 +68,18 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
               height={24}
               className="rounded-full h-6 w-6"
             />
-            <p className="text-sm font-normal text-neutral-600 dark:text-neutral-400">
+            <p className="text-sm font-normal text-muted">
               {blog.author}
             </p>
-            <span className="text-neutral-400 dark:text-neutral-600">•</span>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
+            <span className="text-subtle">•</span>
+            <p className="text-sm text-muted">
               {format(new Date(blog.date), "MMM dd, yyyy")}
             </p>
           </div>
-          <p className="text-2xl font-bold mb-4 text-neutral-800 dark:text-neutral-100">
+          <p className="text-2xl font-bold mb-4 text-fg">
             {blog.title}
           </p>
-          <p className="text-left text-base mt-4 text-neutral-600 dark:text-neutral-400 leading-relaxed">
+          <p className="text-left text-base mt-4 text-muted leading-relaxed">
             {blog.description}
           </p>
         </div>
@@ -129,7 +129,7 @@ const BlogPostRows = ({ blogs }: { blogs: Blog[] }) => {
           placeholder="Search reports..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full px-6 py-4 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200 focus:ring-2 focus:ring-primary-500 focus:border-transparent text-lg"
+          className="w-full px-6 py-4 rounded-xl border border-subtle bg-surface text-fg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-lg placeholder:text-subtle"
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -144,7 +144,7 @@ const BlogPostRows = ({ blogs }: { blogs: Blog[] }) => {
 const BlogPostRow = ({ blog }: { blog: Blog }) => {
   return (
     <Link
-      className="shadow-derek rounded-2xl border dark:border-neutral-800 bg-white dark:bg-neutral-900 overflow-hidden hover:scale-[1.02] transition duration-200 flex flex-col"
+      className="shadow-soft rounded-2xl border border-subtle bg-surface overflow-hidden hover:scale-[1.02] hover:shadow-elevated transition duration-200 flex flex-col"
       href={`/reports/${blog.slug}`}
     >
       <div className="relative h-48">
@@ -155,7 +155,7 @@ const BlogPostRow = ({ blog }: { blog: Blog }) => {
           className="object-cover object-center"
         />
       </div>
-      <div className="p-6 flex-grow flex flex-col">
+      <div className="p-6 flex-grow flex flex-col bg-surface">
         <div className="flex space-x-2 items-center mb-3">
           <Image
             src={blog.authorAvatar}
@@ -164,21 +164,21 @@ const BlogPostRow = ({ blog }: { blog: Blog }) => {
             height={20}
             className="rounded-full h-5 w-5"
           />
-          <p className="text-xs font-normal text-neutral-600 dark:text-neutral-400">
+          <p className="text-xs font-normal text-muted">
             {blog.author}
           </p>
-          <span className="text-neutral-400 dark:text-neutral-600">•</span>
-          <p className="text-xs text-neutral-600 dark:text-neutral-400">
+          <span className="text-subtle">•</span>
+          <p className="text-xs text-muted">
             {format(new Date(blog.date), "MMM dd, yyyy")}
           </p>
         </div>
-        <p className="text-lg font-bold mb-3 text-neutral-800 dark:text-neutral-100 line-clamp-2">
+        <p className="text-lg font-bold mb-3 text-fg line-clamp-2">
           {blog.title}
         </p>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400 line-clamp-3 flex-grow">
+        <p className="text-sm text-muted line-clamp-3 flex-grow">
           {blog.description}
         </p>
-        <div className="mt-4 pt-4 border-t border-neutral-200 dark:border-neutral-700">
+        <div className="mt-4 pt-4 border-t border-subtle">
           <span className="text-primary-600 dark:text-primary-400 font-medium text-sm inline-flex items-center hover:gap-2 transition-all">
             Read Report
             <svg

@@ -15,14 +15,14 @@ export function Process() {
   return (
     <div
       id="process"
-      className="w-full mx-auto bg-white dark:bg-gray-900 py-24 px-4 md:px-8"
+      className="w-full mx-auto bg-app py-24 px-4 md:px-8"
     >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-display text-display-md md:text-display-lg font-bold text-accent-900 dark:text-white mb-4">
+          <h2 className="font-display text-display-md md:text-display-lg font-bold text-fg mb-4">
             Proven Path to Market Success
           </h2>
-          <p className="text-lg text-accent-600 dark:text-accent-300 max-w-3xl mx-auto">
+          <p className="text-lg text-muted max-w-3xl mx-auto">
             Our battle-tested 4-phase methodology has generated $5M+ in client value and delivered 3x faster execution across 120+ corporate finance engagements.
           </p>
         </div>
@@ -92,7 +92,7 @@ export function Process() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
-            className="inline-flex items-center gap-3 bg-primary-50 dark:bg-primary-900/20 px-8 py-4 rounded-full border border-primary-200 dark:border-primary-800"
+            className="inline-flex items-center gap-3 bg-primary-50/70 dark:bg-primary-900/20 px-8 py-4 rounded-full border border-primary-200/70 dark:border-primary-800/60"
           >
             <span className="text-primary-600 dark:text-primary-400 font-semibold text-lg">
               Ready to unlock your market opportunity?
@@ -125,31 +125,31 @@ const ProcessStep = ({
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
-      className="relative group bg-white dark:bg-gray-800 rounded-2xl p-8 border border-accent-100 dark:border-gray-700 hover:border-primary-200 dark:hover:border-primary-600 shadow-sm hover:shadow-xl transition-all duration-300"
+      className="relative group bg-surface rounded-2xl p-8 border border-subtle hover:border-primary-300/70 shadow-soft hover:shadow-elevated transition-all duration-300"
     >
       <div className="text-left">
         {/* Step Number and Icon */}
         <div className="relative w-16 h-16 mb-6">
-          <div className="absolute inset-0 bg-primary-100 dark:bg-primary-900/30 rounded-xl group-hover:scale-110 transition-transform duration-300" />
-          <div className="absolute inset-1 bg-primary-600 dark:bg-primary-500 rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:bg-primary-700 dark:group-hover:bg-primary-400 transition-colors duration-300">
+          <div className="absolute inset-0 bg-primary-100/70 dark:bg-primary-900/30 rounded-xl group-hover:scale-110 transition-transform duration-300" />
+          <div className="absolute inset-1 bg-primary-600 rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:bg-primary-700 transition-colors duration-300">
             {step}
           </div>
-          <div className="absolute inset-0 flex items-center justify-center text-primary-600 dark:text-primary-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="absolute inset-0 flex items-center justify-center text-primary-50 dark:text-primary-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             {icon}
           </div>
         </div>
 
         {/* Content */}
-        <h3 className="font-display text-xl font-bold text-accent-900 dark:text-white mb-4">
+        <h3 className="font-display text-xl font-bold text-fg mb-4">
           {title}
         </h3>
         
-        <p className="text-accent-600 dark:text-accent-300 mb-6 leading-relaxed">
+        <p className="text-muted mb-6 leading-relaxed">
           {description}
         </p>
 
         {/* Details */}
-        <ul className="text-sm text-accent-500 dark:text-accent-400 space-y-3">
+        <ul className="text-sm text-subtle space-y-3">
           {details.map((detail, index) => (
             <li key={index} className="flex items-start gap-3">
               <div className="w-2 h-2 rounded-full bg-primary-500 flex-shrink-0 mt-1.5" />

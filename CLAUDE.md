@@ -114,18 +114,17 @@ npm run lint         # ESLint + Next.js linting
 - **Static pages**: about, contact, privacy, terms, cookies, login
 - **Home page** ([app/page.tsx](app/page.tsx)):
   - Hero with 3D Prism effect
-  - **ComplianceDisclaimer** (new, legal required) ⚠️ Currently untracked
+  - ComplianceDisclaimer (legal required)
   - Services, Process, Case Studies
   - Featured Content, Testimonials, CTA
 
 ## Key Components
 
-**New Components**:
-- [components/compliance-disclaimer.tsx](components/compliance-disclaimer.tsx) ⚠️ **UNTRACKED FILE**
+**Legal & Compliance**:
+- [components/compliance-disclaimer.tsx](components/compliance-disclaimer.tsx)
   - Legal disclaimer for advisory services
   - Clarifies no investment management/fund handling
   - Uses `lucide-react` AlertTriangle icon
-  - **MUST BE COMMITTED** - Critical for legal compliance
 
 **Core Components**:
 - [components/hero.tsx](components/hero.tsx) - Landing hero with 3D Prism
@@ -140,67 +139,69 @@ npm run lint         # ESLint + Next.js linting
 
 ## Development Gotchas
 
-**⚠️ CRITICAL ISSUES**:
-
-1. **Uncommitted Changes (13 files modified)**:
-   - Multiple core files modified but not committed
-   - Risk of data loss if not committed soon
-   - Files affected: `app/cookies/page.tsx`, `app/layout.tsx`, `app/page.tsx`, `app/privacy/page.tsx`, `app/terms/page.tsx`, and 8 component files
-   - **ACTION REQUIRED**: Commit changes ASAP
-
-2. **Untracked Legal Compliance Component**:
-   - [components/compliance-disclaimer.tsx](components/compliance-disclaimer.tsx) is critical for legal compliance
-   - Currently untracked and not in version control
-   - **ACTION REQUIRED**: Git add and commit immediately
-
-3. **File Naming Consistency** ✅ RESOLVED:
-   - Previously `contact sections.tsx` had a space in filename
-   - Now renamed to `contact-sections.tsx` following kebab-case convention
-   - Consistent with other component naming patterns
-
-4. **Demo Credentials Still Active**:
-   - Cal.com still using demo account `"chat-with-manu-demo"`
-   - **MUST UPDATE** before production deployment
-   - Update [constants/links.ts](constants/links.ts) with real credentials
+**⚠️ Cal.com Demo Configuration**:
+- Still using demo account `"chat-with-manu-demo"` in [constants/links.ts](constants/links.ts)
+- **MUST UPDATE** before production deployment with actual Cal.com credentials
+- Update `CALCOM_NAMESPACE` and `CALCOM_LINK` constants
 
 **WebGL Performance**:
-- Prism component is GPU-intensive
+- Prism component is GPU-intensive, uses OGL for 3D rendering
 - Dark mode default ensures better visibility of 3D effects
 - Use `suspendWhenOffscreen` for performance optimization
 - May cause performance issues on low-end devices
+- Consider fallback for devices without WebGL support
 
 **Build Process**:
 - Static export configured (generates `/out` directory)
 - Cal.com embed requires client-side JavaScript (no SSR)
 - Images must be unoptimized for static export
 - TypeScript strict mode enabled
+- No trailing slash redirects (static hosting optimization)
 
 ## Tailwind Configuration
 
-**Custom Extensions**:
-- Custom box shadows: `derek`, `input`
-- Color variables plugin generates CSS custom properties
-- Dark mode class-based strategy (`class` strategy)
-- Custom gradient backgrounds
+**Custom Color Palette** ([tailwind.config.ts](tailwind.config.ts)):
+- `primary`: Sky blue scale (50-900) - main brand color
+- `accent`: Zinc/gray scale (50-900) - neutral colors
+- `success`: `#10b981` (emerald)
+- `warning`: `#f59e0b` (amber)
+- `error`: `#ef4444` (red)
+
+**Custom Typography**:
+- Font family: Inter (display + body)
+- Display sizes: `display-2xl` (4.5rem) through `display-sm` (1.875rem)
+- Tight letter-spacing for display headings (-0.02em to -0.01em)
+
+**Custom Shadows**:
+- Standard shadows: `sm`, `md`, `lg`, `xl`
+- Special: `soft` (subtle blur), `border` (1px outline effect)
+
+**Custom Animations**:
+- `fade-in`: 0.5s opacity transition
+- `slide-up`: 0.6s upward slide with opacity
+- `scale-in`: 0.4s scale with opacity
+
+**Plugin**: `addVariablesForColors` - Exposes all Tailwind colors as CSS variables (e.g., `var(--primary-500)`)
 
 **Important Classes**:
 - Use `dark:` prefixes extensively due to dark mode default
-- Custom shadow utilities for consistent design system
+- Custom display font sizes for hero/heading typography
 
 ## Recent Changes (Last 5 Commits)
 
-1. `03b3157` - 🔧 修复Next.js Image组件弃用属性警告
-2. `47b0c81` - 🔧 更新域名和业务规模调整
-3. `2ced35d` - 🎨 全面优化网站内容与用户体验
-4. `510c491` - 🔧 更新Logo组件和图片
-5. `3fc7e5c` - 🎨 统一CTA按钮样式设计
+1. `7c07b5f` - 🌐 更新域名：obamconsulting.com → orientblackstone.net
+2. `502218b` - 🖼️ 更新团队成员头像SVG文件
+3. `246c4ae` - 🖼️ About页面团队头像使用本地SVG文件
+4. `33726cd` - 🔄 修正About页面照片：交换廖治华和王雅琪的团队照片
+5. `6431e6a` - 🔄 修正SVG头像路径：交换廖治华和王雅琪的头像文件
+
+## Domain Information
+
+**Current Domain**: orientblackstone.net (updated from obamconsulting.com)
 
 ## Action Items for Production Readiness
 
-- [x] ~~**URGENT**: Commit all 13 modified files~~ ✅ DONE
-- [x] ~~**URGENT**: Add and commit `compliance-disclaimer.tsx`~~ ✅ DONE
-- [x] ~~**RECOMMENDED**: Rename `contact sections.tsx` to remove space~~ ✅ DONE
 - [ ] **CRITICAL**: Replace Cal.com demo credentials with production account
-- [ ] **RECOMMENDED**: Add TypeScript type checking script
+- [ ] **RECOMMENDED**: Add TypeScript type checking script (`npm run type-check`)
 - [ ] **RECOMMENDED**: Consider adding testing framework (Jest/Vitest)
 - [ ] **RECOMMENDED**: Add environment variable validation for Cal.com config

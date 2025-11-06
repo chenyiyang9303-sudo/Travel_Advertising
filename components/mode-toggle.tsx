@@ -40,7 +40,7 @@ export function ModeToggle() {
   return (
     <button
       onClick={SWITCH}
-      className="relative flex cursor-pointer items-center justify-center rounded-xl p-2 text-neutral-500 hover:shadow-input dark:text-neutral-500"
+      className="relative flex cursor-pointer items-center justify-center rounded-xl p-2 bg-surface border border-subtle text-muted hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 shadow-soft"
     >
       <SunIcon
         size={16}

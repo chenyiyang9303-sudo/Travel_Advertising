@@ -6,6 +6,7 @@ import { CTAWithDashedGridLines } from "@/components/cta";
 import { Hero } from "@/components/hero";
 import { FeaturedContent } from "@/components/featured-content";
 import { ComplianceDisclaimer } from "@/components/compliance-disclaimer";
+import { FAQSection } from "@/components/faq";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <CaseStudies />
       <FeaturedContent />
       <Testimonials />
+      <FAQSection />
       <CTAWithDashedGridLines />
     </main>
   );

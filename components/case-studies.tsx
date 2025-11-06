@@ -46,14 +46,14 @@ export function CaseStudies() {
   return (
     <div
       id="case-studies"
-      className="w-full mx-auto bg-gray-50 dark:bg-gray-800 py-24 px-4 md:px-8"
+      className="w-full mx-auto bg-surface-subtle py-24 px-4 md:px-8"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-display text-display-md md:text-display-lg font-bold text-accent-900 dark:text-white mb-4">
+          <h2 className="font-display text-display-md md:text-display-lg font-bold text-fg mb-4">
             $5M+ in Client Value Created
           </h2>
-          <p className="text-lg text-accent-600 dark:text-accent-300 max-w-3xl mx-auto">
+          <p className="text-lg text-muted max-w-3xl mx-auto">
             Real results from real companies. See how our strategic financial advisory has delivered transformational growth, optimized capital structures, and breakthrough financial performance for corporate clients worldwide.
           </p>
         </div>
@@ -65,10 +65,10 @@ export function CaseStudies() {
             onClick={scrollLeft}
             disabled={!canScrollLeft}
             className={cn(
-              "absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white dark:bg-accent-800 shadow-lg border border-accent-200 dark:border-accent-700 flex items-center justify-center transition-all duration-200",
+              "absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-surface shadow-soft border border-subtle flex items-center justify-center transition-all duration-200",
               canScrollLeft 
-                ? "hover:bg-accent-50 dark:hover:bg-accent-700 text-accent-900 dark:text-white cursor-pointer" 
-                : "opacity-50 cursor-not-allowed text-accent-400"
+                ? "hover:text-primary-600 dark:hover:text-primary-400 cursor-pointer" 
+                : "opacity-50 cursor-not-allowed text-subtle"
             )}
           >
             <ChevronLeft className="w-5 h-5" />
@@ -78,10 +78,10 @@ export function CaseStudies() {
             onClick={scrollRight}
             disabled={!canScrollRight}
             className={cn(
-              "absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white dark:bg-accent-800 shadow-lg border border-accent-200 dark:border-accent-700 flex items-center justify-center transition-all duration-200",
+              "absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-surface shadow-soft border border-subtle flex items-center justify-center transition-all duration-200",
               canScrollRight 
-                ? "hover:bg-accent-50 dark:hover:bg-accent-700 text-accent-900 dark:text-white cursor-pointer" 
-                : "opacity-50 cursor-not-allowed text-accent-400"
+                ? "hover:text-primary-600 dark:hover:text-primary-400 cursor-pointer" 
+                : "opacity-50 cursor-not-allowed text-subtle"
             )}
           >
             <ChevronRight className="w-5 h-5" />
@@ -159,7 +159,7 @@ const CaseStudyCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -8, scale: 1.02 }}
-      className="group bg-white dark:bg-accent-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-accent-100 dark:border-accent-700/50 hover:border-primary-200 dark:hover:border-primary-600 h-full"
+      className="group bg-surface rounded-2xl overflow-hidden shadow-soft hover:shadow-elevated transition-all duration-300 border border-subtle hover:border-primary-300/70 h-full"
     >
       <Link href={`/case-studies/${slug}`}>
         <div className="relative h-48 overflow-hidden">
@@ -178,30 +178,30 @@ const CaseStudyCard = ({
 
         <div className="p-6">
           <div className="mb-4">
-            <h4 className="font-semibold text-accent-900 dark:text-white mb-2 text-sm uppercase tracking-wide">
+            <h4 className="font-semibold text-fg mb-2 text-sm uppercase tracking-wide">
               Challenge
             </h4>
-            <p className="text-sm text-accent-600 dark:text-accent-300 leading-relaxed">
+            <p className="text-sm text-muted leading-relaxed">
               {challenge}
             </p>
           </div>
 
           <div className="mb-6">
-            <h4 className="font-semibold text-accent-900 dark:text-white mb-2 text-sm uppercase tracking-wide">
+            <h4 className="font-semibold text-fg mb-2 text-sm uppercase tracking-wide">
               Results
             </h4>
-            <p className="text-sm text-accent-600 dark:text-accent-300 leading-relaxed">
+            <p className="text-sm text-muted leading-relaxed">
               {solution}
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-2 mb-6">
             {results.slice(0, 3).map((result, idx) => (
-              <div key={idx} className="flex justify-between items-center py-2 px-3 bg-accent-50 dark:bg-accent-700/30 rounded-lg">
-                <span className="text-xs text-accent-600 dark:text-accent-400 font-medium">
+              <div key={idx} className="flex justify-between items-center py-2 px-3 bg-surface-subtle rounded-lg">
+                <span className="text-xs text-muted font-medium">
                   {result.metric}
                 </span>
-                <span className="font-bold text-accent-900 dark:text-white text-sm">
+                <span className="font-bold text-fg text-sm">
                   {result.value}
                 </span>
               </div>
@@ -209,7 +209,7 @@ const CaseStudyCard = ({
           </div>
 
           <div className="flex items-center justify-between text-sm mt-auto">
-            <span className="text-accent-500 dark:text-accent-400 font-medium">
+            <span className="text-subtle font-medium">
               {timeline}
             </span>
             <motion.div

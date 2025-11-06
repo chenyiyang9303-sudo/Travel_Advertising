@@ -14,10 +14,10 @@ export function SimpleBlogWithGrid() {
       <div className="py-4 md:py-10 overflow-hidden relative  px-4 md:px-8">
         <GridPatternContainer className="opacity-50" />
         <div className="relative z-20 py-10 text-center">
-          <h2 className="font-display text-display-md md:text-display-lg font-bold text-accent-900 dark:text-white mb-4">
+          <h2 className="font-display text-display-md md:text-display-lg font-bold text-fg mb-4">
             Featured Articles
           </h2>
-          <p className="text-lg text-accent-600 dark:text-accent-300 max-w-3xl mx-auto">
+          <p className="text-lg text-muted max-w-3xl mx-auto">
             Latest insights and strategies from corporate finance experts to accelerate your growth.
           </p>
         </div>
@@ -37,10 +37,10 @@ const Logo = () => {
   return (
     <Link
       href="/"
-      className="font-normal flex space-x-2 items-center text-sm mr-4  text-black px-2 py-1  relative z-20"
+      className="font-normal flex space-x-2 items-center text-sm mr-4 text-fg px-2 py-1 relative z-20"
     >
-      <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm" />
-      <span className="font-medium text-black dark:text-white">OBAM</span>
+      <div className="h-5 w-6 bg-surface-elevated rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm" />
+      <span className="font-medium text-fg">OBAM</span>
     </Link>
   );
 };
@@ -51,7 +51,7 @@ export const BlogCard = ({ blog }: { blog: any }) => {
   };
   return (
     <Link
-      className="shadow-derek rounded-3xl border dark:border-neutral-800 w-full bg-white dark:bg-neutral-900  overflow-hidden  hover:scale-[1.02] transition duration-200"
+      className="shadow-soft rounded-3xl border border-subtle w-full bg-surface overflow-hidden hover:scale-[1.02] hover:shadow-elevated transition duration-200"
       href={`/blog/${blog.slug}`}
     >
       {blog.coverImage ? (
@@ -63,23 +63,23 @@ export const BlogCard = ({ blog }: { blog: any }) => {
           className="h-52 object-cover object-top w-full"
         />
       ) : (
-        <div className="h-52 flex items-center justify-center bg-white dark:bg-neutral-900">
+        <div className="h-52 flex items-center justify-center bg-surface">
           <Logo />
         </div>
       )}
-      <div className="p-4 md:p-8 bg-white dark:bg-neutral-900">
+      <div className="p-4 md:p-8 bg-surface">
         <div className="flex space-x-2 items-center  mb-2">
           <div className="rounded-full h-5 w-5 bg-blue-600 flex items-center justify-center text-white text-xs font-bold">
             {blog.author.name.split(' ').map((n: string) => n[0]).join('')}
           </div>
-          <p className="text-sm font-normal text-neutral-600 dark:text-neutral-400">
+          <p className="text-sm font-normal text-muted">
             {blog.author.name}
           </p>
         </div>
-        <p className="text-lg font-bold mb-4 text-neutral-800 dark:text-neutral-100">
+        <p className="text-lg font-bold mb-4 text-fg">
           {blog.title}
         </p>
-        <p className="text-left text-sm mt-2 text-neutral-600 dark:text-neutral-400">
+        <p className="text-left text-sm mt-2 text-muted">
           {truncate(blog.excerpt, 100)}
         </p>
       </div>
@@ -127,7 +127,7 @@ const GridPatternContainer = ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
-        "absolute inset-0 h-full w-full  stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_center,white,transparent)]",
+        "absolute inset-0 h-full w-full stroke-black/10 dark:stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_center,white,transparent)]",
         className
       )}
     >

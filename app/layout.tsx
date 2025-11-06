@@ -9,10 +9,10 @@ import { ThemeProvider } from "@/context/providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Orient Blackstone Asset Management | Corporate Finance Advisory & Risk Management",
+  title: "Radiant Soaring Fund Management | Premier Investment Advisory & Fund Management",
   description:
-    "Orient Blackstone Asset Management LLC provides expert corporate finance consulting, risk management, and compliance advisory services. Strategic guidance on financial planning, investment strategy, and asset allocation to drive business growth.",
-  keywords: "Orient Blackstone, asset management, corporate finance consulting, risk management advisory, compliance consulting, financial planning, investment strategy advisory, corporate asset advisory, CFO advisory services",
+    "Radiant Soaring Fund Management LLC delivers exceptional fund management and investment advisory services for institutional investors and high-net-worth individuals. Expert portfolio management, risk optimization, and strategic asset allocation for superior returns.",
+  keywords: "Radiant Soaring, fund management, investment advisory, portfolio management, institutional investing, wealth management, asset allocation, hedge fund, private equity, high-net-worth advisory",
 };
 
 export default function RootLayout({
@@ -26,7 +26,10 @@ export default function RootLayout({
         <script src="https://app.cal.com/embed/embed.js" async />
       </head>
       <body
-        className={cn("antialiased dark:bg-black bg-white", inter.className)}
+        className={cn(
+          "antialiased bg-app text-fg min-h-screen transition-colors duration-300",
+          inter.className
+        )}
       >
         <ThemeProvider
           attribute="class"

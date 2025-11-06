@@ -22,15 +22,17 @@ export const Button = ({
   | typeof Link
 )) => {
   const baseStyles =
-    "px-4 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
+    "inline-flex items-center justify-center px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 cursor-pointer disabled:cursor-not-allowed disabled:opacity-70";
 
   const variantStyles = {
     primary:
-      "shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
-    secondary: "bg-transparent shadow-none dark:text-white",
-    dark: "bg-black text-white shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
+      "bg-primary-600 text-white shadow-soft hover:bg-primary-700 hover:shadow-elevated",
+    secondary:
+      "bg-surface border border-subtle text-fg hover:text-primary-600 hover:border-primary-300/70 dark:hover:text-primary-400",
+    dark:
+      "bg-surface-elevated text-fg shadow-soft hover:bg-primary-600 hover:text-white",
     gradient:
-      "bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-all duration-200 hover:shadow-lg",
+      "bg-gradient-to-r from-primary-500 via-amber-500 to-primary-600 text-white shadow-soft hover:from-primary-600 hover:via-amber-500 hover:to-primary-700",
   };
 
   return (

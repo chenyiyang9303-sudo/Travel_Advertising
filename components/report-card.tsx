@@ -40,7 +40,7 @@ export function ReportCard({
     <motion.div
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
-      className={`group bg-white dark:bg-neutral-800 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 ${className}`}
+      className={`group bg-surface rounded-xl overflow-hidden shadow-soft hover:shadow-elevated border border-subtle transition-all duration-300 ${className}`}
     >
       <Link href={`/reports/${report.id}`}>
         {/* Fixed aspect ratio cover - wider format */}
@@ -62,18 +62,18 @@ export function ReportCard({
         
         {/* Content area */}
         <div className="p-5">
-          <h3 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
+          <h3 className="text-lg font-bold text-fg mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
             {report.title}
           </h3>
           
           {showExcerpt && (
-            <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-3 line-clamp-2">
+            <p className="text-sm text-muted mb-3 line-clamp-2">
               {report.excerpt}
             </p>
           )}
           
           {/* Metadata */}
-          <div className="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-500 mb-3">
+          <div className="flex items-center gap-3 text-xs text-subtle mb-3">
             <div className="flex items-center gap-1">
               <User className="h-3 w-3" />
               {report.author.name}
@@ -91,12 +91,12 @@ export function ReportCard({
           {/* Tags */}
           <div className="flex flex-wrap gap-1 mb-3">
             {report.tags.slice(0, 3).map((tag) => (
-              <span key={tag} className="px-2 py-1 bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-400 text-xs rounded">
+              <span key={tag} className="px-2 py-1 bg-surface-subtle text-muted text-xs rounded">
                 {tag}
               </span>
             ))}
             {report.tags.length > 3 && (
-              <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-400 text-xs rounded">
+              <span className="px-2 py-1 bg-surface-subtle text-muted text-xs rounded">
                 +{report.tags.length - 3}
               </span>
             )}
@@ -130,7 +130,7 @@ function FeaturedReportCard({ report, className }: { report: Report; className?:
     <motion.div
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
-      className={`group bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 h-full ${className}`}
+      className={`group bg-surface rounded-2xl overflow-hidden shadow-soft hover:shadow-elevated border border-subtle transition-all duration-300 h-full ${className}`}
     >
       <Link href={`/reports/${report.id}`}>
         <div className="flex flex-col lg:flex-row h-full">
@@ -153,25 +153,25 @@ function FeaturedReportCard({ report, className }: { report: Report; className?:
           </div>
           
           {/* Content */}
-          <div className="lg:w-1/2 p-6 lg:p-8 flex flex-col justify-between">
+          <div className="lg:w-1/2 p-6 lg:p-8 flex flex-col justify-between bg-surface">
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded">
+                <span className="px-2 py-1 bg-blue-100/70 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 text-xs rounded">
                   {reportCategories.find(cat => cat.value === report.category)?.label || report.category}
                 </span>
               </div>
               
-              <h3 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-2 group-hover:text-blue-600 transition-colors">
+              <h3 className="text-xl font-bold text-fg mb-2 group-hover:text-blue-600 transition-colors">
                 {report.title}
               </h3>
               
-              <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-3">
+              <p className="text-sm text-muted mb-4 line-clamp-3">
                 {report.excerpt}
               </p>
             </div>
             
             <div>
-              <div className="flex items-center gap-4 text-xs text-neutral-500 dark:text-neutral-500 mb-4">
+              <div className="flex items-center gap-4 text-xs text-subtle mb-4">
                 <div className="flex items-center gap-1">
                   <Calendar className="h-3 w-3" />
                   {formatDate(report.publishDate)}

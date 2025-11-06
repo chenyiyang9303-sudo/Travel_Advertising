@@ -11,13 +11,13 @@ export const Logo = () => {
       <div className="flex items-center gap-3">
         <Image
           src="/logo.png"
-          alt="OBAM Logo"
+          alt="Radiant Soaring Logo"
           width={40}
           height={40}
-          className="h-8 w-8 md:h-10 md:w-10 dark:invert dark:brightness-200"
+          className="h-8 w-8 md:h-10 md:w-10"
         />
-        <span className="text-lg md:text-xl font-bold text-neutral-900 dark:text-white tracking-wide">
-          OBAM
+        <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent dark:from-orange-400 dark:to-amber-400 tracking-wide">
+          Radiant Soaring
         </span>
       </div>
     </Link>

@@ -5,7 +5,7 @@ import { BlogWithSearch } from "@/components/2";
 
 export function FeaturedContent() {
   return (
-    <section className="bg-gray-50 dark:bg-gray-800">
+    <section className="bg-surface-subtle">
       {/* Featured Articles */}
       <div className="pb-8">
         <SimpleBlogWithGrid />

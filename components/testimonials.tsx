@@ -1,146 +1,221 @@
 "use client";
-import React from "react";
-import { cn } from "@/lib/utils";
+
 import Image from "next/image";
-import Marquee from "react-fast-marquee";
+import { Quote as QuoteIcon, Star } from "lucide-react";
+
+import { cn } from "@/lib/utils";
+
+const testimonialMetrics = [
+  {
+    value: "215%",
+    label: "Average ROI",
+    description: "Across transformation engagements over the last 24 months.",
+  },
+  {
+    value: "98%",
+    label: "Client retention",
+    description: "Clients who renew or expand advisory partnerships annually.",
+  },
+  {
+    value: "12 weeks",
+    label: "Time to impact",
+    description: "Median period to deliver measurable financial uplift.",
+  },
+];
 
 export function Testimonials() {
+  if (!testimonials.length) {
+    return null;
+  }
+
+  const [spotlight, ...others] = testimonials;
+
   return (
-    <div
+    <section
       id="testimonials"
-      className="relative w-full bg-white dark:bg-gray-900 py-24 px-4 md:px-8 overflow-hidden"
+      className="relative w-full bg-app py-24 px-4 md:px-8"
     >
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-display-md md:text-display-lg font-bold text-accent-900 dark:text-white mb-4">
-            Trusted by Industry Leaders
-          </h2>
-          <p className="text-lg text-accent-600 dark:text-accent-300 max-w-3xl mx-auto">
-            20+ companies trust us to deliver transformational results. Here's what industry leaders say about working with our team to unlock exponential growth.
-          </p>
+      <div className="mx-auto max-w-7xl">
+        <div className="grid items-start gap-12 xl:grid-cols-[1.1fr_0.9fr]">
+          <div className="space-y-10">
+            <div className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-subtle">
+              Testimonials
+              <span className="h-px w-10 bg-primary-500/70" />
+            </div>
+            <div className="space-y-6">
+              <h2 className="font-display text-display-md font-bold text-fg md:text-display-lg">
+                Trusted partners for mission-critical finance initiatives
+              </h2>
+              <p className="max-w-2xl text-lg text-muted">
+                Board members, CFOs, and founders rely on our team to navigate
+                capital market inflection points, restructure complex portfolios,
+                and unlock measurable performance gains.
+              </p>
+            </div>
+            <dl className="grid gap-6 sm:grid-cols-3">
+              {testimonialMetrics.map((metric) => (
+                <div
+                  key={metric.label}
+                  className="rounded-2xl border border-subtle/80 bg-surface px-6 py-5 shadow-soft"
+                >
+                  <dt className="text-xs font-semibold uppercase tracking-wide text-subtle">
+                    {metric.label}
+                  </dt>
+                  <dd className="mt-3 text-2xl font-semibold text-fg">
+                    {metric.value}
+                  </dd>
+                  <p className="mt-2 text-xs leading-relaxed text-muted">
+                    {metric.description}
+                  </p>
+                </div>
+              ))}
+            </dl>
+          </div>
+          <TestimonialSpotlight testimonial={spotlight} />
         </div>
 
-        <div className="relative">
-          <div className="h-full overflow-hidden w-full">
-            <TestimonialsGrid />
-          </div>
+        <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {others.map((testimonial, index) => (
+            <TestimonialCard
+              key={`${testimonial.name}-${index}`}
+              testimonial={testimonial}
+              accentIndex={index}
+            />
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
-export const TestimonialsGrid = () => {
-  const first = testimonials.slice(0, 6);
-  const second = testimonials.slice(6, 12);
+const badgeLabels = [
+  "Capital Strategy",
+  "Operational Excellence",
+  "Risk & Compliance",
+  "Growth Advisory",
+];
 
+const TestimonialSpotlight = ({ testimonial }: { testimonial: Testimonial }) => {
   return (
-    <div className="relative [mask-image:linear-gradient(to_right,transparent_0%,white_10%,white_90%,transparent_100%)]">
-      <Marquee direction="right" pauseOnHover speed={50}>
-        {first.map((testimonial, index) => (
-          <Card key={`testimonial-${testimonial.src}-${index}`}>
-            <Quote>{testimonial.quote}</Quote>
-            <div className="flex gap-2 items-center mt-8">
-              <Image
-                src={testimonial.src}
-                alt={testimonial.name}
-                width={40}
-                height={40}
-                className="rounded-full"
-              />
-              <div className="flex flex-col">
-                <QuoteDescription className="text-neutral-600 dark:text-neutral-300">
-                  {testimonial.name}
-                </QuoteDescription>
-                <QuoteDescription className="text-neutral-400">
-                  {testimonial.designation}
-                </QuoteDescription>
-              </div>
-            </div>
-          </Card>
-        ))}
-      </Marquee>
-      <Marquee className="mt-10" direction="right" pauseOnHover speed={70}>
-        {second.map((testimonial, index) => (
-          <Card key={`testimonial-${testimonial.src}-${index}`}>
-            <Quote>{testimonial.quote}</Quote>
-            <div className="flex gap-2 items-center mt-8">
-              <Image
-                src={testimonial.src}
-                alt={testimonial.name}
-                width={40}
-                height={40}
-                className="rounded-full"
-              />
-              <div className="flex flex-col">
-                <QuoteDescription className="text-neutral-300">
-                  {testimonial.name}
-                </QuoteDescription>
-                <QuoteDescription className="text-neutral-400">
-                  {testimonial.designation}
-                </QuoteDescription>
-              </div>
-            </div>
-          </Card>
-        ))}
-      </Marquee>
-    </div>
-  );
-};
-export const Card = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children: React.ReactNode;
-}) => {
-  return (
-    <div
-      className={cn(
-        "p-6 md:p-8 rounded-2xl min-h-[230px] h-full max-w-md md:max-w-lg mx-4 bg-white dark:bg-accent-800 border border-accent-100 dark:border-accent-700/50 hover:border-primary-200 dark:hover:border-primary-600 shadow-sm hover:shadow-xl transition-all duration-300 group",
-        className
-      )}
-    >
-      {children}
-    </div>
-  );
-};
+    <article className="relative isolate overflow-hidden rounded-3xl border border-primary-300/60 bg-gradient-to-br from-primary-500/15 via-surface to-orange-500/10 px-8 py-10 shadow-elevated backdrop-blur">
+      <QuoteIcon
+        className="pointer-events-none absolute -top-14 -right-12 h-56 w-56 text-primary-500/15"
+        aria-hidden="true"
+      />
+      <div className="flex items-center gap-4">
+        <Image
+          src={testimonial.src}
+          alt={testimonial.name}
+          width={64}
+          height={64}
+          className="h-16 w-16 rounded-full border-4 border-white/40 object-cover shadow-md"
+        />
+        <div className="space-y-1">
+          <p className="text-base font-semibold text-fg">{testimonial.name}</p>
+          {testimonial.designation && (
+            <p className="text-sm text-primary-700/80 dark:text-primary-200/80">
+              {testimonial.designation}
+            </p>
+          )}
+        </div>
+      </div>
 
-export const Quote = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <h3
-      className={cn(
-        "text-sm md:text-base font-medium dark:text-accent-200 text-accent-700 py-2 leading-relaxed",
-        className
-      )}
-    >
-      {children}
-    </h3>
+      <div className="mt-8 space-y-4">
+        <div className="flex items-center gap-1 text-amber-500">
+          {Array.from({ length: 5 }).map((_, starIndex) => (
+            <Star
+              key={`spotlight-star-${starIndex}`}
+              className="h-4 w-4"
+              fill="currentColor"
+              stroke="none"
+            />
+          ))}
+          <span className="ml-2 text-xs font-medium uppercase tracking-[0.3em] text-amber-600">
+            5.0 rating
+          </span>
+        </div>
+        <p className="text-lg leading-relaxed text-fg">
+          &ldquo;{testimonial.quote}&rdquo;
+        </p>
+      </div>
+
+      <div className="mt-8 grid gap-4 rounded-2xl border border-primary-300/40 bg-surface/70 p-6 text-sm text-muted md:grid-cols-2">
+        <div>
+          <p className="text-xs uppercase tracking-wide text-subtle">
+            Focus
+          </p>
+          <p className="mt-1 font-medium text-fg">
+            Strategic finance transformation
+          </p>
+        </div>
+        <div>
+          <p className="text-xs uppercase tracking-wide text-subtle">
+            Result
+          </p>
+          <p className="mt-1">
+            Delivered compound EBITDA uplift and liquidity resilience in under
+            six months.
+          </p>
+        </div>
+      </div>
+    </article>
   );
 };
 
-export const QuoteDescription = ({
-  children,
-  className,
+const TestimonialCard = ({
+  testimonial,
+  accentIndex,
 }: {
-  children: React.ReactNode;
-  className?: string;
+  testimonial: Testimonial;
+  accentIndex: number;
 }) => {
+  const highlight = accentIndex % 4 === 1;
+  const badgeLabel = badgeLabels[accentIndex % badgeLabels.length];
+
   return (
-    <p
+    <article
       className={cn(
-        "text-xs md:text-sm font-medium dark:text-accent-400 text-accent-600 max-w-sm",
-        className
+        "relative flex h-full flex-col justify-between rounded-2xl border bg-surface p-8 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated",
+        highlight
+          ? "border-primary-400/60 bg-gradient-to-br from-primary-500/10 via-surface to-orange-400/5"
+          : "border-subtle/80"
       )}
     >
-      {children}
-    </p>
+      <QuoteIcon
+        className={cn(
+          "pointer-events-none absolute -right-6 -top-6 h-24 w-24 text-primary-500/10",
+          highlight ? "text-primary-500/15" : "text-primary-500/10"
+        )}
+        aria-hidden="true"
+      />
+
+      {highlight && (
+        <span className="inline-flex w-fit items-center gap-2 rounded-full bg-primary-500/10 px-3 py-1 text-xs font-medium text-primary-700 dark:text-primary-200">
+          <span className="h-1.5 w-1.5 rounded-full bg-primary-500" />
+          {badgeLabel}
+        </span>
+      )}
+
+      <p className="relative mt-4 text-base leading-relaxed text-muted">
+        &ldquo;{testimonial.quote}&rdquo;
+      </p>
+
+      <div className="mt-8 flex items-center gap-4">
+        <Image
+          src={testimonial.src}
+          alt={testimonial.name}
+          width={48}
+          height={48}
+          className="h-12 w-12 rounded-full border border-white/40 object-cover shadow"
+        />
+        <div className="space-y-1">
+          <p className="text-sm font-semibold text-fg">{testimonial.name}</p>
+          {testimonial.designation && (
+            <p className="text-xs text-subtle">{testimonial.designation}</p>
+          )}
+        </div>
+      </div>
+    </article>
   );
 };
 
