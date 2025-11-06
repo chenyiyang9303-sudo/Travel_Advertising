@@ -22,11 +22,11 @@ export function ReportCard({
 }: ReportCardProps) {
   const coverVariants = ['hexagon', 'wave', 'circle', 'diamond', 'organic'] as const;
   const gradients = [
-    'from-blue-500 to-green-500',
-    'from-purple-500 to-blue-500', 
-    'from-green-500 to-teal-500',
-    'from-orange-500 to-red-500',
-    'from-indigo-500 to-purple-500'
+    'from-primary-500 to-amber-500',
+    'from-primary-600 to-primary-800',
+    'from-amber-400 to-primary-600',
+    'from-primary-500 to-rose-400',
+    'from-neutral-900 to-primary-500'
   ];
   
   const variantIndex = Math.abs(report.id.split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % coverVariants.length;
@@ -62,7 +62,7 @@ export function ReportCard({
         
         {/* Content area */}
         <div className="p-5">
-          <h3 className="text-lg font-bold text-fg mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
+          <h3 className="text-lg font-bold text-fg mb-2 group-hover:text-primary-600 transition-colors line-clamp-2">
             {report.title}
           </h3>
           
@@ -103,7 +103,7 @@ export function ReportCard({
           </div>
           
           {/* Action */}
-          <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium text-sm hover:gap-3 transition-all duration-200">
+          <div className="flex items-center gap-2 text-primary-600 dark:text-primary-300 font-medium text-sm hover:gap-3 transition-all duration-200">
             View Report
             <Download className="h-4 w-4" />
           </div>
@@ -116,11 +116,11 @@ export function ReportCard({
 function FeaturedReportCard({ report, className }: { report: Report; className?: string }) {
   const coverVariants = ['hexagon', 'wave', 'circle', 'diamond', 'organic'] as const;
   const gradients = [
-    'from-blue-600 to-green-600',
-    'from-purple-600 to-blue-600', 
-    'from-green-600 to-teal-600',
-    'from-orange-600 to-red-600',
-    'from-indigo-600 to-purple-600'
+    'from-primary-600 to-amber-500',
+    'from-primary-700 to-primary-900',
+    'from-amber-500 to-primary-700',
+    'from-primary-600 to-rose-500',
+    'from-neutral-900 to-primary-600'
   ];
   
   const variantIndex = Math.abs(report.id.split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % coverVariants.length;
@@ -156,12 +156,12 @@ function FeaturedReportCard({ report, className }: { report: Report; className?:
           <div className="lg:w-1/2 p-6 lg:p-8 flex flex-col justify-between bg-surface">
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <span className="px-2 py-1 bg-blue-100/70 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 text-xs rounded">
+                <span className="px-2 py-1 bg-primary-100/70 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200 text-xs rounded">
                   {reportCategories.find(cat => cat.value === report.category)?.label || report.category}
                 </span>
               </div>
               
-              <h3 className="text-xl font-bold text-fg mb-2 group-hover:text-blue-600 transition-colors">
+              <h3 className="text-xl font-bold text-fg mb-2 group-hover:text-primary-600 transition-colors">
                 {report.title}
               </h3>
               
@@ -186,7 +186,7 @@ function FeaturedReportCard({ report, className }: { report: Report; className?:
                 </div>
               </div>
               
-              <div className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+              <div className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
                 <Download className="h-4 w-4" />
                 View Report
               </div>
@@ -202,11 +202,11 @@ function FeaturedReportCard({ report, className }: { report: Report; className?:
 export function RelatedReportCard({ report }: { report: Report }) {
   const coverVariants = ['hexagon', 'wave', 'circle', 'diamond', 'organic'] as const;
   const gradients = [
-    'from-blue-500 to-green-500',
-    'from-purple-500 to-blue-500', 
-    'from-green-500 to-teal-500',
-    'from-orange-500 to-red-500',
-    'from-indigo-500 to-purple-500'
+    'from-primary-500 to-amber-500',
+    'from-primary-600 to-primary-800',
+    'from-amber-400 to-primary-600',
+    'from-primary-500 to-rose-400',
+    'from-neutral-900 to-primary-500'
   ];
   
   const variantIndex = Math.abs(report.id.split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % coverVariants.length;
@@ -232,7 +232,7 @@ export function RelatedReportCard({ report }: { report: Report }) {
         </div>
         
         <div className="p-4">
-          <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded mb-2 inline-block">
+          <span className="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200 text-xs rounded mb-2 inline-block">
             {reportCategories.find(cat => cat.value === report.category)?.label || report.category}
           </span>
           <h3 className="font-bold text-neutral-800 dark:text-neutral-100 mb-2 line-clamp-2">
@@ -251,7 +251,7 @@ export function RelatedReportCard({ report }: { report: Report }) {
               {report.readTime}
             </div>
           </div>
-          <div className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium text-sm hover:gap-3 transition-all duration-200">
+          <div className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-300 font-medium text-sm hover:gap-3 transition-all duration-200">
             View Report
             <Download className="h-4 w-4" />
           </div>

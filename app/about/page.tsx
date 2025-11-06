@@ -23,7 +23,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-900">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-slate-50 dark:from-blue-900/20 dark:to-slate-900/20 py-20">
+      <section className="bg-gradient-to-br from-primary-50 to-slate-50 dark:from-primary-900/20 dark:to-slate-900/20 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h1
@@ -49,7 +49,7 @@ export default function AboutPage() {
             >
               <Link
                 href="/#contact"
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
+                className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
               >
                 Work With Us
                 <ArrowRight className="h-4 w-4" />
@@ -83,7 +83,7 @@ export default function AboutPage() {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex items-start gap-3">
-                  <Target className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+                  <Target className="h-6 w-6 text-primary-600 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-1">
                       Strategic Focus
@@ -94,7 +94,7 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Globe className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+                  <Globe className="h-6 w-6 text-primary-600 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-1">
                       Client-Centric Approach
@@ -166,7 +166,7 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white dark:bg-neutral-900 p-6 rounded-xl shadow-sm"
               >
-                <value.icon className="h-8 w-8 text-blue-600 mb-4" />
+                <value.icon className="h-8 w-8 text-primary-600 mb-4" />
                 <h3 className="text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">
                   {value.title}
                 </h3>
@@ -264,7 +264,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium mb-2">
+                  <p className="text-primary-600 dark:text-primary-300 font-medium mb-2">
                     {member.role}
                   </p>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-3">
@@ -276,7 +276,7 @@ export default function AboutPage() {
                   <div className="flex items-center gap-3">
                     <a
                       href={`mailto:${member.email}`}
-                      className="inline-flex items-center gap-1 text-neutral-600 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      className="inline-flex items-center gap-1 text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
                     >
                       <Mail className="h-4 w-4" />
                     </a>
@@ -289,13 +289,13 @@ export default function AboutPage() {
       </section>
 
       {/* Company Stats */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
+      <section className="py-20 bg-gradient-to-r from-primary-600 via-primary-600 to-amber-500">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">
               Our Impact in Numbers
             </h2>
-            <p className="text-blue-100 text-lg max-w-2xl mx-auto">
+            <p className="text-primary-100/80 text-lg max-w-2xl mx-auto">
               Delivering measurable results for clients across industries and sectors.
             </p>
           </div>
@@ -314,9 +314,9 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <stat.icon className="h-8 w-8 text-blue-200 mx-auto mb-4" />
+                <stat.icon className="h-8 w-8 text-primary-200 mx-auto mb-4" />
                 <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-blue-100">{stat.label}</div>
+                <div className="text-primary-100/80">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -353,7 +353,7 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-neutral-50 dark:bg-neutral-800 p-6 rounded-xl text-center"
               >
-                <Award className="h-8 w-8 text-blue-600 mx-auto mb-3" />
+                <Award className="h-8 w-8 text-primary-600 mx-auto mb-3" />
                 <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 text-sm">
                   {certification}
                 </h3>
@@ -376,7 +376,7 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/#contact"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
+              className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
             >
               Get Started Today
               <ArrowRight className="h-4 w-4" />

@@ -154,7 +154,7 @@ const ServiceCard = ({
       className="group relative p-8 rounded-2xl bg-surface border border-subtle hover:border-primary-300/70 shadow-soft hover:shadow-elevated transition-all duration-300"
     >
       <div className="mb-6">
-        <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-100/70 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 mb-4">
+        <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary-100/70 dark:bg-primary-900/40 text-primary-600 dark:text-primary-300 mb-4">
           {icon}
         </div>
         <h3 className="font-display text-xl font-semibold text-fg">
@@ -169,7 +169,7 @@ const ServiceCard = ({
       <ul className="space-y-3 mb-4">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start gap-3 text-sm text-muted">
-            <svg className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <svg className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
             </svg>
             {feature}

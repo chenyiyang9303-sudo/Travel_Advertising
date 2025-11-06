@@ -69,7 +69,7 @@ export const BlogCard = ({ blog }: { blog: any }) => {
       )}
       <div className="p-4 md:p-8 bg-surface">
         <div className="flex space-x-2 items-center  mb-2">
-          <div className="rounded-full h-5 w-5 bg-blue-600 flex items-center justify-center text-white text-xs font-bold">
+          <div className="rounded-full h-5 w-5 bg-primary-600 flex items-center justify-center text-white text-xs font-bold">
             {blog.author.name.split(' ').map((n: string) => n[0]).join('')}
           </div>
           <p className="text-sm font-normal text-muted">

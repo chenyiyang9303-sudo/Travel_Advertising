@@ -73,7 +73,7 @@ npm run lint         # ESLint + Next.js linting
 **Current Configuration** (in [constants/links.ts](constants/links.ts)):
 - Namespace: `"chat-with-manu-demo"` ⚠️ **STILL USING DEMO ACCOUNT**
 - Link: `"manu-arora-vesr9s/chat-with-manu-demo"` ⚠️
-- Brand color: `#3b82f6` (blue-500)
+- Brand color: `#ea580c` (primary-600)
 - Layout: `"month_view"`
 
 **Hook Implementation**:
@@ -161,7 +161,7 @@ npm run lint         # ESLint + Next.js linting
 ## Tailwind Configuration
 
 **Custom Color Palette** ([tailwind.config.ts](tailwind.config.ts)):
-- `primary`: Sky blue scale (50-900) - main brand color
+- `primary`: Warm orange scale (50-900) - main brand color
 - `accent`: Zinc/gray scale (50-900) - neutral colors
 - `success`: `#10b981` (emerald)
 - `warning`: `#f59e0b` (amber)

@@ -19,7 +19,7 @@ export function ReportCover({
   category, 
   publishDate, 
   variant = 'hexagon',
-  gradient = 'from-blue-500 to-green-500'
+  gradient = 'from-primary-600 to-amber-500'
 }: ReportCoverProps) {
   const variants = {
     hexagon: HexagonCover,

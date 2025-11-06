@@ -10,6 +10,7 @@ body {
   background-color: rgb(var(--color-bg));
   color: rgb(var(--color-text));
   transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: var(--font-body), "Inter", "Helvetica Neue", Arial, sans-serif;
 }
 
 @layer utilities {
@@ -21,9 +22,17 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  
+
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+
+  .font-body {
+    font-family: var(--font-body), "Inter", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .font-display {
+    font-family: var(--font-display), "Playfair Display", Georgia, serif;
   }
 
   .bg-app {
@@ -87,28 +96,53 @@ body {
 
 @layer base {
   :root {
-    --color-bg: 252, 253, 255;
-    --color-surface-subtle: 246, 248, 252;
-    --color-surface: 240, 243, 249;
-    --color-surface-elevated: 232, 236, 244;
-    --color-border: 218, 224, 235;
-    --color-border-strong: 196, 204, 218;
-    --color-text: 21, 24, 35;
-    --color-text-muted: 79, 90, 108;
-    --color-text-subtle: 123, 132, 150;
-    --color-shadow: 15, 23, 42;
+    color-scheme: dark;
+    --color-bg: 6, 6, 6;
+    --color-surface-subtle: 14, 14, 14;
+    --color-surface: 18, 18, 18;
+    --color-surface-elevated: 28, 28, 28;
+    --color-border: 48, 48, 48;
+    --color-border-strong: 76, 76, 76;
+    --color-text: 232, 232, 232;
+    --color-text-muted: 186, 186, 186;
+    --color-text-subtle: 135, 135, 135;
+    --color-shadow: 0, 0, 0;
   }
 
-  .dark {
-    --color-bg: 6, 7, 11;
-    --color-surface-subtle: 12, 14, 20;
-    --color-surface: 17, 22, 31;
-    --color-surface-elevated: 27, 32, 44;
-    --color-border: 41, 50, 64;
-    --color-border-strong: 63, 78, 98;
-    --color-text: 229, 234, 244;
-    --color-text-muted: 175, 182, 202;
-    --color-text-subtle: 131, 140, 162;
-    --color-shadow: 0, 0, 0;
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display), "Playfair Display", Georgia, serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-weight: 600;
+  }
+
+  h2 {
+    font-weight: 600;
+  }
+
+  h3 {
+    font-weight: 500;
+  }
+
+  h4 {
+    font-weight: 500;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+
+  a {
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  section + section {
+    margin-top: 4rem;
   }
 }

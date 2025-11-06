@@ -22,17 +22,17 @@ export const Button = ({
   | typeof Link
 )) => {
   const baseStyles =
-    "inline-flex items-center justify-center px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 cursor-pointer disabled:cursor-not-allowed disabled:opacity-70";
+    "group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs font-semibold tracking-[0.35em] uppercase transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 cursor-pointer disabled:cursor-not-allowed disabled:opacity-70";
 
   const variantStyles = {
     primary:
-      "bg-primary-600 text-white shadow-soft hover:bg-primary-700 hover:shadow-elevated",
+      "bg-white text-black hover:bg-primary-500 hover:text-black shadow-soft",
     secondary:
-      "bg-surface border border-subtle text-fg hover:text-primary-600 hover:border-primary-300/70 dark:hover:text-primary-400",
+      "bg-transparent border border-white/40 text-white hover:border-primary-500 hover:text-primary-200",
     dark:
-      "bg-surface-elevated text-fg shadow-soft hover:bg-primary-600 hover:text-white",
+      "bg-black text-white border border-white/10 hover:border-primary-500 hover:text-primary-100 shadow-soft",
     gradient:
-      "bg-gradient-to-r from-primary-500 via-amber-500 to-primary-600 text-white shadow-soft hover:from-primary-600 hover:via-amber-500 hover:to-primary-700",
+      "bg-gradient-to-r from-primary-600 via-primary-500 to-primary-700 text-black shadow-soft hover:from-primary-500 hover:via-primary-500 hover:to-primary-600",
   };
 
   return (

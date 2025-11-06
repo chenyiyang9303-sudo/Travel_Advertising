@@ -26,7 +26,7 @@ export function FeaturedPostCard({ post }: FeaturedPostCardProps) {
               <Star className="h-3 w-3" />
               Featured
             </span>
-            <span className="px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-full">
+            <span className="px-3 py-1 bg-primary-600 text-white text-xs font-medium rounded-full">
               {blogCategories.find(cat => cat.value === post.category)?.label || post.category}
             </span>
           </div>
@@ -34,7 +34,7 @@ export function FeaturedPostCard({ post }: FeaturedPostCardProps) {
         
         <div className="lg:w-1/2 p-6 lg:p-8 flex flex-col justify-between">
           <div>
-            <h3 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+            <h3 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 group-hover:text-primary-600 transition-colors line-clamp-2">
               <Link href={`/blog/${post.slug}`}>
                 {post.title}
               </Link>
@@ -63,7 +63,7 @@ export function FeaturedPostCard({ post }: FeaturedPostCardProps) {
             
             <Link
               href={`/blog/${post.slug}`}
-              className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium hover:gap-3 transition-all duration-200"
+              className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-300 font-medium hover:gap-3 transition-all duration-200"
             >
               Read Article
               <ArrowRight className="h-4 w-4" />

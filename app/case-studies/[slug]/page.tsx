@@ -48,7 +48,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             
             <div className="max-w-3xl">
               <div className="flex items-center gap-3 mb-4">
-                <span className="px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">
+                <span className="px-3 py-1 bg-primary-600 text-white text-sm font-medium rounded-full">
                   {caseStudy.industry}
                 </span>
                 <div className="flex items-center gap-1 text-white/80">
@@ -77,7 +77,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             {/* Client Background */}
             <section>
               <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-6 flex items-center gap-3">
-                <Users className="h-6 w-6 text-blue-600" />
+                <Users className="h-6 w-6 text-primary-600" />
                 Client Background
               </h2>
               <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
@@ -106,7 +106,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
                 {caseStudy.approach.map((item, index) => (
                   <div key={index} className="bg-neutral-50 dark:bg-neutral-800 p-4 rounded-lg">
                     <div className="flex items-center gap-3">
-                      <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                      <span className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
                         {index + 1}
                       </span>
                       <span className="font-medium text-neutral-800 dark:text-neutral-100">
@@ -125,19 +125,19 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               </h2>
               <div className="space-y-8">
                 {caseStudy.implementation.map((phase, index) => (
-                  <div key={index} className="border-l-4 border-blue-600 pl-6">
+                  <div key={index} className="border-l-4 border-primary-600 pl-6">
                     <div className="flex items-center gap-3 mb-3">
                       <h3 className="text-xl font-semibold text-neutral-800 dark:text-neutral-100">
                         {phase.phase}
                       </h3>
-                      <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded">
+                      <span className="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200 text-sm rounded">
                         {phase.duration}
                       </span>
                     </div>
                     <ul className="space-y-2">
                       {phase.activities.map((activity, actIndex) => (
                         <li key={actIndex} className="flex items-center gap-2 text-neutral-600 dark:text-neutral-400">
-                          <span className="w-2 h-2 bg-blue-600 rounded-full flex-shrink-0" />
+                          <span className="w-2 h-2 bg-primary-600 rounded-full flex-shrink-0" />
                           {activity}
                         </li>
                       ))}
@@ -183,8 +183,8 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             </section>
 
             {/* Testimonial */}
-            <section className="bg-blue-50 dark:bg-blue-900/20 p-8 rounded-xl">
-              <Quote className="h-8 w-8 text-blue-600 mb-4" />
+            <section className="bg-primary-50 dark:bg-primary-900/20 p-8 rounded-xl">
+              <Quote className="h-8 w-8 text-primary-600 mb-4" />
               <blockquote className="text-lg text-neutral-700 dark:text-neutral-300 italic mb-4">
                 "{caseStudy.testimonial.quote}"
               </blockquote>
@@ -231,7 +231,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
                 {caseStudy.technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full"
+                    className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200 text-sm rounded-full"
                   >
                     {tech}
                   </span>
@@ -258,7 +258,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
 
             {/* Next Steps */}
             {caseStudy.nextSteps && (
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-xl">
+              <div className="bg-gradient-to-br from-primary-50 to-amber-50 dark:from-primary-900/15 dark:to-amber-900/20 p-6 rounded-xl">
                 <h3 className="text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-4">
                   Next Steps
                 </h3>
@@ -282,7 +282,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
           </p>
           <Link
             href="/#contact"
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
+            className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
           >
             Free Market Consultation
           </Link>

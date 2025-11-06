@@ -1,221 +1,181 @@
 "use client";
-import { cn } from "@/lib/utils";
-import { IconMenu2, IconX } from "@tabler/icons-react";
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-} from "framer-motion";
-import Link from "next/link";
-import React, { useRef, useState } from "react";
-import { Button } from "./button";
-import { Logo } from "./logo";
-import { ModeToggle } from "./mode-toggle";
-import { useCalEmbed } from "@/app/hooks/useCalEmbed";
 
-interface NavbarProps {
-  navItems: {
-    name: string;
-    link: string;
-  }[];
-  visible: boolean;
-}
+import { useState } from "react";
+import Link from "next/link";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
+import { IconMenu2, IconX } from "@tabler/icons-react";
+import { ArrowUpRight } from "lucide-react";
+
+import { Logo } from "./logo";
+import { Button } from "./button";
+import { useCalEmbed } from "@/app/hooks/useCalEmbed";
+import { cn } from "@/lib/utils";
+
+const NAV_ITEMS = [
+  { name: "The Firm", link: "/about" },
+  { name: "Solutions", link: "/#services" },
+  { name: "Casework", link: "/#case-studies" },
+  { name: "Insights", link: "/blog" },
+  { name: "Reports", link: "/reports" },
+  { name: "Contact", link: "/#contact" },
+];
 
 export const Navbar = () => {
-  const navItems = [
-    {
-      name: "Services",
-      link: "/#services",
-    },
-    {
-      name: "Case Studies",
-      link: "/#case-studies",
-    },
-    {
-      name: "Reports",
-      link: "/reports",
-    },
-    {
-      name: "Blog",
-      link: "/blog",
-    },
-    {
-      name: "About",
-      link: "/about",
-    },
-  ];
-
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollY } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
+  const { scrollY } = useScroll();
   const [visible, setVisible] = useState<boolean>(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > 100) {
-      setVisible(true);
-    } else {
-      setVisible(false);
-    }
+    setVisible(latest > 80);
   });
 
   return (
-    <motion.div ref={ref} className="w-full fixed top-0 inset-x-0 z-50">
-      <DesktopNav visible={visible} navItems={navItems} />
-      <MobileNav visible={visible} navItems={navItems} />
-    </motion.div>
+    <motion.header className="fixed inset-x-0 top-0 z-50 w-full">
+      <DesktopNav visible={visible} />
+      <MobileNav visible={visible} />
+    </motion.header>
   );
 };
 
-const DesktopNav = ({ navItems, visible }: NavbarProps) => {
+const DesktopNav = ({ visible }: { visible: boolean }) => {
   const [hovered, setHovered] = useState<number | null>(null);
   const calConfig = useCalEmbed();
 
-
   return (
     <motion.div
-      onMouseLeave={() => {
-        setHovered(null);
-      }}
       animate={{
-        backdropFilter: visible ? "blur(10px)" : "none",
-        boxShadow: visible
-          ? "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
-          : "none",
-        width: visible ? "80%" : "100%",
-        y: visible ? 20 : 0,
+        backdropFilter: visible ? "blur(18px)" : "none",
+        y: visible ? 20 : 10,
       }}
-      transition={{
-        type: "spring",
-        stiffness: 200,
-        damping: 50,
-      }}
-      style={{
-        minWidth: visible ? "900px" : "800px",
-      }}
+      transition={{ type: "spring", stiffness: 200, damping: 40 }}
       className={cn(
-        "hidden lg:flex flex-row self-start items-center justify-between py-2 max-w-7xl mx-auto px-4 rounded-full relative z-[60] w-full transition-colors duration-300",
-        visible && "bg-surface-glass border border-subtle shadow-soft"
+        "hidden lg:flex items-center justify-between px-6 py-4 mx-auto max-w-6xl rounded-full transition-colors duration-300 border border-transparent",
+        visible ? "bg-black/82 border border-white/10 shadow-soft" : "bg-transparent"
       )}
     >
       <Logo />
-      <motion.div className="lg:flex flex-row flex-1 absolute inset-0 hidden items-center justify-center space-x-2 lg:space-x-2 text-sm text-zinc-600 font-medium hover:text-zinc-800 transition duration-200">
-        {navItems.map((navItem: any, idx: number) => (
+
+      <nav className="flex items-center gap-1 text-xs font-semibold uppercase tracking-[0.35em] text-white/65">
+        {NAV_ITEMS.map((item, idx) => (
           <Link
+            key={item.name}
+            href={item.link}
+            className="relative px-4 py-2 transition-colors duration-200 hover:text-primary-300"
             onMouseEnter={() => setHovered(idx)}
-            className="text-subtle hover:text-primary-600 dark:hover:text-primary-400 relative px-4 py-2 transition-colors duration-200"
-            key={`link=${idx}`}
-            href={navItem.link}
+            onMouseLeave={() => setHovered(null)}
           >
             {hovered === idx && (
-              <motion.div
-                layoutId="hovered"
-                className="w-full h-full absolute inset-0 bg-surface-subtle dark:bg-surface rounded-full"
+              <motion.span
+                layoutId="nav-hover"
+                className="absolute inset-0 rounded-full bg-white/6"
+                transition={{ type: "spring", stiffness: 350, damping: 30 }}
               />
             )}
-            <span className="relative z-20">{navItem.name}</span>
+            <span className="relative z-10">{item.name}</span>
           </Link>
         ))}
-      </motion.div>
-      <div className="flex items-center gap-4 relative z-30">
-        <ModeToggle />
+      </nav>
 
-        <button
+      <div className="flex items-center gap-4">
+        <Button
+          as="button"
+          variant="primary"
           data-cal-namespace={calConfig.namespace}
           data-cal-link={calConfig.link}
           data-cal-config={`{"layout":"${calConfig.layout}"}`}
-          className="hidden md:block px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 text-sm cursor-pointer"
+          className="hidden md:inline-flex"
         >
-          Schedule Consultation
-        </button>
+          <span>Book A Call</span>
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition-all duration-200 group-hover:bg-primary-200 group-hover:text-black">
+            <ArrowUpRight className="h-4 w-4" />
+          </span>
+        </Button>
       </div>
     </motion.div>
   );
 };
 
-const MobileNav = ({ navItems, visible }: NavbarProps) => {
+const MobileNav = ({ visible }: { visible: boolean }) => {
   const [open, setOpen] = useState(false);
   const calConfig = useCalEmbed();
 
-
   return (
-    <>
-      <motion.div
-        animate={{
-          backdropFilter: visible ? "blur(10px)" : "none",
-          boxShadow: visible
-            ? "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
-            : "none",
-          width: visible ? "90%" : "100%",
-          y: visible ? 20 : 0,
-          borderRadius: open ? "4px" : "2rem",
-          paddingRight: visible ? "12px" : "0px",
-          paddingLeft: visible ? "12px" : "0px",
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 200,
-          damping: 50,
-        }}
-        className={cn(
-          "flex relative flex-col lg:hidden w-full justify-between items-center max-w-[calc(100vw-2rem)] mx-auto px-0 py-2 z-50 transition-colors duration-300",
-          visible && "bg-surface-glass border border-subtle shadow-soft"
-        )}
+    <motion.div
+      animate={{
+        backdropFilter: visible || open ? "blur(16px)" : "none",
+        y: visible ? 18 : 8,
+      }}
+      transition={{ type: "spring", stiffness: 200, damping: 40 }}
+      className={cn(
+        "relative mx-auto flex w-[calc(100%-1.5rem)] items-center justify-between rounded-full px-4 py-3 lg:hidden",
+        visible || open ? "bg-black/85 border border-white/12 shadow-soft" : "bg-transparent"
+      )}
+    >
+      <Logo />
+      <button
+        className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white"
+        onClick={() => setOpen((prev) => !prev)}
+        aria-label="Toggle navigation"
       >
-        <div className="flex flex-row justify-between items-center w-full">
-          <div className="flex-1 min-w-0">
-            <Logo />
-          </div>
-          <div className="flex-shrink-0 ml-2">
-            {open ? (
-              <IconX
-                className="text-black dark:text-white h-6 w-6 cursor-pointer"
-                onClick={() => setOpen(!open)}
-              />
-            ) : (
-              <IconMenu2
-                className="text-black dark:text-white h-6 w-6 cursor-pointer"
-                onClick={() => setOpen(!open)}
-              />
-            )}
-          </div>
-        </div>
+        {open ? <IconX size={18} /> : <IconMenu2 size={18} />}
+      </button>
 
-        <AnimatePresence>
-          {open && (
-            <motion.div
-              initial={{
-                opacity: 0,
-              }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="flex rounded-2xl absolute top-16 inset-x-0 z-50 flex-col items-start justify-start gap-4 w-full px-4 py-8 bg-surface shadow-soft border border-subtle"
-            >
-              {navItems.map((navItem: any, idx: number) => (
-                <Link
-                  key={`link=${idx}`}
-                  href={navItem.link}
-                  onClick={() => setOpen(false)}
-                  className="relative text-subtle hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
-                >
-                  <motion.span className="block">{navItem.name} </motion.span>
-                </Link>
-              ))}
-              <button
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ type: "spring", stiffness: 240, damping: 30 }}
+            className="absolute top-16 left-0 right-0 mx-auto flex w-full flex-col gap-4 rounded-3xl border border-white/12 bg-black/92 px-5 py-8 shadow-soft backdrop-blur-xl"
+          >
+            {NAV_ITEMS.map((item) => (
+              <Link
+                key={item.name}
+                href={item.link}
+                onClick={() => setOpen(false)}
+                className="text-sm font-semibold uppercase tracking-[0.4em] text-white/70 transition-colors duration-200 hover:text-primary-300"
+              >
+                {item.name}
+              </Link>
+            ))}
+
+            <div className="flex w-full flex-col gap-3 border-t border-white/10 pt-6">
+              <Button
+                as="button"
+                variant="primary"
                 data-cal-namespace={calConfig.namespace}
                 data-cal-link={calConfig.link}
                 data-cal-config={`{"layout":"${calConfig.layout}"}`}
+                className="w-full justify-between"
                 onClick={() => setOpen(false)}
-                className="block md:hidden w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 text-sm cursor-pointer"
               >
-                Schedule Consultation
-              </button>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.div>
-    </>
+                <span>Book A Call</span>
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition-all duration-200 group-hover:bg-primary-200 group-hover:text-black">
+                  <ArrowUpRight className="h-4 w-4" />
+                </span>
+              </Button>
+
+              <Button
+                as={Link}
+                href="/reports"
+                variant="secondary"
+                className="w-full justify-between"
+                onClick={() => setOpen(false)}
+              >
+                <span>View Research</span>
+                <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/30 transition-colors duration-200 group-hover:border-primary-400">
+                  <ArrowUpRight className="h-4 w-4" />
+                </span>
+              </Button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 };

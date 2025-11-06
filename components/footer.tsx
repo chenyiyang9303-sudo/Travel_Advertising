@@ -1,204 +1,123 @@
 import Link from "next/link";
 import React from "react";
+
 import { Logo } from "./logo";
 
+const NAV_ITEMS = [
+  { title: "Home", href: "/" },
+  { title: "Solutions", href: "/#services" },
+  { title: "Casework", href: "/#case-studies" },
+  { title: "Insights", href: "/blog" },
+  { title: "Reports", href: "/reports" },
+  { title: "Contact", href: "/#contact" },
+];
+
+const SERVICE_ITEMS = [
+  { title: "Portfolio Management", href: "/#services" },
+  { title: "Private Capital", href: "/#services" },
+  { title: "Risk Advisory", href: "/#services" },
+  { title: "Institutional Mandates", href: "/#contact" },
+];
+
+const LEGAL_ITEMS = [
+  { title: "Privacy Policy", href: "/privacy" },
+  { title: "Terms of Service", href: "/terms" },
+  { title: "Cookie Policy", href: "/cookies" },
+];
+
 export function Footer() {
-  const pages = [
-    {
-      title: "Home",
-      href: "/",
-    },
-    {
-      title: "Services",
-      href: "/#services",
-    },
-    {
-      title: "Case Studies",
-      href: "/#case-studies",
-    },
-    {
-      title: "Reports",
-      href: "/reports",
-    },
-    {
-      title: "Blog",
-      href: "/blog",
-    },
-    {
-      title: "About",
-      href: "/about",
-    },
-    {
-      title: "Contact",
-      href: "/#contact",
-    },
-  ];
-
-  const legals = [
-    {
-      title: "Privacy Policy",
-      href: "/privacy",
-    },
-    {
-      title: "Terms of Service",
-      href: "/terms",
-    },
-    {
-      title: "Cookie Policy",
-      href: "/cookies",
-    },
-  ];
-
-  const services = [
-    {
-      title: "Portfolio Management",
-      href: "/#services",
-    },
-    {
-      title: "Private Equity",
-      href: "/#services",
-    },
-    {
-      title: "Risk Management",
-      href: "/#services",
-    },
-    {
-      title: "Institutional Advisory",
-      href: "/#contact",
-    },
-  ];
-
-  const contact = [
-    {
-      title: "Email Us",
-      href: "mailto:contact@radiantsoaring.com",
-    },
-    {
-      title: "Schedule Meeting",
-      href: "/#contact",
-    },
-  ];
-
   return (
-    <footer className="relative w-full overflow-hidden bg-surface-subtle dark:bg-surface">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-500/5 to-amber-500/5 dark:from-transparent dark:via-orange-400/10 dark:to-amber-400/10" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-orange-500/20 via-transparent to-amber-500/20" />
-      
-      <div className="relative border-t border-subtle px-6 md:px-8 py-16">
-        <div className="max-w-7xl mx-auto">
-          {/* Main footer content */}
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-12">
-            {/* Brand section */}
-            <div className="lg:col-span-2 space-y-6">
-              <div className="flex items-center">
-                <Logo />
-              </div>
-              
-              {/* Updated tagline */}
-              <div className="space-y-3">
-                <h3 className="text-lg font-bold bg-gradient-to-r from-orange-600 via-amber-600 to-orange-800 dark:from-orange-400 dark:via-amber-400 dark:to-orange-300 bg-clip-text text-transparent">
-                  Elevating Investment Excellence
-                </h3>
-                <p className="text-sm text-muted leading-relaxed max-w-md">
-                  Premier fund management services for institutional investors and high-net-worth clients. Delivering exceptional returns through sophisticated strategies and rigorous risk management.
-                </p>
-              </div>
+    <footer className="relative overflow-hidden border-t border-white/10 bg-[#050505] text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(196,154,108,0.12),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(185,130,94,0.12),transparent_40%)]" />
 
-              {/* Contact info */}
-              <div className="space-y-2 text-sm text-subtle">
-                <p>Radiant Soaring Fund Management LLC</p>
-                <p>Institutional Investment Management</p>
-              </div>
-            </div>
-
-            {/* Navigation sections */}
-            <div className="space-y-6">
-              <h4 className="font-bold text-fg text-sm uppercase tracking-wide">
-                Navigate
-              </h4>
-              <ul className="space-y-3">
-                {pages.map((page, idx) => (
-                  <li key={"pages" + idx}>
-                    <Link
-                      className="text-sm text-muted hover:text-orange-600 dark:hover:text-orange-400 transition-colors duration-200"
-                      href={page.href}
-                    >
-                      {page.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="space-y-6">
-              <h4 className="font-bold text-fg text-sm uppercase tracking-wide">
-                Services
-              </h4>
-              <ul className="space-y-3">
-                {services.map((service, idx) => (
-                  <li key={"service" + idx}>
-                    <Link
-                      className="text-sm text-muted hover:text-orange-600 dark:hover:text-orange-400 transition-colors duration-200"
-                      href={service.href}
-                    >
-                      {service.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="space-y-6">
-              <h4 className="font-bold text-fg text-sm uppercase tracking-wide">
-                Connect
-              </h4>
-              <ul className="space-y-3">
-                {contact.map((item, idx) => (
-                  <li key={"contact" + idx}>
-                    <Link
-                      className="text-sm text-muted hover:text-orange-600 dark:hover:text-orange-400 transition-colors duration-200"
-                      href={item.href}
-                    >
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              
-              <div className="pt-4">
-                <h5 className="font-semibold text-fg text-xs uppercase tracking-wide mb-3">
-                  Legal
-                </h5>
-                <ul className="space-y-2">
-                  {legals.map((legal, idx) => (
-                    <li key={"legal" + idx}>
-                      <Link
-                        className="text-xs text-subtle hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors duration-200"
-                        href={legal.href}
-                      >
-                        {legal.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+      <div className="relative mx-auto max-w-6xl px-6 py-20 md:px-10">
+        <div className="grid gap-12 lg:grid-cols-5">
+          <div className="lg:col-span-2 space-y-6">
+            <Logo />
+            <p className="max-w-sm text-sm leading-relaxed text-neutral-300">
+              RSFM partners with institutional allocators, family offices, and
+              founders to architect capital solutions, manage complex portfolios,
+              and execute transformative transactions with discretion and
+              precision.
+            </p>
+            <div className="space-y-1 text-[11px] uppercase tracking-[0.45em] text-neutral-500">
+              <p>RSFM</p>
+              <p>575 Lexington Avenue, Suite 4200, New York, NY 10022</p>
+              <p>contact@radiantsoaringfm.com</p>
             </div>
           </div>
 
-          {/* Bottom section */}
-          <div className="pt-8 border-t border-subtle">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="text-xs text-subtle">
-                &copy; 2025 Radiant Soaring Fund Management LLC. All rights reserved.
-              </div>
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-[0.4em] text-neutral-500">
+              Navigate
+            </h4>
+            <ul className="mt-5 space-y-3 text-sm text-neutral-300">
+              {NAV_ITEMS.map((item) => (
+                <li key={item.title}>
+                  <Link
+                    href={item.href}
+                    className="transition-colors duration-200 hover:text-primary-300"
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-              <div className="flex items-center gap-6 text-xs text-subtle">
-                <span>Premium Fund Management</span>
-                <span className="w-1 h-1 rounded-full bg-orange-500" />
-                <span>Institutional Excellence</span>
-              </div>
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-[0.4em] text-neutral-500">
+              Services
+            </h4>
+            <ul className="mt-5 space-y-3 text-sm text-neutral-300">
+              {SERVICE_ITEMS.map((item) => (
+                <li key={item.title}>
+                  <Link
+                    href={item.href}
+                    className="transition-colors duration-200 hover:text-primary-300"
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-[0.4em] text-neutral-500">
+              Governance
+            </h4>
+            <ul className="mt-5 space-y-3 text-sm text-neutral-300">
+              {LEGAL_ITEMS.map((item) => (
+                <li key={item.title}>
+                  <Link
+                    href={item.href}
+                    className="transition-colors duration-200 hover:text-primary-300"
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6 text-sm text-neutral-300">
+              <Link
+                href="mailto:contact@radiantsoaringfm.com"
+                className="inline-flex items-center gap-2 border-b border-transparent pb-1 transition-all duration-200 hover:border-primary-400 hover:text-primary-300"
+              >
+                contact@radiantsoaringfm.com
+              </Link>
             </div>
+          </div>
+        </div>
+
+        <div className="mt-16 flex flex-col items-start justify-between gap-6 border-t border-white/10 pt-8 text-[11px] uppercase tracking-[0.4em] text-neutral-500 sm:flex-row">
+          <span>&copy; 2025 Radiant Soaring Fund Management LLC. All rights reserved.</span>
+          <div className="flex flex-wrap items-center gap-3 text-neutral-500">
+            <span>Excellence</span>
+            <span className="h-0.5 w-8 bg-white/20" />
+            <span>Discipline</span>
+            <span className="h-0.5 w-8 bg-white/20" />
+            <span>Stewardship</span>
           </div>
         </div>
       </div>

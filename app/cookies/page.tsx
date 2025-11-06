@@ -1,227 +1,244 @@
 import type { Metadata } from "next";
 
+          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
+            <div className="prose prose-neutral dark:prose-invert space-y-4">
+              <h2>2. Cookies We Use</h2>
+              <p>
+                The specific cookies served may vary depending on the sections of
+                our website you visit. We categorise cookies as follows:
+              </p>
+              <ul>
+                <li>
+                  <strong>Strictly necessary:</strong> Enable core functionality
+                  such as page navigation, secure login, and session management.
+                  These cookies are essential and cannot be switched off in our
+                  systems.
+                </li>
+                <li>
+                  <strong>Performance and analytics:</strong> Collect aggregated
+                  data on how visitors use our site so we can diagnose performance
+                  issues, understand engagement, and improve content.
+                </li>
+                <li>
+                  <strong>Functional:</strong> Remember your preferences (for
+                  example, language or region) and enhance your experience.
+                </li>
+                <li>
+                  <strong>Marketing and personalisation:</strong> Support targeted
+                  communications, measure campaign effectiveness, and tailor
+                  content based on your interactions with Orient Blackstone.
+                </li>
+              </ul>
+            </div>
+          </section>
+
+
 export const metadata: Metadata = {
   title: "Cookie Policy | Orient Blackstone Asset Management",
-  description: "Learn about how Orient Blackstone Asset Management LLC uses cookies and similar technologies on our website to improve your browsing experience.",
+  description:
+    "Learn how Orient Blackstone Asset Management LLC uses cookies and similar technologies, the categories we rely on, and the choices available to you.",
 };
+
+const contactEmail = "privacy@orientblackstone.com";
 
 export default function CookiePolicy() {
   return (
-    <div className="min-h-screen bg-white dark:bg-neutral-950 py-20 px-4 md:px-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
+    <div className="min-h-screen bg-white py-20 px-4 dark:bg-neutral-950 md:px-8">
+      <div className="mx-auto max-w-4xl">
+        <header className="mb-12">
+          <h1 className="mb-4 text-4xl font-bold text-neutral-800 dark:text-neutral-100 md:text-5xl">
             Cookie Policy
           </h1>
           <p className="text-lg text-neutral-600 dark:text-neutral-400">
             Last updated: July 13, 2025
           </p>
-        </div>
+        </header>
 
-        <div className="prose prose-lg prose-neutral dark:prose-invert max-w-none">
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
-              What Are Cookies
-            </h2>
-            <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-              Cookies are small pieces of text sent by your web browser by a website you visit. A cookie file is stored in your web browser and allows the website or a third-party to recognize you and make your next visit easier and the website more useful to you.
-            </p>
-            <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
-              Cookies can be "persistent" or "session" cookies. Persistent cookies remain on your personal computer or mobile device when you go offline, while session cookies are deleted as soon as you close your web browser.
-            </p>
+        <div className="space-y-10">
+          <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+            Orient Blackstone Asset Management LLC (“Orient Blackstone”, “we”,
+            “us”, or “our”) uses cookies and related technologies to operate and
+            enhance our websites, deliver secure experiences, and provide
+            relevant insights. This Cookie Policy explains what these
+            technologies are, why we use them, and the options available to you.
+          </p>
+
+          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
+            <div className="prose prose-neutral dark:prose-invert space-y-4">
+              <h2>1. What Are Cookies?</h2>
+              <p>
+                Cookies are small data files that a website stores on your device.
+                They serve numerous purposes, from remembering your preferences to
+                enabling secure areas of the site. Cookies can be “session”
+                cookies, which expire when you close your browser, or
+                “persistent” cookies, which remain on your device until they are
+                deleted or reach their expiration date.
+              </p>
+              <p>
+                We also deploy web beacons, pixels, and similar technologies that
+                operate in conjunction with cookies to gather usage analytics and
+                measure campaign effectiveness.
+              </p>
+            </div>
           </section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
-              How We Use Cookies
-            </h2>
-            <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-              When you use and access our website, we may place a number of cookies files in your web browser. We use cookies for the following purposes:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 text-neutral-700 dark:text-neutral-300">
-              <li><strong>Essential cookies:</strong> To enable certain functions of the website</li>
-              <li><strong>Analytics cookies:</strong> To analyze website traffic and understand how visitors interact with our website</li>
-              <li><strong>Marketing cookies:</strong> To display relevant advertisements and track the effectiveness of our advertising campaigns</li>
-              <li><strong>Functionality cookies:</strong> To remember your preferences and settings</li>
-              <li><strong>Security cookies:</strong> To authenticate users and prevent fraudulent use of login credentials</li>
-            </ul>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
-              Types of Cookies We Use
-            </h2>
-            
-            <h3 className="text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-3">
-              Essential Cookies
-            </h3>
-            <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-              These cookies are essential for the website to function properly. They enable basic functions like page navigation, access to secure areas of the website, and remember your consent preferences. The website cannot function properly without these cookies.
-            </p>
-
-            <h3 className="text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-3">
-              Performance and Analytics Cookies
-            </h3>
-            <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-              These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. We use this information to improve our website's performance and user experience.
-            </p>
-            <div className="bg-neutral-50 dark:bg-neutral-900 p-4 rounded-lg mb-4">
-              <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-2"><strong>Third-party services we use:</strong></p>
-              <ul className="list-disc pl-6 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-                <li>Google Analytics - to analyze website traffic and user behavior</li>
-                <li>Cal.com - for booking and scheduling functionality</li>
-                <li>Vercel Analytics - for performance monitoring</li>
+          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
+            <div className="prose prose-neutral dark:prose-invert space-y-4">
+              <h2>2. Cookies We Use</h2>
+              <p>
+                The specific cookies served may vary depending on the sections of
+                our website you visit. We categorise cookies as follows:
+              </p>
+              <ul>
+                <li>
+                  <strong>Strictly necessary:</strong> Enable core functionality
+                  such as page navigation, secure login, and session management.
+                  These cookies are essential and cannot be switched off in our
+                  systems.
+                </li>
+                <li>
+                  <strong>Performance and analytics:</strong> Collect aggregated
+                  data on how visitors use our site so we can diagnose performance
+                  issues, understand engagement, and improve content.
+                </li>
+                <li>
+                  <strong>Functional:</strong> Remember your preferences (for
+                  example, language or region) and enhance your experience.
+                </li>
+                <li>
+                  <strong>Marketing and personalisation:</strong> Support targeted
+                  communications, measure campaign effectiveness, and tailor
+                  content based on your interactions with Orient Blackstone.
+                </li>
               </ul>
             </div>
-
-            <h3 className="text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-3">
-              Functionality Cookies
-            </h3>
-            <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-              These cookies allow the website to remember choices you make (such as your username, language, or the region you are in) and provide enhanced, more personal features.
-            </p>
-
-            <h3 className="text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-3">
-              Marketing and Targeting Cookies
-            </h3>
-            <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
-              These cookies track your browsing habits to enable us to show advertising which is more likely to be of interest to you. These cookies use information about your browsing history to group you with other users who have similar interests.
-            </p>
           </section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
-              Third-Party Cookies
-            </h2>
-            <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-              In addition to our own cookies, we may also use various third-parties cookies to report usage statistics of the website, deliver advertisements on and through the website, and so on. These third-party cookies are governed by the respective privacy policies of the third parties.
-            </p>
-            <div className="overflow-x-auto">
-              <table className="min-w-full bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-hidden">
-                <thead>
-                  <tr className="bg-neutral-100 dark:bg-neutral-800">
-                    <th className="px-4 py-3 text-left text-sm font-semibold text-neutral-800 dark:text-neutral-200">Service</th>
-                    <th className="px-4 py-3 text-left text-sm font-semibold text-neutral-800 dark:text-neutral-200">Purpose</th>
-                    <th className="px-4 py-3 text-left text-sm font-semibold text-neutral-800 dark:text-neutral-200">Cookie Type</th>
-                    <th className="px-4 py-3 text-left text-sm font-semibold text-neutral-800 dark:text-neutral-200">Duration</th>
-                  </tr>
-                </thead>
-                <tbody className="text-sm text-neutral-700 dark:text-neutral-300">
-                  <tr className="border-t border-neutral-200 dark:border-neutral-700">
-                    <td className="px-4 py-3">Google Analytics</td>
-                    <td className="px-4 py-3">Website analytics</td>
-                    <td className="px-4 py-3">Performance</td>
-                    <td className="px-4 py-3">2 years</td>
-                  </tr>
-                  <tr className="border-t border-neutral-200 dark:border-neutral-700">
-                    <td className="px-4 py-3">Cal.com</td>
-                    <td className="px-4 py-3">Booking functionality</td>
-                    <td className="px-4 py-3">Functional</td>
-                    <td className="px-4 py-3">Session</td>
-                  </tr>
-                  <tr className="border-t border-neutral-200 dark:border-neutral-700">
-                    <td className="px-4 py-3">Theme Preference</td>
-                    <td className="px-4 py-3">Remember dark/light mode</td>
-                    <td className="px-4 py-3">Functional</td>
-                    <td className="px-4 py-3">1 year</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
-              Your Cookie Choices
-            </h2>
-            <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-              You have several options for managing cookies:
-            </p>
-
-            <h3 className="text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-3">
-              Browser Settings
-            </h3>
-            <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-              Most web browsers allow you to control cookies through their settings preferences. You can set your browser to:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 text-neutral-700 dark:text-neutral-300 mb-4">
-              <li>Delete all cookies</li>
-              <li>Block all cookies</li>
-              <li>Allow all cookies</li>
-              <li>Block third-party cookies</li>
-              <li>Clear all cookies when you close the browser</li>
-              <li>Open a private browsing / incognito browsing session</li>
-            </ul>
-
-            <h3 className="text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-3">
-              Browser-Specific Instructions
-            </h3>
-            <div className="bg-neutral-50 dark:bg-neutral-900 p-4 rounded-lg mb-4">
-              <ul className="space-y-2 text-sm text-neutral-700 dark:text-neutral-300">
-                <li><strong>Chrome:</strong> Settings → Privacy and security → Cookies and other site data</li>
-                <li><strong>Firefox:</strong> Preferences → Privacy & Security → Cookies and Site Data</li>
-                <li><strong>Safari:</strong> Preferences → Privacy → Manage Website Data</li>
-                <li><strong>Edge:</strong> Settings → Site permissions → Cookies and site data</li>
-              </ul>
-            </div>
-
-            <h3 className="text-xl font-semibold text-neutral-800 dark:text-neutral-100 mb-3">
-              Opt-Out Links
-            </h3>
-            <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-2">
-              You can also opt out of certain third-party cookies directly:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 text-neutral-700 dark:text-neutral-300">
-              <li><a href="https://tools.google.com/dlpage/gaoptout" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a></li>
-              <li><a href="http://optout.networkadvertising.org/" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300" target="_blank" rel="noopener noreferrer">Network Advertising Initiative Opt-out</a></li>
-              <li><a href="http://optout.aboutads.info/" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300" target="_blank" rel="noopener noreferrer">Digital Advertising Alliance Opt-out</a></li>
-            </ul>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
-              Impact of Disabling Cookies
-            </h2>
-            <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-              Please note that if you disable or refuse cookies, some parts of our website may become inaccessible or not function properly. Specifically, you may experience:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 text-neutral-700 dark:text-neutral-300">
-              <li>Difficulty remembering your login information</li>
-              <li>Loss of personalization features</li>
-              <li>Inability to use certain interactive features</li>
-              <li>Problems with the booking and consultation system</li>
-              <li>Reduced website performance and functionality</li>
-            </ul>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
-              Updates to This Policy
-            </h2>
-            <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-              We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any material changes by posting the new Cookie Policy on this page.
-            </p>
-            <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
-              We encourage you to review this Cookie Policy periodically to stay informed about how we use cookies.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
-              Contact Us
-            </h2>
-            <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed mb-4">
-              If you have any questions about this Cookie Policy or our use of cookies, please contact us:
-            </p>
-            <div className="bg-neutral-50 dark:bg-neutral-900 p-6 rounded-lg">
-              <div className="text-neutral-800 dark:text-neutral-200">
-                <p className="font-bold text-lg mb-2">Green Giant Energy Texas Inc</p>
-                <p>41 University Drive, Suite 202</p>
-                <p>Newtown, PA 18940</p>
-                <p className="mt-2">P: +1-267-759-9000</p>
-                <p>F: +1-267-759-8989</p>
-                <p>E: <a href="mailto:privacy@ggeconsulting.net" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">privacy@ggeconsulting.net</a></p>
+          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
+            <div className="prose prose-neutral dark:prose-invert space-y-4">
+              <h2>3. Third-Party Technologies</h2>
+              <p>
+                We partner with carefully selected third parties that place
+                cookies or use similar technologies to deliver analytics, meeting
+                booking, and infrastructure services. These providers include:
+              </p>
+              <div className="not-prose rounded-lg bg-neutral-50 p-4 text-sm text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300">
+                <ul className="space-y-2">
+                  <li>
+                    <strong>Google Analytics:</strong> audience measurement and
+                    engagement insights.
+                  </li>
+                  <li>
+                    <strong>Cal.com:</strong> scheduling and meeting management
+                    for consultations and events.
+                  </li>
+                  <li>
+                    <strong>Vercel Analytics:</strong> application performance
+                    monitoring and operational diagnostics.
+                  </li>
+                </ul>
               </div>
+              <p>
+                Third-party cookies are subject to the privacy policies of the
+                providers placing them. We encourage you to review those policies
+                for additional information about their practices.
+              </p>
+            </div>
+          </section>
+
+
+          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
+            <div className="prose prose-neutral dark:prose-invert space-y-4">
+              <h2>4. Managing Cookies</h2>
+              <p>You have several options to control cookies:</p>
+              <ul>
+                <li>
+                  <strong>Consent management:</strong> When required by applicable
+                  law, our consent banner enables you to accept or reject
+                  non-essential cookies. Your selections can be updated at any
+                  time through the “Cookie Preferences” link in the site footer.
+                </li>
+                <li>
+                  <strong>Browser settings:</strong> Most browsers allow you to
+                  block or delete cookies through their privacy settings. Helpful
+                  resources include:
+                  <ul>
+                    <li>Chrome: Settings → Privacy &amp; Security → Cookies</li>
+                    <li>Safari: Preferences → Privacy → Manage Website Data</li>
+                    <li>Edge: Settings → Site permissions → Cookies</li>
+                    <li>Firefox: Settings → Privacy &amp; Security → Cookies</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Third-party opt-outs:</strong> You can opt out of
+                  certain analytics and advertising cookies directly via tools
+                  such as the{" "}
+                  <a
+                    href="https://tools.google.com/dlpage/gaoptout"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Google Analytics Opt-out Add-on
+                  </a>{" "}
+                  or the{" "}
+                  <a
+                    href="http://optout.aboutads.info/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Digital Advertising Alliance Opt-out
+                  </a>
+                  .
+                </li>
+              </ul>
+              <p>
+                Please note that disabling certain cookies may impact the
+                functionality of our website, including access to secure areas
+                and personalised features.
+              </p>
+            </div>
+          </section>
+
+          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
+            <div className="prose prose-neutral dark:prose-invert space-y-4">
+              <h2>5. Data Collected via Cookies</h2>
+              <p>
+                Information captured through cookies is typically aggregated and
+                does not, by itself, identify you. When cookie data is associated
+                with personal information, we treat it in accordance with our
+                Privacy Policy. We do not use cookies to store sensitive personal
+                information such as financial account numbers.
+              </p>
+            </div>
+          </section>
+
+          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
+            <div className="prose prose-neutral dark:prose-invert space-y-4">
+              <h2>6. Updates to This Policy</h2>
+              <p>
+                We may update this Cookie Policy from time to time to reflect
+                changes in technology, legal requirements, or our practices. A
+                revised “Last updated” date indicates when the policy was most
+                recently amended. Material changes may be highlighted through
+                banners or other notifications.
+              </p>
+            </div>
+          </section>
+
+          <section className="not-prose rounded-3xl border border-subtle bg-surface px-6 py-6 md:px-8 md:py-8 shadow-soft">
+            <div className="prose prose-neutral dark:prose-invert space-y-4">
+              <h2>7. Contact Us</h2>
+              <p>
+                For questions about our use of cookies or this Policy, please
+                contact us at{" "}
+                <a
+                  href={`mailto:${contactEmail}`}
+                  className="text-primary-600 hover:text-primary-700 dark:text-primary-300 dark:hover:text-primary-200"
+                >
+                  {contactEmail}
+                </a>
+                .
+              </p>
             </div>
           </section>
         </div>

@@ -37,11 +37,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-900">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-neutral-50 to-blue-50 dark:from-neutral-800 dark:to-blue-900/20 py-16">
+      <div className="relative bg-gradient-to-br from-neutral-50 to-primary-50 dark:from-neutral-800 dark:to-primary-900/20 py-16">
         <div className="container mx-auto px-4">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-300 hover:text-primary-700 dark:hover:text-primary-200 mb-8 transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to Blog
@@ -49,7 +49,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-6">
-              <span className="px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">
+              <span className="px-3 py-1 bg-primary-600 text-white text-sm font-medium rounded-full">
                 {blogCategories.find(cat => cat.value === post.category)?.label || post.category}
               </span>
               <div className="flex items-center gap-4 text-sm text-neutral-600 dark:text-neutral-400">
@@ -75,7 +75,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             {/* Author and Actions */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                <div className="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold">
                   {post.author.name.split(' ').map(n => n[0]).join('')}
                 </div>
                 <div>
@@ -93,7 +93,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                   <Share2 className="h-4 w-4" />
                   Share
                 </button>
-                <button className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                <button className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
                   <BookOpen className="h-4 w-4" />
                   Save Article
                 </button>
@@ -147,7 +147,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full"
+                    className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200 text-sm rounded-full"
                   >
                     {tag}
                   </span>
@@ -156,9 +156,9 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
 
             {/* Author Bio */}
-            <div className="mt-12 p-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl">
+            <div className="mt-12 p-8 bg-gradient-to-r from-primary-50 to-amber-50 dark:from-primary-900/15 dark:to-amber-900/20 rounded-2xl">
               <div className="flex items-start gap-6">
-                <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
+                <div className="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">
                   {post.author.name.split(' ').map(n => n[0]).join('')}
                 </div>
                 <div>
@@ -186,16 +186,16 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 </h3>
                 <nav className="space-y-2">
                   {/* This would be dynamically generated based on headings */}
-                  <a href="#overview" className="block text-sm text-neutral-600 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  <a href="#overview" className="block text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">
                     Technology Overview
                   </a>
-                  <a href="#applications" className="block text-sm text-neutral-600 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  <a href="#applications" className="block text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">
                     Industrial Applications
                   </a>
-                  <a href="#market" className="block text-sm text-neutral-600 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  <a href="#market" className="block text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">
                     Market Development
                   </a>
-                  <a href="#future" className="block text-sm text-neutral-600 dark:text-neutral-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  <a href="#future" className="block text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">
                     Future Outlook
                   </a>
                 </nav>
@@ -207,7 +207,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                   Share Article
                 </h3>
                 <div className="space-y-3">
-                  <button className="w-full flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+                  <button className="w-full flex items-center gap-3 bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg transition-colors">
                     <Share2 className="h-4 w-4" />
                     LinkedIn
                   </button>
@@ -223,11 +223,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
 
               {/* Newsletter Signup */}
-              <div className="bg-gradient-to-br from-blue-600 to-indigo-600 p-6 rounded-xl text-white">
+              <div className="bg-gradient-to-br from-primary-600 via-primary-600 to-amber-500 p-6 rounded-xl text-white">
                 <h3 className="font-semibold mb-3">
                   Stay Updated
                 </h3>
-                <p className="text-blue-100 text-sm mb-4">
+                <p className="text-primary-100/80 text-sm mb-4">
                   Get weekly financial strategy insights delivered to your inbox.
                 </p>
                 <div className="space-y-3">
@@ -236,7 +236,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                     placeholder="Enter your email"
                     className="w-full px-3 py-2 rounded-lg text-neutral-800 text-sm focus:ring-2 focus:ring-white focus:outline-none"
                   />
-                  <button className="w-full bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-blue-50 transition-colors text-sm">
+                  <button className="w-full bg-white text-primary-600 px-4 py-2 rounded-lg font-medium hover:bg-primary-50 transition-colors text-sm">
                     Subscribe
                   </button>
                 </div>
@@ -265,7 +265,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                     />
                   </div>
                   <div className="p-6">
-                    <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded mb-3 inline-block">
+                    <span className="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200 text-xs rounded mb-3 inline-block">
                       {blogCategories.find(cat => cat.value === relatedPost.category)?.label || relatedPost.category}
                     </span>
                     <h3 className="font-bold text-neutral-800 dark:text-neutral-100 mb-2">
@@ -286,7 +286,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                     </div>
                     <Link
                       href={`/blog/${relatedPost.slug}`}
-                      className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium text-sm hover:gap-3 transition-all duration-200"
+                      className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-300 font-medium text-sm hover:gap-3 transition-all duration-200"
                     >
                       Read Article
                       <Eye className="h-4 w-4" />

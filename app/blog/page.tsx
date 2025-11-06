@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Calendar, Clock, User, ArrowRight, Search, Filter, Tag, Star } from "lucide-react";
-import { getAllBlogPosts, getFeaturedBlogPosts, getBlogPostsByCategory, blogCategories, BlogPost } from "@/lib/blog-data";
+import { getAllBlogPosts, getFeaturedBlogPosts, blogCategories, BlogPost } from "@/lib/blog-data";
 import { formatDate } from "@/lib/utils";
 
 export default function BlogPage() {
@@ -26,7 +26,7 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-900">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 py-16">
+      <div className="bg-gradient-to-br from-primary-50 to-amber-100 dark:from-primary-900/20 dark:to-amber-900/20 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h1 
@@ -60,13 +60,13 @@ export default function BlogPage() {
                   placeholder="Search articles..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                 />
               </div>
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="px-4 py-3 rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               >
                 {blogCategories.map((category) => (
                   <option key={category.value} value={category.value}>{category.label}</option>
@@ -158,7 +158,7 @@ export default function BlogPage() {
             </p>
             <Link 
               href="/reports"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
               Explore Reports
               <ArrowRight className="h-4 w-4" />
@@ -168,13 +168,13 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-green-600">
+      <section className="py-16 bg-gradient-to-r from-primary-600 via-primary-600 to-amber-500">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center text-white">
             <h2 className="text-3xl font-bold mb-4">
               Stay Updated with Financial Strategy Trends
             </h2>
-            <p className="text-blue-100 mb-8">
+            <p className="text-primary-100/80 mb-8">
               Get weekly insights, market analysis, and technology updates delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
@@ -183,7 +183,7 @@ export default function BlogPage() {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg text-neutral-800 focus:ring-2 focus:ring-white focus:outline-none"
               />
-              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors">
+              <button className="bg-white text-primary-600 px-6 py-3 rounded-lg font-medium hover:bg-primary-50 transition-colors">
                 Subscribe
               </button>
             </div>
@@ -210,7 +210,7 @@ function FeaturedPostCard({ post }: { post: BlogPost }) {
               <Star className="h-3 w-3" />
               Featured
             </span>
-            <span className="px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-full">
+            <span className="px-3 py-1 bg-primary-600 text-white text-xs font-medium rounded-full">
               {blogCategories.find(cat => cat.value === post.category)?.label || post.category}
             </span>
           </div>
@@ -218,7 +218,7 @@ function FeaturedPostCard({ post }: { post: BlogPost }) {
         
         <div className="lg:w-1/2 p-6 lg:p-8 flex flex-col justify-between">
           <div>
-            <h3 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+            <h3 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 group-hover:text-primary-600 transition-colors line-clamp-2">
               <Link href={`/blog/${post.slug}`}>
                 {post.title}
               </Link>
@@ -247,7 +247,7 @@ function FeaturedPostCard({ post }: { post: BlogPost }) {
             
             <Link
               href={`/blog/${post.slug}`}
-              className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium hover:gap-3 transition-all duration-200"
+              className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-300 font-medium hover:gap-3 transition-all duration-200"
             >
               Read Article
               <ArrowRight className="h-4 w-4" />
@@ -271,7 +271,7 @@ function BlogPostCard({ post }: { post: BlogPost }) {
             className="object-cover group-hover:scale-105 transition-transform duration-300"
           />
           <div className="absolute top-3 left-3">
-            <span className="px-2 py-1 bg-blue-600 text-white text-xs font-medium rounded">
+            <span className="px-2 py-1 bg-primary-600 text-white text-xs font-medium rounded">
               {blogCategories.find(cat => cat.value === post.category)?.label || post.category}
             </span>
           </div>
@@ -284,7 +284,7 @@ function BlogPostCard({ post }: { post: BlogPost }) {
         
         <div className="p-6 flex flex-col justify-between flex-1">
           <div>
-            <h3 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
+            <h3 className="text-lg font-bold text-neutral-800 dark:text-neutral-100 mb-2 group-hover:text-primary-600 transition-colors line-clamp-2">
               <Link href={`/blog/${post.slug}`}>
                 {post.title}
               </Link>
@@ -326,7 +326,7 @@ function BlogPostCard({ post }: { post: BlogPost }) {
             
             <Link
               href={`/blog/${post.slug}`}
-              className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium text-sm hover:gap-3 transition-all duration-200"
+              className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-300 font-medium text-sm hover:gap-3 transition-all duration-200"
             >
               Read More
               <ArrowRight className="h-4 w-4" />

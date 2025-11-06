@@ -32,11 +32,11 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-900">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-900/20 dark:to-indigo-900/20 py-16">
+      <div className="relative bg-gradient-to-br from-primary-50 to-amber-100 dark:from-primary-900/30 dark:to-amber-900/20 py-16">
         <div className="container mx-auto px-4">
           <Link
             href="/reports"
-            className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-300 hover:text-primary-700 dark:hover:text-primary-200 mb-8 transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to Reports
@@ -45,7 +45,7 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <span className="px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">
+                <span className="px-3 py-1 bg-primary-600 text-white text-sm font-medium rounded-full">
                   {reportCategories.find(cat => cat.value === report.category)?.label || report.category}
                 </span>
                 {report.featured && (
@@ -88,7 +88,7 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
               </div>
               
               <div className="flex flex-wrap gap-4">
-                <button className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                <button className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
                   <Download className="h-5 w-5" />
                   Download Full Report
                 </button>
@@ -107,7 +107,7 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
                   category={reportCategories.find(cat => cat.value === report.category)?.label || report.category}
                   publishDate={report.publishDate}
                   variant="organic"
-                  gradient="from-blue-600 to-green-600"
+                  gradient="from-primary-600 to-amber-500"
                 />
               </div>
             </div>
@@ -133,13 +133,13 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
             {/* Key Findings */}
             <section>
               <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-6 flex items-center gap-3">
-                <Target className="h-6 w-6 text-blue-600" />
+                <Target className="h-6 w-6 text-primary-600" />
                 Key Findings
               </h2>
               <div className="grid grid-cols-1 gap-4">
                 {report.keyFindings.map((finding, index) => (
-                  <div key={index} className="flex items-start gap-3 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                    <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
+                  <div key={index} className="flex items-start gap-3 p-4 bg-primary-50 dark:bg-primary-900/20 rounded-lg">
+                    <span className="w-6 h-6 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
                       {index + 1}
                     </span>
                     <p className="text-neutral-700 dark:text-neutral-300">
@@ -194,13 +194,13 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
             </section>
 
             {/* Author Information */}
-            <section className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-8 rounded-xl">
+            <section className="bg-gradient-to-r from-primary-50 to-amber-50 dark:from-primary-900/15 dark:to-amber-900/20 p-8 rounded-xl">
               <h3 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-4 flex items-center gap-3">
-                <Users className="h-5 w-5 text-blue-600" />
+                <Users className="h-5 w-5 text-primary-600" />
                 About the Author
               </h3>
               <div className="flex items-start gap-4">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
                   {report.author.name.split(' ').map(n => n[0]).join('')}
                 </div>
                 <div>
@@ -226,7 +226,7 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
                 Download Options
               </h3>
               <div className="space-y-3">
-                <button className="w-full flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors">
+                <button className="w-full flex items-center gap-3 bg-primary-600 hover:bg-primary-700 text-white px-4 py-3 rounded-lg font-medium transition-colors">
                   <Download className="h-4 w-4" />
                   Full Report PDF
                 </button>
@@ -246,7 +246,7 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
                 {report.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full"
+                    className="px-3 py-1 bg-primary-100 dark:bg-primary-900/40 text-primary-800 dark:text-primary-200 text-sm rounded-full"
                   >
                     {tag}
                   </span>
@@ -288,16 +288,16 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
             </div>
 
             {/* Contact CTA */}
-            <div className="bg-gradient-to-br from-blue-600 to-indigo-600 p-6 rounded-xl text-white">
+            <div className="bg-gradient-to-br from-primary-600 via-primary-600 to-amber-500 p-6 rounded-xl text-white">
               <h3 className="text-lg font-semibold mb-3">
                 Need Custom Research?
               </h3>
-              <p className="text-blue-100 text-sm mb-4">
+              <p className="text-primary-100/80 text-sm mb-4">
                 Get tailored market analysis and strategic insights for your specific business needs.
               </p>
               <Link
                 href="/#contact"
-                className="inline-flex items-center gap-2 bg-white text-blue-600 px-4 py-2 rounded-lg font-medium hover:bg-blue-50 transition-colors"
+                className="inline-flex items-center gap-2 bg-white text-primary-600 px-4 py-2 rounded-lg font-medium hover:bg-primary-50 transition-colors"
               >
                 Contact Our Team
               </Link>

@@ -5,15 +5,15 @@ import { AlertTriangle } from "lucide-react";
 
 export function ComplianceDisclaimer() {
   return (
-    <div className="w-full bg-blue-50 dark:bg-blue-950/30 border-t border-b border-blue-200 dark:border-blue-900/50 py-8 px-4 md:px-8">
+    <div className="w-full bg-primary-50 dark:bg-primary-900/20 border-t border-b border-primary-200 dark:border-primary-900/30 py-8 px-4 md:px-8">
       <div className="max-w-5xl mx-auto">
         <div className="flex items-start gap-4">
-          <AlertTriangle className="w-6 h-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" />
+          <AlertTriangle className="w-6 h-6 text-primary-600 dark:text-primary-300 flex-shrink-0 mt-1" />
           <div className="flex-1">
-            <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-2">
+            <h3 className="text-lg font-semibold text-primary-900 dark:text-primary-100 mb-2">
               Important Disclosure
             </h3>
-            <div className="text-sm text-blue-800 dark:text-blue-200 space-y-2">
+            <div className="text-sm text-primary-800 dark:text-primary-100/80 space-y-2">
               <p>
                 <strong>Advisory Services Only:</strong> We provide strategic consulting and advisory services. We do not manage, hold, or have access to client funds or assets. All investment and financial decisions remain with the client.
               </p>

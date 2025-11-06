@@ -93,7 +93,7 @@ export const ReportPostRow = ({ report }: { report: Report }) => {
           <p className="text-subtle text-sm max-w-xl transition duration-200">
             {format(new Date(report.publishDate), "MMMM dd, yyyy")}
           </p>
-          <span className="px-2 py-1 bg-blue-100/70 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 text-xs rounded">
+          <span className="px-2 py-1 bg-primary-100/70 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200 text-xs rounded">
             {reportCategories.find(cat => cat.value === report.category)?.label || report.category}
           </span>
           <span className="text-xs text-subtle">
@@ -126,7 +126,7 @@ export const ReportCard = ({ report }: { report: Report }) => {
       <div className="p-4 md:p-8 bg-surface flex flex-col justify-between group-hover/report:bg-surface-subtle transition-colors duration-200">
         <div>
           <div className="flex items-center gap-2 mb-3">
-            <span className="px-2 py-1 bg-blue-100/70 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 text-xs rounded">
+            <span className="px-2 py-1 bg-primary-100/70 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200 text-xs rounded">
               {reportCategories.find(cat => cat.value === report.category)?.label || report.category}
             </span>
             {report.featured && (
@@ -143,7 +143,7 @@ export const ReportCard = ({ report }: { report: Report }) => {
           </p>
         </div>
         <div className="flex space-x-2 items-center mt-6">
-          <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
+          <div className="w-5 h-5 bg-primary-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
             {report.author.name.split(' ').map(n => n[0]).join('')}
           </div>
           <p className="text-sm font-normal text-fg">

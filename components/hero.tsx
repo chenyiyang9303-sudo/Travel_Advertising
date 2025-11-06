@@ -1,86 +1,87 @@
 "use client";
-import React, { useRef } from "react";
-import Balancer from "react-wrap-balancer";
+"use client";
+
+import { Button } from "@/components/button";
+import { ArrowUpRight, Minus } from "lucide-react";
 import { useCalEmbed } from "@/app/hooks/useCalEmbed";
 
+const heroStats = [
+  { value: "$5B+", label: "Assets Under Advisory" },
+  { value: "18 yrs", label: "Institutional Track Record" },
+  { value: "92%", label: "Client Retention" },
+  { value: "40+", label: "Jurisdictions Covered" },
+];
+
 export function Hero() {
-  const parentRef = useRef<HTMLDivElement>(null);
   const calConfig = useCalEmbed();
-  
   return (
-    <div
-      ref={parentRef}
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 py-20 md:px-8 md:py-40 bg-app"
-    >
-      {/* Radiant-themed gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-white/80 to-amber-100/20 dark:from-primary-900/25 dark:via-surface-subtle dark:to-black/40 opacity-80" />
+    <section className="relative overflow-hidden bg-[#0b0b0d] text-white">
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(196,154,108,0.12),transparent_45%),radial-gradient(circle_at_bottom_right,rgba(185,130,94,0.12),transparent_40%)]" />
+        <div className="absolute inset-0 opacity-20 bg-[linear-gradient(0deg,transparent_90%,rgba(196,154,108,0.25)_100%),linear-gradient(90deg,transparent_90%,rgba(196,154,108,0.25)_100%)] bg-[length:28px_28px]" />
+      </div>
 
-      {/* Professional grid background */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(249,115,22,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(249,115,22,0.06)_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,rgba(249,115,22,0.035)_1px,transparent_1px),linear-gradient(to_bottom,rgba(249,115,22,0.035)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-
-      <div className="relative z-20 mx-auto max-w-5xl text-center px-4">
-        <div className="mb-8">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary-50/70 dark:bg-primary-900/30 border border-primary-200/80 dark:border-primary-800/50 mb-8">
-            <span className="text-orange-600 dark:text-orange-400 text-sm font-medium">
-              Elevating Global Financial Excellence
-            </span>
-          </div>
+      <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-center px-6 py-32 md:px-10 lg:px-12">
+        <div className="mb-10 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.5em] text-primary-400">
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-primary-500/60">
+            <Minus className="h-4 w-4" />
+          </span>
+          Institutional Financial Leadership
         </div>
 
-        <h1 className="font-display text-display-lg md:text-display-xl text-fg mb-8 animate-fade-in">
-          <Balancer>Radiant Soaring Fund Management</Balancer>
-        </h1>
+        <div className="max-w-4xl space-y-8">
+          <h1 className="text-4xl font-semibold leading-[1.2] text-white sm:text-5xl lg:text-[3.75rem]">
+            RSFM guides global capital toward resilient, performance-led
+            outcomes.
+          </h1>
+          <p className="max-w-3xl text-base leading-relaxed text-neutral-300 sm:text-lg">
+            We partner with boards, investment committees, and family offices to
+            structure capital, manage risk, and deploy bespoke investment
+            mandates. Precision, discipline, and accountability define every
+            engagement.
+          </p>
+        </div>
 
-        <p className="text-xl text-muted max-w-3xl mx-auto mb-12 animate-slide-up">
-          Premier fund management and financial advisory services — empowering institutional investors and high-net-worth clients to achieve exceptional returns.
-        </p>
-
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up">
-          <button
+        <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
+          <Button
+            as="button"
+            variant="primary"
             data-cal-namespace={calConfig.namespace}
             data-cal-link={calConfig.link}
-          data-cal-config={`{"layout":"${calConfig.layout}"}`}
-          className="group flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 min-w-[200px]"
-        >
-          Schedule Consultation
-          <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-            </svg>
-          </button>
-
-          <button
-            onClick={() => {
-              console.log('Hero button clicked - View Services');
-              window.location.href = '/#services';
-            }}
-            className="group flex items-center justify-center px-8 py-4 bg-surface border border-subtle text-fg font-semibold rounded-xl transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 min-w-[200px] hover:text-primary-600 dark:hover:text-primary-400"
+            data-cal-config={`{"layout":"${calConfig.layout}"}`}
           >
-            Explore Services
-            <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
-            </svg>
-          </button>
+            <span>Schedule Consultation</span>
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition-colors duration-200 group-hover:text-black group-hover:bg-primary-200">
+              <ArrowUpRight className="h-4 w-4" />
+            </span>
+          </Button>
+
+          <Button
+            as="a"
+            href="/#services"
+            variant="secondary"
+            className="group"
+          >
+            <span>Explore Services</span>
+            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/30 transition-all duration-200 group-hover:border-primary-400">
+              <ArrowUpRight className="h-4 w-4" />
+            </span>
+          </Button>
         </div>
-        
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto animate-fade-in">
-          <div className="text-center">
-            <div className="text-2xl font-bold text-fg">$5B+</div>
-            <div className="text-sm text-muted">Assets Under Management</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-fg">18+</div>
-            <div className="text-sm text-muted">Years of Excellence</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-fg">200+</div>
-            <div className="text-sm text-muted">Institutional Clients</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-fg">15%</div>
-            <div className="text-sm text-muted">Avg. Annual Returns</div>
-          </div>
+
+        <div className="mt-20 grid grid-cols-2 gap-6 border-t border-white/10 pt-12 sm:grid-cols-4">
+          {heroStats.map((stat) => (
+            <div key={stat.label} className="space-y-2">
+              <p className="text-2xl font-semibold tracking-[0.3em] uppercase text-white">
+                {stat.value}
+              </p>
+              <p className="text-xs uppercase tracking-[0.4em] text-neutral-400">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

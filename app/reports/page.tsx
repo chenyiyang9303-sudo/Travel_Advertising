@@ -10,7 +10,7 @@ export default function ReportsPage() {
   return (
     <div className="min-h-screen bg-app">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-blue-50/70 via-surface-subtle to-indigo-100/40 dark:from-blue-900/20 dark:via-surface-subtle dark:to-indigo-900/30 py-16">
+      <div className="bg-gradient-to-br from-primary-50/70 via-surface-subtle to-amber-100/40 dark:from-primary-900/20 dark:via-surface-subtle dark:to-amber-900/30 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h1 
@@ -50,7 +50,7 @@ export default function ReportsPage() {
             </p>
             <Link 
               href="/blog"
-              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
               Read Articles
               <ArrowRight className="h-4 w-4" />
