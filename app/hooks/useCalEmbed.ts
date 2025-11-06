@@ -4,24 +4,24 @@ import { CONSTANTS } from "@/constants/links";
 
 // 全局标记防止重复初始化
 let isCalInitialized = false;
+let initPromise: Promise<void> | null = null;
 
 export const useCalEmbed = () => {
   const initRef = useRef(false);
-  
+
   useEffect(() => {
-    // 防止重复初始化
-    if (isCalInitialized || initRef.current) return;
-    
+    // 如果已经在初始化中或已完成，直接返回
+    if (initRef.current || isCalInitialized || initPromise) {
+      return;
+    }
+
     initRef.current = true;
-    console.log("🔧 Cal.com初始化开始...");
-    
-    (async function () {
+
+    // 创建初始化 Promise 并缓存
+    initPromise = (async function () {
       try {
-        console.log("📞 调用getCalApi...");
         const cal = await getCalApi({ namespace: CONSTANTS.CALCOM_NAMESPACE });
-        console.log("✅ getCalApi成功:", cal);
-        
-        console.log("🎨 设置UI配置...");
+
         cal("ui", {
           styles: {
             branding: {
@@ -31,15 +31,21 @@ export const useCalEmbed = () => {
           hideEventTypeDetails: CONSTANTS.CALCOM_HIDE_EVENT_TYPE_DETAILS,
           layout: CONSTANTS.CALCOM_LAYOUT as any,
         });
-        console.log("✅ UI配置设置完成");
-        console.log("🎉 Cal.com初始化完成！");
+
         isCalInitialized = true;
-        
+
       } catch (error) {
         console.error("❌ Cal.com初始化失败:", error);
-        initRef.current = false; // 失败时允许重试
+        initRef.current = false;
+        initPromise = null;
+        isCalInitialized = false;
       }
     })();
+
+    return () => {
+      // Cleanup on unmount
+      initRef.current = false;
+    };
   }, []);
 
   return {
