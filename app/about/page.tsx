@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Users, Target, Award, Globe, Lightbulb, TrendingUp, Heart, CheckCircle, ArrowRight, Mail } from "lucide-react";
+import { Target, Award, Globe, Lightbulb, TrendingUp, Heart, CheckCircle, ArrowRight, Mail } from "lucide-react";
 
 // Generate avatar URLs for team members using local avatar files
 const getAvatarUrl = (name: string, index: number) => {
@@ -21,15 +21,15 @@ const getAvatarUrl = (name: string, index: number) => {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white dark:bg-neutral-900">
+    <div className="min-h-screen bg-neutral-950 text-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-50 to-slate-50 dark:from-primary-900/20 dark:to-slate-900/20 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-950 to-black py-24 border-b border-white/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-100 mb-6"
+              className="text-4xl md:text-5xl font-bold text-white mb-6"
             >
               Strategic Financial Advisory for Corporate Success
             </motion.h1>
@@ -37,7 +37,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-neutral-600 dark:text-neutral-300 mb-8 leading-relaxed"
+              className="text-xl text-white/70 mb-8 leading-relaxed"
             >
               We are a trusted corporate finance consulting firm dedicated to helping businesses optimize their financial strategies, manage risks, and achieve sustainable growth through expert advisory services.
             </motion.p>
@@ -49,14 +49,14 @@ export default function AboutPage() {
             >
               <Link
                 href="/#contact"
-                className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-primary-500 px-8 py-3 font-medium text-black shadow-lg transition-colors hover:bg-primary-400"
               >
                 Work With Us
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/#case-studies"
-                className="inline-flex items-center gap-2 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-50 dark:hover:bg-neutral-700 text-neutral-800 dark:text-neutral-200 px-8 py-3 rounded-lg font-medium transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-3 font-medium text-white/80 transition-colors hover:bg-white/10"
               >
                 View Our Work
                 <ArrowRight className="h-4 w-4" />
@@ -67,7 +67,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-white dark:bg-neutral-900">
+      <section className="py-20 bg-neutral-950 border-b border-white/5">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -75,31 +75,31 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-3xl font-bold text-neutral-800 dark:text-neutral-100 mb-6">
+              <h2 className="text-3xl font-bold text-white mb-6">
                 Our Mission
               </h2>
-              <p className="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
+              <p className="text-lg text-white/70 leading-relaxed mb-6">
                 To empower businesses with strategic financial insights and advisory services that drive informed decision-making, optimize capital structure, and ensure regulatory compliance—enabling our clients to achieve sustainable growth and maximize shareholder value.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="flex items-start gap-3">
-                  <Target className="h-6 w-6 text-primary-600 flex-shrink-0 mt-1" />
+                <div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-4 backdrop-blur">
+                  <Target className="h-6 w-6 text-primary-300 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-1">
+                    <h3 className="font-semibold text-white mb-1">
                       Strategic Focus
                     </h3>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                    <p className="text-sm text-white/70">
                       Data-driven financial analysis for optimal outcomes
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Globe className="h-6 w-6 text-primary-600 flex-shrink-0 mt-1" />
+                <div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-4 backdrop-blur">
+                  <Globe className="h-6 w-6 text-primary-300 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 mb-1">
+                    <h3 className="font-semibold text-white mb-1">
                       Client-Centric Approach
                     </h3>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                    <p className="text-sm text-white/70">
                       Tailored solutions for diverse business needs
                     </p>
                   </div>
@@ -111,7 +111,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="relative h-96 rounded-2xl overflow-hidden"
+              className="relative h-96 overflow-hidden rounded-2xl border border-white/10 bg-white/5"
             >
               <Image
                 src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&auto=format"
@@ -125,13 +125,13 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-neutral-50 dark:bg-neutral-800">
+      <section className="py-20 bg-neutral-900/60 border-b border-white/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
+            <h2 className="text-3xl font-bold text-white mb-4">
               Our Core Values
             </h2>
-            <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-lg text-white/70 max-w-2xl mx-auto">
               These principles guide everything we do and shape how we work with our clients and partners.
             </p>
           </div>
@@ -164,13 +164,13 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white dark:bg-neutral-900 p-6 rounded-xl shadow-sm"
+                className="rounded-xl border border-white/10 bg-neutral-900/70 p-6 shadow-lg backdrop-blur"
               >
-                <value.icon className="h-8 w-8 text-primary-600 mb-4" />
-                <h3 className="text-lg font-semibold text-neutral-800 dark:text-neutral-100 mb-2">
+                <value.icon className="h-8 w-8 text-primary-300 mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">
                   {value.title}
                 </h3>
-                <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+                <p className="text-sm text-white/70">
                   {value.description}
                 </p>
               </motion.div>
@@ -180,13 +180,13 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-20 bg-white dark:bg-neutral-900">
+      <section className="py-20 bg-neutral-950">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
+            <h2 className="text-3xl font-bold text-white mb-4">
               Our Expert Team
             </h2>
-            <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-lg text-white/70 max-w-2xl mx-auto">
               Our diverse team combines deep financial expertise with industry knowledge
               to deliver comprehensive corporate finance advisory services.
             </p>
@@ -248,9 +248,9 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-neutral-50 dark:bg-neutral-800 rounded-xl overflow-hidden"
+                className="rounded-xl border border-white/10 bg-neutral-900/50 overflow-hidden backdrop-blur"
               >
-                <div className="relative h-56 flex items-center justify-center bg-gray-50 dark:bg-gray-800 p-4">
+                <div className="relative h-56 flex items-center justify-center bg-neutral-900/40 p-4">
                   <div className="relative w-40 h-40">
                     <Image
                       src={getAvatarUrl(member.name, index)}
@@ -261,22 +261,22 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-neutral-800 dark:text-neutral-100 mb-1">
+                  <h3 className="text-xl font-bold text-white mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-primary-600 dark:text-primary-300 font-medium mb-2">
+                  <p className="font-medium text-primary-300 mb-2">
                     {member.role}
                   </p>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-3">
+                  <p className="text-sm text-white/70 mb-3">
                     {member.expertise}
                   </p>
-                  <p className="text-sm text-neutral-500 dark:text-neutral-500 mb-4">
+                  <p className="text-sm text-white/60 mb-4">
                     {member.bio}
                   </p>
                   <div className="flex items-center gap-3">
                     <a
                       href={`mailto:${member.email}`}
-                      className="inline-flex items-center gap-1 text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
+                      className="inline-flex items-center gap-1 text-white/70 transition-colors hover:text-primary-300"
                     >
                       <Mail className="h-4 w-4" />
                     </a>
@@ -324,13 +324,13 @@ export default function AboutPage() {
       </section>
 
       {/* Certifications & Awards */}
-      <section className="py-20 bg-white dark:bg-neutral-900">
+      <section className="py-20 bg-neutral-950 border-t border-white/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-neutral-800 dark:text-neutral-100 mb-4">
+            <h2 className="text-3xl font-bold text-white mb-4">
               Recognition & Certifications
             </h2>
-            <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-lg text-white/70 max-w-2xl mx-auto">
               Our expertise and commitment to excellence have been recognized by leading industry organizations.
             </p>
           </div>
@@ -351,10 +351,10 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-neutral-50 dark:bg-neutral-800 p-6 rounded-xl text-center"
+                className="rounded-xl border border-white/10 bg-neutral-900/60 p-6 text-center shadow-lg backdrop-blur"
               >
-                <Award className="h-8 w-8 text-primary-600 mx-auto mb-3" />
-                <h3 className="font-semibold text-neutral-800 dark:text-neutral-100 text-sm">
+                <Award className="h-8 w-8 text-primary-300 mx-auto mb-3" />
+                <h3 className="text-sm font-semibold text-white">
                   {certification}
                 </h3>
               </motion.div>
@@ -364,7 +364,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-neutral-900 dark:bg-neutral-800">
+      <section className="py-20 bg-black border-t border-white/5">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Optimize Your Corporate Finance Strategy?
@@ -376,14 +376,14 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/#contact"
-              className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-medium transition-colors"
+              className="inline-flex items-center gap-2 rounded-full bg-primary-500 px-8 py-3 font-medium text-black shadow-lg transition-colors hover:bg-primary-400"
             >
               Get Started Today
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/reports"
-              className="inline-flex items-center gap-2 bg-neutral-700 hover:bg-neutral-600 text-white px-8 py-3 rounded-lg font-medium transition-colors"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-3 font-medium text-white/80 transition-colors hover:bg-white/10"
             >
               Explore Our Research
               <ArrowRight className="h-4 w-4" />

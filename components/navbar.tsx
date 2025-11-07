@@ -9,7 +9,6 @@ import {
   useScroll,
 } from "framer-motion";
 import { IconMenu2, IconX } from "@tabler/icons-react";
-import { ArrowUpRight } from "lucide-react";
 
 import { Logo } from "./logo";
 import { Button } from "./button";
@@ -75,7 +74,9 @@ const DesktopNav = ({ visible }: { visible: boolean }) => {
                 transition={{ type: "spring", stiffness: 350, damping: 30 }}
               />
             )}
-            <span className="relative z-10">{item.name}</span>
+            <span className="relative z-10 whitespace-nowrap">
+              {item.name}
+            </span>
           </Link>
         ))}
       </nav>
@@ -90,9 +91,6 @@ const DesktopNav = ({ visible }: { visible: boolean }) => {
           className="hidden md:inline-flex"
         >
           <span>Book A Call</span>
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition-all duration-200 group-hover:bg-primary-200 group-hover:text-black">
-            <ArrowUpRight className="h-4 w-4" />
-          </span>
         </Button>
       </div>
     </motion.div>
@@ -151,26 +149,20 @@ const MobileNav = ({ visible }: { visible: boolean }) => {
                 data-cal-namespace={calConfig.namespace}
                 data-cal-link={calConfig.link}
                 data-cal-config={`{"layout":"${calConfig.layout}"}`}
-                className="w-full justify-between"
+                className="w-full"
                 onClick={() => setOpen(false)}
               >
                 <span>Book A Call</span>
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition-all duration-200 group-hover:bg-primary-200 group-hover:text-black">
-                  <ArrowUpRight className="h-4 w-4" />
-                </span>
               </Button>
 
               <Button
                 as={Link}
                 href="/reports"
                 variant="secondary"
-                className="w-full justify-between"
+                className="w-full"
                 onClick={() => setOpen(false)}
               >
                 <span>View Research</span>
-                <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/30 transition-colors duration-200 group-hover:border-primary-400">
-                  <ArrowUpRight className="h-4 w-4" />
-                </span>
               </Button>
             </div>
           </motion.div>
