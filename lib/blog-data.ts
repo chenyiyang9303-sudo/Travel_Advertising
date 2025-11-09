@@ -81,10 +81,10 @@ Finally, investment teams are running governance “tabletop exercises” twice 
     category: "financial-strategy",
     featured: true,
     author: {
-      name: "廖治华 (Zhihua Liao)",
-      title: "Chief Investment Strategist",
+      name: "田俊 (Jun Tian)",
+      title: "Founder & CEO",
       avatar: "/avatars/liao-zhihua.svg",
-      bio: "Institutional portfolio strategist with two decades of experience advising pension, insurance, and sovereign clients on asset allocation and governance.",
+      bio: "Founder of RSFM and long-time advisor to pensions, insurers, and sovereign funds on capital allocation, governance, and capital market execution.",
     },
     tags: [
       "Asset Allocation",
@@ -148,10 +148,10 @@ Liquidity councils, chaired by the CFO or Treasurer, meet monthly to review stre
     category: "risk-management",
     featured: true,
     author: {
-      name: "林志华 (Lin Zhihua)",
-      title: "CFO Advisory Partner",
+      name: "韩思远 (Siyuan Han)",
+      title: "Chief Financial Architect",
       avatar: "/avatars/lin-zhihua.svg",
-      bio: "Finance transformation leader advising treasurers and CFOs on liquidity, capital structure, and risk governance across global enterprises.",
+      bio: "Treasury modernisation specialist helping CFOs build liquidity control towers, stress testing programs, and funding diversification strategies.",
     },
     tags: [
       "Liquidity",
@@ -209,10 +209,10 @@ Finally, management must articulate a coherent equity narrative. This includes t
     category: "corporate-finance",
     featured: false,
     author: {
-      name: "陈嘉音 (Jiayin Chen)",
-      title: "Capital Markets Director",
+      name: "黎语彤 (Yutong Li)",
+      title: "Capital Markets & Insights Director",
       avatar: "/avatars/chen-jiayin.svg",
-      bio: "Capital markets practitioner helping growth companies institutionalise finance functions and secure strategic financing.",
+      bio: "Capital markets strategist partnering with growth-stage finance teams to institutionalise forecasting, diligence readiness, and investor storytelling.",
     },
     tags: [
       "Capital Raising",

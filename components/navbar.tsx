@@ -16,11 +16,11 @@ import { useCalEmbed } from "@/app/hooks/useCalEmbed";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
-  { name: "The Firm", link: "/about" },
   { name: "Solutions", link: "/#services" },
   { name: "Casework", link: "/#case-studies" },
   { name: "Insights", link: "/blog" },
   { name: "Reports", link: "/reports" },
+  { name: "The Firm", link: "/about" },
   { name: "Contact", link: "/#contact" },
 ];
 

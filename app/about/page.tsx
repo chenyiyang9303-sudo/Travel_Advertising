@@ -6,17 +6,18 @@ import { motion } from "framer-motion";
 import { Target, Award, Globe, Lightbulb, TrendingUp, Heart, CheckCircle, ArrowRight, Mail } from "lucide-react";
 
 // Generate avatar URLs for team members using local avatar files
-const getAvatarUrl = (name: string, index: number) => {
+const getAvatarUrl = (image: string | undefined, index: number) => {
   const avatarFiles = [
-    '/avatars/liao-zhihua.svg',
-    '/avatars/lin-zhihua.svg',
-    '/avatars/wang-yaqi.svg',
-    '/avatars/zhang-wenbo.svg',
-    '/avatars/li-siyi.svg',
-    '/avatars/chen-jiayin.svg'
+    "/avatars/liao-zhihua.svg",
+    "/avatars/lin-zhihua.svg",
+    "/avatars/chen-jiayin.svg",
   ];
 
-  return avatarFiles[index] || '/avatars/dai-rongrong.svg';
+  if (image) {
+    return image;
+  }
+
+  return avatarFiles[index] || "/avatars/dai-rongrong.svg";
 };
 
 export default function AboutPage() {
@@ -195,52 +196,28 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "廖治华 (Zhihua Liao)",
+                name: "田俊 (Jun Tian)",
                 role: "Founder & CEO",
-                expertise: "Corporate Finance Strategy & Capital Markets",
-                bio: "15+ years leading corporate finance advisory and M&A transactions across diverse industries",
+                expertise: "Strategic Finance, Capital Markets & Corporate Development",
+                bio: "Founder of RSFM with 15+ years guiding board-level finance transformations, cross-border M&A, and capital market readiness.",
                 image: "/avatars/liao-zhihua.svg",
-                email: "zhihua.liao@radiantsoaringfm.com"
+                email: "jun.tian@radiantsoaringfm.com"
               },
               {
-                name: "林志华 (Lin Zhihua)",
-                role: "Chief Financial Officer",
-                expertise: "Financial Planning & Analysis",
-                bio: "Former CFO at multinational corporation with expertise in financial modeling and strategic planning",
-                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&auto=format",
-                email: "zhihua.lin@radiantsoaringfm.com"
+                name: "韩思远 (Siyuan Han)",
+                role: "Chief Financial Architect",
+                expertise: "Treasury Modernisation & Risk Governance",
+                bio: "Former global treasurer who designs liquidity control towers, stress testing frameworks, and funding diversification playbooks for multinational clients.",
+                image: "/avatars/lin-zhihua.svg",
+                email: "siyuan.han@radiantsoaringfm.com"
               },
               {
-                name: "王雅琪 (Wang Yaqi)",
-                role: "Risk Management Director",
-                expertise: "Enterprise Risk & Compliance Advisory",
-                bio: "Risk management specialist with 12+ years experience in regulatory compliance and internal controls",
-                image: "/avatars/wang-yaqi.svg",
-                email: "yaqi.wang@radiantsoaringfm.com"
-              },
-              {
-                name: "张文博 (Zhang Wenbo)",
-                role: "Investment Strategy Lead",
-                expertise: "Portfolio Analysis & Investment Advisory",
-                bio: "MBA from prestigious business school, specializing in investment strategy and portfolio optimization",
-                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&auto=format",
-                email: "wenbo.zhang@radiantsoaringfm.com"
-              },
-              {
-                name: "李思怡 (Li Siyi)",
-                role: "Compliance Manager",
-                expertise: "Regulatory Compliance & Internal Audit",
-                bio: "Former compliance officer at financial institution with expertise in regulatory frameworks and audit processes",
-                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&auto=format",
-                email: "siyi.li@radiantsoaringfm.com"
-              },
-              {
-                name: "陈佳音 (Chen Jiayin)",
-                role: "Market Analysis Lead",
-                expertise: "Financial Market Research & Due Diligence",
-                bio: "Former analyst at leading investment bank specializing in market research and valuation analysis",
-                image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&auto=format",
-                email: "jiayin.chen@radiantsoaringfm.com"
+                name: "黎语彤 (Yutong Li)",
+                role: "Capital Markets & Insights Director",
+                expertise: "Capital Raise Readiness & Investor Communications",
+                bio: "Capital markets strategist specialising in investor-grade storytelling, diligence readiness, and research programs that translate data into decisive action.",
+                image: "/avatars/chen-jiayin.svg",
+                email: "yutong.li@radiantsoaringfm.com"
               }
             ].map((member, index) => (
               <motion.div
@@ -253,7 +230,7 @@ export default function AboutPage() {
                 <div className="relative h-56 flex items-center justify-center bg-neutral-900/40 p-4">
                   <div className="relative w-40 h-40">
                     <Image
-                      src={getAvatarUrl(member.name, index)}
+                      src={getAvatarUrl(member.image, index)}
                       alt={`${member.name} avatar`}
                       fill
                       className="object-contain"

@@ -42,7 +42,7 @@ export function Footer() {
             </p>
             <div className="space-y-1 text-[11px] uppercase tracking-[0.45em] text-neutral-500">
               <p>RSFM</p>
-              <p>575 Lexington Avenue, Suite 4200, New York, NY 10022</p>
+              <p>30 N Gould St Ste R, Sheridan, WY 82801</p>
               <p>contact@radiantsoaringfm.com</p>
             </div>
           </div>

@@ -51,8 +51,8 @@ const reports: Report[] = [
     previewPages: 12,
     fileSize: "3.6 MB",
     author: {
-      name: "廖治华 (Zhihua Liao)",
-      title: "Chief Investment Strategist",
+      name: "田俊 (Jun Tian)",
+      title: "Founder & CEO",
       avatar: "/avatars/liao-zhihua.svg",
     },
     tags: [
@@ -103,8 +103,8 @@ const reports: Report[] = [
     previewPages: 10,
     fileSize: "2.9 MB",
     author: {
-      name: "林志华 (Lin Zhihua)",
-      title: "CFO Advisory Partner",
+      name: "韩思远 (Siyuan Han)",
+      title: "Chief Financial Architect",
       avatar: "/avatars/lin-zhihua.svg",
     },
     tags: [
@@ -155,9 +155,9 @@ const reports: Report[] = [
     previewPages: 9,
     fileSize: "2.4 MB",
     author: {
-      name: "李思怡 (Siyi Li)",
-      title: "Head of Regulatory & Operations Advisory",
-      avatar: "/avatars/li-siyi.svg",
+      name: "黎语彤 (Yutong Li)",
+      title: "Capital Markets & Insights Director",
+      avatar: "/avatars/chen-jiayin.svg",
     },
     tags: [
       "Private Equity",

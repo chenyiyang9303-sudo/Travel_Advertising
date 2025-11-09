@@ -4,8 +4,8 @@ import type { ReactNode } from "react";
 const COMPANY_NAME = "Radiant Soaring Fund Management LLC";
 const SHORT_NAME = "RSFM";
 const CONTACT_EMAIL = "privacy@radiantsoaringfm.com";
-const STREET_ADDRESS = "575 Lexington Avenue, Suite 4200";
-const CITY_ADDRESS = "New York, NY 10022";
+const STREET_ADDRESS = "30 N Gould St Ste R";
+const CITY_ADDRESS = "Sheridan, WY 82801";
 
 export const metadata: Metadata = {
   title: "Cookie Policy | RSFM",
