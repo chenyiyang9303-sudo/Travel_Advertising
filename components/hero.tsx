@@ -36,9 +36,10 @@ export function Hero() {
           </h1>
           <p className="max-w-3xl text-base leading-relaxed text-neutral-300 sm:text-lg">
             We partner with boards, investment committees, and family offices to
-            structure capital, manage risk, and deploy bespoke investment
-            mandates. Precision, discipline, and accountability define every
-            engagement.
+            architect capital strategies, calibrate risk oversight, and prepare
+            execution playbooks—while every client maintains full control of its
+            capital deployment. Precision, discipline, and accountability define
+            every engagement.
           </p>
         </div>
 

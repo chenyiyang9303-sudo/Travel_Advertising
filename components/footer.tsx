@@ -13,10 +13,10 @@ const NAV_ITEMS = [
 ];
 
 const SERVICE_ITEMS = [
-  { title: "Portfolio Management", href: "/#services" },
-  { title: "Private Capital", href: "/#services" },
-  { title: "Risk Advisory", href: "/#services" },
-  { title: "Institutional Mandates", href: "/#contact" },
+  { title: "Portfolio Governance Advisory", href: "/#services" },
+  { title: "Risk Architecture Playbooks", href: "/#services" },
+  { title: "Private Markets & Alternatives", href: "/#services" },
+  { title: "Institutional Mandate Enablement", href: "/#contact" },
 ];
 
 const LEGAL_ITEMS = [
@@ -33,15 +33,15 @@ export function Footer() {
       <div className="relative mx-auto max-w-6xl px-6 py-20 md:px-10">
         <div className="grid gap-12 lg:grid-cols-5">
           <div className="lg:col-span-2 space-y-6">
-            <Logo />
+            <Logo showText={false} />
             <p className="max-w-sm text-sm leading-relaxed text-neutral-300">
               RSFM partners with institutional allocators, family offices, and
-              founders to architect capital solutions, manage complex portfolios,
-              and execute transformative transactions with discretion and
-              precision.
+              founders to architect capital solutions, equip teams to steward
+              complex portfolios, and advise on transformative transactions with
+              discretion and precision. We provide consulting guidance only—
+              clients retain responsibility for execution, trading, and custody.
             </p>
             <div className="space-y-1 text-[11px] uppercase tracking-[0.45em] text-neutral-500">
-              <p>RSFM</p>
               <p>30 N Gould St Ste R, Sheridan, WY 82801</p>
               <p>contact@radiantsoaringfm.com</p>
             </div>

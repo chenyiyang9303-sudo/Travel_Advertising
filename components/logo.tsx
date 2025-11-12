@@ -2,7 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const Logo = () => {
+type LogoProps = {
+  showText?: boolean;
+};
+
+export const Logo = ({ showText = true }: LogoProps) => {
   return (
     <Link
       href="/"
@@ -11,14 +15,17 @@ export const Logo = () => {
       <div className="flex items-center gap-3">
         <Image
           src="/logo.png"
-          alt="RSFM Logo"
-          width={40}
-          height={40}
-          className="h-8 w-8 md:h-10 md:w-10"
+          alt="Radiant Soaring Fund Management logo"
+          width={952}
+          height={280}
+          className="h-12 w-auto md:h-[3.75rem]"
+          priority
         />
-        <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent dark:from-orange-400 dark:to-amber-400 tracking-wide">
-          RSFM
-        </span>
+        {showText && (
+          <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent dark:from-orange-400 dark:to-amber-400 tracking-wide">
+            RSFM
+          </span>
+        )}
       </div>
     </Link>
   );

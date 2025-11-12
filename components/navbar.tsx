@@ -56,7 +56,7 @@ const DesktopNav = ({ visible }: { visible: boolean }) => {
         visible ? "bg-black/82 border border-white/10 shadow-soft" : "bg-transparent"
       )}
     >
-      <Logo />
+      <Logo showText={false} />
 
       <nav className="flex items-center gap-1 text-xs font-semibold uppercase tracking-[0.35em] text-white/65">
         {NAV_ITEMS.map((item, idx) => (
@@ -113,7 +113,7 @@ const MobileNav = ({ visible }: { visible: boolean }) => {
         visible || open ? "bg-black/85 border border-white/12 shadow-soft" : "bg-transparent"
       )}
     >
-      <Logo />
+      <Logo showText={false} />
       <button
         className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white"
         onClick={() => setOpen((prev) => !prev)}

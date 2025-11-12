@@ -18,64 +18,68 @@ export function Services() {
     >
       <Header>
         <h2 className="font-display text-display-md md:text-display-lg text-center mx-auto text-fg">
-          Premier Fund Management Services
+          Strategic Asset Advisory Programs
         </h2>
       </Header>
       <p className="max-w-3xl text-lg text-muted text-center mx-auto mt-6">
-        Institutional-grade investment solutions and fund management for sophisticated investors seeking exceptional returns.
+        Independent consulting support that equips investment teams with governance frameworks, analytics, and playbooks—clients retain execution control over every mandate.
       </p>
 
       <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         <ServiceCard
           icon={<Building2 className="h-6 w-6" />}
-          title="Portfolio Management"
-          description="Active portfolio management strategies designed to maximize risk-adjusted returns. Our experienced team leverages proprietary research and advanced analytics to deliver superior performance."
+          title="Portfolio Governance Advisory"
+          description="Design investment policy statements, oversight cadences, and scenario toolkits that give boards transparency without ceding discretion."
           features={[
-            "Discretionary portfolio management",
-            "Multi-asset class strategies",
-            "Alternative investment allocation",
-            "Dynamic rebalancing & risk control",
-            "Performance reporting & attribution"
+            "Investment policy & mandate design",
+            "Decision-rights & escalation mapping",
+            "KPI dashboards and reporting rhythms",
+            "Scenario planning & war-gaming",
+            "Board-ready documentation sets"
           ]}
+          disclaimer="RSFM provides governance design and analytics; clients execute all investment decisions."
         />
 
         <ServiceCard
           icon={<Shield className="h-6 w-6" />}
-          title="Risk Management & Hedging"
-          description="Sophisticated risk management frameworks to protect capital and optimize portfolio outcomes. We implement advanced hedging strategies and stress testing protocols."
+          title="Risk Architecture Playbooks"
+          description="Build quantitative risk appetites, hedging policies, and stress-test methodologies your internal team can operate with confidence."
           features={[
-            "Quantitative risk modeling",
-            "Derivatives-based hedging strategies",
-            "VaR & scenario analysis",
-            "Counterparty risk management",
-            "Liquidity stress testing"
+            "Risk appetite calibration workshops",
+            "Hedging framework design & guardrails",
+            "Independent VaR & scenario methodology",
+            "Counterparty oversight standards",
+            "Liquidity contingency playbooks"
           ]}
+          disclaimer="We advise on policy design only; clients select instruments, brokers, and hedging execution."
         />
 
         <ServiceCard
           icon={<TrendingUp className="h-6 w-6" />}
-          title="Private Equity & Alternative Investments"
-          description="Access to exclusive private equity opportunities and alternative investment strategies. We source, structure, and manage investments in high-growth private companies and specialized funds."
+          title="Private Markets & Alternatives Advisory"
+          description="Deliver investment committee-ready diligence, structuring guidance, and operating model assessments for complex private strategies."
           features={[
-            "Private equity deal sourcing",
-            "Venture capital investments",
-            "Real assets & infrastructure",
-            "Credit & distressed opportunities",
-            "Co-investment structures"
+            "Pipeline and thesis validation",
+            "Manager & GP evaluation scorecards",
+            "Structure and term sheet benchmarking",
+            "Operating model readiness reviews",
+            "Co-investment governance protocols"
           ]}
+          disclaimer="Our role is advisory; capital commitments and fund administration remain with the client."
         />
 
         <ServiceCard
           icon={<PieChart className="h-6 w-6" />}
-          title="Institutional Advisory"
-          description="Tailored investment solutions for institutional clients including pension funds, endowments, and family offices. Strategic asset allocation aligned with long-term objectives and liability profiles."
+          title="Institutional Mandate Enablement"
+          description="Co-develop allocation roadmaps, ESG policies, and operating manuals so pension, endowment, and family office teams can execute independently."
           features={[
-            "Custom mandate design",
-            "Asset-liability modeling",
-            "Manager selection & oversight",
-            "ESG integration & impact investing",
-            "Capital markets execution"
+            "Custom allocation & pacing roadmaps",
+            "Asset-liability diagnostic support",
+            "Manager search facilitation materials",
+            "ESG & impact policy integration",
+            "Execution playbooks & readiness kits"
           ]}
+          disclaimer="Execution, trading, and custody responsibilities remain solely with each client and their appointed managers."
         />
       </div>
     </div>

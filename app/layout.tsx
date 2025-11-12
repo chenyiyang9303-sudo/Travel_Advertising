@@ -14,9 +14,9 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "RSFM | Institutional Capital Advisory & Portfolio Stewardship",
   description:
-    "RSFM partners with institutional allocators, family offices, and founders to architect capital solutions, manage portfolio risk, and execute complex transactions with discretion.",
+    "RSFM partners with institutional allocators, family offices, and founders to architect capital solutions, advise on portfolio risk oversight, and support complex transactions as an independent consulting firm—clients always retain control of their capital.",
   keywords:
-    "RSFM, institutional capital, asset management, portfolio advisory, investment strategy, family office, corporate finance, transaction advisory, risk governance",
+    "RSFM, institutional capital, asset management consulting, portfolio advisory, investment strategy consulting, family office advisory, corporate finance, transaction advisory, risk governance",
 };
 
 export default function RootLayout({
