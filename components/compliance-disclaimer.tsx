@@ -15,13 +15,13 @@ export function ComplianceDisclaimer() {
             </h3>
             <div className="text-sm text-primary-800 dark:text-primary-100/80 space-y-2">
               <p>
-                <strong>Advisory Services Only:</strong> We provide strategic consulting and advisory services. We do not manage, hold, or have access to client funds or assets. All investment and financial decisions remain with the client.
+                <strong>Advisory Services Only:</strong> Radiant Soaring Fund Management LLC provides strategic consulting and advisory services for corporate finance matters. We do not manage, hold, or have access to client funds or assets. All financial and operational decisions remain with the client.
               </p>
               <p>
-                <strong>No Investment Management:</strong> Our investment strategy consulting and asset advisory services are for informational and strategic planning purposes only. We are not registered investment advisors and do not provide portfolio management services.
+                <strong>No Fund Management:</strong> We specialize in advisory services for mergers and acquisitions, financial restructuring, fundraising, valuation, and tax/compliance optimization. We are not registered investment advisors and do not provide fund management or portfolio management services.
               </p>
               <p>
-                <strong>Professional Advice:</strong> The information provided is for general guidance and should not be considered as legal, tax, or investment advice. Clients should consult with licensed professionals for specific recommendations.
+                <strong>Professional Consultation:</strong> The information and guidance provided is for strategic planning purposes and should not be considered as legal, tax, or investment advice. Clients should consult with licensed legal, tax, and financial professionals for implementation.
               </p>
             </div>
           </div>

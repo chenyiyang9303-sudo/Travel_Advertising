@@ -13,10 +13,10 @@ const NAV_ITEMS = [
 ];
 
 const SERVICE_ITEMS = [
-  { title: "Portfolio Governance Advisory", href: "/#services" },
-  { title: "Risk Architecture Playbooks", href: "/#services" },
-  { title: "Private Markets & Alternatives", href: "/#services" },
-  { title: "Institutional Mandate Enablement", href: "/#contact" },
+  { title: "Mergers & Acquisitions", href: "/#services" },
+  { title: "Financial Restructuring", href: "/#services" },
+  { title: "Fundraising & Valuation", href: "/#services" },
+  { title: "Tax Optimization & Compliance", href: "/#services" },
 ];
 
 const LEGAL_ITEMS = [
@@ -35,11 +35,11 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-6">
             <Logo showText={false} />
             <p className="max-w-sm text-sm leading-relaxed text-neutral-300">
-              RSFM partners with institutional allocators, family offices, and
-              founders to architect capital solutions, equip teams to steward
-              complex portfolios, and advise on transformative transactions with
-              discretion and precision. We provide consulting guidance only—
-              clients retain responsibility for execution, trading, and custody.
+              RSFM is a corporate financial advisory firm specializing in mergers
+              and acquisitions, financial restructuring, fundraising and valuation,
+              as well as tax and compliance optimization. We provide expert advisory
+              and strategic consulting services only—clients retain full control of
+              all financial decisions and capital management.
             </p>
             <div className="space-y-1 text-[11px] uppercase tracking-[0.45em] text-neutral-500">
               <p>30 N Gould St Ste R, Sheridan, WY 82801</p>

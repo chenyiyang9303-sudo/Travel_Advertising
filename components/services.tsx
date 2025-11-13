@@ -4,10 +4,10 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  Building2,
-  Shield,
+  Handshake,
+  RefreshCw,
   TrendingUp,
-  PieChart
+  Scale
 } from "lucide-react";
 
 export function Services() {
@@ -18,68 +18,68 @@ export function Services() {
     >
       <Header>
         <h2 className="font-display text-display-md md:text-display-lg text-center mx-auto text-fg">
-          Strategic Asset Advisory Programs
+          Core Advisory Services
         </h2>
       </Header>
       <p className="max-w-3xl text-lg text-muted text-center mx-auto mt-6">
-        Independent consulting support that equips investment teams with governance frameworks, analytics, and playbooks—clients retain execution control over every mandate.
+        Expert financial advisory and strategic consulting services to help businesses navigate complex corporate finance challenges—from M&A and restructuring to fundraising and compliance optimization.
       </p>
 
       <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         <ServiceCard
-          icon={<Building2 className="h-6 w-6" />}
-          title="Portfolio Governance Advisory"
-          description="Design investment policy statements, oversight cadences, and scenario toolkits that give boards transparency without ceding discretion."
+          icon={<Handshake className="h-6 w-6" />}
+          title="Mergers & Acquisitions Advisory"
+          description="Comprehensive M&A advisory from target identification and due diligence to deal structuring and post-merger integration planning."
           features={[
-            "Investment policy & mandate design",
-            "Decision-rights & escalation mapping",
-            "KPI dashboards and reporting rhythms",
-            "Scenario planning & war-gaming",
-            "Board-ready documentation sets"
+            "Strategic target identification & screening",
+            "Financial & operational due diligence",
+            "Valuation analysis (DCF, comparable, precedent)",
+            "Deal structuring & negotiation support",
+            "Post-merger integration planning"
           ]}
-          disclaimer="RSFM provides governance design and analytics; clients execute all investment decisions."
+          disclaimer="RSFM provides advisory services only; clients retain full control of transaction decisions and execution."
         />
 
         <ServiceCard
-          icon={<Shield className="h-6 w-6" />}
-          title="Risk Architecture Playbooks"
-          description="Build quantitative risk appetites, hedging policies, and stress-test methodologies your internal team can operate with confidence."
+          icon={<RefreshCw className="h-6 w-6" />}
+          title="Financial Restructuring & Turnaround"
+          description="Expert guidance for businesses facing financial distress—from debt restructuring and working capital optimization to comprehensive turnaround strategies."
           features={[
-            "Risk appetite calibration workshops",
-            "Hedging framework design & guardrails",
-            "Independent VaR & scenario methodology",
-            "Counterparty oversight standards",
-            "Liquidity contingency playbooks"
+            "Financial health diagnostic assessment",
+            "Debt restructuring & negotiation strategy",
+            "Working capital optimization programs",
+            "Cost reduction & efficiency initiatives",
+            "Stakeholder communication frameworks"
           ]}
-          disclaimer="We advise on policy design only; clients select instruments, brokers, and hedging execution."
+          disclaimer="We provide strategic advisory only; clients maintain responsibility for all operational and financial decisions."
         />
 
         <ServiceCard
           icon={<TrendingUp className="h-6 w-6" />}
-          title="Private Markets & Alternatives Advisory"
-          description="Deliver investment committee-ready diligence, structuring guidance, and operating model assessments for complex private strategies."
+          title="Fundraising & Valuation Advisory"
+          description="Strategic support for capital raises from financial modeling and investor materials preparation to valuation analysis and term sheet negotiation."
           features={[
-            "Pipeline and thesis validation",
-            "Manager & GP evaluation scorecards",
-            "Structure and term sheet benchmarking",
-            "Operating model readiness reviews",
-            "Co-investment governance protocols"
+            "Financial projections & modeling",
+            "Investor presentation development",
+            "Valuation methodology & benchmarking",
+            "Investor targeting & outreach strategy",
+            "Term sheet review & negotiation support"
           ]}
-          disclaimer="Our role is advisory; capital commitments and fund administration remain with the client."
+          disclaimer="Our role is advisory; capital allocation decisions and investor agreements remain with the client."
         />
 
         <ServiceCard
-          icon={<PieChart className="h-6 w-6" />}
-          title="Institutional Mandate Enablement"
-          description="Co-develop allocation roadmaps, ESG policies, and operating manuals so pension, endowment, and family office teams can execute independently."
+          icon={<Scale className="h-6 w-6" />}
+          title="Tax Optimization & Compliance"
+          description="Strategic tax planning, regulatory compliance advisory, and risk management to optimize corporate tax structures while ensuring full regulatory adherence."
           features={[
-            "Custom allocation & pacing roadmaps",
-            "Asset-liability diagnostic support",
-            "Manager search facilitation materials",
-            "ESG & impact policy integration",
-            "Execution playbooks & readiness kits"
+            "Corporate tax structure optimization",
+            "Transfer pricing strategy & documentation",
+            "Regulatory compliance assessment",
+            "Risk management framework design",
+            "Cross-border transaction advisory"
           ]}
-          disclaimer="Execution, trading, and custody responsibilities remain solely with each client and their appointed managers."
+          disclaimer="RSFM provides strategic guidance; clients should engage licensed tax and legal professionals for implementation."
         />
       </div>
     </div>

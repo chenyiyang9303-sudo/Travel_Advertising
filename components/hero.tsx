@@ -6,10 +6,10 @@ import { ArrowUpRight, Minus } from "lucide-react";
 import { useCalEmbed } from "@/app/hooks/useCalEmbed";
 
 const heroStats = [
-  { value: "$5B+", label: "Assets Under Advisory" },
-  { value: "18 yrs", label: "Institutional Track Record" },
-  { value: "92%", label: "Client Retention" },
-  { value: "40+", label: "Jurisdictions Covered" },
+  { value: "$2.8B+", label: "Transaction Value Advised" },
+  { value: "15 yrs", label: "M&A Advisory Experience" },
+  { value: "95%", label: "Client Success Rate" },
+  { value: "120+", label: "Deals Completed" },
 ];
 
 export function Hero() {
@@ -26,20 +26,19 @@ export function Hero() {
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-primary-500/60">
             <Minus className="h-4 w-4" />
           </span>
-          Institutional Financial Leadership
+          Corporate Finance Excellence
         </div>
 
         <div className="max-w-4xl space-y-8">
           <h1 className="text-4xl font-semibold leading-[1.2] text-white sm:text-5xl lg:text-[3.75rem]">
-            RSFM guides global capital toward resilient, performance-led
-            outcomes.
+            Strategic Financial Advisory for Corporate Growth and Transformation
           </h1>
           <p className="max-w-3xl text-base leading-relaxed text-neutral-300 sm:text-lg">
-            We partner with boards, investment committees, and family offices to
-            architect capital strategies, calibrate risk oversight, and prepare
-            execution playbooks—while every client maintains full control of its
-            capital deployment. Precision, discipline, and accountability define
-            every engagement.
+            RSFM partners with businesses, founders, and boards to navigate complex
+            financial decisions—from mergers and acquisitions to restructuring,
+            fundraising, and compliance optimization. We provide expert advisory
+            and strategic consulting services only; clients retain full control
+            of all capital and operational decisions.
           </p>
         </div>
 

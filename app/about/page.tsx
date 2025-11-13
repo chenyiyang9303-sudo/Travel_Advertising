@@ -32,7 +32,7 @@ export default function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               className="text-4xl md:text-5xl font-bold text-white mb-6"
             >
-              Strategic Financial Advisory for Corporate Success
+              Expert Corporate Finance Advisory
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ export default function AboutPage() {
               transition={{ delay: 0.1 }}
               className="text-xl text-white/70 mb-8 leading-relaxed"
             >
-              We are a trusted corporate finance consulting firm dedicated to helping businesses optimize their financial strategies, manage risks, and achieve sustainable growth through expert advisory services.
+              Radiant Soaring Fund Management LLC is a corporate financial advisory firm specializing in mergers and acquisitions, divestiture consulting, financial restructuring, fundraising and valuation, as well as tax and compliance optimization. We provide advisory and strategic consulting services only and do not manage or handle client funds.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -80,7 +80,7 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-lg text-white/70 leading-relaxed mb-6">
-                To empower businesses with strategic financial insights and advisory services that drive informed decision-making, optimize capital structure, and ensure regulatory compliance—enabling our clients to achieve sustainable growth and maximize shareholder value.
+                To empower businesses with strategic financial advisory services across mergers and acquisitions, restructuring, fundraising, and compliance—enabling our clients to make informed decisions, optimize capital structure, and achieve sustainable growth while maintaining full control of their financial operations.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-4 backdrop-blur">
