@@ -12,11 +12,11 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "RSFM | Institutional Capital Advisory & Portfolio Stewardship",
+  title: "WanderAds | Travel Marketing Studio & Smart Promotion",
   description:
-    "RSFM partners with institutional allocators, family offices, and founders to architect capital solutions, advise on portfolio risk oversight, and support complex transactions as an independent consulting firm—clients always retain control of their capital.",
+    "WanderAds helps destinations, hotels, and travel brands win more bookings through AI-powered content, creator activations, and full-funnel media. Explore services, case studies, and tools built for tourism growth.",
   keywords:
-    "RSFM, institutional capital, asset management consulting, portfolio advisory, investment strategy consulting, family office advisory, corporate finance, transaction advisory, risk governance",
+    "WanderAds, travel marketing, tourism advertising, destination campaign, KOL marketing, travel content studio, AI travel ads, tourism digitalization",
 };
 
 export default function RootLayout({

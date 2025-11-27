@@ -1,126 +1,124 @@
 import Link from "next/link";
 import React from "react";
+import { Instagram, LinkedinIcon, Youtube } from "lucide-react";
 
 import { Logo } from "./logo";
 
-const NAV_ITEMS = [
-  { title: "Home", href: "/" },
-  { title: "Solutions", href: "/#services" },
-  { title: "Casework", href: "/#case-studies" },
-  { title: "Insights", href: "/blog" },
+// lucide-react doesn't ship a TikTok glyph, so we keep a simple custom SVG for consistency.
+const TiktokIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    {...props}
+  >
+    <path d="M15 4.2c.9 1.6 2.4 2.6 4 2.8v3.1c-1.6 0-3.2-.6-4-1.3v6.3a5.7 5.7 0 1 1-5.7-5.6c.5 0 .9 0 1.4.1v3.2a2.2 2.2 0 1 0 1.5 2.1V2.5H15Z" />
+  </svg>
+);
+
+const GUIDE_LINKS = [
+  { title: "Top Destinations", href: "/blog" },
+  { title: "Latest Guides", href: "/blog" },
+  { title: "Themed Photography", href: "/case-studies" },
+];
+
+const SERVICE_LINKS = [
+  { title: "Full-Funnel Advertising", href: "/#services" },
+  { title: "Travel Content Studio", href: "/#services" },
+  { title: "Creator/KOL Partnerships", href: "/#services" },
+  { title: "AI Travel Marketing Tools", href: "/#ai-tools" },
+];
+
+const SOLUTION_LINKS = [
+  { title: "Destination Solutions", href: "/#process" },
+  { title: "Hotel Solutions", href: "/#process" },
+  { title: "City Tourism Boards", href: "/#process" },
+  { title: "Travel Agencies/Brands", href: "/#process" },
+];
+
+const RESOURCE_LINKS = [
+  { title: "Case Studies", href: "/case-studies" },
+  { title: "Blog", href: "/blog" },
   { title: "Reports", href: "/reports" },
-  { title: "Contact", href: "/#contact" },
+  { title: "Contact Us", href: "/contact" },
 ];
 
-const SERVICE_ITEMS = [
-  { title: "Mergers & Acquisitions", href: "/#services" },
-  { title: "Financial Restructuring", href: "/#services" },
-  { title: "Fundraising & Valuation", href: "/#services" },
-  { title: "Tax Optimization & Compliance", href: "/#services" },
-];
-
-const LEGAL_ITEMS = [
-  { title: "Privacy Policy", href: "/privacy" },
-  { title: "Terms of Service", href: "/terms" },
-  { title: "Cookie Policy", href: "/cookies" },
+const SOCIAL_LINKS = [
+  { name: "TikTok", href: "https://www.tiktok.com", icon: TiktokIcon },
+  { name: "Instagram", href: "https://www.instagram.com", icon: Instagram },
+  { name: "YouTube", href: "https://www.youtube.com", icon: Youtube },
+  { name: "LinkedIn", href: "https://www.linkedin.com", icon: LinkedinIcon },
 ];
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-[#050505] text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(196,154,108,0.12),transparent_45%),radial-gradient(circle_at_bottom_left,rgba(185,130,94,0.12),transparent_40%)]" />
-
-      <div className="relative mx-auto max-w-6xl px-6 py-20 md:px-10">
-        <div className="grid gap-12 lg:grid-cols-5">
+    <footer className="relative overflow-hidden bg-[#111111] text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,107,74,0.18),transparent_50%),radial-gradient(circle_at_bottom,_rgba(74,143,255,0.18),transparent_45%)] opacity-70" />
+      <div className="relative mx-auto max-w-6xl px-6 py-20 md:px-10 space-y-12">
+        <div className="grid gap-10 lg:grid-cols-6">
           <div className="lg:col-span-2 space-y-6">
-            <Logo showText={false} />
-            <p className="max-w-sm text-sm leading-relaxed text-neutral-300">
-              RSFM is a corporate financial advisory firm specializing in mergers
-              and acquisitions, financial restructuring, fundraising and valuation,
-              as well as tax and compliance optimization. We provide expert advisory
-              and strategic consulting services only—clients retain full control of
-              all financial decisions and capital management.
+            <Logo showText />
+            <p className="text-sm leading-relaxed text-white/70 max-w-sm">
+              WanderAds is a creative + data studio for travel brands. We help destinations be seen on the global stage through magazine-grade content, creator alliances, AI tools, and media strategy.
             </p>
-            <div className="space-y-1 text-[11px] uppercase tracking-[0.45em] text-neutral-500">
-              <p>30 N Gould St Ste R, Sheridan, WY 82801</p>
-              <p>contact@radiantsoaringfm.com</p>
-            </div>
+            <p className="text-xs uppercase tracking-[0.4em] text-white/50">
+              hello@wanderads.studio
+            </p>
           </div>
 
-          <div>
-            <h4 className="text-xs font-semibold uppercase tracking-[0.4em] text-neutral-500">
-              Navigate
-            </h4>
-            <ul className="mt-5 space-y-3 text-sm text-neutral-300">
-              {NAV_ITEMS.map((item) => (
-                <li key={item.title}>
-                  <Link
-                    href={item.href}
-                    className="transition-colors duration-200 hover:text-primary-300"
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-xs font-semibold uppercase tracking-[0.4em] text-neutral-500">
-              Services
-            </h4>
-            <ul className="mt-5 space-y-3 text-sm text-neutral-300">
-              {SERVICE_ITEMS.map((item) => (
-                <li key={item.title}>
-                  <Link
-                    href={item.href}
-                    className="transition-colors duration-200 hover:text-primary-300"
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-xs font-semibold uppercase tracking-[0.4em] text-neutral-500">
-              Governance
-            </h4>
-            <ul className="mt-5 space-y-3 text-sm text-neutral-300">
-              {LEGAL_ITEMS.map((item) => (
-                <li key={item.title}>
-                  <Link
-                    href={item.href}
-                    className="transition-colors duration-200 hover:text-primary-300"
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-6 text-sm text-neutral-300">
-              <Link
-                href="mailto:contact@radiantsoaringfm.com"
-                className="inline-flex items-center gap-2 border-b border-transparent pb-1 transition-all duration-200 hover:border-primary-400 hover:text-primary-300"
-              >
-                contact@radiantsoaringfm.com
-              </Link>
-            </div>
-          </div>
+          <FooterColumn title="Travel Guides" links={GUIDE_LINKS} />
+          <FooterColumn title="Advertising & Services" links={SERVICE_LINKS} />
+          <FooterColumn title="Solutions" links={SOLUTION_LINKS} />
+          <FooterColumn title="Resources" links={RESOURCE_LINKS} />
         </div>
 
-        <div className="mt-16 flex flex-col items-start justify-between gap-6 border-t border-white/10 pt-8 text-[11px] uppercase tracking-[0.4em] text-neutral-500 sm:flex-row">
-          <span>&copy; 2025 Radiant Soaring Fund Management LLC. All rights reserved.</span>
-          <div className="flex flex-wrap items-center gap-3 text-neutral-500">
-            <span>Excellence</span>
-            <span className="h-0.5 w-8 bg-white/20" />
-            <span>Discipline</span>
-            <span className="h-0.5 w-8 bg-white/20" />
-            <span>Stewardship</span>
+        <div className="flex flex-col gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-wrap gap-3">
+            {SOCIAL_LINKS.map(({ name, href, icon: Icon }) => (
+              <Link
+                key={name}
+                href={href}
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm text-white/80 transition hover:border-primary-400 hover:text-primary-200"
+              >
+                <Icon className="h-4 w-4" />
+                {name}
+              </Link>
+            ))}
           </div>
+          <p className="text-xs uppercase tracking-[0.4em] text-white/50">
+            © 2025 WanderAds — Travel Inspiration & Smart Promotion
+          </p>
         </div>
       </div>
     </footer>
+  );
+}
+
+function FooterColumn({
+  title,
+  links,
+}: {
+  title: string;
+  links: { title: string; href: string }[];
+}) {
+  return (
+    <div className="space-y-4">
+      <h4 className="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+        {title}
+      </h4>
+      <ul className="space-y-3 text-sm text-white/70">
+        {links.map((link) => (
+          <li key={link.title}>
+            <Link
+              href={link.href}
+              className="transition-colors duration-200 hover:text-primary-200"
+            >
+              {link.title}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

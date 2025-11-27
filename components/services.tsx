@@ -1,14 +1,80 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  Handshake,
-  RefreshCw,
-  TrendingUp,
-  Scale
+  Megaphone,
+  Video,
+  Users,
+  Cpu,
+  Globe,
 } from "lucide-react";
+
+const services = [
+  {
+    icon: <Megaphone className="h-6 w-6" />,
+    title: "Full-Funnel Advertising",
+    description:
+      "Integrate Douyin, Bytedance, WeChat ecosystem, OTA, search, and programmatic channels, targeting by traveler interests and journey stages to optimize exposure, leads, and conversion across the full funnel.",
+    features: [
+      "Budget planning & cross-channel pacing design",
+      "Audience/geography/theme segmentation strategy",
+      "Livestream, feed, search coordination",
+      "Real-time advertising dashboard & auto-alerts",
+    ],
+    disclaimer: "Covering media resources across 32 cities nationwide, providing specialized models for destinations, hotels, travel photography, and tourism boards.",
+  },
+  {
+    icon: <Video className="h-6 w-6" />,
+    title: "Premium Travel Content",
+    description:
+      "In-house imaging team + creator co-creation, delivering magazine-quality visuals, vlogs, short dramas, aerial footage, and immersive photo stories to make destinations more compelling.",
+    features: [
+      "Travel shoot scripts, storyboards & scene direction",
+      "Aerial/underwater/night multi-scene shooting",
+      "Multilingual subtitles & social editing standards",
+      "Content asset platform + AI tagging organization",
+    ],
+    disclaimer: "Single shoot takes 3-7 days to produce 30+ assets adapted for different channels.",
+  },
+  {
+    icon: <Users className="h-6 w-6" />,
+    title: "Creator/KOL/Livestream Collaboration",
+    description:
+      "Covering 800+ travel, family, photography creators; matching optimal content tone through audience profiles and real conversion data, balancing reach with sales.",
+    features: [
+      "Creator screening, negotiation & scheduling management",
+      "Livestream scripts & product mix recommendations",
+      "Xiaohongshu + Douyin dual-platform matrix",
+      "Brand partnership media PR solutions",
+    ],
+    disclaimer: "Coordinating with official organizational accounts, supporting city/regional tourism themed promotions.",
+  },
+  {
+    icon: <Cpu className="h-6 w-6" />,
+    title: "AI Travel Marketing Tools",
+    description:
+      "Providing AI copywriting, asset scoring, ad recommendations, and data dashboards to help teams instantly turn inspiration into executable campaigns.",
+    features: [
+      "AI copywriting + title + hashtag recommendations",
+      "Traveler preference insights & intelligent budget allocation",
+      "Asset heat rankings & auto-editing",
+      "Data dashboard real-time syncs visitor source locations",
+    ],
+  },
+  {
+    icon: <Globe className="h-6 w-6" />,
+    title: "Destination Digitalization Solutions",
+    description:
+      "Build ticketing funnels, CRM & membership systems, integrating offline navigation, interactive installations, and WeChat private domain to achieve closed-loop communication and operations.",
+    features: [
+      "Membership growth path & benefits design",
+      "AR navigation / smart wayfinding / interactive installations",
+      "OTA / OTA+private domain integration strategy",
+      "Data tracking & incremental analysis",
+    ],
+  },
+];
 
 export function Services() {
   return (
@@ -18,69 +84,17 @@ export function Services() {
     >
       <Header>
         <h2 className="font-display text-display-md md:text-display-lg text-center mx-auto text-fg">
-          Core Advisory Services
+          Core Service Portfolio
         </h2>
       </Header>
       <p className="max-w-3xl text-lg text-muted text-center mx-auto mt-6">
-        Expert financial advisory and strategic consulting services to help businesses navigate complex corporate finance challenges—from M&A and restructuring to fundraising and compliance optimization.
+        Growth templates for destinations, hotels, city tourism, and emerging travel brands, coordinating content, creators, advertising, and data as four main pillars to deliver implementable, replicable solutions.
       </p>
 
-      <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-        <ServiceCard
-          icon={<Handshake className="h-6 w-6" />}
-          title="Mergers & Acquisitions Advisory"
-          description="Comprehensive M&A advisory from target identification and due diligence to deal structuring and post-merger integration planning."
-          features={[
-            "Strategic target identification & screening",
-            "Financial & operational due diligence",
-            "Valuation analysis (DCF, comparable, precedent)",
-            "Deal structuring & negotiation support",
-            "Post-merger integration planning"
-          ]}
-          disclaimer="RSFM provides advisory services only; clients retain full control of transaction decisions and execution."
-        />
-
-        <ServiceCard
-          icon={<RefreshCw className="h-6 w-6" />}
-          title="Financial Restructuring & Turnaround"
-          description="Expert guidance for businesses facing financial distress—from debt restructuring and working capital optimization to comprehensive turnaround strategies."
-          features={[
-            "Financial health diagnostic assessment",
-            "Debt restructuring & negotiation strategy",
-            "Working capital optimization programs",
-            "Cost reduction & efficiency initiatives",
-            "Stakeholder communication frameworks"
-          ]}
-          disclaimer="We provide strategic advisory only; clients maintain responsibility for all operational and financial decisions."
-        />
-
-        <ServiceCard
-          icon={<TrendingUp className="h-6 w-6" />}
-          title="Fundraising & Valuation Advisory"
-          description="Strategic support for capital raises from financial modeling and investor materials preparation to valuation analysis and term sheet negotiation."
-          features={[
-            "Financial projections & modeling",
-            "Investor presentation development",
-            "Valuation methodology & benchmarking",
-            "Investor targeting & outreach strategy",
-            "Term sheet review & negotiation support"
-          ]}
-          disclaimer="Our role is advisory; capital allocation decisions and investor agreements remain with the client."
-        />
-
-        <ServiceCard
-          icon={<Scale className="h-6 w-6" />}
-          title="Tax Optimization & Compliance"
-          description="Strategic tax planning, regulatory compliance advisory, and risk management to optimize corporate tax structures while ensuring full regulatory adherence."
-          features={[
-            "Corporate tax structure optimization",
-            "Transfer pricing strategy & documentation",
-            "Regulatory compliance assessment",
-            "Risk management framework design",
-            "Cross-border transaction advisory"
-          ]}
-          disclaimer="RSFM provides strategic guidance; clients should engage licensed tax and legal professionals for implementation."
-        />
+      <div className="mt-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {services.map((service) => (
+          <ServiceCard key={service.title} {...service} />
+        ))}
       </div>
     </div>
   );
@@ -155,10 +169,10 @@ const ServiceCard = ({
     <motion.div
       whileHover={{ y: -8, scale: 1.02 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="group relative p-8 rounded-2xl bg-surface border border-subtle hover:border-primary-300/70 shadow-soft hover:shadow-elevated transition-all duration-300"
+      className="group relative p-8 rounded-2xl bg-white border border-white/60 hover:border-primary-300/70 shadow-[0_20px_60px_rgba(80,96,120,0.1)] hover:shadow-elevated transition-all duration-300"
     >
       <div className="mb-6">
-        <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary-100/70 dark:bg-primary-900/40 text-primary-600 dark:text-primary-300 mb-4">
+        <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-primary-50 text-primary-600 mb-4 shadow-inner">
           {icon}
         </div>
         <h3 className="font-display text-xl font-semibold text-fg">

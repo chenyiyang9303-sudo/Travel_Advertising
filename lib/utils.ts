@@ -5,11 +5,11 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-// 用于解决 hydration 错误的日期格式化函数
+// Date formatting function to resolve hydration errors
 export function formatDate(date: string | Date): string {
   try {
     const dateObj = typeof date === 'string' ? new Date(date) : date;
-    // 使用固定格式避免服务端和客户端差异
+    // Use fixed format to avoid server/client mismatch
     return dateObj.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short',

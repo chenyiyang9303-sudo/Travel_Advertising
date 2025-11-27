@@ -15,10 +15,10 @@ export function SimpleBlogWithGrid() {
         <GridPatternContainer className="opacity-50" />
         <div className="relative z-20 py-10 text-center">
           <h2 className="font-display text-display-md md:text-display-lg font-bold text-fg mb-4">
-            Featured Articles
+            Travel Brand Inspiration
           </h2>
           <p className="text-lg text-muted max-w-3xl mx-auto">
-            Latest insights and strategies from corporate finance experts to accelerate your growth.
+            The WanderAds team records destination content trends, creator tactics, and AI tool tips weekly, helping you quickly find inspiration for your next campaign.
           </p>
         </div>
       </div>

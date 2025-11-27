@@ -15,19 +15,19 @@ export function CalProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     let mounted = true;
-    
-    console.log("🔧 全局Cal.com初始化开始...");
-    
+
+    console.log("🔧 Global Cal.com initialization started...");
+
     (async function () {
       try {
-        console.log("📞 调用getCalApi...");
+        console.log("📞 Calling getCalApi...");
         const cal = await getCalApi({ namespace: "chat-with-manu-demo" });
-        
-        if (!mounted) return; // 防止组件卸载后设置状态
-        
-        console.log("✅ getCalApi成功:", cal);
-        
-        console.log("🎨 设置UI配置...");
+
+        if (!mounted) return; // Prevent setting state after component unmount
+
+        console.log("✅ getCalApi success:", cal);
+
+        console.log("🎨 Setting UI config...");
         cal("ui", {
           styles: {
             branding: {
@@ -36,20 +36,20 @@ export function CalProvider({ children }: { children: React.ReactNode }) {
           },
           layout: "month_view",
         });
-        console.log("✅ UI配置设置完成");
-        
+        console.log("✅ UI config set");
+
         setCalInstance(cal);
         setIsReady(true);
-        console.log("🎉 Cal.com全局初始化完成！");
-        
-        // 检查全局Cal对象
+        console.log("🎉 Cal.com global initialization complete!");
+
+        // Check global Cal object
         setTimeout(() => {
-          console.log("🔍 全局Cal对象检查:", (window as any).Cal);
-          console.log("🔍 Cal对象类型:", typeof (window as any).Cal);
+          console.log("🔍 Global Cal object check:", (window as any).Cal);
+          console.log("🔍 Cal object type:", typeof (window as any).Cal);
         }, 1000);
-        
+
       } catch (error) {
-        console.error("❌ Cal.com初始化失败:", error);
+        console.error("❌ Cal.com initialization failed:", error);
         if (mounted) {
           setIsReady(false);
         }
@@ -59,27 +59,27 @@ export function CalProvider({ children }: { children: React.ReactNode }) {
     return () => {
       mounted = false;
     };
-  }, []); // 空依赖数组，只在组件挂载时运行一次
+  }, []); // Empty dependency array, runs only once on mount
 
   const openModal = (eventType: string) => {
-    console.log("🚀 CalProvider openModal被调用:", eventType);
+    console.log("🚀 CalProvider openModal called:", eventType);
     console.log("🔍 isReady:", isReady);
     console.log("📞 calInstance:", calInstance);
     console.log("🌐 window.Cal:", (window as any).Cal);
-    
+
     if (isReady && typeof window !== 'undefined' && (window as any).Cal) {
-      console.log("✅ 尝试打开Cal.com模态框...");
+      console.log("✅ Attempting to open Cal.com modal...");
       try {
         (window as any).Cal('openModal', eventType);
-        console.log("🎉 Cal.com模态框调用成功");
+        console.log("🎉 Cal.com modal called successfully");
       } catch (error) {
-        console.error("❌ Cal.com调用失败:", error);
+        console.error("❌ Cal.com call failed:", error);
       }
     } else {
-      console.warn("⚠️ Cal.com还没准备好:");
+      console.warn("⚠️ Cal.com not ready:");
       console.warn("  - isReady:", isReady);
       console.warn("  - window:", typeof window !== 'undefined');
-      console.warn("  - Cal存在:", !!(window as any).Cal);
+      console.warn("  - Cal exists:", !!(window as any).Cal);
     }
   };
 

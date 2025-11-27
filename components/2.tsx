@@ -26,10 +26,10 @@ export function BlogWithSearch() {
       <Container className="flex flex-col items-center justify-between pb-20">
         <div className="relative z-20 py-10 text-center">
           <h2 className="font-display text-display-md md:text-display-lg font-bold text-fg mb-4">
-            Market Intelligence Reports
+            Destination Intelligence Reports
           </h2>
           <p className="text-lg text-muted max-w-3xl mx-auto">
-            Deep-dive analysis and data-driven insights from corporate finance markets to inform your strategic decisions.
+            Deep dive into traveler behavior, creator commercialization, and AI advertising research to help you formulate your next destination strategy faster.
           </p>
         </div>
 
@@ -126,7 +126,7 @@ const BlogPostRows = ({ blogs }: { blogs: Blog[] }) => {
       <div className="mb-12">
         <input
           type="text"
-          placeholder="Search reports..."
+          placeholder="Search destinations, creators, AI reports..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full px-6 py-4 rounded-xl border border-subtle bg-surface text-fg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-lg placeholder:text-subtle"

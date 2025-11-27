@@ -262,20 +262,19 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
         </aside>
       </div>
 
-      <section className="border-t border-white/10 bg-[#050505] py-20 text-white">
+      <section className="border-t border-[#efe3d4] bg-gradient-to-b from-[#fbfcff] to-[#f6f4ef] py-20 text-fg">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-semibold uppercase tracking-[0.35em]">
-            Ready to Engineer A Similar Outcome?
+          <h2 className="text-3xl font-semibold">
+            Want your destination to be the next trending case study?
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm uppercase tracking-[0.4em] text-neutral-400">
-            Schedule a confidential strategy session with RSFM to map the next
-            phase of your transaction or transformation agenda.
+          <p className="mx-auto mt-4 max-w-2xl text-base text-muted">
+            Book a strategy session with WanderAds, and we will design the next steps for content + creators + advertising based on your brand, audience, and budget.
           </p>
           <Link
             href="/#contact"
-            className="mt-10 inline-flex items-center gap-3 rounded-full border border-white/20 px-10 py-3 text-xs font-semibold uppercase tracking-[0.35em] transition-all duration-200 hover:border-primary-400"
+            className="mt-10 inline-flex items-center gap-3 rounded-full border border-primary-200 bg-white px-10 py-3 text-xs font-semibold tracking-[0.25em] text-primary-600 transition-all duration-200 hover:bg-primary-50"
           >
-            Schedule Consultation
+            Book Strategy Session
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

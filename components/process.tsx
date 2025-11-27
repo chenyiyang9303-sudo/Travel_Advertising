@@ -1,14 +1,14 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import React from "react";
 import { motion } from "framer-motion";
-import { 
-  Search, 
-  Target, 
-  Lightbulb, 
-  TrendingUp,
-  ArrowRight
+import {
+  MapPin,
+  PenTool,
+  Camera,
+  Megaphone,
+  LineChart,
+  ArrowRight,
 } from "lucide-react";
 
 export function Process() {
@@ -20,10 +20,10 @@ export function Process() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-display text-display-md md:text-display-lg font-bold text-fg mb-4">
-            Proven Path to Market Success
+            Five-Step Travel Growth Process
           </h2>
           <p className="text-lg text-muted max-w-3xl mx-auto">
-            Our battle-tested 4-phase methodology has generated $5M+ in client value and delivered 3x faster execution across 120+ corporate finance engagements.
+            From insights to execution, every step revolves around "how to inspire travelers and drive action." Average 6 weeks to see dual lift in exposure and inquiries.
           </p>
         </div>
 
@@ -31,58 +31,72 @@ export function Process() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <ProcessStep
               step={1}
-              icon={<Search className="h-8 w-8" />}
-              title="Discovery & Market Intelligence"
-              description="Uncover hidden opportunities through deep market analysis and competitive intelligence that reveals your path to market leadership."
+              icon={<MapPin className="h-8 w-8" />}
+              title="Research & Communication · Destination Insights"
+              description="Clarify brand positioning, source markets, core products, and seasonal rhythms. Combine traveler profiles and competitor tactics to identify key campaign challenges."
               details={[
-                "Market opportunity mapping",
-                "Competitive white space identification",
-                "Regulatory landscape & policy impact analysis",
-                "Technology readiness & IP gap assessment"
+                "Customer/product/scenario interviews & desk research",
+                "Online data & offline experience review",
+                "Traveler decision journey & content needs analysis",
+                "Campaign KPI & budget boundary confirmation",
               ]}
               delay={0}
             />
-            
+
             <ProcessStep
               step={2}
-              icon={<Target className="h-8 w-8" />}
-              title="Strategy Design & Roadmap Creation"
-              description="Craft winning strategies with clear ROI projections. Our strategic roadmaps deliver measurable results within 6-12 months."
+              icon={<PenTool className="h-8 w-8" />}
+              title="Strategy Design · Narrative Planning"
+              description="Establish brand narrative framework, campaign rhythm, and channel roles to form a complete roadmap of 'content matrix + media layering + creator plan.'"
               details={[
-                "Revenue-optimized go-to-market strategy",
-                "Multi-channel market penetration plan", 
-                "Innovation pipeline & R&D prioritization",
-                "Scalable business model architecture"
+                "Hero banner & theme concept draft",
+                "Content pillar/thematic directions",
+                "Channel division & deployment rhythm",
+                "Creator/media partnership recommendations",
               ]}
               delay={0.1}
             />
-            
+
             <ProcessStep
               step={3}
-              icon={<Lightbulb className="h-8 w-8" />}
-              title="Execution & Rapid Deployment"
-              description="Transform strategy into results with hands-on execution support. Our clients achieve 85% faster implementation than industry benchmarks."
+              icon={<Camera className="h-8 w-8" />}
+              title="Content Production · Travel Shoot Execution"
+              description="Travel directors, editing, and AI workflows proceed simultaneously, delivering premium content, vlogs, and livestream teasers for all channels."
               details={[
-                "Agile execution frameworks",
-                "Cross-functional team alignment",
-                "Performance tracking & optimization",
-                "Risk mitigation & course correction"
+                "Scripting/storyboarding/location scouting & reconnaissance",
+                "Photography/aerial/underwater/night shooting",
+                "AI asset expansion & multilingual subtitles",
+                "Asset library & rights management",
               ]}
               delay={0.2}
             />
-            
+
             <ProcessStep
               step={4}
-              icon={<TrendingUp className="h-8 w-8" />}
-              title="Scale & Continuous Growth"
-              description="Achieve sustainable growth with ongoing optimization. Our clients maintain 40%+ annual growth rates with our continuous improvement framework."
+              icon={<Megaphone className="h-8 w-8" />}
+              title="Advertising & Creator Synergy"
+              description="Creator seeding + brand accounts + paid advertising work in concert, using audience/scenario-based tactics to amplify reach and conversion simultaneously."
               details={[
-                "Real-time performance analytics",
-                "Market expansion opportunities",
-                "Operational efficiency optimization",
-                "Strategic partnership development"
+                "Creator outreach, livestream scripts & scheduling",
+                "Xiaohongshu/Douyin/OTA coordinated launches",
+                "Smart ad recommendations, asset A/B testing",
+                "On-ground activations + private domain touchpoints",
               ]}
               delay={0.3}
+            />
+
+            <ProcessStep
+              step={5}
+              icon={<LineChart className="h-8 w-8" />}
+              title="Data Optimization & Review"
+              description="Track exposure, GMV, visitor origins, and leads via real-time dashboards. Accumulate review templates to turn insights into local team assets."
+              details={[
+                "Multi-channel data integration & dashboard setup",
+                "AI insights on traveler preferences & conversion points",
+                "ROI / GMV / lead weekly reports",
+                "Mid-to-late stage activities & secondary distribution plans",
+              ]}
+              delay={0.4}
             />
           </div>
         </div>
@@ -92,12 +106,12 @@ export function Process() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
-            className="inline-flex items-center gap-3 bg-primary-50/70 dark:bg-primary-900/20 px-8 py-4 rounded-full border border-primary-200/70 dark:border-primary-800/60"
+            className="inline-flex items-center gap-3 bg-white px-8 py-5 rounded-full border border-primary-100 shadow-soft"
           >
-            <span className="text-primary-600 dark:text-primary-400 font-semibold text-lg">
-              Ready to unlock your market opportunity?
+            <span className="text-primary-600 font-semibold text-lg">
+              Ready to launch your next destination hit campaign?
             </span>
-            <ArrowRight className="h-5 w-5 text-primary-600 dark:text-primary-400" />
+            <ArrowRight className="h-5 w-5 text-primary-600" />
           </motion.div>
         </div>
       </div>
@@ -125,16 +139,16 @@ const ProcessStep = ({
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
-      className="relative group bg-surface rounded-2xl p-8 border border-subtle hover:border-primary-300/70 shadow-soft hover:shadow-elevated transition-all duration-300"
+      className="relative group bg-white rounded-2xl p-8 border border-white/60 hover:border-primary-300/70 shadow-[0_20px_60px_rgba(80,96,120,0.12)] hover:shadow-elevated transition-all duration-300"
     >
       <div className="text-left">
         {/* Step Number and Icon */}
         <div className="relative w-16 h-16 mb-6">
-          <div className="absolute inset-0 bg-primary-100/70 dark:bg-primary-900/30 rounded-xl group-hover:scale-110 transition-transform duration-300" />
-          <div className="absolute inset-1 bg-primary-600 rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:bg-primary-700 transition-colors duration-300">
+          <div className="absolute inset-0 bg-primary-50 rounded-xl group-hover:scale-110 transition-transform duration-300" />
+          <div className="absolute inset-1 bg-primary-500 rounded-xl flex items-center justify-center text-white font-bold text-lg group-hover:bg-primary-600 transition-colors duration-300">
             {step}
           </div>
-          <div className="absolute inset-0 flex items-center justify-center text-primary-50 dark:text-primary-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             {icon}
           </div>
         </div>
@@ -143,7 +157,7 @@ const ProcessStep = ({
         <h3 className="font-display text-xl font-bold text-fg mb-4">
           {title}
         </h3>
-        
+
         <p className="text-muted mb-6 leading-relaxed">
           {description}
         </p>

@@ -51,10 +51,10 @@ export function CaseStudies() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-display text-display-md md:text-display-lg font-bold text-fg mb-4">
-            $5M+ in Client Value Created
+            Featured Cases · Making Destinations Stand Out
           </h2>
           <p className="text-lg text-muted max-w-3xl mx-auto">
-            Real results from real companies. See how our strategic financial advisory has delivered transformational growth, optimized capital structures, and breakthrough financial performance for corporate clients worldwide.
+            From mountain resorts to island luxury travel, we help clients achieve 3-6x growth in exposure and GMV through creative content + data-driven advertising. Browse real-world strategies, execution, and results.
           </p>
         </div>
 
@@ -66,8 +66,8 @@ export function CaseStudies() {
             disabled={!canScrollLeft}
             className={cn(
               "absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-surface shadow-soft border border-subtle flex items-center justify-center transition-all duration-200",
-              canScrollLeft 
-                ? "hover:text-primary-600 dark:hover:text-primary-400 cursor-pointer" 
+              canScrollLeft
+                ? "hover:text-primary-600 dark:hover:text-primary-400 cursor-pointer"
                 : "opacity-50 cursor-not-allowed text-subtle"
             )}
           >
@@ -79,8 +79,8 @@ export function CaseStudies() {
             disabled={!canScrollRight}
             className={cn(
               "absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-surface shadow-soft border border-subtle flex items-center justify-center transition-all duration-200",
-              canScrollRight 
-                ? "hover:text-primary-600 dark:hover:text-primary-400 cursor-pointer" 
+              canScrollRight
+                ? "hover:text-primary-600 dark:hover:text-primary-400 cursor-pointer"
                 : "opacity-50 cursor-not-allowed text-subtle"
             )}
           >
@@ -95,9 +95,9 @@ export function CaseStudies() {
             onScroll={checkScrollability}
           >
             {caseStudies.map((caseStudy, index) => (
-              <div 
-                key={caseStudy.slug} 
-                className="flex-shrink-0 w-80 md:w-96" 
+              <div
+                key={caseStudy.slug}
+                className="flex-shrink-0 w-80 md:w-96"
                 style={{ scrollSnapAlign: 'start' }}
               >
                 <CaseStudyCard
@@ -117,15 +117,16 @@ export function CaseStudies() {
         </div>
 
         <div className="text-center mt-16">
-          <motion.div
+          <motion.a
+            href="/case-studies"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 font-semibold hover:gap-3 transition-all duration-200 cursor-pointer text-lg"
+            className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:gap-3 transition-all duration-200 cursor-pointer text-lg"
           >
-            Explore All Success Stories
+            View All Cases
             <ArrowUpRight className="h-5 w-5" />
-          </motion.div>
+          </motion.a>
         </div>
       </div>
     </div>
@@ -179,7 +180,7 @@ const CaseStudyCard = ({
         <div className="p-6">
           <div className="mb-4">
             <h4 className="font-semibold text-fg mb-2 text-sm uppercase tracking-wide">
-              Challenge
+              Campaign Objectives
             </h4>
             <p className="text-sm text-muted leading-relaxed">
               {challenge}
@@ -188,7 +189,7 @@ const CaseStudyCard = ({
 
           <div className="mb-6">
             <h4 className="font-semibold text-fg mb-2 text-sm uppercase tracking-wide">
-              Results
+              Execution Highlights
             </h4>
             <p className="text-sm text-muted leading-relaxed">
               {solution}
@@ -216,7 +217,7 @@ const CaseStudyCard = ({
               whileHover={{ x: 2 }}
               className="flex items-center gap-1 text-primary-600 dark:text-primary-400 font-semibold cursor-pointer"
             >
-              View Details
+              Learn More
               <ArrowUpRight className="h-4 w-4" />
             </motion.div>
           </div>

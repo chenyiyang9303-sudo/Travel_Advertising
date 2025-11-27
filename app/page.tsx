@@ -5,19 +5,25 @@ import { Testimonials } from "@/components/testimonials";
 import { CTAWithDashedGridLines } from "@/components/cta";
 import { Hero } from "@/components/hero";
 import { FeaturedContent } from "@/components/featured-content";
-import { ComplianceDisclaimer } from "@/components/compliance-disclaimer";
+import { ValueProposition } from "@/components/value-proposition";
 import { FAQSection } from "@/components/faq";
+import { AISuite } from "@/components/ai-suite";
+import { PartnerWall } from "@/components/partner-logos";
+import { Pricing } from "@/components/pricing";
 
 export default function Home() {
   return (
     <main className="">
       <Hero />
-      <ComplianceDisclaimer />
+      <ValueProposition />
       <Services />
-      <Process />
       <CaseStudies />
+      <AISuite />
+      <PartnerWall />
+      <Process />
       <FeaturedContent />
       <Testimonials />
+      <Pricing />
       <FAQSection />
       <CTAWithDashedGridLines />
     </main>

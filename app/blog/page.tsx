@@ -29,25 +29,23 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-app text-fg">
       {/* Hero Section */}
-      <div className="border-b border-white/10 bg-[#050505] pt-36 pb-24 text-white">
+      <div className="border-b border-[#e9dfd4] bg-gradient-to-b from-[#fdfaf3] to-[#fbfcff] pt-36 pb-24 text-fg">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-4xl font-semibold uppercase tracking-[0.35em] text-white sm:text-5xl"
+              className="text-4xl font-semibold text-fg sm:text-5xl"
             >
-              Insights & Research
+              Travel Marketing Insights
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="mt-6 text-base leading-relaxed text-neutral-300 sm:text-lg"
+              className="mt-6 text-base leading-relaxed text-muted sm:text-lg"
             >
-              Briefings and long-form essays on capital formation, risk
-              governance, and institutional strategy from RSFM&apos;s research
-              desk.
+              The WanderAds team shares destination strategies, creator co-creation, and AI tool practices to help you find inspiration for your next campaign faster.
             </motion.p>
 
             {/* Search and Filter */}
@@ -61,16 +59,16 @@ export default function BlogPage() {
                 <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 transform text-neutral-500" />
                 <input
                   type="text"
-                  placeholder="Search articles..."
+                  placeholder="Search articles or topics..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full rounded-full border border-white/10 bg-black/40 px-10 py-3 text-sm uppercase tracking-[0.4em] text-white placeholder:text-neutral-500 focus:border-primary-400 focus:outline-none"
+                  className="w-full rounded-full border border-white/60 bg-white px-10 py-3 text-sm tracking-[0.15em] text-fg placeholder:text-muted focus:border-primary-400 focus:outline-none"
                 />
               </div>
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="rounded-full border border-white/10 bg-black/40 px-4 py-3 text-xs uppercase tracking-[0.35em] text-white focus:border-primary-400 focus:outline-none"
+                className="rounded-full border border-white/60 bg-white px-4 py-3 text-xs uppercase tracking-[0.2em] text-muted focus:border-primary-400 focus:outline-none"
               >
                 {blogCategories.map((category) => (
                   <option key={category.value} value={category.value} className="text-black">
@@ -135,7 +133,7 @@ export default function BlogPage() {
               </motion.div>
             ))}
           </div>
-          
+
           {filteredPosts.length === 0 && (
             <div className="py-16 text-center text-neutral-400">
               <Search className="mx-auto mb-4 h-16 w-16 text-neutral-600" />
@@ -200,7 +198,7 @@ export default function BlogPage() {
 
 function FeaturedPostCard({ post }: { post: BlogPost }) {
   return (
-    <div className="group h-full overflow-hidden rounded-3xl border border-white/10 bg-[#0f0f0f] shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary-400">
+    <div className="group h-full overflow-hidden rounded-3xl border border-white/70 bg-white shadow-[0_20px_60px_rgba(81,98,128,0.1)] transition-all duration-300 hover:-translate-y-1 hover:border-primary-400">
       <div className="flex h-full flex-col lg:flex-row">
         <div className="relative h-48 w-full lg:h-64 lg:w-1/2">
           <Image
@@ -223,31 +221,31 @@ function FeaturedPostCard({ post }: { post: BlogPost }) {
 
         <div className="flex flex-1 flex-col justify-between p-6 lg:w-1/2 lg:p-8">
           <div>
-            <h3 className="mb-3 text-xl font-semibold text-white transition-colors duration-200 group-hover:text-primary-300">
+            <h3 className="mb-3 text-xl font-semibold text-fg transition-colors duration-200 group-hover:text-primary-500">
               <Link href={`/blog/${post.slug}`}>{post.title}</Link>
             </h3>
-            <p className="text-sm text-neutral-400 line-clamp-3">
+            <p className="text-sm text-muted line-clamp-3">
               {post.excerpt}
             </p>
           </div>
           <div>
-            <div className="mb-4 flex items-center gap-4 text-[11px] uppercase tracking-[0.35em] text-neutral-500">
+            <div className="mb-4 flex items-center gap-4 text-[11px] uppercase tracking-[0.3em] text-muted">
               <span className="flex items-center gap-1">
-                <User className="h-4 w-4 text-neutral-500" />
+                <User className="h-4 w-4 text-muted" />
                 {post.author.name}
               </span>
               <span className="flex items-center gap-1">
-                <Calendar className="h-4 w-4 text-neutral-500" />
+                <Calendar className="h-4 w-4 text-muted" />
                 {formatDate(post.publishDate)}
               </span>
               <span className="flex items-center gap-1">
-                <Clock className="h-4 w-4 text-neutral-500" />
+                <Clock className="h-4 w-4 text-muted" />
                 {post.readTime}
               </span>
             </div>
             <Link
               href={`/blog/${post.slug}`}
-              className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-white transition-all duration-200 hover:text-primary-300"
+              className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-primary-600 transition-all duration-200 hover:text-primary-500"
             >
               Read Article
               <ArrowRight className="h-4 w-4" />
@@ -265,7 +263,7 @@ function BlogPostCard({ post }: { post: BlogPost }) {
     post.category;
 
   return (
-    <div className="group flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-[#0f0f0f] shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary-400">
+    <div className="group flex h-full flex-col overflow-hidden rounded-3xl border border-white/70 bg-white shadow-[0_20px_60px_rgba(81,98,128,0.1)] transition-all duration-300 hover:-translate-y-1 hover:border-primary-400">
       <div className="relative h-52 w-full overflow-hidden">
         <Image
           src={post.coverImage}

@@ -5,12 +5,7 @@ export interface BlogPost {
   content: string;
   publishDate: string;
   readTime: string;
-  category:
-    | "financial-strategy"
-    | "risk-management"
-    | "market-analysis"
-    | "corporate-finance"
-    | "compliance";
+  category: "travel-marketing" | "ai-tools" | "creator-economy" | "destination-strategy";
   featured: boolean;
   author: {
     name: string;
@@ -29,214 +24,173 @@ export interface BlogPost {
 }
 
 export const blogCategories = [
-  { value: "all", label: "All Posts" },
-  { value: "financial-strategy", label: "Financial Strategy" },
-  { value: "risk-management", label: "Risk Management" },
-  { value: "market-analysis", label: "Market Analysis" },
-  { value: "corporate-finance", label: "Corporate Finance" },
-  { value: "compliance", label: "Compliance" },
+  { value: "all", label: "All Content" },
+  { value: "travel-marketing", label: "Travel Marketing" },
+  { value: "ai-tools", label: "AI Tools" },
+  { value: "creator-economy", label: "Creator Economy" },
+  { value: "destination-strategy", label: "Destination Strategy" },
 ];
 
 const blogPosts: BlogPost[] = [
   {
-    slug: "institutional-portfolio-governance-2025",
-    title: "Institutional Portfolio Governance: Recalibrating Allocation Models for 2025",
+    slug: "destination-marketing-playbook-2025",
+    title: "2025 Destination Marketing Playbook: Three-Layer Experience, Dual Narratives, One Data Hub",
     excerpt:
-      "With volatility persisting across public and private markets, investment committees are redesigning governance, allocation, and reporting frameworks to protect funded status and unlock durable alpha.",
+      "Redesigning content, creator, and media strategies with an 'experience stack' to help travel brands rise to the top in 2025. This article breaks down the 6 key actions WanderAds uses to serve destinations, hotels, and tourism boards.",
     content: `
-# Institutional Portfolio Governance: Recalibrating Allocation Models for 2025
+# 2025 Destination Marketing Playbook
 
-Institutional investors enter 2025 navigating persistent rate volatility, divergent growth outlooks, and changing liquidity dynamics. Asset allocation committees are reassessing governance models to capture opportunity while protecting funded status and liquidity.
+"Fun destination" is no longer enough to occupy travelers' minds. We see successful destinations breaking down experiences into three layers:
 
-## The Macro Backdrop Demands Faster Calibration
+1. **Immersion**: Can it put people right in the moment? Think night tours, pop-up installations, interactive technology.
+2. **Shareability**: Is it easy to photograph and share? Structured photo spots and scripts are key.
+3. **Replicable Activities**: After the event ends, does it leave behind an SOP for easy replication next season?
 
-Capital markets are recalibrating around structurally higher funding costs, energy transition capex, and evolving geopolitical risk premia. Long-duration government bonds have regained relevance as a portfolio ballast, yet forward real yields remain elevated relative to pre-2020 norms. Meanwhile, private market valuations continue to adjust with longer exit timelines and lower leverage availability.
+## Dual Narratives: Brand Line + Real-time Line
 
-This environment rewards governance structures that support rapid scenario testing, documented risk appetite statements, and clear delegation to execution teams. Quarterly allocation reviews are giving way to rolling 60-day governance cycles anchored in quantitative guardrails.
+The brand line carries the long-term story. For example, "Golden Hour at Sunrise Bay." The real-time line quickly generates content around live trends, weather, flights, holidays, etc. We recommend:
 
-## Building a Dynamic Allocation Playbook
+- Use magazine-style content to carry the brand line;
+- Use livestreams, short vlogs, and travel updates to carry the real-time line;
+- Connect both narratives to the same content asset library and AI tools.
 
-Institutions are deploying “core versus opportunistic” frameworks to segment long-term allocation anchors from tactical sleeves. Core exposures remain benchmark oriented with strict tracking-error budgets, while opportunistic sleeves flex within pre-approved ranges to exploit dislocations in credit, infrastructure, or thematic equity.
+## One Data Hub
 
-Key design elements include:
+Destinations need to consolidate the following data:
 
-- **Real-time funding ratio analytics** integrating liability hedging impact and solvency buffers.
-- **Liquidity waterfalls** that monitor stress-case redemption and capital call scenarios.
-- **Trigger-based governance** that codifies when rebalancing or hedging actions must be escalated.
+- Content performance (asset scoring, UGC hotspots)
+- Media and advertising (budget, ROI, audience profiles)
+- Transaction leads (OTA, private domain, membership)
 
-## Enhancing Board Reporting and Accountabilities
+Once this data is integrated into dashboards, you can complete the "content-advertising-product" feedback loop within a day.
 
-Trustees expect more transparent, decision-useful reporting. Leading institutions are implementing tiered dashboards that distinguish diagnostic metrics from action-oriented indicators. Reporting packs now highlight scenario analysis, counterparty exposures, ESG stewardship milestones, and operational risk alerts in addition to performance.
+## Action Checklist
 
-Clear role definitions across boards, investment committees, and delegated management teams are critical. Charters should articulate which decisions are delegated, timelines for escalation, and documentation standards to satisfy fiduciary obligations.
+- Build a destination experience map: content, installations, creator task points
+- Design creator guidebook: storylines, shooting suggestions, usable music
+- Deploy AI Studio: copywriting, multilingual subtitles, asset scoring, advertising recommendations
+- Run quarterly campaigns: each season includes 1 flagship event + 2 real-time initiatives
 
-## Embedding Operational Resilience
-
-Portfolio governance increasingly intersects with operational resilience mandates. Institutions are conducting supplier risk assessments covering administrators, risk systems, and valuation agents. Cyber resilience metrics are being embedded into board dashboards alongside market risk indicators.
-
-Finally, investment teams are running governance “tabletop exercises” twice annually to rehearse responses to market shocks, liquidity squeezes, or outsourced provider failures. These drills strengthen institutional memory and shorten reaction time when stress scenarios become reality.
-`,
-    publishDate: "2025-01-08",
-    readTime: "9 min",
-    category: "financial-strategy",
-    featured: true,
-    author: {
-      name: "田俊 (Jun Tian)",
-      title: "Founder & CEO",
-      avatar: "/avatars/liao-zhihua.svg",
-      bio: "Founder of RSFM and long-time advisor to pensions, insurers, and sovereign funds on capital allocation, governance, and capital market execution.",
-    },
-    tags: [
-      "Asset Allocation",
-      "Institutional Investing",
-      "Governance",
-      "Portfolio Strategy",
-    ],
-    coverImage:
-      "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=1600&h=900&fit=crop&auto=format",
-    seo: {
-      metaTitle:
-        "Institutional Portfolio Governance: Allocation Models for 2025",
-      metaDescription:
-        "Explore how investment committees are redesigning asset allocation, liquidity, and governance frameworks to navigate 2025 market volatility.",
-      keywords: [
-        "institutional investing",
-        "asset allocation",
-        "portfolio governance",
-        "investment committee best practices",
-      ],
-    },
-    relatedPosts: [
-      "enterprise-liquidity-risk-playbook",
-      "capital-raise-readiness-blueprint",
-    ],
-  },
-  {
-    slug: "enterprise-liquidity-risk-playbook",
-    title: "Enterprise Liquidity Risk Playbook: Stress Testing for a Higher-Rate Cycle",
-    excerpt:
-      "Corporate treasurers and CFOs are revamping liquidity frameworks, stress testing protocols, and counterparty governance to stay resilient as the higher-for-longer rate narrative takes hold.",
-    content: `
-# Enterprise Liquidity Risk Playbook: Stress Testing for a Higher-Rate Cycle
-
-The liquidity environment has shifted materially. Policy rates are expected to remain elevated, commercial bank appetite for balance sheet commitments is selective, and capital markets windows open and close quickly. Finance leaders must treat liquidity risk governance with the same rigor they apply to capital allocation.
-
-## Elevating Treasury as a Strategic Function
-
-Best-in-class treasury teams now operate as enterprise control towers. They maintain daily visibility into global cash positions, covenant headroom, and hedging effectiveness. Treasurers partner with FP&A to align liquidity planning with scenario-based earnings forecasts and board-approved risk appetite statements.
-
-## Designing Multi-Layered Stress Tests
-
-Robust stress testing frameworks typically assess three dimensions:
-
-1. **Operating cash flow shocks** — revenue contractions, working capital drawdowns, or supply chain disruptions.
-2. **Financing market stress** — refinancing delays, covenant breaches, widening spreads, or rating downgrades.
-3. **Counterparty failures** — bank insolvency, trade credit withdrawal, or vendor distress.
-
-For each scenario, leadership should map mitigation levers, decision thresholds, and stakeholder communication plans. Modern treasury workbenches enable automated recalculation of cash runway and covenant compliance under each stress lens.
-
-## Strengthening Funding Diversification
-
-Organisations are diversifying away from single-bank dependence by building syndicated credit facilities, accessing private placement markets, and pre-positioning assets for structured financing. A disciplined funding diversification plan quantifies concentration risk, sets counterparty exposure limits, and introduces early-warning indicators for bank credit deterioration.
-
-## Embedding Governance and Reporting
-
-Liquidity councils, chaired by the CFO or Treasurer, meet monthly to review stress results, confirm action plans, and report to the audit or risk committee. Dashboards integrate liquidity coverage, net stable funding metrics, covenant headroom, and collateral availability. This governance cadence ensures management and directors remain aligned on trigger points for cost actions, refinancing, or portfolio rebalancing.
-`,
-    publishDate: "2024-12-12",
+> "Destination marketing is orchestration. Content, creators, and commerce must happen in the same rhythm."`,
+    publishDate: "2025-02-10",
     readTime: "8 min",
-    category: "risk-management",
+    category: "destination-strategy",
     featured: true,
     author: {
-      name: "韩思远 (Siyuan Han)",
-      title: "Chief Financial Architect",
-      avatar: "/avatars/lin-zhihua.svg",
-      bio: "Treasury modernisation specialist helping CFOs build liquidity control towers, stress testing programs, and funding diversification strategies.",
+      name: "Sophie Wang",
+      title: "Head of Destination Strategy",
+      avatar: "/avatars/liao-zhihua.svg",
+      bio: "Leads WanderAds destination strategy and experience innovation, with extensive experience across Southeast Asia and Pacific regions.",
     },
-    tags: [
-      "Liquidity",
-      "Treasury",
-      "Risk Management",
-      "Scenario Planning",
-    ],
+    tags: ["Destination", "Experience Design", "Campaign"],
     coverImage:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&h=900&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1600&h=900&fit=crop&auto=format",
     seo: {
-      metaTitle:
-        "Enterprise Liquidity Risk Playbook for the Higher-Rate Environment",
+      metaTitle: "2025 Destination Marketing Playbook | WanderAds",
       metaDescription:
-        "Discover practical steps corporate treasurers can take to stress test liquidity, diversify funding, and build resilient governance structures.",
-      keywords: [
-        "liquidity risk",
-        "treasury strategy",
-        "stress testing",
-        "corporate finance governance",
-      ],
+        "Learn how WanderAds uses experience stacks, dual narratives, and data hubs to help destinations create breakthrough campaigns in 2025.",
+      keywords: ["destination marketing", "travel brands", "WanderAds", "experience design"],
     },
     relatedPosts: [
-      "institutional-portfolio-governance-2025",
-      "capital-raise-readiness-blueprint",
+      "ai-powered-travel-content-factory",
+      "creator-livestream-blueprint",
     ],
   },
   {
-    slug: "capital-raise-readiness-blueprint",
-    title: "Capital Raise Readiness: Building an Investor-Grade Finance Function",
+    slug: "ai-powered-travel-content-factory",
+    title: "AI Travel Content Factory: 9 Nodes from Inspiration to Multilingual Deployment",
     excerpt:
-      "Growth-stage companies pursuing debt or equity capital in 2025 must demonstrate institutional-quality forecasting, KPIs, and governance to earn investor confidence and favourable terms.",
+      "From serving 200+ destinations and hotels, we've developed an AI-driven content pipeline that enables teams to complete travel content, copywriting, and deployment versions within 48 hours.",
     content: `
-# Capital Raise Readiness: Building an Investor-Grade Finance Function
+# AI Travel Content Factory
 
-Capital markets remain open for well-prepared issuers, but investors are raising the bar on diligence requirements. Finance leaders planning a capital raise—whether private credit, growth equity, or public markets—should anchor preparation around three dimensions: insight quality, operating discipline, and governance credibility.
+We break content production into 9 nodes:
 
-## Elevating the Operating Model
+1. **Traveler Inspiration Input**: Scrape social keywords, FAQs, OTA reviews.
+2. **Experience Element Breakdown**: Extract "visual-interactive-service" keyword groups.
+3. **Script Generation**: AI auto-outputs Vlog/livestream/short drama scripts with shot lists.
+4. **Shot Planning**: Give photographers and creators a shot sequence (wide angle → close-up).
+5. **Asset Upload**: Upload footage to cloud library; AI auto-tags and scores.
+6. **Multilingual Versions**: Generate Chinese, English, Japanese, Spanish subtitles and covers.
+7. **Copy/Hashtags**: Generate titles and tags tailored to platform tone.
+8. **Deployment Adaptation**: Auto-output 9:16 / 1:1 / 16:9 versions with CTAs.
+9. **Heat Monitoring**: AI pushes top-performing assets to ops team to guide budget scaling.
 
-Investor-grade finance teams deliver a unified financial narrative. This starts with integrated planning models that reconcile GAAP financials, cash flow drivers, and operational KPIs. Rolling 18-month forecasts, scenario overlays, and sensitivity analytics give stakeholders confidence that management understands the levers that drive value.
+## Three Practical Tips
 
-## Curating Decision-Ready Metrics
+- **Templatize**: Design a "content module" for each experience, e.g., "sunset picnic" module includes 5 shots and 3 copy versions.
+- **Co-create**: Share these modules with creators, share performance data, improve collaboration efficiency.
+- **SaaSify**: Embed tools into WeChat Work or Slack to truly integrate into daily workflow.
 
-Boards and investors expect forward-looking indicators. Best practice dashboards blend financial metrics (ARR growth, gross margin progression, free cash flow conversion) with operational signals (sales efficiency, retention cohorts, unit economics). Each metric should cascade from the value creation plan and feature clear owners.
-
-## Governance and Control Readiness
-
-Before launching a capital raise process, organisations should benchmark internal controls, policy documentation, and cyber resilience against investor expectations. Audit readiness, revenue recognition policies, and data privacy compliance are frequent diligence focus areas. Establishing a disclosure committee and documentation protocol early reduces friction when diligence accelerates.
-
-## Communicating the Equity Story
-
-Finally, management must articulate a coherent equity narrative. This includes the problem statement, customer value proposition, scalability proof points, and capital deployment roadmap. Investor presentations should link strategic milestones to the associated financial impact and highlight risk mitigants anchored in credible data.
-`,
-    publishDate: "2024-11-04",
+After deployment, Sunrise Bay Resort reduced asset delivery time from 72 hours to 18 hours while maintaining consistent brand voice.`,
+    publishDate: "2025-01-24",
     readTime: "7 min",
-    category: "corporate-finance",
+    category: "ai-tools",
+    featured: true,
+    author: {
+      name: "Alex Chen",
+      title: "AI Product Lead",
+      avatar: "/avatars/lin-zhihua.svg",
+      bio: "Leads the WanderAds AI Studio team, responsible for copywriting, asset scoring, and advertising recommendation modules.",
+    },
+    tags: ["AI Studio", "Content Ops", "Automation"],
+    coverImage:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&h=900&fit=crop&auto=format",
+    seo: {
+      metaTitle: "AI Travel Content Factory | WanderAds",
+      metaDescription:
+        "Learn how to build an AI content pipeline covering inspiration, scripts, travel shoots, and deployment.",
+      keywords: ["AI content", "travel marketing automation", "travel scripts"],
+    },
+    relatedPosts: [
+      "destination-marketing-playbook-2025",
+      "creator-livestream-blueprint",
+    ],
+  },
+  {
+    slug: "creator-livestream-blueprint",
+    title: "Creator + Livestream + OTA: 12 Details for a High-Converting Travel Livestream",
+    excerpt:
+      "Livestreaming isn't just about selling—it's real-time experience. We break down the SkyRail Adventure case to see how to achieve 9.6M views and 87% occupancy rate in a mountain region.",
+    content: `
+# 12 Details for Travel Livestreams
+
+1. **Journey Script**: Includes departure—highlights—interaction—arrival, controlling emotional rhythm.
+2. **Camera Setup**: Five combinations: inside car, outside car, drone, host, fill light.
+3. **Signal Assurance**: Test base stations along route, set up 5G relay if necessary.
+4. **Task Design**: Audience participates in "check-ins" and "voting" to decide next stop, increasing engagement.
+5. **Real-time Editing**: AI auto-generates Reels/TikTok clips, published immediately after livestream ends.
+6. **Creator Coordination**: Different creators board at different stops, ensuring content diversity.
+7. **Benefits Bundle**: Livestream distributes premium cabin upgrades, merch, night tour packages.
+8. **Dynamic Reminders**: AI monitors comments and orders, reminds host to answer questions or push sales.
+9. **OTA Integration**: Inventory and offers update in real-time to avoid stockouts.
+10. **Offline Experience**: Launch pop-ups or night tours during livestream.
+11. **Data Dashboard**: Monitor views, orders, source locations; adjust content and offers.
+12. **Review Template**: Record best-performing scripts, shots, and offers for easy replication.
+
+Livestreaming is "dynamic content asset." A good livestream continues producing short videos and ad materials for 30 days after, pre-warming the next event.`,
+    publishDate: "2024-12-30",
+    readTime: "6 min",
+    category: "creator-economy",
     featured: false,
     author: {
-      name: "黎语彤 (Yutong Li)",
-      title: "Capital Markets & Insights Director",
+      name: "Yuki Yamada",
+      title: "Creator Partnership Director",
       avatar: "/avatars/chen-jiayin.svg",
-      bio: "Capital markets strategist partnering with growth-stage finance teams to institutionalise forecasting, diligence readiness, and investor storytelling.",
+      bio: "Manages WanderAds' global creator network, specializing in cross-border livestreams and creator collaborations.",
     },
-    tags: [
-      "Capital Raising",
-      "Investor Relations",
-      "Financial Planning",
-      "Governance",
-    ],
+    tags: ["Livestream", "Creators", "Commerce"],
     coverImage:
-      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&h=900&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1500534318099-1b4b6fe9c8f0?w=1600&h=900&fit=crop&auto=format",
     seo: {
-      metaTitle:
-        "Capital Raise Readiness Blueprint for Growth-Stage Companies",
+      metaTitle: "High-Converting Travel Livestream Guide | WanderAds",
       metaDescription:
-        "Learn how to build investor-grade forecasting, KPIs, and governance ahead of a 2025 capital raise.",
-      keywords: [
-        "capital raise readiness",
-        "financial planning",
-        "investor relations",
-        "growth equity preparation",
-      ],
+        "Analyze the 12 key details needed for a high-converting travel livestream, helping destinations and brands master content rhythm.",
+      keywords: ["travel livestream", "creator marketing", "OTA integration"],
     },
     relatedPosts: [
-      "institutional-portfolio-governance-2025",
-      "enterprise-liquidity-risk-playbook",
+      "ai-powered-travel-content-factory",
+      "destination-marketing-playbook-2025",
     ],
   },
 ];
@@ -245,19 +199,22 @@ export function getAllBlogPosts(): BlogPost[] {
   return blogPosts;
 }
 
-export function getFeaturedBlogPosts(): BlogPost[] {
-  return blogPosts.filter((post) => post.featured);
-}
-
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((post) => post.slug === slug);
 }
 
 export function getRelatedBlogPosts(slug: string): BlogPost[] {
   const currentPost = getBlogPostBySlug(slug);
+
   if (!currentPost) return [];
 
-  return blogPosts.filter((post) =>
-    currentPost.relatedPosts.includes(post.slug)
+  return blogPosts.filter(
+    (post) =>
+      post.slug !== slug &&
+      currentPost.relatedPosts.includes(post.slug)
   );
+}
+
+export function getFeaturedBlogPosts(): BlogPost[] {
+  return blogPosts.filter((post) => post.featured);
 }

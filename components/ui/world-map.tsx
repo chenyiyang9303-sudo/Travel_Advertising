@@ -28,16 +28,16 @@ export default function WorldMap({
 
   useEffect(() => {
     if (!mounted) return;
-    
+
     setIsLoading(true);
-    
-    // 使用requestAnimationFrame来避免阻塞UI
+
+    // Use requestAnimationFrame to avoid blocking UI
     const generateMap = () => {
-      // 根据屏幕大小调整地图密度
+      // Adjust map density based on screen size
       const isMobile = window.innerWidth < 768;
-      const map = new DottedMap({ 
-        height: isMobile ? 80 : 100, 
-        grid: "diagonal" 
+      const map = new DottedMap({
+        height: isMobile ? 80 : 100,
+        grid: "diagonal"
       });
       const svgString = map.getSVG({
         radius: isMobile ? 0.3 : 0.22,
@@ -74,9 +74,8 @@ export default function WorldMap({
             {svgMap && (
               <Image
                 src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
-                className={`h-full w-full object-cover transition-opacity duration-300 ${
-                  isLoading ? "opacity-0" : "opacity-100"
-                }`}
+                className={`h-full w-full object-cover transition-opacity duration-300 ${isLoading ? "opacity-0" : "opacity-100"
+                  }`}
                 alt="world map"
                 height={495}
                 width={1056}
@@ -108,7 +107,7 @@ export default function WorldMap({
             const startY = ((90 - dot.start.lat) / 180) * 400;
             const endX = ((dot.end.lng + 180) / 360) * 800;
             const endY = ((90 - dot.end.lat) / 180) * 400;
-            
+
             return (
               <g key={index} className={`transition-opacity duration-300 ${isLoading ? "opacity-0" : "opacity-100"}`}>
                 {/* Animated path */}
@@ -127,8 +126,8 @@ export default function WorldMap({
                     repeatCount="indefinite"
                   />
                 </path>
-                
-                {/* Start dot with pulse animation - 简化移动端动画 */}
+
+                {/* Start dot with pulse animation - Simplified for mobile */}
                 <circle
                   cx={startX}
                   cy={startY}
@@ -136,8 +135,8 @@ export default function WorldMap({
                   fill={lineColor}
                   className="transition-all duration-300 sm:animate-pulse"
                 />
-                
-                {/* End dot with pulse animation - 简化移动端动画 */}
+
+                {/* End dot with pulse animation - Simplified for mobile */}
                 <circle
                   cx={endX}
                   cy={endY}
@@ -145,8 +144,8 @@ export default function WorldMap({
                   fill={lineColor}
                   className="transition-all duration-300 sm:animate-pulse"
                 />
-                
-                {/* Moving dot along the path - 仅在桌面端显示 */}
+
+                {/* Moving dot along the path - Desktop only */}
                 <circle r="1.5" fill={lineColor} opacity="0.8" className="hidden sm:block">
                   <animateMotion
                     dur={`${6 + index}s`}

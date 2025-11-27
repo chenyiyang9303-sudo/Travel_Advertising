@@ -10,7 +10,7 @@ body {
   background-color: rgb(var(--color-bg));
   color: rgb(var(--color-text));
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-family: var(--font-body), "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-body), "Inter", "DM Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
 @layer utilities {
@@ -96,26 +96,26 @@ body {
 
 @layer base {
   :root {
-    color-scheme: dark;
-    --color-bg: 6, 6, 6;
-    --color-surface-subtle: 14, 14, 14;
-    --color-surface: 18, 18, 18;
-    --color-surface-elevated: 28, 28, 28;
-    --color-border: 48, 48, 48;
-    --color-border-strong: 76, 76, 76;
-    --color-text: 232, 232, 232;
-    --color-text-muted: 186, 186, 186;
-    --color-text-subtle: 135, 135, 135;
-    --color-shadow: 0, 0, 0;
+    color-scheme: light;
+    --color-bg: 246, 244, 239;
+    --color-surface-subtle: 251, 252, 255;
+    --color-surface: 255, 255, 255;
+    --color-surface-elevated: 246, 243, 255;
+    --color-border: 228, 221, 214;
+    --color-border-strong: 203, 198, 190;
+    --color-text: 43, 43, 43;
+    --color-text-muted: 110, 110, 110;
+    --color-text-subtle: 140, 140, 140;
+    --color-shadow: 15, 25, 45;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    font-family: var(--font-display), "Playfair Display", Georgia, serif;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    font-family: var(--font-display), "Playfair Display", "Cormorant Garamond", Georgia, serif;
+    letter-spacing: -0.02em;
+    text-transform: none;
   }
 
   h1 {
@@ -139,10 +139,10 @@ body {
   }
 
   a {
-    transition: color 0.2s ease, border-color 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
   }
 
   section + section {
-    margin-top: 4rem;
+    margin-top: 5rem;
   }
 }

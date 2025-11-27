@@ -7,19 +7,19 @@ import { cn } from "@/lib/utils";
 
 const testimonialMetrics = [
   {
-    value: "215%",
-    label: "Average ROI",
-    description: "Across transformation engagements over the last 24 months.",
+    value: "235%",
+    label: "Average Exposure Increase",
+    description: "Average uplift from cross-channel destination campaigns.",
   },
   {
-    value: "98%",
-    label: "Client retention",
-    description: "Clients who renew or expand advisory partnerships annually.",
+    value: "93%",
+    label: "Lead/GMV Growth",
+    description: "Combined performance from peak and off-season strategies.",
   },
   {
-    value: "12 weeks",
-    label: "Time to impact",
-    description: "Median period to deliver measurable financial uplift.",
+    value: "14 Days",
+    label: "Script to Launch",
+    description: "Average delivery cycle for travel content campaigns.",
   },
 ];
 
@@ -44,12 +44,10 @@ export function Testimonials() {
             </div>
             <div className="space-y-6">
               <h2 className="font-display text-display-md font-bold text-fg md:text-display-lg">
-                Trusted partners for mission-critical finance initiatives
+                Growth Partners for Tourism Groups & Premium Hotels
               </h2>
               <p className="max-w-2xl text-lg text-muted">
-                Board members, CFOs, and founders rely on our team to navigate
-                capital market inflection points, restructure complex portfolios,
-                and unlock measurable performance gains.
+                City tourism boards, resorts, hotel groups, and travel brands trust us to bring warmer experiences and lasting conversions through creativity and data.
               </p>
             </div>
             <dl className="grid gap-6 sm:grid-cols-3">
@@ -89,10 +87,10 @@ export function Testimonials() {
 }
 
 const badgeLabels = [
-  "Capital Strategy",
-  "Operational Excellence",
-  "Risk & Compliance",
-  "Growth Advisory",
+  "Destination Launch",
+  "Hotel Recovery",
+  "Creator Program",
+  "AI Media Hub",
 ];
 
 const TestimonialSpotlight = ({ testimonial }: { testimonial: Testimonial }) => {
@@ -145,7 +143,7 @@ const TestimonialSpotlight = ({ testimonial }: { testimonial: Testimonial }) => 
             Focus
           </p>
           <p className="mt-1 font-medium text-fg">
-            Strategic finance transformation
+            Destination Renewal & City Roadshow Campaigns
           </p>
         </div>
         <div>
@@ -153,8 +151,7 @@ const TestimonialSpotlight = ({ testimonial }: { testimonial: Testimonial }) => 
             Result
           </p>
           <p className="mt-1">
-            Delivered compound EBITDA uplift and liquidity resilience in under
-            six months.
+            Launched omni-channel content within 4 weeks, achieving 3.8x exposure and 2.5x inquiry growth.
           </p>
         </div>
       </div>
@@ -228,87 +225,87 @@ interface Testimonial {
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Michael Chen",
+    name: "Jing Wang",
     quote:
-      "Their M&A advisory was exceptional. We successfully acquired a complementary business, achieving $3.2M in annual cost synergies and strengthening our market position significantly.",
+      "After repositioning our hot spring resort's narrative, our first content wave topped the Xiaohongshu local trending list. Livestream + creator seeding brought 4.6x booking growth.",
     src: "https://i.pravatar.cc/150?img=1",
-    designation: "CEO, TechManu Corp",
+    designation: "Marketing Director · Yunjing Hot Spring Resort",
   },
   {
-    name: "Jennifer Li",
+    name: "Marco Chen",
     quote:
-      "The financial restructuring plan saved our company. EBITDA improved from -$2.1M to +$4.3M in 14 months, and we reduced debt by 56%.",
+      "WanderAds' travel content team works like a film crew—shot ten short films in three days, delivered edits overnight. We launched our peak season two weeks ahead of schedule.",
     src: "https://i.pravatar.cc/150?img=2",
-    designation: "CFO, RetailMax Inc",
+    designation: "PR Lead · Sanya Travel Photography Base",
   },
   {
-    name: "David Zhang",
+    name: "Luca Mirren",
     quote:
-      "Their fundraising advisory was instrumental. We secured $12M Series A at a $45M valuation with 8 term sheets. Their financial modeling was world-class.",
+      "The bilingual content studio helped us speak to Chinese travelers authentically. Occupancy recovered to 92% within one quarter.",
     src: "https://i.pravatar.cc/150?img=3",
-    designation: "Founder & CEO, FinFlow Technologies",
+    designation: "GM · Boutique Voyage Hotels",
   },
   {
-    name: "Dr. Sarah Martinez",
+    name: "Yan Li",
     quote:
-      "The compliance framework they built was comprehensive. We remediated 23 gaps, passed regulatory audits with zero major findings, and achieved full SOX compliance.",
+      "AI asset scoring is genuinely useful—automatically tells us which vlogs have the highest conversion potential. Advertising efficiency improved 38% versus before.",
     src: "https://i.pravatar.cc/150?img=4",
-    designation: "Chief Compliance Officer, MedCare Systems",
+    designation: "Chief Marketing Officer · Xilu Valley Scenic Area",
   },
   {
-    name: "Robert Kim",
+    name: "Patricia Gomez",
     quote:
-      "Outstanding working capital optimization. They unlocked $2.8M in hidden cash through receivables management and inventory optimization.",
+      "Creator program + OTA media boosted our island campaign, delivering 3.1x more bookings from Mainland China versus last year.",
     src: "https://i.pravatar.cc/150?img=5",
-    designation: "VP Finance, GlobalTrade Logistics",
+    designation: "VP Marketing · Maldives Sun Resorts",
   },
   {
-    name: "Amanda Rodriguez",
+    name: "Xing Song",
     quote:
-      "Their valuation analysis for our divestiture was spot-on. We achieved 18% premium over initial offers and closed the deal in 5 months.",
+      "Our city renewal campaign went from script to execution in just 21 days. The night tour routes and AR navigation also became highlights in visitor reviews.",
     src: "https://i.pravatar.cc/150?img=6",
-    designation: "Corporate Development Director, IndustrialTech Holdings",
+    designation: "Brand Lead · Chengdu Culture & Tourism Group",
   },
   {
-    name: "James Park",
+    name: "Yuki Yamada",
     quote:
-      "Debt restructuring strategy was brilliant. We refinanced $18M at 3.2% lower rates, extending maturity by 4 years and saving $1.1M annually.",
+      "They orchestrated our sakura season livestream marathon across TikTok, Douyin, and LINE. Merch sell-through hit 95% in 48 hours.",
     src: "https://i.pravatar.cc/150?img=7",
-    designation: "CFO, UrbanDev Properties",
+    designation: "Digital Director · Kyoto Moments",
   },
   {
-    name: "Lisa Thompson",
+    name: "Yifan Zhao",
     quote:
-      "Financial due diligence uncovered $800K in hidden liabilities and negotiation leverage. The deal price adjusted 12% in our favor.",
+      "The creator co-creation handbook was so detailed—covering attraction stories, shot suggestions, risk alerts. Collaboration experience was exceptional, brand tone fully preserved.",
     src: "https://i.pravatar.cc/150?img=8",
-    designation: "M&A Director, Pacific Ventures",
+    designation: "Marketing Manager · Aranya Living",
   },
   {
-    name: "Dr. William Chang",
+    name: "Marta Rossi",
     quote:
-      "Their tax optimization strategy reduced our effective rate by 7 percentage points while maintaining full compliance. Saved $1.4M in first year.",
+      "WanderAds connected us with Chinese creators who truly love mountains. Our Dolomites experience reached 12M views organically.",
     src: "https://i.pravatar.cc/150?img=9",
-    designation: "CFO, BioPharmaTech Inc",
+    designation: "Head of Content · Alpine Trails Italy",
   },
   {
-    name: "Maria Santos",
+    name: "Yi Tang",
     quote:
-      "Capital structure optimization improved our debt-to-equity ratio from 3.2 to 1.8, reduced interest expense by $600K annually.",
+      "From 0-to-1 night economy brand building, WanderAds helped us build a private domain system and handed over the data dashboard for continued team iteration.",
     src: "https://i.pravatar.cc/150?img=10",
-    designation: "Treasurer, NorthStar Manufacturing",
+    designation: "General Manager · Ningxia Shapotou Culture & Tourism",
   },
   {
-    name: "Daniel Lee",
+    name: "Isabelle Perrot",
     quote:
-      "IPO readiness program was comprehensive. We successfully listed at $220M valuation with strong institutional demand and raised $35M.",
+      "The AI media cockpit alerted us when Paris bookings spiked; we redirected budget to focus on Shanghai travelers and doubled ROI.",
     src: "https://i.pravatar.cc/150?img=11",
-    designation: "CEO, CloudServe Solutions",
+    designation: "Head of Growth · Voyage Lumière",
   },
   {
-    name: "Emma Wilson",
+    name: "Xi He",
     quote:
-      "Financial transformation project delivered 40% faster month-end close, real-time reporting dashboards, and eliminated 95% of manual reconciliations.",
+      "They connected travel content, advertising, and exhibition interactive installations into one seamless flow, helping us attract 180K visitors in our opening month.",
     src: "https://i.pravatar.cc/150?img=12",
-    designation: "Controller, MegaRetail Group",
+    designation: "Brand Director · Mountain & Sea Story Museum",
   },
 ];

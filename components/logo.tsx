@@ -15,15 +15,15 @@ export const Logo = ({ showText = true }: LogoProps) => {
       <div className="flex items-center gap-3">
         <Image
           src="/logo.png"
-          alt="Radiant Soaring Fund Management logo"
+          alt="WanderAds travel marketing logo"
           width={952}
           height={280}
           className="h-12 w-auto md:h-[3.75rem]"
           priority
         />
         {showText && (
-          <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent dark:from-orange-400 dark:to-amber-400 tracking-wide">
-            RSFM
+          <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-primary-500 via-creative-500 to-accent-400 bg-clip-text text-transparent tracking-wide">
+            WanderAds
           </span>
         )}
       </div>

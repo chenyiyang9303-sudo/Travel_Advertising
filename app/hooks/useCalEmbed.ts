@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { getCalApi } from "@calcom/embed-react";
 import { CONSTANTS } from "@/constants/links";
 
-// 全局标记防止重复初始化
+// Global flag to prevent duplicate initialization
 let isCalInitialized = false;
 let initPromise: Promise<void> | null = null;
 
@@ -10,14 +10,14 @@ export const useCalEmbed = () => {
   const initRef = useRef(false);
 
   useEffect(() => {
-    // 如果已经在初始化中或已完成，直接返回
+    // If already initializing or completed, return immediately
     if (initRef.current || isCalInitialized || initPromise) {
       return;
     }
 
     initRef.current = true;
 
-    // 创建初始化 Promise 并缓存
+    // Create initialization Promise and cache it
     initPromise = (async function () {
       try {
         const cal = await getCalApi({ namespace: CONSTANTS.CALCOM_NAMESPACE });
@@ -35,7 +35,7 @@ export const useCalEmbed = () => {
         isCalInitialized = true;
 
       } catch (error) {
-        console.error("❌ Cal.com初始化失败:", error);
+        console.error("❌ Cal.com initialization failed:", error);
         initRef.current = false;
         initPromise = null;
         isCalInitialized = false;

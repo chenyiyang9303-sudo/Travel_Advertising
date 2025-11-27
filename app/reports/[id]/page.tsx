@@ -212,8 +212,7 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
                   {report.author.title}
                 </p>
                 <p className="text-sm leading-relaxed text-neutral-300">
-                  RSFM&apos;s research collective synthesises market intelligence, governance benchmarks,
-                  and transaction casework to inform institutional decision makers.
+                  The WanderAds research team tracks traveler behavior, content trends, and channel models long-term to provide actionable growth insights for destinations and travel brands.
                 </p>
               </div>
             </div>
@@ -270,8 +269,7 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
               Need Custom Research?
             </h3>
             <p className="mt-4 text-sm text-primary-50/80">
-              Engage RSFM&apos;s research team to develop transaction pathways, market entry
-              blueprints, or portfolio diagnostics tailored to your mandate.
+              Invite the WanderAds research team to formulate destination strategies, creator matrices, or AI advertising plans that match your market rhythm.
             </p>
             <Link
               href="/#contact"

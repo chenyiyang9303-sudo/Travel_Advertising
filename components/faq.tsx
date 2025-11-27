@@ -21,12 +21,10 @@ export function FAQSection() {
             </div>
             <div className="space-y-6">
               <h2 className="font-display text-display-md font-bold text-fg md:text-display-lg">
-                Answers to the questions we hear most
+                Your Top Partnership Questions
               </h2>
               <p className="max-w-xl text-lg text-muted">
-                Explore how we scope engagements, align incentives, and deliver
-                measurable financial outcomes. Each answer draws from recent
-                mandates with corporate finance leaders.
+                Learn how we plan travel shoots, advertising, and AI tool deployment to ensure every campaign has both inspiration and certainty.
               </p>
             </div>
 
@@ -38,17 +36,16 @@ export function FAQSection() {
                   </span>
                   <div>
                     <h3 className="text-lg font-semibold text-fg">
-                      Need tailored guidance?
+                      Want a Custom Campaign?
                     </h3>
                     <p className="mt-2 text-sm text-muted">
-                      Schedule a confidential strategy session with one of our
-                      partners to map next steps for your finance agenda.
+                      Book a 30-minute workshop where we'll simulate campaign paths based on your destination, target audience, and budget.
                     </p>
                     <Link
                       href="/#contact"
                       className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary-600 px-5 py-2 text-sm font-semibold text-white shadow transition hover:bg-primary-700"
                     >
-                      Start a conversation
+                      Book Strategy Session
                     </Link>
                   </div>
                 </div>
@@ -56,19 +53,19 @@ export function FAQSection() {
               <ul className="space-y-3 text-xs text-subtle">
                 <li>
                   <span className="font-semibold text-fg">Office Hours:</span>{" "}
-                  Monday to Friday, 8:00–18:00 CST
+                  Mon–Fri 10:00 - 19:00 (GMT+8)
                 </li>
                 <li>
                   <span className="font-semibold text-fg">Response Time:</span>{" "}
-                  Within 24 hours for new inquiries
+                  New projects within 24 hours
                 </li>
                 <li>
                   <span className="font-semibold text-fg">Contact:</span>{" "}
                   <Link
-                    href="mailto:advisory@radiantsoaringfm.com"
+                    href="mailto:hello@wanderads.studio"
                     className="text-primary-600 underline-offset-4 transition hover:underline"
                   >
-                    advisory@radiantsoaringfm.com
+                    hello@wanderads.studio
                   </Link>
                 </li>
               </ul>
@@ -177,66 +174,65 @@ interface FAQGroup {
 
 const faqGroups: FAQGroup[] = [
   {
-    category: "ENGAGEMENT",
-    description: "How we scope work and define success metrics.",
+    category: "Partnership Model",
+    description: "How we start projects, define goals, and structure fees",
     items: [
       {
-        question: "What does a typical engagement timeline look like?",
+        question: "What does the collaboration fee include?",
         answer:
-          "Discovery and diagnostic work generally spans two to three weeks. We then sequence delivery in 6 to 8 week sprints with executive readouts every fortnight and KPI tracking dashboards from day one.",
-        footnote: "Urgent transactions can be accelerated based on stakeholder availability.",
+          "Typically includes strategy fees, content/production fees, advertising management fees, and optional AI tool subscriptions. Budgets can be phased, with different ratios for peak/off seasons. We'll provide a proposal and quote within 3 business days after the Brief Workshop.",
       },
       {
-        question: "How do you structure fees and incentives?",
+        question: "Do we need to provide materials or scripts?",
         answer:
-          "We combine a fixed advisory retainer for strategic leadership with performance-based components tied to tangible financial outcomes. This keeps both sides aligned on value creation rather than hourly utilization.",
+          "If you have existing materials, great—we'll collaborate with our in-house travel content team. If not, we can handle the complete process: scripting, scouting, shooting, editing, and post-production, ensuring consistent tone across all platforms.",
       },
       {
-        question: "Do you integrate with internal teams or external partners?",
+        question: "How long does a project typically take?",
         answer:
-          "Yes. We embed alongside corporate finance, treasury, and legal teams, and coordinate with external auditors, banks, and counsel to maintain momentum across workstreams.",
+          "Regular campaigns take about 4-6 weeks from research to launch. For urgent activations, we can complete core content and deployment within two weeks. Large destination renewal projects are typically planned quarterly.",
       },
     ],
   },
   {
-    category: "DELIVERY",
-    description: "What collaboration and reporting look like in practice.",
+    category: "Execution & Delivery",
+    description: "How content, creators, and advertising connect",
     items: [
       {
-        question: "How often will we receive progress updates?",
+        question: "Can we select specific creators or platforms?",
         answer:
-          "Expect weekly written dashboards, live steering committee sessions every other week, and ad-hoc war room support for critical decisions. Stakeholders also receive secure access to the real-time metrics workspace.",
+          "Yes. We have a database of 800+ creators, filtered by destination tone, audience demographics, and historical performance. Platform-wise, we support combinations of Douyin, Xiaohongshu, Kuaishou, Video Account, OTA, and programmatic media.",
       },
       {
-        question: "Can you work across multiple geographies and entities?",
+        question: "How do you manage livestreams or large offline events?",
         answer:
-          "We frequently orchestrate cross-border engagements. Our operating cadence accounts for regional regulatory nuances, currency impacts, and local filing requirements to keep programmes synchronized.",
+          "We provide complete rundowns, scripts, and material lists, deploy on-site directors and ad monitoring, while setting up contingency content and camera positions to ensure smooth cross-platform streaming and interaction.",
       },
       {
-        question: "What tools and artifacts will our team receive?",
+        question: "What deliverables are included?",
         answer:
-          "Deliverables include integrated financial models, scenario playbooks, risk registers, and implementation roadmaps with ownership clearly assigned for each workstream.",
+          "Includes strategy docs, creative scripts, travel content (raw footage + platform-specific versions), creator co-creation handbook, ad assets, and real-time data dashboards. Projects conclude with a review and secondary distribution recommendations.",
       },
     ],
   },
   {
-    category: "IMPACT",
-    description: "Ensuring outcomes are measurable and durable.",
+    category: "Budget & Performance",
+    description: "How to evaluate ROI? Do you provide data tools?",
     items: [
       {
-        question: "How do you measure success after the engagement ends?",
+        question: "What's the typical starting budget for advertising?",
         answer:
-          "We establish baseline metrics during discovery and agree on target ranges with your leadership. Post-engagement, we run quarterly impact reviews to validate that EBITDA, liquidity, and compliance indicators remain on track.",
+          "Small-scale activities suggest ≥ $43K to form a complete content + advertising loop; destination-level campaigns typically range from $115-290K. We'll provide detailed ratio recommendations based on seasonality and channels.",
       },
       {
-        question: "Do you support knowledge transfer to internal teams?",
+        question: "How do you measure effectiveness?",
         answer:
-          "Absolutely. Every workstream includes playbooks, training workshops, and handover sessions so internal teams can sustain improvements without external dependency.",
+          "We establish baselines for exposure, leads, GMV, visitor origins, and membership growth before project launch, provide dashboard + weekly reports during execution, and deliver ROI/GMV/repeat purchase rate comparisons upon completion.",
       },
       {
-        question: "What happens if market conditions change mid-project?",
+        question: "Can I use only AI tools or individual services?",
         answer:
-          "We build scenario pivots into the operating model and run rapid response simulations. This allows us to re-sequence initiatives or hedge exposures while maintaining momentum toward core outcomes.",
+          "Yes. AI Studio, content production, creator partnerships, and advertising management can all be standalone projects; we also welcome gradual expansion into a complete growth plan.",
       },
     ],
   },

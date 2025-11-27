@@ -7,7 +7,6 @@ export interface CaseStudy {
   results: { metric: string; value: string }[];
   timeline: string;
   image: string;
-  // Detail page additional fields
   overview: string;
   clientBackground: string;
   detailedChallenge: string;
@@ -34,443 +33,482 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "tech-manufacturing-ma",
-    company: "TechManu Corp",
-    industry: "Manufacturing & Technology",
-    challenge: "A mid-sized manufacturing company needed strategic M&A advisory to acquire a complementary technology firm, but lacked experience in deal structuring and valuation.",
-    solution: "We provided comprehensive M&A advisory including target identification, financial due diligence, valuation analysis, and deal structuring guidance.",
+    slug: "sunrise-bay-resort-relaunch",
+    company: "Sunrise Bay Resort",
+    industry: "Luxury Coastal Resort",
+    challenge:
+      "After completing an 18-month renovation, Sunrise Bay Resort in Seminyak, Bali needed to reignite high-net-worth travelers' and international creators' attention within 6 weeks while driving premium summer bookings.",
+    solution:
+      "Launched the 'Every Hour is Golden' campaign, combining magazine-quality travel photography, creator residency programs, AI-driven full-funnel advertising, and immersive on-ground experiences—creating a closed loop of content, creators, and advertising.",
     results: [
-      { metric: "Deal Completion", value: "Successfully closed in 8 months" },
-      { metric: "Cost Synergies Identified", value: "$3.2M annually" },
-      { metric: "Post-Merger Integration", value: "Completed within timeline" }
+      { metric: "Campaign Reach", value: "120M+ cross-platform impressions" },
+      { metric: "Booking Growth", value: "+210% MoM" },
+      { metric: "Average Daily Rate (ADR)", value: "+18%" },
     ],
-    timeline: "8 months",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&auto=format",
-    overview: "TechManu Corp is a mid-market manufacturing company seeking to expand capabilities through strategic acquisition of a technology provider.",
-    clientBackground: "Founded in 2010, TechManu Corp is an established manufacturer with $120M annual revenue. The company identified acquisition as key growth strategy but lacked internal M&A expertise and needed independent advisory to navigate the complex transaction process.",
-    detailedChallenge: "The main challenges included: identifying suitable acquisition targets that aligned with strategic objectives, conducting comprehensive financial and operational due diligence, developing accurate valuation models considering synergies, structuring the deal to optimize tax efficiency and financing, and planning post-merger integration to capture identified synergies.",
+    timeline: "6 weeks",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&h=900&fit=crop&auto=format",
+    overview:
+      "Sunrise Bay Resort is a 220-room beachfront luxury resort featuring French-inspired design, targeting affluent travelers aged 28–45 and global content creators.",
+    clientBackground:
+      "The brand historically relied on traditional travel agencies and OTAs, with fragmented digital channels. Post-renovation, the resort added 32 beachfront pool villas and art installations, requiring a relaunch campaign that balanced brand elevation with conversion.",
+    detailedChallenge:
+      "How to attract high-net-worth travelers, increase brand premium, and activate international creators in a short timeframe was the core challenge.\n- Brand tone upgrade required more magazine-quality content expression\n- International traveler return necessitated bilingual narratives and multilingual subtitles\n- Needed to prove new experiences could drive higher room rates and longer stays\n- Budget concentrated in 6 weeks demanded rapid iteration and real-time monitoring\n- Internal team needed to master replicable methods to support year-round campaigns",
     approach: [
-      "Strategic target identification and screening",
-      "Comprehensive financial due diligence",
-      "Valuation analysis with multiple methodologies",
-      "Deal structure optimization and negotiation support",
-      "Post-merger integration planning"
+      "Designed 4 storylines around 'golden moments' covering sunrise, afternoon tea, sunset, and midnight party scenes",
+      "Established creator residency program, inviting 16 travel photographers and lifestyle bloggers for co-creation",
+      "Leveraged WanderAds AI Studio to generate multilingual copy, asset scoring, and intelligent ad recommendations",
+      "Synchronized launch across Douyin, Xiaohongshu, Instagram, YouTube, and OTA spotlight placements",
+      "Deployed immersive experience routes and photo-ready installations within the resort to extend dwell time",
     ],
     implementation: [
       {
-        phase: "Target Identification & Screening",
-        duration: "2 months",
+        phase: "Brand Story Lab",
+        duration: "1 week",
         activities: [
-          "Defined strategic acquisition criteria",
-          "Identified and screened 15 potential targets",
-          "Conducted preliminary valuation assessments",
-          "Facilitated management meetings with shortlisted candidates",
-          "Recommended top 3 targets for detailed evaluation"
-        ]
+          "Workshop with management and designers to co-create theme keywords",
+          "Competitive & behavioral research, output traveler personas",
+          "Finalized 4 hero storylines and content pillars",
+          "Developed shooting scripts, scene guides, lighting, and styling handbook",
+        ],
       },
       {
-        phase: "Due Diligence & Valuation",
-        duration: "3 months",
+        phase: "Immersive Photography",
+        duration: "2 weeks",
         activities: [
-          "Conducted financial due diligence on selected target",
-          "Performed quality of earnings analysis",
-          "Developed detailed financial models (DCF, comparable transactions)",
-          "Identified and quantified potential synergies",
-          "Assessed key risks and mitigation strategies"
-        ]
+          "Tri-camera sync shooting + FPV drone + underwater footage",
+          "AI asset management: real-time upload, auto-tagging, and scoring",
+          "Multilingual subtitles, vertical/horizontal adaptation, output 120+ assets",
+          "Built pop-up sets on villas and beach for guest photography",
+        ],
       },
       {
-        phase: "Deal Structuring & Negotiation",
-        duration: "2 months",
+        phase: "Creator Residency Program",
+        duration: "2 weeks",
         activities: [
-          "Designed optimal deal structure (asset vs. stock purchase)",
-          "Analyzed tax implications and optimization strategies",
-          "Evaluated financing alternatives and capital structure",
-          "Supported negotiation of purchase agreement terms",
-          "Coordinated with legal and tax advisors"
-        ]
+          "Invited 16 creators to 4-day co-creation camp with scripts and storylines",
+          "Organized livestreams, salons, and night tours with synchronized ad warm-up",
+          "Partnered with local tourism board for media FAM trip",
+          "Built content co-creation studio, output 48 articles and 32 vlogs",
+        ],
       },
       {
-        phase: "Integration Planning",
-        duration: "1 month",
-        activities: [
-          "Developed 100-day integration roadmap",
-          "Identified quick-win synergy opportunities",
-          "Designed governance and reporting structures",
-          "Established KPIs for tracking integration progress",
-          "Created communication plan for stakeholders"
-        ]
-      }
-    ],
-    outcomes: [
-      {
-        category: "Transaction Execution",
-        description: "Successfully completed strategic acquisition within target timeline and budget, capturing identified synergies.",
-        metrics: [
-          { metric: "Deal Value", before: "$45M target", after: "$42M negotiated", improvement: "7% cost savings" },
-          { metric: "Time to Close", before: "12 months estimated", after: "8 months actual", improvement: "33% faster" },
-          { metric: "Due Diligence Issues", before: "Unknown risks", after: "15 issues identified & addressed", improvement: "Risk mitigation" }
-        ]
-      },
-      {
-        category: "Financial Performance",
-        description: "Achieved target synergies and improved combined entity financial performance ahead of projections.",
-        metrics: [
-          { metric: "Cost Synergies", before: "$0", after: "$3.2M annually", improvement: "New value creation" },
-          { metric: "Revenue Synergies", before: "$0", after: "$1.8M Year 1", improvement: "Cross-selling success" },
-          { metric: "EBITDA Margin", before: "12%", after: "15.5%", improvement: "3.5 points expansion" }
-        ]
-      },
-      {
-        category: "Strategic Positioning",
-        description: "Enhanced market position and competitive capabilities through complementary technology acquisition.",
-        metrics: [
-          { metric: "Product Portfolio", before: "Limited offerings", after: "3 new product lines", improvement: "Market expansion" },
-          { metric: "Customer Base", before: "150 clients", after: "280 clients", improvement: "87% growth" },
-          { metric: "Market Share", before: "8%", after: "14%", improvement: "75% increase" }
-        ]
-      }
-    ],
-    testimonial: {
-      quote: "The M&A advisory team provided invaluable guidance throughout our first acquisition. Their expertise in valuation, deal structuring, and integration planning was instrumental in achieving a successful outcome. The synergies we've captured exceed our initial expectations.",
-      author: "David Chen",
-      position: "CEO, TechManu Corp"
-    },
-    technologies: ["Financial Modeling Software", "Due Diligence Platforms", "Valuation Tools", "Project Management Systems"],
-    services: ["M&A Advisory", "Financial Due Diligence", "Valuation Analysis", "Deal Structuring", "Integration Planning"],
-    nextSteps: "Continuing engagement for post-merger integration monitoring and evaluation of additional bolt-on acquisition opportunities to further strengthen market position."
-  },
-  {
-    slug: "retail-chain-restructuring",
-    company: "RetailMax Inc",
-    industry: "Retail & Consumer Goods",
-    challenge: "A regional retail chain faced declining profitability and needed comprehensive financial restructuring and capital structure optimization to restore financial health.",
-    solution: "We conducted detailed financial analysis, developed turnaround strategy, restructured debt, and implemented working capital optimization initiatives.",
-    results: [
-      { metric: "EBITDA Improvement", value: "-$2.1M → +$4.3M" },
-      { metric: "Debt Reduction", value: "$18M → $8M" },
-      { metric: "Working Capital", value: "Improved by $5.2M" }
-    ],
-    timeline: "12 months",
-    image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop&auto=format",
-    overview: "RetailMax Inc is a multi-location retail chain requiring urgent financial restructuring to address deteriorating profitability and overleveraged balance sheet.",
-    clientBackground: "RetailMax operates 25 retail locations across three states with $85M annual revenue. Following aggressive expansion funded by debt, the company faced declining same-store sales, rising operating costs, and mounting debt service burden threatening business viability.",
-    detailedChallenge: "Critical challenges included: negative EBITDA and unsustainable debt levels requiring immediate action, working capital constraints limiting operational flexibility, underperforming locations draining corporate resources, lack of financial visibility and management reporting, and strained banking relationships requiring debt restructuring negotiations.",
-    approach: [
-      "Comprehensive financial and operational assessment",
-      "Cash flow analysis and 13-week cash flow forecasting",
-      "Working capital optimization program",
-      "Debt restructuring and refinancing strategy",
-      "Profitability improvement initiatives"
-    ],
-    implementation: [
-      {
-        phase: "Financial Assessment & Stabilization",
-        duration: "2 months",
-        activities: [
-          "Conducted rapid financial health assessment",
-          "Implemented 13-week rolling cash flow forecasting",
-          "Identified immediate cost reduction opportunities ($1.5M)",
-          "Established daily cash management protocols",
-          "Negotiated temporary covenant relief with lenders"
-        ]
-      },
-      {
-        phase: "Operational Analysis & Strategy",
-        duration: "3 months",
-        activities: [
-          "Performed location-by-location profitability analysis",
-          "Assessed supply chain and inventory management",
-          "Evaluated organizational structure and overhead costs",
-          "Developed turnaround strategy and financial projections",
-          "Prioritized initiatives by impact and feasibility"
-        ]
-      },
-      {
-        phase: "Debt Restructuring",
-        duration: "4 months",
-        activities: [
-          "Analyzed capital structure and refinancing alternatives",
-          "Prepared detailed lender presentation materials",
-          "Negotiated debt restructuring with existing lenders",
-          "Secured new working capital facility with improved terms",
-          "Closed refinancing transaction and reduced total debt"
-        ]
-      },
-      {
-        phase: "Performance Improvement",
-        duration: "3 months (ongoing)",
-        activities: [
-          "Closed 4 underperforming locations",
-          "Renegotiated vendor contracts ($800K savings)",
-          "Implemented inventory optimization system",
-          "Upgraded financial reporting and KPI dashboards",
-          "Established monthly financial review cadence"
-        ]
-      }
-    ],
-    outcomes: [
-      {
-        category: "Financial Performance",
-        description: "Restored profitability and improved cash generation through comprehensive restructuring and operational improvements.",
-        metrics: [
-          { metric: "EBITDA", before: "-$2.1M loss", after: "$4.3M profit", improvement: "$6.4M swing" },
-          { metric: "Operating Cash Flow", before: "-$1.5M", after: "$3.8M", improvement: "$5.3M improvement" },
-          { metric: "Gross Margin", before: "28%", after: "34%", improvement: "6 points expansion" }
-        ]
-      },
-      {
-        category: "Balance Sheet Strength",
-        description: "Significantly deleveraged balance sheet and improved liquidity position through debt restructuring and working capital optimization.",
-        metrics: [
-          { metric: "Total Debt", before: "$18M", after: "$8M", improvement: "56% reduction" },
-          { metric: "Debt/EBITDA", before: "Negative", after: "1.9x", improvement: "Sustainable level" },
-          { metric: "Working Capital", before: "$2.1M", after: "$7.3M", improvement: "$5.2M increase" }
-        ]
-      },
-      {
-        category: "Operational Efficiency",
-        description: "Streamlined operations and improved unit economics through strategic location optimization and cost management.",
-        metrics: [
-          { metric: "Store Count", before: "25 locations", after: "21 locations", improvement: "Focus on profitable units" },
-          { metric: "Same-Store Sales", before: "-8% decline", after: "+3% growth", improvement: "11 point improvement" },
-          { metric: "Operating Expenses", before: "42% of revenue", after: "36% of revenue", improvement: "6 point reduction" }
-        ]
-      }
-    ],
-    testimonial: {
-      quote: "Facing a financial crisis, we brought in this advisory team to help navigate our restructuring. Their expertise in cash management, debt negotiations, and operational improvements literally saved our business. We're now profitable and positioned for sustainable growth.",
-      author: "Sarah Martinez",
-      position: "CFO, RetailMax Inc"
-    },
-    technologies: ["Financial Planning Software", "Cash Flow Management Tools", "Business Intelligence Platforms", "Inventory Management Systems"],
-    services: ["Financial Restructuring", "Debt Advisory", "Working Capital Management", "Turnaround Strategy", "Performance Improvement"],
-    nextSteps: "Ongoing monthly financial advisory retainer to monitor performance, optimize capital allocation, and support evaluation of strategic growth opportunities including potential acquisition targets."
-  },
-  {
-    slug: "fintech-startup-fundraising",
-    company: "FinFlow Technologies",
-    industry: "Financial Technology",
-    challenge: "An early-stage fintech startup needed to raise Series A funding but lacked investor-ready financial projections and fundraising strategy to attract institutional investors.",
-    solution: "We developed comprehensive financial models, prepared investor materials, refined valuation approach, and provided fundraising strategy guidance throughout the capital raise process.",
-    results: [
-      { metric: "Funding Raised", value: "$12M Series A" },
-      { metric: "Valuation", value: "$45M post-money" },
-      { metric: "Investor Interest", value: "8 term sheets received" }
-    ],
-    timeline: "5 months",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format",
-    overview: "FinFlow Technologies is a high-growth fintech startup requiring strategic advisory for Series A fundraising to scale operations and expand market presence.",
-    clientBackground: "FinFlow developed an innovative payment processing platform with strong early traction (2,500 clients, $8M revenue run-rate). To capitalize on market opportunity and competitive positioning, the company needed significant capital injection but lacked experience in institutional fundraising.",
-    detailedChallenge: "Key challenges included: building credible financial projections that balanced growth ambitions with investor expectations, developing compelling unit economics and cohort analysis to demonstrate business model scalability, establishing appropriate valuation methodology and benchmarking, preparing professional-grade investor presentations and data room materials, and navigating term sheet negotiations and due diligence processes with limited in-house finance expertise.",
-    approach: [
-      "Financial model development and scenario analysis",
-      "Business plan and investor deck creation",
-      "Valuation analysis and benchmarking",
-      "Investor targeting and outreach strategy",
-      "Due diligence preparation and management"
-    ],
-    implementation: [
-      {
-        phase: "Financial Planning & Modeling",
-        duration: "6 weeks",
-        activities: [
-          "Built comprehensive 5-year financial model",
-          "Developed detailed revenue buildups by product and segment",
-          "Created cohort analysis and customer lifetime value models",
-          "Established key operating metrics and KPI framework",
-          "Prepared multiple scenarios (base, upside, downside cases)"
-        ]
-      },
-      {
-        phase: "Valuation & Positioning",
+        phase: "Media & Data Operations",
         duration: "3 weeks",
         activities: [
-          "Analyzed comparable fintech companies and transactions",
-          "Developed valuation framework using multiple methodologies",
-          "Established target valuation range with supporting rationale",
-          "Identified key value drivers and investment highlights",
-          "Prepared responses to common investor objections"
-        ]
+          "Synchronized launch across Douyin, Xiaohongshu, Instagram, YouTube, OTA spotlight",
+          "AI ad recommendations dynamically adjusted budget and targeting",
+          "Integrated CRM & membership system to track booking behavior",
+          "Daily briefs + weekly reviews to guide secondary distribution",
+        ],
       },
-      {
-        phase: "Materials Preparation",
-        duration: "4 weeks",
-        activities: [
-          "Created investor pitch deck (25 slides)",
-          "Developed executive summary and business plan",
-          "Compiled virtual data room with supporting documents",
-          "Prepared detailed financial appendix and supporting schedules",
-          "Created management presentation materials"
-        ]
-      },
-      {
-        phase: "Fundraising Execution",
-        duration: "10 weeks",
-        activities: [
-          "Identified and prioritized 45 target investors",
-          "Managed investor outreach and meeting coordination",
-          "Supported management in investor presentations",
-          "Facilitated due diligence requests and Q&A",
-          "Assisted in term sheet review and negotiation"
-        ]
-      }
     ],
     outcomes: [
       {
-        category: "Fundraising Success",
-        description: "Successfully raised Series A funding exceeding target amount with favorable terms from top-tier institutional investors.",
+        category: "Content & Reach",
+        description: "Magazine-quality photography + creator content built breakout assets.",
         metrics: [
-          { metric: "Capital Raised", before: "$0 target", after: "$12M raised", improvement: "Exceeded $10M goal" },
-          { metric: "Valuation", before: "$35M target", after: "$45M post-money", improvement: "29% premium" },
-          { metric: "Term Sheets", before: "0", after: "8 received", improvement: "Strong investor interest" }
-        ]
+          { metric: "Cross-platform impressions", before: "18M", after: "120M", improvement: "6.6x" },
+          { metric: "UGC topic volume", before: "3.2K", after: "29K", improvement: "9x" },
+          { metric: "Creator participation", before: "6/quarter", after: "32/quarter", improvement: "5.3x" },
+        ],
       },
       {
-        category: "Investor Quality",
-        description: "Attracted high-quality institutional investors with relevant sector expertise and value-add capabilities beyond capital.",
+        category: "Commercial Conversion",
+        description: "Premium suites and extended-stay products showed significant performance.",
         metrics: [
-          { metric: "Lead Investor", before: "Unknown", after: "Tier 1 VC firm", improvement: "Brand validation" },
-          { metric: "Investor Network", before: "Limited", after: "3 strategic investors", improvement: "Industry connections" },
-          { metric: "Board Composition", before: "2 founders", after: "Added 2 experienced operators", improvement: "Enhanced governance" }
-        ]
+          { metric: "ADR", before: "$355", after: "$420", improvement: "+18%" },
+          { metric: "Average stay duration", before: "2.1 days", after: "3.4 days", improvement: "+62%" },
+          { metric: "Direct booking share", before: "28%", after: "46%", improvement: "+18pt" },
+        ],
       },
       {
-        category: "Business Acceleration",
-        description: "Funding enabled accelerated growth plans including team expansion, product development, and market expansion.",
+        category: "Brand Sentiment",
+        description: "Social listening and NPS scores showed significant improvement.",
         metrics: [
-          { metric: "Runway", before: "6 months", after: "24 months", improvement: "Extended operating horizon" },
-          { metric: "Hiring Capacity", before: "25 employees", after: "60 planned (18 months)", improvement: "140% team growth" },
-          { metric: "Market Expansion", before: "1 region", after: "3 regions planned", improvement: "Geographic growth" }
-        ]
-      }
+          { metric: "Brand favorability", before: "68%", after: "91%", improvement: "+23pt" },
+          { metric: "NPS", before: "34", after: "56", improvement: "+22" },
+          { metric: "Media coverage", before: "4 articles", after: "19 articles", improvement: "4.7x" },
+        ],
+      },
     ],
     testimonial: {
-      quote: "As first-time founders, we had no experience raising institutional capital. This team guided us through every step of the process—from building our financial model to negotiating term sheets. We raised more than we expected at a better valuation with ideal investors. Worth every penny.",
-      author: "Michael Zhang",
-      position: "Co-Founder & CEO, FinFlow Technologies"
+      quote:
+        "WanderAds seamlessly integrated photography, creators, and advertising. For the first time, we saw hotel content that looked like a fashion editorial while driving real booking data.",
+      author: "Lina Ortega",
+      position: "General Manager, Sunrise Bay Resort",
     },
-    technologies: ["Financial Modeling Tools", "Pitch Deck Software", "Virtual Data Rooms", "Cap Table Management", "Investor CRM"],
-    services: ["Fundraising Advisory", "Financial Modeling", "Valuation Analysis", "Investor Relations", "Due Diligence Support"],
-    nextSteps: "Engaged for ongoing CFO advisory services to support post-fundraising growth phase including hiring finance team, implementing financial systems, and preparing for Series B fundraising in 18-24 months."
+    technologies: [
+      "WanderAds AI Studio",
+      "Creator CRM",
+      "Content Asset Cloud",
+      "Real-time Marketing Dashboard",
+    ],
+    services: [
+      "Travel Content Studio",
+      "Creator/KOL Co-creation",
+      "Full-Funnel Advertising",
+      "AI Copywriting & Asset Scoring",
+    ],
+    nextSteps:
+      "Planning to extend 'Golden Hour' campaign to Tokyo, Phuket, and Maldives in 2025, continuously building membership assets.",
   },
   {
-    slug: "healthcare-compliance-risk",
-    company: "MedCare Systems",
-    industry: "Healthcare Services",
-    challenge: "A healthcare services provider faced regulatory compliance gaps and needed comprehensive risk assessment and internal controls framework to meet evolving regulatory requirements.",
-    solution: "We conducted enterprise-wide risk assessment, designed compliance framework, implemented internal controls, and established ongoing monitoring processes.",
+    slug: "heritage-night-festival",
+    company: "Prague Old Town Tourism Board",
+    industry: "City Tourism Board",
+    challenge:
+      "A historic European city wanted to activate younger demographics through a night festival while preserving cultural heritage, trending on social video platforms, and boosting revenue for old town merchants.",
+    solution:
+      "Created 'Prague Starlit Nights' themed festival, combining immersive light projections, river cruises, AR navigation, and creator check-in routes, with AI-powered data optimization for on-site operations and advertising.",
     results: [
-      { metric: "Compliance Gaps Remediated", value: "23 of 23 identified" },
-      { metric: "Audit Findings", value: "Zero material weaknesses" },
-      { metric: "Risk Score", value: "High → Low risk rating" }
+      { metric: "Weekend Visitors", value: "284K attendees" },
+      { metric: "Night Economy", value: "+3.2x YoY" },
+      { metric: "Online Leads", value: "12,000+ city break inquiries" },
     ],
-    timeline: "9 months",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop&auto=format",
-    overview: "MedCare Systems is a regional healthcare provider requiring comprehensive compliance and risk management framework to address regulatory requirements and operational risks.",
-    clientBackground: "MedCare operates 12 healthcare facilities with $150M annual revenue and 800 employees. Following rapid growth and regulatory changes, the organization identified significant compliance gaps and internal control deficiencies requiring immediate remediation to avoid potential penalties and reputational damage.",
-    detailedChallenge: "Critical challenges included: fragmented compliance processes across facilities with inconsistent application of policies, inadequate documentation of internal controls and compliance activities, limited risk assessment capabilities and enterprise risk visibility, outdated policies and procedures not reflecting current regulations, and insufficient training and awareness of compliance requirements among staff.",
+    timeline: "8 weeks",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1600&h=900&fit=crop&auto=format",
+    overview:
+      "Prague Old Town is famous for its cobblestone squares and riverside heritage, home to 1,400+ independent merchants. The tourism board aimed to boost off-season visits and spending through night tourism.",
+    clientBackground:
+      "Traditional marketing approaches were static with insufficient social media presence. The city wanted to experiment with creator collaborations and technology to attract Gen Z and family audiences.",
+    detailedChallenge:
+      "Needed to transform old town heritage into modern experiences within a limited budget while ensuring crowd flow and safety.\n- Content must balance historical authenticity with contemporary appeal\n- Activity routes need to accommodate families and photography enthusiasts\n- Required real-time monitoring of foot traffic and spending for quick adjustments\n- Multi-department coordination needed clear scripts and rehearsals\n- Post-event needed to establish replicable methodology",
     approach: [
-      "Enterprise risk assessment and gap analysis",
-      "Compliance framework design and implementation",
-      "Internal controls documentation and testing",
-      "Policy and procedure development",
-      "Training program and change management"
+      "Conducted sound, lighting, and storytelling surveys of old town districts, forming 5 night tour routes",
+      "Used projections and interactive installations to recreate heritage memories, creating photo-worthy spots",
+      "Invited 40 creators to form 'Night Hunters' alliance, pre-scouting for co-creation",
+      "AI control center connected cameras and payment data for real-time insights on foot traffic, spending, and sentiment",
+      "Co-created night market menus and co-branded merchandise with local merchants to extend dwell time",
     ],
     implementation: [
       {
-        phase: "Risk Assessment & Gap Analysis",
-        duration: "2 months",
+        phase: "Insights & Route Design",
+        duration: "2 weeks",
         activities: [
-          "Conducted enterprise-wide risk assessment across all facilities",
-          "Identified 23 compliance gaps and control deficiencies",
-          "Assessed current state of policies and procedures",
-          "Interviewed key stakeholders and reviewed documentation",
-          "Prioritized remediation activities by risk level"
-        ]
+          "Surveyed 100 visitors for night tour needs and pain points",
+          "Proposed 5 themed routes: Starlight, Fireworks, Old Lanes, Family, Music",
+          "Mapped immersive installation distribution and visitor flow",
+          "Developed creator scripts and photo spot locations",
+        ],
       },
       {
-        phase: "Framework Design",
-        duration: "2 months",
+        phase: "Content Production & Installation Setup",
+        duration: "3 weeks",
         activities: [
-          "Designed comprehensive compliance management framework",
-          "Developed risk assessment methodology and tools",
-          "Created internal controls documentation standards",
-          "Established governance structure and reporting protocols",
-          "Defined roles and responsibilities across organization"
-        ]
+          "Built waterfront light theater and interactive floating lanterns",
+          "Created AR navigation mini-app and task cards",
+          "Shot night tour themed videos and photo content",
+          "Trained volunteers and merchants on storylines",
+        ],
       },
       {
-        phase: "Implementation & Remediation",
-        duration: "4 months",
+        phase: "Creator Co-creation & Launch",
+        duration: "2 weeks",
         activities: [
-          "Remediated all 23 identified compliance gaps",
-          "Implemented new internal controls across key processes",
-          "Updated 45+ policies and procedures",
-          "Deployed compliance management software",
-          "Established monitoring and testing protocols"
-        ]
+          "Invited creators in batches for experiences with lighting and camera setups",
+          "Livestream rooms featured interactive games and offers",
+          "AI copywriting tools helped creators publish in multiple languages",
+          "Synchronized deployment with OTAs, video platforms, Douyin, Xiaohongshu",
+        ],
       },
       {
-        phase: "Training & Sustainability",
-        duration: "1 month (ongoing)",
+        phase: "Real-time Optimization & Review",
+        duration: "1 week",
         activities: [
-          "Developed comprehensive training curriculum",
-          "Conducted training sessions for 800+ employees",
-          "Created ongoing compliance education program",
-          "Established annual risk assessment cycle",
-          "Implemented continuous improvement process"
-        ]
-      }
+          "Monitored foot traffic, sales, and social heat through data platform",
+          "Dynamically adjusted lighting, routes, and performance times",
+          "Output merchant operation suggestions and co-branded packages",
+          "Created review report and next season planning",
+        ],
+      },
     ],
     outcomes: [
       {
-        category: "Compliance & Risk",
-        description: "Achieved comprehensive compliance with regulatory requirements and significantly reduced enterprise risk profile.",
+        category: "Cultural Impact",
+        description: "Night tour stories trended across platforms, driving old town brand renewal.",
         metrics: [
-          { metric: "Compliance Gaps", before: "23 identified", after: "0 remaining", improvement: "100% remediation" },
-          { metric: "Risk Rating", before: "High risk", after: "Low risk", improvement: "Two-level reduction" },
-          { metric: "Control Testing", before: "Not performed", after: "100% tested annually", improvement: "Ongoing assurance" }
-        ]
+          { metric: "Social heat", before: "1.2M topic views", after: "58M", improvement: "48x" },
+          { metric: "Media coverage", before: "2 outlets", after: "17 outlets", improvement: "8.5x" },
+          { metric: "Travel posts", before: "14/day", after: "188/day", improvement: "13x" },
+        ],
       },
       {
-        category: "Operational Excellence",
-        description: "Improved operational efficiency and standardization through implementation of consistent policies and procedures.",
+        category: "Economic Impact",
+        description: "Night foot traffic and average spend increased significantly, high merchant satisfaction.",
         metrics: [
-          { metric: "Policies & Procedures", before: "Outdated/incomplete", after: "45+ updated documents", improvement: "Current & comprehensive" },
-          { metric: "Process Standardization", before: "Varies by facility", after: "Standardized across 12 sites", improvement: "Consistency achieved" },
-          { metric: "Documentation Quality", before: "Inadequate", after: "Meets audit standards", improvement: "Professional-grade" }
-        ]
+          { metric: "Night visitors", before: "95K", after: "284K", improvement: "+199%" },
+          { metric: "Per capita spend", before: "$12", after: "$23", improvement: "+85%" },
+          { metric: "Merchant participation", before: "230", after: "612", improvement: "+166%" },
+        ],
       },
       {
-        category: "Regulatory Outcomes",
-        description: "Successfully passed external audits with no material findings and strengthened regulatory relationships.",
+        category: "Data Capabilities",
+        description: "Government and merchants gained real-time dashboards, improving decision efficiency.",
         metrics: [
-          { metric: "External Audit Results", before: "3 material weaknesses", after: "0 material weaknesses", improvement: "Clean audit opinion" },
-          { metric: "Regulatory Inquiries", before: "2 pending", after: "Successfully resolved", improvement: "Closed all matters" },
-          { metric: "Staff Compliance Training", before: "45% completion", after: "98% completion", improvement: "53 point increase" }
-        ]
-      }
+          { metric: "Incident response time", before: "30 min", after: "8 min", improvement: "-73%" },
+          { metric: "Data sources integrated", before: "4", after: "17", improvement: "4.25x" },
+          { metric: "Scenario replication", before: "Single event", after: "4 cities", improvement: "New template}" },
+        ],
+      },
     ],
     testimonial: {
-      quote: "The compliance and risk advisory services we received were transformative for our organization. The team not only identified our gaps but worked alongside us to build sustainable solutions. We now have confidence in our compliance posture and strong controls that protect our patients and our business.",
-      author: "Dr. Jennifer Wu",
-      position: "Chief Compliance Officer, MedCare Systems"
+      quote:
+        "Creativity, culture, and data were seamlessly integrated here. We saw young people return to the old town, and local merchants learned to operate night economy digitally.",
+      author: "Viktor Novak",
+      position: "Brand Director, Prague Old Town Tourism Board",
     },
-    technologies: ["Compliance Management Software", "Risk Assessment Tools", "Policy Management Systems", "Training Platforms", "Audit Management"],
-    services: ["Compliance Advisory", "Enterprise Risk Management", "Internal Controls", "Regulatory Compliance", "Training & Education"],
-    nextSteps: "Continuing annual risk assessment engagement and ongoing compliance advisory retainer to maintain compliance framework, monitor regulatory changes, and support expansion into new service lines and geographic markets."
-  }
+    technologies: [
+      "WanderAds Live Monitor",
+      "AR Navigation App",
+      "AI Copywriting Assistant",
+      "Scenario Data Platform",
+    ],
+    services: [
+      "City Integration Strategy",
+      "Content & Installation Design",
+      "Creator Alliance",
+      "AI Data Monitoring",
+    ],
+    nextSteps: "Night tour template will expand to winter 'Fireworks & Hot Springs Festival' and international tours.",
+  },
+  {
+    slug: "skyrail-adventure-livestream",
+    company: "SkyRail Adventure",
+    industry: "Mountain Scenic Railway",
+    challenge:
+      "A mountain scenic railway launching new panoramic glass carriages and travel photography services needed livestreaming and creator partnerships to attract young backpackers and improve weekday occupancy rates.",
+    solution:
+      "Launched 'Alpine Trails' livestream season, combining FPV perspectives, creator co-creation, AI asset scoring, and OTA integration to make the train journey a social media phenomenon.",
+    results: [
+      { metric: "Livestream Views", value: "9.6M+" },
+      { metric: "Weekday Occupancy", value: "45% → 87%" },
+      { metric: "Merchandise Sales", value: "+310%" },
+    ],
+    timeline: "5 weeks",
+    image: "https://images.unsplash.com/photo-1470246973918-29a93221c455?w=1600&h=900&fit=crop&auto=format",
+    overview:
+      "SkyRail Adventure is a 54km mountain scenic railway traversing cloud seas, valleys, and alpine villages, offering a 'slow travel' experience through the Swiss Alps.",
+    clientBackground:
+      "After launching premium carriages with 30% price increase, market awareness was insufficient. Team lacked livestreaming and content experience, requiring external support.",
+    detailedChallenge:
+      "Moving train had unstable signals and filming challenges requiring safety considerations; needed to prove content could directly drive ticket sales.\n- Required portable livestreaming system\n- Travel content must be delivered to channels within 24 hours\n- Partner creators must align with brand tone\n- OTA listing needed to coordinate with early bird/journey products\n- Data needed to feedback to scheduling and customer service",
+    approach: [
+      "Built mobile 5G outdoor livestreaming system, combining on-board and route-side camera positions",
+      "Co-created with 12 outdoor and tech creators, providing exclusive routes and scripts",
+      "AI asset scoring system real-time identifies best shots to guide secondary editing",
+      "OTA, video platforms, and Douyin synchronized sales, bundling new packages with commemorative merchandise",
+      "Used journey data to monitor ticket buyer demographics and dynamic pricing",
+    ],
+    implementation: [
+      {
+        phase: "Script & Technical Rehearsal",
+        duration: "1 week",
+        activities: [
+          "On-site route survey, recording key scenic timepoints",
+          "Deployed 5G relay and drone no-fly zone plans",
+          "Wrote livestream and creator scripts, clarified CTAs",
+          "Coordinated with OTAs on inventory and promotional strategies",
+        ],
+      },
+      {
+        phase: "Travel Photography Production",
+        duration: "1 week",
+        activities: [
+          "Shot multi-angle footage of interiors, route, camps, and stops",
+          "Used AI tools to auto-generate covers, subtitles, titles",
+          "Built asset library for brands and creators to use quickly",
+        ],
+      },
+      {
+        phase: "Livestream Season & Creator Co-creation",
+        duration: "2 weeks",
+        activities: [
+          "Arranged 6 cross-platform livestreams combining aerial + window perspectives",
+          "Creators relayed at different stops, showcasing camping, coffee, craft experiences",
+          "AI monitored comments and conversions, timely guided ticket and merchandise purchases",
+        ],
+      },
+      {
+        phase: "Review & Product Optimization",
+        duration: "1 week",
+        activities: [
+          "Output audience personas, popular routes, dwell preferences",
+          "Launched weekday-exclusive carriages and family-specific trains",
+          "Trained internal team to use AI tools and livestream SOPs",
+        ],
+      },
+    ],
+    outcomes: [
+      {
+        category: "Exposure & Reach",
+        description: "Train journey became popular content theme, continuously attracting user-generated content.",
+        metrics: [
+          { metric: "Livestream views", before: "0", after: "9.6M", improvement: "New channel" },
+          { metric: "UGC volume", before: "18/day", after: "240/day", improvement: "13x" },
+          { metric: "Follower growth", before: "3K/month", after: "48K/month", improvement: "16x" },
+        ],
+      },
+      {
+        category: "Revenue Performance",
+        description: "Weekday trains and merchandise sales significantly improved.",
+        metrics: [
+          { metric: "Weekday occupancy", before: "45%", after: "87%", improvement: "+42pt" },
+          { metric: "Premium carriage share", before: "12%", after: "34%", improvement: "+22pt" },
+          { metric: "Merchandise sales", before: "$26K", after: "$105K", improvement: "+310%" },
+        ],
+      },
+      {
+        category: "Operational Capabilities",
+        description: "Team mastered livestreaming and AI tools, capable of independent replication.",
+        metrics: [
+          { metric: "Asset delivery time", before: "72 hours", after: "18 hours", improvement: "-75%" },
+          { metric: "Internal livestream events", before: "0", after: "4/quarter", improvement: "New norm" },
+          { metric: "OTA conversion rate", before: "1.8%", after: "4.6%", improvement: "+2.8pt" },
+        ],
+      },
+    ],
+    testimonial: {
+      quote:
+        "They made complex mountain livestreaming as controllable as building blocks. AI tools let us use data to guide routes, pricing, and content for the first time.",
+      author: "Marco Schmidt",
+      position: "Marketing Director · SkyRail Adventure",
+    },
+    technologies: [
+      "Mobile 5G Livestream Pod",
+      "WanderAds AI Studio",
+      "OTA Data API",
+      "Creator Collaboration Kit",
+    ],
+    services: [
+      "Content & Livestream Production",
+      "Creator Network Management",
+      "Full-Funnel Deployment Strategy",
+      "AI Data Insights",
+    ],
+    nextSteps: "Planning to launch ski-themed trains in winter, extending more experience products.",
+  },
+  {
+    slug: "island-tourism-board-ai-hub",
+    company: "Coral Isles Tourism Board",
+    industry: "National Tourism Organization",
+    challenge:
+      "Coral Isles wanted to build an AI marketing hub covering Southeast Asia and key international markets, unifying content, creators, and media resources while training internal teams to enable year-round campaign coordination.",
+    solution:
+      "Built WanderAds Destination Lab, including data platform, AI copywriting and asset scoring, creator CRM, and multilingual content production line, supported by quarterly co-creation workshops and on-ground events.",
+    results: [
+      { metric: "Market Coordination", value: "6 markets unified launch" },
+      { metric: "Potential Leads", value: "34K+ brand inquiries" },
+      { metric: "Media Efficiency", value: "+42% ROI" },
+    ],
+    timeline: "12 weeks",
+    image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=1600&h=900&fit=crop&auto=format",
+    overview:
+      "Coral Isles is an emerging island destination with 8 major islands and 120 luxury hotels, needing to rapidly build international recognition in the post-pandemic phase.",
+    clientBackground:
+      "Team spread across Jakarta, Singapore, Shanghai, and Sydney, using different agencies and tools with inconsistent content and no data sharing, affecting efficiency and brand consistency.",
+    detailedChallenge:
+      "Needed to build a unified marketing operating system in a short time, serving both brand teams and hotel/attraction partners.\n- Lacked unified content guidelines and asset center\n- Creator collaborations were fragmented without performance data\n- Media budgets dispersed, unable to adjust in real-time\n- Needed to deliver visualization reports to government level\n- Simultaneously needed to train internal team to master new tools",
+    approach: [
+      "Built Destination Lab data platform, integrating OTA, social, CRM, and media data",
+      "Deployed AI copywriting, asset scoring, ad recommendations and other tools, supporting multilingual output",
+      "Established global creator library and collaboration workflow, providing content templates and benefits system",
+      "Ran quarterly campaigns: island residency photography, diving season, New Year island-hopping carnival, etc.",
+      "Designed capability training program to ensure internal team can operate independently",
+    ],
+    implementation: [
+      {
+        phase: "Baseline Assessment",
+        duration: "2 weeks",
+        activities: [
+          "Surveyed content, media, and data assets across 4 markets",
+          "Defined KPIs, data metric standards, and security requirements",
+          "Mapped partner hotel/attraction assets and benefits",
+        ],
+      },
+      {
+        phase: "Destination Lab Setup",
+        duration: "4 weeks",
+        activities: [
+          "Deployed data platform and AI Studio, integrated 12 data sources",
+          "Built asset library and multilingual templates",
+          "Developed creator CRM to track performance and rights",
+        ],
+      },
+      {
+        phase: "First Campaign Launch",
+        duration: "4 weeks",
+        activities: [
+          "Ran '72-Hour Island Stay' theme, inviting 24 creators",
+          "Multilingual media mix: Douyin, Xiaohongshu, TikTok, YouTube, Meta",
+          "AI deployment console real-time optimized budget and targeting",
+        ],
+      },
+      {
+        phase: "Training & Handover",
+        duration: "2 weeks",
+        activities: [
+          "Designed 6 training sessions covering AI tools, content SOPs, data interpretation",
+          "Co-created annual event calendar with hotel partners",
+          "Output governance handbook and KPI dashboard templates",
+        ],
+      },
+    ],
+    outcomes: [
+      {
+        category: "Coordination Efficiency",
+        description: "Cross-market content and media launched in same week, saving significant communication costs.",
+        metrics: [
+          { metric: "Asset reuse rate", before: "18%", after: "71%", improvement: "+53pt" },
+          { metric: "Approval cycle", before: "10 days", after: "3 days", improvement: "-70%" },
+          { metric: "Creator response", before: "7 days", after: "36 hours", improvement: "-78%" },
+        ],
+      },
+      {
+        category: "Conversion Performance",
+        description: "AI-driven media strategy delivered higher ROI and leads.",
+        metrics: [
+          { metric: "Overall ROI", before: "1.8", after: "2.56", improvement: "+42%" },
+          { metric: "Brand inquiries", before: "8.4K", after: "34K", improvement: "4x" },
+          { metric: "Hotel package sales", before: "$1.7M", after: "$2.8M", improvement: "+62%" },
+        ],
+      },
+      {
+        category: "Organizational Capability",
+        description: "Team mastered tools and SOPs, capable of running next season independently.",
+        metrics: [
+          { metric: "Internal active users", before: "0", after: "68", improvement: "Full adoption" },
+          { metric: "Training satisfaction", before: "-", after: "4.8/5", improvement: "New metric" },
+          { metric: "Partner hotel participation", before: "25%", after: "64%", improvement: "+39pt" },
+        ],
+      },
+    ],
+    testimonial: {
+      quote:
+        "Destination Lab gave us our own marketing operating system. AI tools and creator network brought our global team into the same rhythm.",
+      author: "Patricia Gomez",
+      position: "VP Marketing · Coral Isles Tourism Board",
+    },
+    technologies: [
+      "Destination Lab Data Platform",
+      "WanderAds AI Studio",
+      "Creator CRM",
+      "Media Intelligence Dashboard",
+    ],
+    services: [
+      "Integration Strategy Consulting",
+      "AI Tool Deployment",
+      "Content & Creator Management",
+      "Full-Funnel Campaign Operations",
+    ],
+    nextSteps:
+      "Planning to extend Destination Lab to local hotels and experience providers, forming island business alliance.",
+  },
 ];
-
-export function getCaseStudyBySlug(slug: string): CaseStudy | undefined {
-  return caseStudies.find((study) => study.slug === slug);
-}
-
-export function getFeaturedCaseStudies(): CaseStudy[] {
-  return caseStudies.slice(0, 3);
-}
 
 export function getAllCaseStudies(): CaseStudy[] {
   return caseStudies;
+}
+
+export function getCaseStudyBySlug(slug: string): CaseStudy | undefined {
+  return caseStudies.find((study) => study.slug === slug);
 }

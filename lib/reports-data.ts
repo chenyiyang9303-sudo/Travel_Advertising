@@ -5,7 +5,7 @@ export interface Report {
   description: string;
   publishDate: string;
   readTime: string;
-  category: "market-analysis" | "financial-strategy" | "risk-management" | "compliance";
+  category: "destination-insight" | "creator-strategy" | "ai-innovation";
   featured: boolean;
   downloadUrl?: string;
   previewPages: number;
@@ -30,167 +30,148 @@ export interface Report {
 
 export const reportCategories = [
   { value: "all", label: "All Reports" },
-  { value: "market-analysis", label: "Market Analysis" },
-  { value: "financial-strategy", label: "Financial Strategy" },
-  { value: "risk-management", label: "Risk Management" },
-  { value: "compliance", label: "Compliance" },
+  { value: "destination-insight", label: "Destination Insights" },
+  { value: "creator-strategy", label: "Creator/Content Strategy" },
+  { value: "ai-innovation", label: "AI & Digital Innovation" },
 ];
 
 const reports: Report[] = [
   {
-    id: "institutional-asset-allocation-2025",
-    title: "Institutional Asset Allocation Outlook 2025",
-    subtitle: "Strategic Positioning Across Public and Private Markets",
+    id: "apac-travel-content-radar-2025",
+    title: "APAC Travel Content Radar 2025",
+    subtitle: "Asian Traveler Content Preferences & Channel Conversion Research",
     description:
-      "A forward-looking assessment of how pensions, insurers, and endowments are recalibrating allocations, liquidity frameworks, and governance in a higher-rate regime.",
-    publishDate: "2024-12-15",
-    readTime: "30 min",
-    category: "market-analysis",
+      "Analyzing content consumption behavior of 12,000 travelers across China, Southeast Asia, Japan, and Korea, dissecting narrative approaches and conversion strategies for travel brands across different channels in 2025.",
+    publishDate: "2025-01-15",
+    readTime: "32 min",
+    category: "destination-insight",
     featured: true,
-    downloadUrl: "/reports/institutional-asset-allocation-2025.pdf",
-    previewPages: 12,
-    fileSize: "3.6 MB",
+    downloadUrl: "/reports/apac-travel-content-radar-2025.pdf",
+    previewPages: 14,
+    fileSize: "4.1 MB",
     author: {
-      name: "田俊 (Jun Tian)",
-      title: "Founder & CEO",
+      name: "Jing Wang",
+      title: "Head of Destination Strategy",
       avatar: "/avatars/liao-zhihua.svg",
     },
-    tags: [
-      "Asset Allocation",
-      "Institutional Investing",
-      "Portfolio Strategy",
-      "Market Outlook",
-    ],
+    tags: ["Destination", "Content", "APAC", "Traveler Insight"],
     coverImage:
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1600&h=900&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?w=1600&h=900&fit=crop&auto=format",
     excerpt:
-      "More than 70% of surveyed CIOs anticipate reallocating at least 5% of portfolio weight during 2025, with private credit, infrastructure, and short-duration fixed income seeing the largest net inflows.",
+      "87% of respondents stated that 'experiential feel' is key to whether they search for more information about a destination, while multilingual short videos have 2.7x the click-through rate of pure text.",
     keyFindings: [
-      "Funding-ratio volatility is driving a 9% average increase in liability-aware fixed income allocations.",
-      "Private credit commitments are poised to expand by $210B globally as institutions seek floating-rate income.",
-      "Infrastructure equity remains a preferred inflation hedge, with 62% of CIOs targeting energy transition assets.",
-      "Governance enhancements—faster decision rights, scenario analytics, and centralized risk dashboards—are cited as critical enablers of agility.",
+      "Chinese and Southeast Asian travelers differ in social media inspiration sources: the former prefer creator perspectives, the latter favor official brand content.",
+      "Adding interactive nodes (polls, route choices) to travel content increases sharing rates by 38%.",
+      "Night experiences and nature healing content are growing fastest in 2025, with average saves 1.9x higher than traditional attractions.",
+      "Multilingual subtitles and AI-generated covers increase overseas viewer watch time by 42%.",
     ],
     tableOfContents: [
       { section: "Executive Summary", page: 4 },
-      { section: "Macroeconomic Baseline & Scenarios", page: 9 },
-      { section: "Allocation Shifts by Investor Segment", page: 18 },
-      { section: "Private Markets Outlook", page: 28 },
-      { section: "Liquidity and Risk Governance", page: 36 },
-      { section: "Implementation Playbooks", page: 46 },
-      { section: "Implications & Action Checklist", page: 56 },
+      { section: "Traveler Sample & Methodology", page: 8 },
+      { section: "Top Performing Narratives", page: 14 },
+      { section: "Channel Deep Dive", page: 22 },
+      { section: "Conversion Benchmarks", page: 30 },
+      { section: "Action Playbooks", page: 40 },
     ],
     methodology:
-      "Findings draw on a proprietary survey of 160 global CIOs, analysis of custodial allocation data representing $2.4T in AUM, and scenario modelling using RSFM's macroeconomic toolkit.",
+      "Combining 12,000 consumer surveys, 45 destination project datasets, social media and OTA interaction logs, and WanderAds internal experiments.",
     dataSource:
-      "RSFM Research, Bloomberg, MSCI, Preqin, public filings, interview transcripts.",
+      "WanderAds Destination Lab, Douyin, Xiaohongshu, TikTok, YouTube, Ctrip, Klook, Trip.com user research.",
     relatedReports: [
-      "global-liquidity-risk-benchmark-2025",
-      "private-markets-operations-survey-2025",
+      "creator-commerce-benchmark-2024",
+      "ai-media-orchestration-guide",
     ],
   },
   {
-    id: "global-liquidity-risk-benchmark-2025",
-    title: "Global Liquidity Risk Benchmark 2025",
-    subtitle: "Treasury Governance, Stress Testing, and Funding Diversification",
+    id: "creator-commerce-benchmark-2024",
+    title: "Creator Commerce Benchmark 2024",
+    subtitle: "50 Key Metrics for Creator Networks & Livestream Conversion",
     description:
-      "Benchmarking study covering 120 multinational treasuries, highlighting leading practices across stress testing, counterparty management, and funding architecture in a higher-for-longer rate cycle.",
-    publishDate: "2024-11-22",
-    readTime: "26 min",
-    category: "risk-management",
+      "Analyzing 210 travel livestreams and 680+ creator partnership projects, revealing how content structure, promotional strategy, and product mix design impact conversion.",
+    publishDate: "2024-12-05",
+    readTime: "28 min",
+    category: "creator-strategy",
     featured: true,
-    downloadUrl: "/reports/global-liquidity-risk-benchmark-2025.pdf",
-    previewPages: 10,
-    fileSize: "2.9 MB",
+    downloadUrl: "/reports/creator-commerce-benchmark-2024.pdf",
+    previewPages: 12,
+    fileSize: "3.2 MB",
     author: {
-      name: "韩思远 (Siyuan Han)",
-      title: "Chief Financial Architect",
-      avatar: "/avatars/lin-zhihua.svg",
-    },
-    tags: [
-      "Liquidity Risk",
-      "Treasury",
-      "Stress Testing",
-      "Funding Strategy",
-    ],
-    coverImage:
-      "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?w=1600&h=900&fit=crop&auto=format",
-    excerpt:
-      "Leading treasuries have doubled the frequency of liquidity scenario analysis since 2022, and 58% maintain pre-negotiated contingent facilities to bridge market dislocations.",
-    keyFindings: [
-      "Organisations with dedicated liquidity councils executed mitigation actions 35% faster during stress events.",
-      "Top-quartile performers maintain at least five committed funding sources and actively monitor counterparty CDS spreads.",
-      "Technology-enabled treasury workbenches reduce scenario modelling time by 45% on average.",
-      "Formalised communication playbooks significantly enhance stakeholder confidence during liquidity events.",
-    ],
-    tableOfContents: [
-      { section: "Executive Briefing", page: 5 },
-      { section: "Methodology & Participant Profile", page: 11 },
-      { section: "Stress Testing Architecture", page: 17 },
-      { section: "Funding Diversification Benchmarks", page: 27 },
-      { section: "Counterparty Risk Governance", page: 35 },
-      { section: "Technology Enablement", page: 43 },
-      { section: "Action Framework", page: 52 },
-    ],
-    methodology:
-      "Survey responses from Fortune 1000 and FTSE 350 treasuries, supplemented with RSFM client benchmarks and liquidity incident post-mortems conducted between 2022-2024.",
-    dataSource:
-      "RSFM Treasury Pulse Survey, company filings, rating agency research, industry roundtables.",
-    relatedReports: [
-      "institutional-asset-allocation-2025",
-      "private-markets-operations-survey-2025",
-    ],
-  },
-  {
-    id: "private-markets-operations-survey-2025",
-    title: "Private Markets Operations Survey 2025",
-    subtitle: "Control Readiness, Valuation Governance, and Regulatory Compliance",
-    description:
-      "Operational deep dive into how private equity and private credit managers are institutionalising middle- and back-office capabilities ahead of emerging regulatory requirements.",
-    publishDate: "2024-10-18",
-    readTime: "24 min",
-    category: "compliance",
-    featured: false,
-    downloadUrl: "/reports/private-markets-operations-survey-2025.pdf",
-    previewPages: 9,
-    fileSize: "2.4 MB",
-    author: {
-      name: "黎语彤 (Yutong Li)",
-      title: "Capital Markets & Insights Director",
+      name: "Yuki Yamada",
+      title: "Creator Partnership Director",
       avatar: "/avatars/chen-jiayin.svg",
     },
-    tags: [
-      "Private Equity",
-      "Operational Excellence",
-      "Compliance",
-      "Valuation Governance",
-    ],
+    tags: ["Creators", "Livestream", "Commerce"],
     coverImage:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600&h=900&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1500534318100-b3b5c98b36c9?w=1600&h=900&fit=crop&auto=format",
     excerpt:
-      "88% of surveyed GPs initiated control enhancement programmes in the past 18 months, with valuation committees, data lineage mapping, and cyber resilience emerging as priority agenda items.",
+      "In travel livestreams, sessions with 'journey milestone interactions' achieve 6.4% average conversion, 1.7x higher than standard streams; dual-creator relay formats reach 78% completion rates.",
     keyFindings: [
-      "Managers with independent valuation committees report 40% fewer audit adjustments.",
-      "Data lineage documentation is now a requirement for 63% of institutional LP due diligence processes.",
-      "Cyber incident response tabletop exercises are conducted at least semi-annually by leading managers.",
-      "Regulatory filings automation delivers a 32% reduction in cycle time for quarterly reporting obligations.",
+      "Scripts with warm-up + climax + full CTA increase watch time by 22%",
+      "Bundle offers (tickets + hotel + night tour) generate 3.4x higher GMV than single-item deals",
+      "Short videos published during livestreams contribute 18% of secondary conversions",
+      "Creator CRM data accumulation improves repeat campaign efficiency by 46%",
     ],
     tableOfContents: [
-      { section: "Survey Overview", page: 6 },
-      { section: "Valuation Governance Trends", page: 14 },
-      { section: "Operational Control Enhancements", page: 22 },
-      { section: "Data & Technology Enablement", page: 30 },
-      { section: "Regulatory Landscape Update", page: 38 },
-      { section: "LP Transparency Expectations", page: 46 },
-      { section: "Operational Uplift Roadmap", page: 54 },
+      { section: "Creator Landscape", page: 5 },
+      { section: "Livestream Script Patterns", page: 12 },
+      { section: "Offer & Bundle Playbooks", page: 20 },
+      { section: "Creator CRM Metrics", page: 30 },
+      { section: "Case Studies", page: 38 },
+      { section: "Implementation Checklist", page: 48 },
     ],
     methodology:
-      "Survey of 95 private equity and private credit COOs, complemented by 30 qualitative interviews with LP operational due diligence teams and analysis of regulatory guidance in North America, Europe, and APAC.",
+      "Sampled from WanderAds 2023-2024 livestream and creator projects, combined with platform API data and survey interviews.",
     dataSource:
-      "RSFM Private Markets Practice, ILPA publications, SEC & ESMA rulemaking, industry working groups.",
+      "WanderAds Creator CRM, Douyin/Kuaishou livestream backends, TikTok Shop, OTA partnership data.",
     relatedReports: [
-      "institutional-asset-allocation-2025",
-      "global-liquidity-risk-benchmark-2025",
+      "apac-travel-content-radar-2025",
+      "ai-media-orchestration-guide",
+    ],
+  },
+  {
+    id: "ai-media-orchestration-guide",
+    title: "AI Media Orchestration Guide",
+    subtitle: "Budget Allocation, Asset Scoring & Automated Recommendations for Travel Brands",
+    description:
+      "Detailed guide on how WanderAds AI Studio helps destinations, hotels, and airlines allocate budgets in real-time, evaluate creative performance, and auto-generate optimization recommendations across multi-channel campaigns.",
+    publishDate: "2024-10-22",
+    readTime: "26 min",
+    category: "ai-innovation",
+    featured: false,
+    downloadUrl: "/reports/ai-media-orchestration-guide.pdf",
+    previewPages: 10,
+    fileSize: "2.7 MB",
+    author: {
+      name: "Marco Chen",
+      title: "AI Product Lead",
+      avatar: "/avatars/lin-zhihua.svg",
+    },
+    tags: ["AI Studio", "Media", "Automation"],
+    coverImage:
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1600&h=900&fit=crop&auto=format",
+    excerpt:
+      "After deploying AI Studio, brands save 37% of creative testing time on average, increase ROI by 42%, and achieve cross-channel budget reallocation within 6 hours.",
+    keyFindings: [
+      "Asset scoring models predict final performance after 200 impressions, providing adjustment recommendations 12 hours in advance",
+      "Budget reallocation following 'experience stage' priority (inspiration → planning → booking) yields best results",
+      "Destination brands using AI Studio improve cross-market coordination efficiency by 63%",
+      "Integrating with OTA data reduces remarketing costs by 28%",
+    ],
+    tableOfContents: [
+      { section: "Why Orchestration Matters", page: 4 },
+      { section: "AI Studio Architecture", page: 10 },
+      { section: "Creative Intelligence", page: 18 },
+      { section: "Budget Automation", page: 26 },
+      { section: "Case Playbooks", page: 34 },
+      { section: "Governance & Training", page: 40 },
+    ],
+    methodology:
+      "Based on AI Studio usage data from 60 travel brands, 40 in-person interviews, and 15 online workshops.",
+    dataSource:
+      "WanderAds AI Studio, Meta/TikTok/Bytedance API, OTA transaction data, client interviews.",
+    relatedReports: [
+      "apac-travel-content-radar-2025",
+      "creator-commerce-benchmark-2024",
     ],
   },
 ];
@@ -199,19 +180,18 @@ export function getAllReports(): Report[] {
   return reports;
 }
 
-export function getFeaturedReports(): Report[] {
-  return reports.filter((report) => report.featured);
-}
-
 export function getReportById(id: string): Report | undefined {
   return reports.find((report) => report.id === id);
+}
+
+export function getFeaturedReports(): Report[] {
+  return reports.filter((report) => report.featured);
 }
 
 export function getRelatedReports(id: string): Report[] {
   const currentReport = getReportById(id);
   if (!currentReport) return [];
-
   return reports.filter((report) =>
-    currentReport.relatedReports.includes(report.id)
+    report.id !== id && currentReport.relatedReports.includes(report.id)
   );
 }

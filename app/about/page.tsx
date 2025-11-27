@@ -196,7 +196,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "田俊 (Jun Tian)",
+                name: "Jun Tian",
                 role: "Founder & CEO",
                 expertise: "Strategic Finance, Capital Markets & Corporate Development",
                 bio: "Founder of RSFM with 15+ years guiding board-level finance transformations, cross-border M&A, and capital market readiness.",
@@ -204,7 +204,7 @@ export default function AboutPage() {
                 email: "jun.tian@radiantsoaringfm.com"
               },
               {
-                name: "韩思远 (Siyuan Han)",
+                name: "Siyuan Han",
                 role: "Chief Financial Architect",
                 expertise: "Treasury Modernisation & Risk Governance",
                 bio: "Former global treasurer who designs liquidity control towers, stress testing frameworks, and funding diversification playbooks for multinational clients.",
@@ -212,7 +212,7 @@ export default function AboutPage() {
                 email: "siyuan.han@radiantsoaringfm.com"
               },
               {
-                name: "黎语彤 (Yutong Li)",
+                name: "Yutong Li",
                 role: "Capital Markets & Insights Director",
                 expertise: "Capital Raise Readiness & Investor Communications",
                 bio: "Capital markets strategist specialising in investor-grade storytelling, diligence readiness, and research programs that translate data into decisive action.",

@@ -16,12 +16,14 @@ import { useCalEmbed } from "@/app/hooks/useCalEmbed";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
-  { name: "Solutions", link: "/#services" },
-  { name: "Casework", link: "/#case-studies" },
-  { name: "Insights", link: "/blog" },
-  { name: "Reports", link: "/reports" },
-  { name: "The Firm", link: "/about" },
-  { name: "Contact", link: "/#contact" },
+  { name: "Home", link: "/" },
+  { name: "Services", link: "/#services" },
+  { name: "Solutions", link: "/#process" },
+  { name: "Case Studies", link: "/#case-studies" },
+  { name: "Pricing", link: "/#pricing" },
+  { name: "AI Tools", link: "/#ai-tools" },
+  { name: "Blog", link: "/blog" },
+  { name: "About Us", link: "/about" },
 ];
 
 export const Navbar = () => {
@@ -52,18 +54,28 @@ const DesktopNav = ({ visible }: { visible: boolean }) => {
       }}
       transition={{ type: "spring", stiffness: 200, damping: 40 }}
       className={cn(
-        "hidden lg:flex items-center justify-between px-6 py-4 mx-auto max-w-6xl rounded-full transition-colors duration-300 border border-transparent",
-        visible ? "bg-black/82 border border-white/10 shadow-soft" : "bg-transparent"
+        "hidden lg:flex items-center justify-between px-6 py-4 mx-auto max-w-6xl rounded-full transition-colors duration-300 border",
+        visible
+          ? "bg-white/90 text-[#1c1c1c] border-white/60 shadow-[0_20px_60px_rgba(15,25,45,0.08)]"
+          : "bg-white/5 text-white border-white/10"
       )}
     >
-      <Logo showText={false} />
+      <Logo showText />
 
-      <nav className="flex items-center gap-1 text-xs font-semibold uppercase tracking-[0.35em] text-white/65">
+      <nav
+        className={cn(
+          "flex items-center gap-1 text-[0.65rem] font-semibold uppercase tracking-[0.3em]",
+          visible ? "text-[#6e6e6e]" : "text-white/80"
+        )}
+      >
         {NAV_ITEMS.map((item, idx) => (
           <Link
             key={item.name}
             href={item.link}
-            className="relative px-4 py-2 transition-colors duration-200 hover:text-primary-300"
+            className={cn(
+              "relative px-4 py-2 transition-colors duration-200",
+              visible ? "hover:text-primary-500" : "hover:text-white"
+            )}
             onMouseEnter={() => setHovered(idx)}
             onMouseLeave={() => setHovered(null)}
           >
@@ -90,7 +102,7 @@ const DesktopNav = ({ visible }: { visible: boolean }) => {
           data-cal-config={`{"layout":"${calConfig.layout}"}`}
           className="hidden md:inline-flex"
         >
-          <span>Book A Call</span>
+          <span>Get Started</span>
         </Button>
       </div>
     </motion.div>
@@ -110,12 +122,19 @@ const MobileNav = ({ visible }: { visible: boolean }) => {
       transition={{ type: "spring", stiffness: 200, damping: 40 }}
       className={cn(
         "relative mx-auto flex w-[calc(100%-1.5rem)] items-center justify-between rounded-full px-4 py-3 lg:hidden",
-        visible || open ? "bg-black/85 border border-white/12 shadow-soft" : "bg-transparent"
+        visible || open
+          ? "bg-white/95 border border-white/60 shadow-[0_15px_50px_rgba(15,25,45,0.12)]"
+          : "bg-white/10 text-white"
       )}
     >
-      <Logo showText={false} />
+      <Logo showText />
       <button
-        className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white"
+        className={cn(
+          "flex h-10 w-10 items-center justify-center rounded-full border",
+          visible || open
+            ? "border-[#ece3d9] text-[#1f1f1f]"
+            : "border-white/30 text-white"
+        )}
         onClick={() => setOpen((prev) => !prev)}
         aria-label="Toggle navigation"
       >
@@ -129,14 +148,14 @@ const MobileNav = ({ visible }: { visible: boolean }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ type: "spring", stiffness: 240, damping: 30 }}
-            className="absolute top-16 left-0 right-0 mx-auto flex w-full flex-col gap-4 rounded-3xl border border-white/12 bg-black/92 px-5 py-8 shadow-soft backdrop-blur-xl"
+            className="absolute top-16 left-0 right-0 mx-auto flex w-full flex-col gap-4 rounded-3xl border border-white px-5 py-8 shadow-soft backdrop-blur-xl bg-white/95 text-[#1f1f1f]"
           >
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.name}
                 href={item.link}
                 onClick={() => setOpen(false)}
-                className="text-sm font-semibold uppercase tracking-[0.4em] text-white/70 transition-colors duration-200 hover:text-primary-300"
+                className="text-sm font-semibold uppercase tracking-[0.35em] text-[#6e6e6e] transition-colors duration-200 hover:text-primary-500"
               >
                 {item.name}
               </Link>
@@ -152,17 +171,17 @@ const MobileNav = ({ visible }: { visible: boolean }) => {
                 className="w-full"
                 onClick={() => setOpen(false)}
               >
-                <span>Book A Call</span>
+                <span>Get Started</span>
               </Button>
 
               <Button
                 as={Link}
-                href="/reports"
+                href="/case-studies"
                 variant="secondary"
                 className="w-full"
                 onClick={() => setOpen(false)}
               >
-                <span>View Research</span>
+                <span>View Cases</span>
               </Button>
             </div>
           </motion.div>

@@ -14,11 +14,11 @@ interface ReportCardProps {
   className?: string;
 }
 
-export function ReportCard({ 
-  report, 
-  variant = 'standard', 
-  showExcerpt = true, 
-  className = '' 
+export function ReportCard({
+  report,
+  variant = 'standard',
+  showExcerpt = true,
+  className = ''
 }: ReportCardProps) {
   const coverVariants = ['hexagon', 'wave', 'circle', 'diamond', 'organic'] as const;
   const gradients = [
@@ -28,7 +28,7 @@ export function ReportCard({
     'from-primary-500 to-rose-400',
     'from-neutral-900 to-primary-500'
   ];
-  
+
   const variantIndex = Math.abs(report.id.split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % coverVariants.length;
   const gradientIndex = Math.abs(report.id.split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % gradients.length;
 
@@ -213,7 +213,7 @@ function FeaturedReportCard({
   );
 }
 
-// 专门用于相关报告的紧凑版本
+// Compact version specifically for related reports
 export function RelatedReportCard({ report }: { report: Report }) {
   const coverVariants = ['hexagon', 'wave', 'circle', 'diamond', 'organic'] as const;
   const gradients = [
@@ -223,7 +223,7 @@ export function RelatedReportCard({ report }: { report: Report }) {
     'from-primary-500 to-rose-400',
     'from-neutral-900 to-primary-500'
   ];
-  
+
   const variantIndex = Math.abs(report.id.split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % coverVariants.length;
   const gradientIndex = Math.abs(report.id.split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % gradients.length;
 

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { IconCheck, IconPlus } from "@tabler/icons-react";
+import { IconCheck } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { Button } from "./button";
 
@@ -26,58 +26,59 @@ export type Plan = {
 const plans: Array<Plan> = [
   {
     id: plan.hobby,
-    name: "Hobby",
-    price: 99,
-    subText: "/month",
-    currency: "$",
+    name: "Launch Sprint",
+    price: 68000,
+    subText: "/ Campaign starting from",
+    currency: "¥",
     features: [
-      "Access to basic analytics reports",
-      "Up to 10,000 data points per month",
-      "Email support",
-      "Community forum access",
-      "Cancel anytime",
+      "2-day travel shoot + aerial footage",
+      "Creator/media lite collaboration",
+      "AI copywriting & asset workflows",
+      "Ad strategy & 14-day management",
+      "Campaign review report",
     ],
-    buttonText: "Get Hobby",
+    buttonText: "Get Proposal",
     onClick: () => {
-      console.log("Get Hobby");
+      window.location.href = "/contact";
     },
   },
   {
     id: plan.starter,
-    name: "Starter",
-    price: 299,
-    subText: "/month",
-    currency: "$",
+    name: "Growth Retainer",
+    price: 180000,
+    subText: "/ month",
+    currency: "¥",
     featured: true,
     features: [
-      "Advanced analytics dashboard",
-      "Customizable reports and charts",
-      "Real-time data tracking",
-      "Integration with third-party tools",
+      "Magazine-quality travel content + multilingual editing",
+      "Creator network + livestream synergy",
+      "Omni-channel advertising & data dashboard",
+      "Full AI tools suite license",
+      "Weekly co-creation meetings & on-site event support",
     ],
-    buttonText: "Get Starter",
-    additionalFeatures: ["Everything in Hobby Plan"],
+    buttonText: "Reserve Spot",
+    additionalFeatures: ["Includes all Launch Sprint deliverables"],
     onClick: () => {
-      console.log("Get Starter");
+      window.location.href = "/contact";
     },
   },
   {
     id: plan.pro,
-    name: "Pro",
-    price: 1490,
-    subText: "/month",
-    currency: "$",
+    name: "Destination Lab",
+    price: "Custom",
+    subText: "",
+    currency: "",
     features: [
-      "Unlimited data storage",
-      "Customizable dashboards",
-      "Advanced data segmentation",
-      "Real-time data processing",
-      "AI-powered insights and recommendations",
+      "City/regional integrated marketing strategy",
+      "Immersive installations + offline activations",
+      "International market localization & PR",
+      "Long-term private domain/membership operations",
+      "Data platform & training programs",
     ],
-    additionalFeatures: ["Everything in Hobby Plan", "Everything in Pro Plan"],
-    buttonText: "Get Pro",
+    additionalFeatures: ["Includes all Growth Retainer deliverables", "Dedicated on-site team"],
+    buttonText: "Contact Team",
     onClick: () => {
-      console.log("Get Pro");
+      window.location.href = "/contact";
     },
   },
 ];
@@ -86,29 +87,27 @@ export function Pricing() {
   return (
     <div
       id="pricing"
-      className="relative isolate bg-white dark:bg-neutral-950 w-full px-4 py-0 sm:py-20 lg:px-4 "
+      className="relative isolate w-full px-4 py-20 md:px-8 bg-surface-subtle"
     >
-      <div
-        className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
-        aria-hidden="true"
-      ></div>
-      <>
-        <h2 className="pt-4 font-bold text-lg md:text-4xl text-center text-neutral-800 dark:text-neutral-100">
-          Simple pricing for advanced people
-        </h2>
-        <p className="max-w-md mx-auto text-base text-center text-neutral-600 dark:text-neutral-300 mt-4">
-          Our pricing is designed for advanced people who need more features and
-          more flexibility.
+      <div className="text-center max-w-3xl mx-auto">
+        <p className="text-sm font-semibold tracking-[0.4em] uppercase text-primary-500">
+          Pricing
         </p>
-      </>
+        <h2 className="font-display text-4xl md:text-5xl text-fg mt-4">
+          Flexible Combinations by Journey Stage
+        </h2>
+        <p className="text-lg text-muted mt-4">
+          Whether peak-season campaigns or city-level integrated marketing, we offer phased deliverables and can integrate with your existing creative or media teams.
+        </p>
+      </div>
 
       <div
         className={cn(
-          "mx-auto grid grid-cols-1 gap-4  mt-20 ",
-          "max-w-7xl mx-auto  md:grid-cols-2 xl:grid-cols-3"
+          "mx-auto grid grid-cols-1 gap-6 mt-16",
+          "max-w-6xl md:grid-cols-2 xl:grid-cols-3"
         )}
       >
-        {plans.map((tier, tierIdx) => {
+        {plans.map((tier) => {
           return <Card plan={tier} key={tier.id} onClick={tier.onClick} />;
         })}
       </div>
@@ -120,19 +119,21 @@ const Card = ({ plan, onClick }: { plan: Plan; onClick: () => void }) => {
   return (
     <div
       className={cn(
-        "p-1 sm:p-4 md:p-4 rounded-3xl bg-gray-50 dark:bg-neutral-900 border border-gray-100 dark:border-neutral-800"
+        "p-1 sm:p-4 md:p-4 rounded-3xl border bg-white shadow-[0_25px_70px_rgba(80,96,120,0.12)]",
+        plan.featured && "border-primary-200 shadow-[0_30px_80px_rgba(255,107,74,0.25)]"
       )}
     >
       <div className="flex flex-col gap-4 h-full justify-start">
         <div
           className={cn(
-            "p-4 bg-white dark:bg-neutral-800 rounded-2xl shadow-input w-full dark:shadow-[0px_-1px_0px_0px_var(--neutral-700)]"
+            "p-5 rounded-2xl bg-white border border-white/80",
+            plan.featured && "bg-gradient-to-br from-primary-500/10 via-white to-white"
           )}
         >
           <div className="flex justify-between items-start ">
             <div className="flex gap-2 flex-col">
               <p
-                className={cn("font-medium text-lg text-black dark:text-white")}
+                className={cn("font-semibold text-2xl text-fg font-display")}
               >
                 {plan.name}
               </p>
@@ -141,11 +142,10 @@ const Card = ({ plan, onClick }: { plan: Plan; onClick: () => void }) => {
             {plan.featured && (
               <div
                 className={cn(
-                  "font-medium text-xs px-3 py-1 rounded-full relative bg-neutral-900 dark:bg-white dark:text-black text-white"
+                  "font-medium text-xs px-3 py-1 rounded-full bg-primary-500/90 text-white uppercase tracking-[0.3em]"
                 )}
               >
-                <div className="absolute inset-x-0 bottom-0 w-3/4 mx-auto h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
-                Featured
+                Popular
               </div>
             )}
           </div>
@@ -153,93 +153,51 @@ const Card = ({ plan, onClick }: { plan: Plan; onClick: () => void }) => {
             <div className="flex items-end">
               <span
                 className={cn(
-                  "text-lg font-bold text-neutral-500 dark:text-neutral-200"
+                  "text-lg font-bold text-muted"
                 )}
               >
                 {plan.currency}
               </span>
-              <div className="flex items-start gap-2">
-                <span
-                  className={cn(
-                    "text-3xl md:text-7xl font-bold dark:text-neutral-50 text-neutral-800"
-                  )}
-                >
-                  {plan?.price}
-                </span>
-              </div>
-              <span
+              <p
                 className={cn(
-                  "text-base font-normal text-neutral-500 dark:text-neutral-200 mb-1 md:mb-2"
+                  "text-4xl text-fg font-semibold leading-none"
                 )}
               >
-                {plan.subText}
-              </span>
+                {plan.price}
+              </p>
+              <span className="ml-2 text-sm text-muted">{plan.subText}</span>
             </div>
           </div>
-          <Button variant="gradient" className="w-full mt-10" onClick={onClick}>
-            {plan.buttonText}
+          <div className="mt-6 flex flex-col gap-3">
+            {plan.features.map((feature) => (
+              <div className="flex items-center gap-2" key={feature}>
+                <div
+                  className={cn(
+                    "h-6 w-6 rounded-full border border-primary-200 flex items-center justify-center text-primary-600"
+                  )}
+                >
+                  <IconCheck className="w-4 h-4" />
+                </div>
+                <p className="text-sm text-muted">
+                  {feature}
+                </p>
+              </div>
+            ))}
+          </div>
+          {plan.additionalFeatures && (
+            <div className="mt-4 border-t border-white/60 pt-4 space-y-2">
+              {plan.additionalFeatures.map((feature) => (
+                <p key={feature} className="text-xs text-subtle">
+                  {feature}
+                </p>
+              ))}
+            </div>
+          )}
+
+          <Button as="button" onClick={onClick} className="mt-8 w-full">
+            <span>{plan.buttonText ? plan.buttonText : "Contact Team"}</span>
           </Button>
         </div>
-        <div className="mt-1 p-4">
-          {plan.features.map((feature, idx) => (
-            <Step key={idx}>{feature}</Step>
-          ))}
-        </div>
-        {plan.additionalFeatures && plan.additionalFeatures.length > 0 && (
-          <Divider />
-        )}
-        <div className="p-4">
-          {plan.additionalFeatures?.map((feature, idx) => (
-            <Step additional key={idx}>
-              {feature}
-            </Step>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const Step = ({
-  children,
-  additional,
-}: {
-  children: React.ReactNode;
-  additional?: boolean;
-  featured?: boolean;
-}) => {
-  return (
-    <div className="flex items-start justify-start gap-2 my-4">
-      <div
-        className={cn(
-          "h-4 w-4 rounded-full bg-neutral-700 flex items-center justify-center flex-shrink-0 mt-0.5",
-          additional ? "bg-sky-500" : "bg-neutral-700"
-        )}
-      >
-        <IconCheck className="h-3 w-3 [stroke-width:4px] text-neutral-300" />
-      </div>
-      <div className={cn("font-medium text-black text-sm dark:text-white")}>
-        {children}
-      </div>
-    </div>
-  );
-};
-
-const Divider = () => {
-  return (
-    <div className="relative">
-      <div className={cn("w-full h-px dark:bg-neutral-950 bg-white")} />
-      <div className={cn("w-full h-px bg-neutral-200 dark:bg-neutral-800")} />
-      <div
-        className={cn(
-          "absolute inset-0 h-5 w-5 m-auto rounded-xl dark:bg-neutral-800 bg-white shadow-[0px_-1px_0px_0px_var(--neutral-200)] dark:shadow-[0px_-1px_0px_0px_var(--neutral-700)] flex items-center justify-center"
-        )}
-      >
-        <IconPlus
-          className={cn(
-            "h-3 w-3 [stroke-width:4px] dark:text-neutral-300 text-black"
-          )}
-        />
       </div>
     </div>
   );
