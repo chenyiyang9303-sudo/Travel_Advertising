@@ -18,7 +18,7 @@ export default function ReportsPage() {
               animate={{ opacity: 1, y: 0 }}
               className="text-4xl font-semibold uppercase tracking-[0.35em] text-white sm:text-5xl"
             >
-              Industry Reports & Research
+              Travel Industry Reports
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -26,8 +26,7 @@ export default function ReportsPage() {
               transition={{ delay: 0.1 }}
               className="mt-6 text-base leading-relaxed text-neutral-300 sm:text-lg"
             >
-              In-depth analysis and insights on corporate finance strategies, market trends, and best practices
-              to guide your strategic decisions.
+              Data-driven research on destination marketing trends, creator economy shifts, and AI application in travel to guide your strategic decisions.
             </motion.p>
           </div>
         </div>
@@ -43,10 +42,10 @@ export default function ReportsPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <h2 className="text-3xl font-semibold uppercase tracking-[0.35em]">
-              Stay Informed with Expert Insights
+              Stay Ahead of Travel Trends
             </h2>
             <p className="mt-4 text-sm uppercase tracking-[0.4em] text-neutral-400">
-              Read our latest analysis and expert commentary on corporate finance trends and market developments.
+              Read our latest analysis and expert commentary on global travel marketing developments.
             </p>
             <Link
               href="/blog"
