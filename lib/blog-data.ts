@@ -181,7 +181,7 @@ Livestreaming is "dynamic content asset." A good livestream continues producing 
     },
     tags: ["Livestream", "Creators", "Commerce"],
     coverImage:
-      "https://images.unsplash.com/photo-1500534318099-1b4b6fe9c8f0?w=1600&h=900&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1600&h=900&fit=crop&auto=format",
     seo: {
       metaTitle: "High-Converting Travel Livestream Guide | WanderAds",
       metaDescription:

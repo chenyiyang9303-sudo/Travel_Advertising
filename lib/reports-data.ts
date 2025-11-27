@@ -102,7 +102,7 @@ const reports: Report[] = [
     },
     tags: ["Creators", "Livestream", "Commerce"],
     coverImage:
-      "https://images.unsplash.com/photo-1500534318100-b3b5c98b36c9?w=1600&h=900&fit=crop&auto=format",
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1600&h=900&fit=crop&auto=format",
     excerpt:
       "In travel livestreams, sessions with 'journey milestone interactions' achieve 6.4% average conversion, 1.7x higher than standard streams; dual-creator relay formats reach 78% completion rates.",
     keyFindings: [

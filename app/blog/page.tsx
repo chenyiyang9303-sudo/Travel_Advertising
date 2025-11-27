@@ -29,13 +29,13 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-app text-fg">
       {/* Hero Section */}
-      <div className="border-b border-[#e9dfd4] bg-gradient-to-b from-[#fdfaf3] to-[#fbfcff] pt-36 pb-24 text-fg">
+      <div className="border-b border-white/10 bg-[#050505] pt-36 pb-24 text-white">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-4xl font-semibold text-fg sm:text-5xl"
+              className="text-4xl font-semibold text-white sm:text-5xl"
             >
               Travel Marketing Insights
             </motion.h1>
@@ -43,7 +43,7 @@ export default function BlogPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="mt-6 text-base leading-relaxed text-muted sm:text-lg"
+              className="mt-6 text-base leading-relaxed text-neutral-300 sm:text-lg"
             >
               The WanderAds team shares destination strategies, creator co-creation, and AI tool practices to help you find inspiration for your next campaign faster.
             </motion.p>
@@ -62,13 +62,13 @@ export default function BlogPage() {
                   placeholder="Search articles or topics..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full rounded-full border border-white/60 bg-white px-10 py-3 text-sm tracking-[0.15em] text-fg placeholder:text-muted focus:border-primary-400 focus:outline-none"
+                  className="w-full rounded-full border border-white/20 bg-white/10 px-10 py-3 text-sm tracking-[0.15em] text-white placeholder:text-neutral-500 focus:border-primary-400 focus:outline-none"
                 />
               </div>
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="rounded-full border border-white/60 bg-white px-4 py-3 text-xs uppercase tracking-[0.2em] text-muted focus:border-primary-400 focus:outline-none"
+                className="rounded-full border border-white/20 bg-white/10 px-4 py-3 text-xs uppercase tracking-[0.2em] text-neutral-300 focus:border-primary-400 focus:outline-none"
               >
                 {blogCategories.map((category) => (
                   <option key={category.value} value={category.value} className="text-black">
@@ -111,7 +111,7 @@ export default function BlogPage() {
       <section className="bg-app py-20">
         <div className="container mx-auto px-4">
           <div className="mb-8 flex items-center justify-between">
-            <h2 className="text-xl font-semibold uppercase tracking-[0.4em] text-white">
+            <h2 className="text-xl font-semibold uppercase tracking-[0.4em] text-fg">
               Latest Articles
             </h2>
             <div className="flex items-center gap-2 text-xs uppercase tracking-[0.4em] text-neutral-500">
@@ -149,7 +149,7 @@ export default function BlogPage() {
       </section>
 
       {/* Featured Reports CTA */}
-      <section className="border-t border-white/10 bg-[#050505] py-20 text-white">
+      <section className="border-t border-white/10 bg-[#050505] pt-20 pb-10 text-white">
         <div className="container mx-auto px-4">
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <h2 className="text-3xl font-semibold uppercase tracking-[0.35em]">
@@ -170,11 +170,11 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="border-t border-white/10 bg-[#050505] py-20 text-white">
+      <section className="bg-[#050505] pt-0 pb-20 text-white mt-0">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold uppercase tracking-[0.4em]">
-              Stay Updated with Financial Strategy Trends
+              Stay Updated with Travel Trends
             </h2>
             <p className="mt-4 text-sm uppercase tracking-[0.4em] text-neutral-400">
               Get weekly insights, market analysis, and technology updates delivered to your inbox.
@@ -286,7 +286,7 @@ function BlogPostCard({ post }: { post: BlogPost }) {
 
       <div className="flex flex-1 flex-col justify-between gap-6 p-6 sm:p-7">
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold uppercase tracking-[0.25em] text-white transition-colors duration-200 group-hover:text-primary-300">
+          <h3 className="text-lg font-semibold uppercase tracking-[0.25em] text-fg transition-colors duration-200 group-hover:text-primary-500">
             <Link href={`/blog/${post.slug}`}>{post.title}</Link>
           </h3>
           <p className="text-sm leading-relaxed text-neutral-400">
@@ -310,17 +310,17 @@ function BlogPostCard({ post }: { post: BlogPost }) {
             </span>
           </div>
 
-          <div className="flex flex-wrap gap-2 text-[10px] uppercase tracking-[0.35em] text-neutral-400">
+          <div className="flex flex-wrap gap-2 text-[10px] uppercase tracking-[0.35em] text-neutral-600">
             {post.tags.slice(0, 4).map((tag) => (
               <span
                 key={tag}
-                className="rounded-full border border-white/10 bg-black/40 px-3 py-1"
+                className="rounded-full border border-neutral-200 bg-neutral-100 px-3 py-1"
               >
                 {tag}
               </span>
             ))}
             {post.tags.length > 4 && (
-              <span className="rounded-full border border-white/10 bg-black/40 px-3 py-1">
+              <span className="rounded-full border border-neutral-200 bg-neutral-100 px-3 py-1">
                 +{post.tags.length - 4} more
               </span>
             )}
@@ -328,7 +328,7 @@ function BlogPostCard({ post }: { post: BlogPost }) {
 
           <Link
             href={`/blog/${post.slug}`}
-            className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-white transition-all duration-200 hover:text-primary-300"
+            className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-primary-600 transition-all duration-200 hover:text-primary-500"
           >
             Read Article
             <ArrowRight className="h-4 w-4" />
