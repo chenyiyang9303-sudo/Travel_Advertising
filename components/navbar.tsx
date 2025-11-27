@@ -8,7 +8,11 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
-import { IconMenu2, IconX } from "@tabler/icons-react";
+import {
+  IconMenu2,
+  IconX,
+  IconChevronDown,
+} from "@tabler/icons-react";
 
 import { Logo } from "./logo";
 import { Button } from "./button";
@@ -20,10 +24,15 @@ const NAV_ITEMS = [
   { name: "Services", link: "/#services" },
   { name: "Solutions", link: "/#process" },
   { name: "Case Studies", link: "/#case-studies" },
-  { name: "Pricing", link: "/#pricing" },
-  { name: "AI Tools", link: "/#ai-tools" },
-  { name: "Blog", link: "/blog" },
-  { name: "About Us", link: "/about" },
+  {
+    name: "Resources",
+    link: "#",
+    children: [
+      { name: "AI Tools", link: "/#ai-tools" },
+      { name: "Blog", link: "/blog" },
+      { name: "About Us", link: "/about" },
+    ],
+  },
 ];
 
 export const Navbar = () => {
@@ -54,7 +63,7 @@ const DesktopNav = ({ visible }: { visible: boolean }) => {
       }}
       transition={{ type: "spring", stiffness: 200, damping: 40 }}
       className={cn(
-        "hidden lg:flex items-center justify-between px-6 py-4 mx-auto max-w-6xl rounded-full transition-colors duration-300 border",
+        "hidden lg:flex items-center justify-between px-6 py-4 mx-auto max-w-7xl rounded-full transition-colors duration-300 border",
         visible
           ? "bg-white/90 text-[#1c1c1c] border-white/60 shadow-[0_20px_60px_rgba(15,25,45,0.08)]"
           : "bg-white/5 text-white border-white/10"
@@ -69,27 +78,81 @@ const DesktopNav = ({ visible }: { visible: boolean }) => {
         )}
       >
         {NAV_ITEMS.map((item, idx) => (
-          <Link
+          <div
             key={item.name}
-            href={item.link}
-            className={cn(
-              "relative px-4 py-2 transition-colors duration-200",
-              visible ? "hover:text-primary-500" : "hover:text-white"
-            )}
+            className="relative"
             onMouseEnter={() => setHovered(idx)}
             onMouseLeave={() => setHovered(null)}
           >
-            {hovered === idx && (
-              <motion.span
-                layoutId="nav-hover"
-                className="absolute inset-0 rounded-full bg-white/6"
-                transition={{ type: "spring", stiffness: 350, damping: 30 }}
-              />
+            {item.children ? (
+              <>
+                <button
+                  className={cn(
+                    "relative px-3 py-2 transition-colors duration-200 flex items-center gap-1 group",
+                    visible ? "hover:text-primary-500" : "hover:text-white"
+                  )}
+                >
+                  {hovered === idx && (
+                    <motion.span
+                      layoutId="nav-hover"
+                      className="absolute inset-0 rounded-full bg-white/6"
+                      transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                    />
+                  )}
+                  <span className="relative z-10 whitespace-nowrap">
+                    {item.name}
+                  </span>
+                  <IconChevronDown
+                    size={14}
+                    className={cn(
+                      "relative z-10 transition-transform duration-200",
+                      hovered === idx ? "rotate-180" : ""
+                    )}
+                  />
+                </button>
+                <AnimatePresence>
+                  {hovered === idx && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full right-0 mt-2 w-48 rounded-xl border border-white/20 bg-white/90 p-2 shadow-xl backdrop-blur-md"
+                    >
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.name}
+                          href={child.link}
+                          className="block rounded-lg px-4 py-2 text-xs text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors"
+                        >
+                          {child.name}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </>
+            ) : (
+              <Link
+                href={item.link}
+                className={cn(
+                  "relative px-3 py-2 transition-colors duration-200 block",
+                  visible ? "hover:text-primary-500" : "hover:text-white"
+                )}
+              >
+                {hovered === idx && (
+                  <motion.span
+                    layoutId="nav-hover"
+                    className="absolute inset-0 rounded-full bg-white/6"
+                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                  />
+                )}
+                <span className="relative z-10 whitespace-nowrap">
+                  {item.name}
+                </span>
+              </Link>
             )}
-            <span className="relative z-10 whitespace-nowrap">
-              {item.name}
-            </span>
-          </Link>
+          </div>
         ))}
       </nav>
 
@@ -102,7 +165,7 @@ const DesktopNav = ({ visible }: { visible: boolean }) => {
           data-cal-config={`{"layout":"${calConfig.layout}"}`}
           className="hidden md:inline-flex"
         >
-          <span>Get Started</span>
+          <span>Book Strategy</span>
         </Button>
       </div>
     </motion.div>
@@ -151,14 +214,34 @@ const MobileNav = ({ visible }: { visible: boolean }) => {
             className="absolute top-16 left-0 right-0 mx-auto flex w-full flex-col gap-4 rounded-3xl border border-white px-5 py-8 shadow-soft backdrop-blur-xl bg-white/95 text-[#1f1f1f]"
           >
             {NAV_ITEMS.map((item) => (
-              <Link
-                key={item.name}
-                href={item.link}
-                onClick={() => setOpen(false)}
-                className="text-sm font-semibold uppercase tracking-[0.35em] text-[#6e6e6e] transition-colors duration-200 hover:text-primary-500"
-              >
-                {item.name}
-              </Link>
+              item.children ? (
+                <div key={item.name} className="flex flex-col gap-2">
+                  <div className="text-sm font-semibold uppercase tracking-[0.35em] text-[#6e6e6e]">
+                    {item.name}
+                  </div>
+                  <div className="flex flex-col gap-2 pl-4 border-l border-gray-200 ml-2">
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.name}
+                        href={child.link}
+                        onClick={() => setOpen(false)}
+                        className="text-xs font-medium uppercase tracking-[0.2em] text-[#8e8e8e] transition-colors duration-200 hover:text-primary-500"
+                      >
+                        {child.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={item.name}
+                  href={item.link}
+                  onClick={() => setOpen(false)}
+                  className="text-sm font-semibold uppercase tracking-[0.35em] text-[#6e6e6e] transition-colors duration-200 hover:text-primary-500"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
 
             <div className="flex w-full flex-col gap-3 border-t border-white/10 pt-6">
@@ -171,7 +254,7 @@ const MobileNav = ({ visible }: { visible: boolean }) => {
                 className="w-full"
                 onClick={() => setOpen(false)}
               >
-                <span>Get Started</span>
+                <span>Book Strategy</span>
               </Button>
 
               <Button

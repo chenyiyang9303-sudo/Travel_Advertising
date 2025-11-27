@@ -9,7 +9,6 @@ import { ValueProposition } from "@/components/value-proposition";
 import { FAQSection } from "@/components/faq";
 import { AISuite } from "@/components/ai-suite";
 import { PartnerWall } from "@/components/partner-logos";
-import { Pricing } from "@/components/pricing";
 
 export default function Home() {
   return (
@@ -23,7 +22,6 @@ export default function Home() {
       <Process />
       <FeaturedContent />
       <Testimonials />
-      <Pricing />
       <FAQSection />
       <CTAWithDashedGridLines />
     </main>
