@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-const COMPANY_NAME = "Radiant Soaring Fund Management LLC";
-const SHORT_NAME = "RSFM";
-const CONTACT_EMAIL = "privacy@radiantsoaringfm.com";
-const CONTACT_PHONE = "+1 (212) 555-0198";
-const STREET_ADDRESS = "30 N Gould St Ste R";
-const CITY_ADDRESS = "Sheridan, WY 82801";
+const COMPANY_NAME = "WanderAds Studio";
+const SHORT_NAME = "WanderAds";
+const CONTACT_EMAIL = "privacy@wanderads.studio";
+const STREET_ADDRESS = "8 Wyndham Street, Level 22";
+const CITY_ADDRESS = "Hong Kong";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | RSFM",
+  title: "Privacy Policy | WanderAds",
   description:
-    "Understand how RSFM collects, governs, and safeguards personal data supporting our institutional advisory mandates and digital platforms.",
+    "Understand how WanderAds collects, governs, and safeguards personal data supporting our travel marketing advisory and digital platforms.",
 };
 
 export default function PrivacyPolicy() {
@@ -28,7 +27,7 @@ export default function PrivacyPolicy() {
           <p className="mt-6 text-base leading-relaxed text-neutral-300">
             {COMPANY_NAME} (referred to as "{SHORT_NAME}", "we", or "our") protects the confidentiality
             of client, prospect, and website visitor information. This Privacy Policy explains how we
-            collect, use, disclose, and secure personal data across our advisory services and digital
+            collect, use, disclose, and secure personal data across our marketing services and digital
             experiences.
           </p>
         </div>
@@ -42,13 +41,13 @@ export default function PrivacyPolicy() {
               <>
                 <p>
                   This Policy applies to personal data processed by {SHORT_NAME} in connection with
-                  our capital advisory mandates, thought leadership, events, and platforms located at
-                  radiantsoaringfm.com. {COMPANY_NAME}, headquartered at {STREET_ADDRESS}, {CITY_ADDRESS},
+                  our marketing campaigns, content production, events, and platforms located at
+                  wanderads.studio. {COMPANY_NAME}, headquartered at {STREET_ADDRESS}, {CITY_ADDRESS},
                   acts as the data controller unless we state otherwise.
                 </p>
                 <p>
-                  We operate in multiple jurisdictions and maintain governance procedures to align
-                  with the privacy expectations of institutional investors, corporate counterparties,
+                  We operate globally and maintain governance procedures to align
+                  with the privacy expectations of international brands, partners,
                   and regulatory authorities.
                 </p>
               </>
@@ -69,8 +68,8 @@ export default function PrivacyPolicy() {
                     details, and jurisdiction of residence.
                   </li>
                   <li>
-                    <strong>Engagement records:</strong> notes from consultations, mandate
-                    documentation, diligence materials, and communications history.
+                    <strong>Engagement records:</strong> notes from strategy sessions, campaign
+                    briefs, and communications history.
                   </li>
                   <li>
                     <strong>Digital interaction data:</strong> device, browser, and IP information,
@@ -78,8 +77,8 @@ export default function PrivacyPolicy() {
                     technologies.
                   </li>
                   <li>
-                    <strong>Third-party insights:</strong> compliance screening outputs, public and
-                    proprietary database checks, and professional references obtained in accordance
+                    <strong>Third-party insights:</strong> public social media profiles, brand
+                    mentions, and professional references obtained in accordance
                     with law.
                   </li>
                 </ul>
@@ -93,10 +92,10 @@ export default function PrivacyPolicy() {
               <>
                 <p>We use personal data to:</p>
                 <ul>
-                  <li>structure and execute investment or corporate finance mandates;</li>
-                  <li>communicate analyses, reporting updates, and market intelligence;</li>
-                  <li>perform diligence, suitability, anti-money-laundering, and sanctions checks;</li>
-                  <li>manage events, subscriptions, and professional networks;</li>
+                  <li>structure and execute marketing and content mandates;</li>
+                  <li>communicate campaign updates, reporting, and market intelligence;</li>
+                  <li>perform diligence and suitability checks for partnerships;</li>
+                  <li>manage events, subscriptions, and creator networks;</li>
                   <li>administer, secure, and enhance our digital interfaces; and</li>
                   <li>meet legal, regulatory, audit, and risk governance obligations.</li>
                 </ul>
@@ -110,7 +109,7 @@ export default function PrivacyPolicy() {
               <>
                 <p>
                   Where required, processing is grounded in one or more lawful bases: performance of a
-                  contract, legitimate interest in operating our advisory practice, compliance with
+                  contract, legitimate interest in operating our agency practice, compliance with
                   legal duties, protection of vital interests, or your explicit consent. We evaluate
                   and balance legitimate interests against potential impacts on your rights.
                 </p>
@@ -125,11 +124,10 @@ export default function PrivacyPolicy() {
                 <p>We disclose personal data to trusted recipients subject to confidentiality:</p>
                 <ul>
                   <li>
-                    affiliates and portfolio entities assisting with mandate execution or risk
-                    oversight;
+                    affiliates and partners assisting with campaign execution or production;
                   </li>
                   <li>
-                    professional advisers, placement agents, technology vendors, data hosts, and
+                    professional advisers, technology vendors, data hosts, and
                     analytics partners that support our operations;
                   </li>
                   <li>
@@ -137,7 +135,7 @@ export default function PrivacyPolicy() {
                     rights; and
                   </li>
                   <li>
-                    potential transaction counterparties under strict confidentiality frameworks.
+                    potential collaboration partners under strict confidentiality frameworks.
                   </li>
                 </ul>
                 <p>
@@ -155,7 +153,7 @@ export default function PrivacyPolicy() {
                 <p>
                   Transfers outside your home jurisdiction may occur when leveraging our global
                   infrastructure or third-party platforms. We apply safeguards such as standard
-                  contractual clauses, intra-group agreements, or other mechanisms recognised by the
+                  contractual clauses or other mechanisms recognised by the
                   relevant authorities to protect transferred data.
                 </p>
               </>
@@ -183,7 +181,7 @@ export default function PrivacyPolicy() {
                 <p>
                   We retain personal data only as long as required to fulfil the purposes described in
                   this Policy, satisfy legal or regulatory obligations, maintain accurate records, and
-                  resolve disputes. Retention schedules differ depending on mandate type and regional
+                  resolve disputes. Retention schedules differ depending on engagement type and regional
                   requirements.
                 </p>
               </>
@@ -261,8 +259,7 @@ export default function PrivacyPolicy() {
                 <div className="mt-6 rounded-2xl border border-white/10 bg-black/35 p-6 text-sm text-neutral-200">
                   <p className="text-base font-semibold text-white">{COMPANY_NAME}</p>
                   <p>{STREET_ADDRESS}</p>
-                  <p>{CITY_ADDRESS}, USA</p>
-                  <p className="mt-2">T: {CONTACT_PHONE}</p>
+                  <p>{CITY_ADDRESS}</p>
                   <p className="mt-1">
                     E:{" "}
                     <a

@@ -63,7 +63,7 @@ const DesktopNav = ({ visible }: { visible: boolean }) => {
       }}
       transition={{ type: "spring", stiffness: 200, damping: 40 }}
       className={cn(
-        "hidden lg:flex items-center justify-between px-6 py-4 mx-auto max-w-7xl rounded-full transition-colors duration-300 border",
+        "hidden lg:flex items-center justify-between px-6 py-3 mx-auto max-w-7xl rounded-full transition-colors duration-300 border",
         visible
           ? "bg-white/90 text-[#1c1c1c] border-white/60 shadow-[0_20px_60px_rgba(15,25,45,0.08)]"
           : "bg-white/5 text-white border-white/10"

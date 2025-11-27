@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-const COMPANY_NAME = "Radiant Soaring Fund Management LLC";
-const SHORT_NAME = "RSFM";
-const CONTACT_EMAIL = "legal@radiantsoaringfm.com";
-const CONTACT_PHONE = "+1 (212) 555-0198";
-const STREET_ADDRESS = "30 N Gould St Ste R";
-const CITY_ADDRESS = "Sheridan, WY 82801";
+const COMPANY_NAME = "WanderAds Studio";
+const SHORT_NAME = "WanderAds";
+const CONTACT_EMAIL = "legal@wanderads.studio";
+const STREET_ADDRESS = "8 Wyndham Street, Level 22";
+const CITY_ADDRESS = "Hong Kong";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | RSFM",
+  title: "Terms of Service | WanderAds",
   description:
-    "Review the engagement terms governing access to RSFM advisory services, market intelligence, and digital platforms.",
+    "Review the engagement terms governing access to WanderAds marketing services, research, and digital platforms.",
 };
 
 export default function TermsOfService() {
@@ -26,7 +25,7 @@ export default function TermsOfService() {
             Last updated: January 15, 2025
           </p>
           <p className="mt-6 text-base leading-relaxed text-neutral-300">
-            These Terms govern your access to {SHORT_NAME}&apos;s advisory services, research, and
+            These Terms govern your access to {SHORT_NAME}&apos;s marketing services, research, and
             digital resources. By engaging with {SHORT_NAME} ({`"${COMPANY_NAME}"`}, `"we"`, `"us"`),
             you acknowledge that you have read, understood, and agree to comply with the clauses
             below. When applicable, these Terms supplement a written engagement letter or mandate.
@@ -41,9 +40,9 @@ export default function TermsOfService() {
             body={
               <>
                 <p>
-                  These Terms apply to access and use of our website, reports, events, and investment
-                  or corporate finance advisory services. Specific mandates are documented in a
-                  statement of work, engagement letter, or advisory agreement. If a conflict exists,
+                  These Terms apply to access and use of our website, reports, events, and marketing
+                  or content production services. Specific mandates are documented in a
+                  statement of work, engagement letter, or service agreement. If a conflict exists,
                   the executed agreement prevails.
                 </p>
               </>
@@ -74,12 +73,12 @@ export default function TermsOfService() {
                     ensure decision makers are available to review deliverables and provide feedback;
                   </li>
                   <li>
-                    implement recommendations at your discretion and manage resulting business or
-                    investment decisions; and
+                    implement recommendations at your discretion and manage resulting business
+                    decisions; and
                   </li>
                   <li>
-                    maintain compliance with all applicable laws, including securities, data
-                    protection, and anti-corruption requirements.
+                    maintain compliance with all applicable laws, including data
+                    protection and advertising regulations.
                   </li>
                 </ul>
                 <p>
@@ -95,7 +94,7 @@ export default function TermsOfService() {
             body={
               <>
                 <p>
-                  Fees, retainers, success-based compensation, and reimbursable expenses are defined
+                  Fees, retainers, performance-based compensation, and reimbursable expenses are defined
                   in the applicable engagement documentation. Invoices are payable within the stated
                   period; overdue balances may accrue interest at the lesser of 1.5% per month or the
                   maximum rate permitted by law. You are responsible for taxes associated with our
@@ -139,8 +138,7 @@ export default function TermsOfService() {
             body={
               <>
                 <p>
-                  You agree to cooperate with due diligence, sanctions screening, and anti-money
-                  laundering requests required by {SHORT_NAME} or applicable regulators. We may suspend
+                  You agree to cooperate with due diligence and compliance requests required by {SHORT_NAME} or applicable regulators. We may suspend
                   or terminate services if compliance concerns arise or if information is withheld.
                 </p>
               </>
@@ -153,7 +151,7 @@ export default function TermsOfService() {
               <>
                 <p>
                   Services are provided on an "as is" basis without warranties of merchantability,
-                  fitness for a particular purpose, or non-infringement. Financial projections and
+                  fitness for a particular purpose, or non-infringement. Marketing projections and
                   forward-looking statements are inherently uncertain; {SHORT_NAME} does not guarantee
                   outcomes or market performance.
                 </p>
@@ -210,9 +208,8 @@ export default function TermsOfService() {
             body={
               <>
                 <p>
-                  These Terms are governed by the laws of the State of New York, without regard to its
-                  conflict-of-laws rules. The parties consent to the exclusive jurisdiction of state
-                  and federal courts located in New York County for disputes arising from these Terms,
+                  These Terms are governed by the laws of Hong Kong, without regard to its
+                  conflict-of-laws rules. The parties consent to the exclusive jurisdiction of courts located in Hong Kong for disputes arising from these Terms,
                   subject to any alternative dispute resolution process set forth in the applicable
                   engagement agreement.
                 </p>
@@ -232,8 +229,7 @@ export default function TermsOfService() {
                 <div className="mt-6 rounded-2xl border border-white/10 bg-black/35 p-6 text-sm text-neutral-200">
                   <p className="text-base font-semibold text-white">{COMPANY_NAME}</p>
                   <p>{STREET_ADDRESS}</p>
-                  <p>{CITY_ADDRESS}, USA</p>
-                  <p className="mt-2">T: {CONTACT_PHONE}</p>
+                  <p>{CITY_ADDRESS}</p>
                   <p className="mt-1">
                     E:{" "}
                     <a

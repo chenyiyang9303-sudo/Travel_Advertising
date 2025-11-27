@@ -18,11 +18,11 @@ export const Logo = ({ showText = true }: LogoProps) => {
           alt="WanderAds travel marketing logo"
           width={952}
           height={280}
-          className="h-12 w-auto md:h-[3.75rem]"
+          className="h-8 w-auto md:h-10"
           priority
         />
         {showText && (
-          <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-primary-500 via-creative-500 to-accent-400 bg-clip-text text-transparent tracking-wide">
+          <span className="text-lg md:text-xl font-bold tracking-wide">
             WanderAds
           </span>
         )}

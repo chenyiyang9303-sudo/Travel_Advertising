@@ -20,7 +20,7 @@ const TiktokIcon = (props: React.SVGProps<SVGSVGElement>) => (
 const GUIDE_LINKS = [
   { title: "Top Destinations", href: "/blog" },
   { title: "Latest Guides", href: "/blog" },
-  { title: "Themed Photography", href: "/case-studies" },
+  { title: "Themed Photography", href: "/#case-studies" },
 ];
 
 const SERVICE_LINKS = [
@@ -38,10 +38,10 @@ const SOLUTION_LINKS = [
 ];
 
 const RESOURCE_LINKS = [
-  { title: "Case Studies", href: "/case-studies" },
+  { title: "Case Studies", href: "/#case-studies" },
   { title: "Blog", href: "/blog" },
   { title: "Reports", href: "/reports" },
-  { title: "Contact Us", href: "/contact" },
+  { title: "Contact Us", href: "mailto:hello@wanderads.studio" },
 ];
 
 const SOCIAL_LINKS = [

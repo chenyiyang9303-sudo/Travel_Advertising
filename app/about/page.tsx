@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Target, Award, Globe, Lightbulb, TrendingUp, Heart, CheckCircle, ArrowRight, Mail } from "lucide-react";
+import { Target, Award, Globe, Lightbulb, TrendingUp, Heart, Zap, ArrowRight, Mail, Camera, Users, Sparkles } from "lucide-react";
 
 // Generate avatar URLs for team members using local avatar files
 const getAvatarUrl = (image: string | undefined, index: number) => {
@@ -32,7 +32,7 @@ export default function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               className="text-4xl md:text-5xl font-bold text-white mb-6"
             >
-              Expert Corporate Finance Advisory
+              Global Travel Marketing & AI Content Studio
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ export default function AboutPage() {
               transition={{ delay: 0.1 }}
               className="text-xl text-white/70 mb-8 leading-relaxed"
             >
-              Radiant Soaring Fund Management LLC is a corporate financial advisory firm specializing in mergers and acquisitions, divestiture consulting, financial restructuring, fundraising and valuation, as well as tax and compliance optimization. We provide advisory and strategic consulting services only and do not manage or handle client funds.
+              WanderAds is a creative + data studio for travel brands. We help destinations be seen on the global stage through magazine-grade content, creator alliances, AI tools, and media strategy. We bridge the gap between inspiration and booking.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -49,7 +49,7 @@ export default function AboutPage() {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <Link
-                href="/#contact"
+                href="mailto:hello@wanderads.studio"
                 className="inline-flex items-center gap-2 rounded-full bg-primary-500 px-8 py-3 font-medium text-black shadow-lg transition-colors hover:bg-primary-400"
               >
                 Work With Us
@@ -80,17 +80,17 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-lg text-white/70 leading-relaxed mb-6">
-                To empower businesses with strategic financial advisory services across mergers and acquisitions, restructuring, fundraising, and compliance—enabling our clients to make informed decisions, optimize capital structure, and achieve sustainable growth while maintaining full control of their financial operations.
+                To redefine destination marketing by combining cinematic storytelling with data-driven precision. We empower travel brands to connect authentically with global travelers, turning passive scrollers into passionate explorers.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-4 backdrop-blur">
                   <Target className="h-6 w-6 text-primary-300 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-white mb-1">
-                      Strategic Focus
+                      Precision Targeting
                     </h3>
                     <p className="text-sm text-white/70">
-                      Data-driven financial analysis for optimal outcomes
+                      AI-driven audience insights for maximum ROI
                     </p>
                   </div>
                 </div>
@@ -98,10 +98,10 @@ export default function AboutPage() {
                   <Globe className="h-6 w-6 text-primary-300 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-white mb-1">
-                      Client-Centric Approach
+                      Global Reach
                     </h3>
                     <p className="text-sm text-white/70">
-                      Tailored solutions for diverse business needs
+                      Connecting brands with travelers worldwide
                     </p>
                   </div>
                 </div>
@@ -115,8 +115,8 @@ export default function AboutPage() {
               className="relative h-96 overflow-hidden rounded-2xl border border-white/10 bg-white/5"
             >
               <Image
-                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&auto=format"
-                alt="Corporate finance consulting mission"
+                src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=600&fit=crop&auto=format"
+                alt="Travel marketing mission"
                 fill
                 className="object-cover"
               />
@@ -133,31 +133,31 @@ export default function AboutPage() {
               Our Core Values
             </h2>
             <p className="text-lg text-white/70 max-w-2xl mx-auto">
-              These principles guide everything we do and shape how we work with our clients and partners.
+              These principles guide our creative process and shape how we partner with destinations around the world.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: Lightbulb,
+                icon: Sparkles,
+                title: "Creativity",
+                description: "We believe in the power of visual storytelling to inspire wanderlust and emotion."
+              },
+              {
+                icon: Zap,
                 title: "Innovation",
-                description: "Leveraging cutting-edge financial tools and methodologies to deliver superior advisory services."
+                description: "Leveraging AI and data to stay ahead of travel trends and platform algorithms."
               },
               {
-                icon: CheckCircle,
-                title: "Integrity",
-                description: "Providing honest, transparent, and independent advice based on rigorous financial analysis."
-              },
-              {
-                icon: TrendingUp,
-                title: "Excellence",
-                description: "Delivering exceptional quality in every engagement and exceeding client expectations."
+                icon: Globe,
+                title: "Global Vision",
+                description: "Understanding cultural nuances to craft campaigns that resonate across borders."
               },
               {
                 icon: Heart,
-                title: "Partnership",
-                description: "Building long-term relationships through trust, collaboration, and shared success."
+                title: "Authenticity",
+                description: "Showcasing the true soul of every destination, beyond just the tourist hotspots."
               }
             ].map((value, index) => (
               <motion.div
@@ -188,8 +188,7 @@ export default function AboutPage() {
               Our Expert Team
             </h2>
             <p className="text-lg text-white/70 max-w-2xl mx-auto">
-              Our diverse team combines deep financial expertise with industry knowledge
-              to deliver comprehensive corporate finance advisory services.
+              A diverse group of travelers, creatives, and data scientists passionate about exploring the world.
             </p>
           </div>
 
@@ -198,26 +197,26 @@ export default function AboutPage() {
               {
                 name: "Jun Tian",
                 role: "Founder & CEO",
-                expertise: "Strategic Finance, Capital Markets & Corporate Development",
-                bio: "Founder of RSFM with 15+ years guiding board-level finance transformations, cross-border M&A, and capital market readiness.",
+                expertise: "Global Marketing Strategy & Destination Branding",
+                bio: "15+ years in travel marketing. Former VP at a major OTA, led campaigns for 50+ national tourism boards.",
                 image: "/avatars/liao-zhihua.svg",
-                email: "jun.tian@radiantsoaringfm.com"
+                email: "jun.tian@wanderads.studio"
               },
               {
                 name: "Siyuan Han",
-                role: "Chief Financial Architect",
-                expertise: "Treasury Modernisation & Risk Governance",
-                bio: "Former global treasurer who designs liquidity control towers, stress testing frameworks, and funding diversification playbooks for multinational clients.",
+                role: "Chief Content Officer",
+                expertise: "Creative Direction & Viral Content Production",
+                bio: "Award-winning creative director. Expert in crafting viral travel content that captures the imagination of Gen Z.",
                 image: "/avatars/lin-zhihua.svg",
-                email: "siyuan.han@radiantsoaringfm.com"
+                email: "siyuan.han@wanderads.studio"
               },
               {
                 name: "Yutong Li",
-                role: "Capital Markets & Insights Director",
-                expertise: "Capital Raise Readiness & Investor Communications",
-                bio: "Capital markets strategist specialising in investor-grade storytelling, diligence readiness, and research programs that translate data into decisive action.",
+                role: "Head of Global Partnerships",
+                expertise: "Creator Networks & Cross-Border Collaboration",
+                bio: "Manages our network of 5,000+ travel creators across 20 countries. Specialist in influencer marketing strategy.",
                 image: "/avatars/chen-jiayin.svg",
-                email: "yutong.li@radiantsoaringfm.com"
+                email: "yutong.li@wanderads.studio"
               }
             ].map((member, index) => (
               <motion.div
@@ -273,16 +272,16 @@ export default function AboutPage() {
               Our Impact in Numbers
             </h2>
             <p className="text-primary-100/80 text-lg max-w-2xl mx-auto">
-              Delivering measurable results for clients across industries and sectors.
+              Delivering measurable results for destinations and travel brands worldwide.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { number: "120+", label: "Advisory Projects Completed", icon: CheckCircle },
-              { number: "$5B+", label: "Transaction Value Advised", icon: TrendingUp },
-              { number: "98%", label: "Client Satisfaction Rate", icon: Award },
-              { number: "15+", label: "Years of Experience", icon: Globe }
+              { number: "200+", label: "Destination Campaigns", icon: Globe },
+              { number: "500M+", label: "Social Media Reach", icon: TrendingUp },
+              { number: "98%", label: "Client Retention Rate", icon: Heart },
+              { number: "10+", label: "Years in Travel Marketing", icon: Award }
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -305,23 +304,23 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Recognition & Certifications
+              Industry Recognition
             </h2>
             <p className="text-lg text-white/70 max-w-2xl mx-auto">
-              Our expertise and commitment to excellence have been recognized by leading industry organizations.
+              Recognized by leading platforms and organizations for excellence in travel marketing.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              "ISO 9001 Quality Management",
-              "CFA Institute Partner",
-              "GARP Member Institution",
-              "Certified Financial Planners",
-              "Top Finance Consultant 2024",
-              "Business Excellence Award",
-              "Innovation in Finance Award",
-              "Client Choice Award 2023"
+              "TikTok Creative Partner",
+              "Meta Business Partner",
+              "Google Premier Partner",
+              "Cannes Lions Shortlist",
+              "Skift Design Award",
+              "Webby Award Winner",
+              "Travel Weekly Magellan Award",
+              "Shorty Award for Travel"
             ].map((certification, index) => (
               <motion.div
                 key={certification}
@@ -344,15 +343,14 @@ export default function AboutPage() {
       <section className="py-20 bg-black border-t border-white/5">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Optimize Your Corporate Finance Strategy?
+            Ready to Elevate Your Destination Brand?
           </h2>
           <p className="text-neutral-300 mb-8 max-w-2xl mx-auto text-lg">
-            Partner with our expert team to navigate complex financial decisions
-            and unlock new opportunities for sustainable growth.
+            Partner with us to tell your story to the world and drive real traveler growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/#contact"
+              href="mailto:hello@wanderads.studio"
               className="inline-flex items-center gap-2 rounded-full bg-primary-500 px-8 py-3 font-medium text-black shadow-lg transition-colors hover:bg-primary-400"
             >
               Get Started Today
