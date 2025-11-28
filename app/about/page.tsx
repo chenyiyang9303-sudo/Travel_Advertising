@@ -199,7 +199,7 @@ export default function AboutPage() {
                 role: "Founder & CEO",
                 expertise: "Global Marketing Strategy & Destination Branding",
                 bio: "15+ years in travel marketing. Former VP at a major OTA, led campaigns for 50+ national tourism boards.",
-                image: "/avatars/liao-zhihua.svg",
+                image: "/avatars/fuying-yan.svg",
                 email: "fuying.yan@iglobaltravel.top"
               },
               {
