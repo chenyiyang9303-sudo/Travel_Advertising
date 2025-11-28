@@ -62,10 +62,10 @@ export function FAQSection() {
                 <li>
                   <span className="font-semibold text-fg">Contact:</span>{" "}
                   <Link
-                    href="mailto:hello@iglobaltravel.top"
+                    href="mailto:Executive@iglobaltravel.top"
                     className="text-primary-400 transition-colors hover:text-primary-300"
                   >
-                    hello@iglobaltravel.top
+                    Executive@iglobaltravel.top
                   </Link>
                 </li>
               </ul>
