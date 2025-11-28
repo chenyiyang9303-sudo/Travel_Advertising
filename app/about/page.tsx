@@ -49,7 +49,7 @@ export default function AboutPage() {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <Link
-                href="mailto:hello@iglobaltravel.top"
+                href="mailto:Executive@iglobaltravel.top"
                 className="inline-flex items-center gap-2 rounded-full bg-primary-500 px-8 py-3 font-medium text-black shadow-lg transition-colors hover:bg-primary-400"
               >
                 Work With Us
@@ -350,7 +350,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="mailto:hello@iglobaltravel.top"
+              href="mailto:Executive@iglobaltravel.top"
               className="inline-flex items-center gap-2 rounded-full bg-primary-500 px-8 py-3 font-medium text-black shadow-lg transition-colors hover:bg-primary-400"
             >
               Get Started Today

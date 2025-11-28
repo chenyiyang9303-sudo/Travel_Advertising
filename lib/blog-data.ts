@@ -128,7 +128,7 @@ After deployment, Sunrise Bay Resort reduced asset delivery time from 72 hours t
     category: "ai-tools",
     featured: true,
     author: {
-      name: "Alex Chen",
+      name: "Marco Chen",
       title: "AI Product Lead",
       avatar: "/avatars/lin-zhihua.svg",
       bio: "Leads the One World Global Travel AI Studio team, responsible for copywriting, asset scoring, and advertising recommendation modules.",
