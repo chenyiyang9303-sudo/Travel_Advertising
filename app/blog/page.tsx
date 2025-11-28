@@ -45,7 +45,7 @@ export default function BlogPage() {
               transition={{ delay: 0.1 }}
               className="mt-6 text-base leading-relaxed text-neutral-300 sm:text-lg"
             >
-              The WanderAds team shares destination strategies, creator co-creation, and AI tool practices to help you find inspiration for your next campaign faster.
+              The One World Global Travel team shares destination strategies, creator co-creation, and AI tool practices to help you find inspiration for your next campaign faster.
             </motion.p>
 
             {/* Search and Filter */}
@@ -155,7 +155,7 @@ export default function BlogPage() {
             <h2 className="text-3xl font-semibold uppercase tracking-[0.35em]">
               Looking for Market Data?
             </h2>
-            <p className="mt-4 text-sm uppercase tracking-[0.4em] text-neutral-400">
+            <p className="mt-4 mb-8 text-sm uppercase tracking-[0.4em] text-neutral-400">
               Get comprehensive market intelligence and research reports to inform your strategic decisions.
             </p>
             <Link

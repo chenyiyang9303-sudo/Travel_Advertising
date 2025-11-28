@@ -74,9 +74,9 @@ const reports: Report[] = [
       { section: "Action Playbooks", page: 40 },
     ],
     methodology:
-      "Combining 12,000 consumer surveys, 45 destination project datasets, social media and OTA interaction logs, and WanderAds internal experiments.",
+      "Combining 12,000 consumer surveys, 45 destination project datasets, social media and OTA interaction logs, and One World Global Travel internal experiments.",
     dataSource:
-      "WanderAds Destination Lab, Douyin, Xiaohongshu, TikTok, YouTube, Ctrip, Klook, Trip.com user research.",
+      "One World Global Travel Destination Lab, Douyin, Xiaohongshu, TikTok, YouTube, Ctrip, Klook, Trip.com user research.",
     relatedReports: [
       "creator-commerce-benchmark-2024",
       "ai-media-orchestration-guide",
@@ -120,9 +120,9 @@ const reports: Report[] = [
       { section: "Implementation Checklist", page: 48 },
     ],
     methodology:
-      "Sampled from WanderAds 2023-2024 livestream and creator projects, combined with platform API data and survey interviews.",
+      "Sampled from One World Global Travel 2023-2024 livestream and creator projects, combined with platform API data and survey interviews.",
     dataSource:
-      "WanderAds Creator CRM, Douyin/Kuaishou livestream backends, TikTok Shop, OTA partnership data.",
+      "One World Global Travel Creator CRM, Douyin/Kuaishou livestream backends, TikTok Shop, OTA partnership data.",
     relatedReports: [
       "apac-travel-content-radar-2025",
       "ai-media-orchestration-guide",
@@ -133,7 +133,7 @@ const reports: Report[] = [
     title: "AI Media Orchestration Guide",
     subtitle: "Budget Allocation, Asset Scoring & Automated Recommendations for Travel Brands",
     description:
-      "Detailed guide on how WanderAds AI Studio helps destinations, hotels, and airlines allocate budgets in real-time, evaluate creative performance, and auto-generate optimization recommendations across multi-channel campaigns.",
+      "Detailed guide on how One World Global Travel AI Studio helps destinations, hotels, and airlines allocate budgets in real-time, evaluate creative performance, and auto-generate optimization recommendations across multi-channel campaigns.",
     publishDate: "2024-10-22",
     readTime: "26 min",
     category: "ai-innovation",
@@ -168,7 +168,7 @@ const reports: Report[] = [
     methodology:
       "Based on AI Studio usage data from 60 travel brands, 40 in-person interviews, and 15 online workshops.",
     dataSource:
-      "WanderAds AI Studio, Meta/TikTok/Bytedance API, OTA transaction data, client interviews.",
+      "One World Global Travel AI Studio, Meta/TikTok/Bytedance API, OTA transaction data, client interviews.",
     relatedReports: [
       "apac-travel-content-radar-2025",
       "creator-commerce-benchmark-2024",

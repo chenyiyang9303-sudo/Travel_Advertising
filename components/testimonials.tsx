@@ -234,7 +234,7 @@ export const testimonials: Testimonial[] = [
   {
     name: "Marco Chen",
     quote:
-      "WanderAds' travel content team works like a film crew—shot ten short films in three days, delivered edits overnight. We launched our peak season two weeks ahead of schedule.",
+      "One World Global Travel' travel content team works like a film crew—shot ten short films in three days, delivered edits overnight. We launched our peak season two weeks ahead of schedule.",
     src: "https://i.pravatar.cc/150?img=2",
     designation: "PR Lead · Sanya Travel Photography Base",
   },
@@ -283,14 +283,14 @@ export const testimonials: Testimonial[] = [
   {
     name: "Marta Rossi",
     quote:
-      "WanderAds connected us with Chinese creators who truly love mountains. Our Dolomites experience reached 12M views organically.",
+      "One World Global Travel connected us with Chinese creators who truly love mountains. Our Dolomites experience reached 12M views organically.",
     src: "https://i.pravatar.cc/150?img=9",
     designation: "Head of Content · Alpine Trails Italy",
   },
   {
     name: "Yi Tang",
     quote:
-      "From 0-to-1 night economy brand building, WanderAds helped us build a private domain system and handed over the data dashboard for continued team iteration.",
+      "From 0-to-1 night economy brand building, One World Global Travel helped us build a private domain system and handed over the data dashboard for continued team iteration.",
     src: "https://i.pravatar.cc/150?img=10",
     designation: "General Manager · Ningxia Shapotou Culture & Tourism",
   },

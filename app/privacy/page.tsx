@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-const COMPANY_NAME = "WanderAds Studio";
-const SHORT_NAME = "WanderAds";
-const CONTACT_EMAIL = "privacy@wanderads.studio";
+const COMPANY_NAME = "One World Global Travel Inc";
+const SHORT_NAME = "One World Global Travel";
+const CONTACT_EMAIL = "privacy@iglobaltravel.top";
 const STREET_ADDRESS = "8 Wyndham Street, Level 22";
 const CITY_ADDRESS = "Hong Kong";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | WanderAds",
+  title: "Privacy Policy | One World Global Travel",
   description:
-    "Understand how WanderAds collects, governs, and safeguards personal data supporting our travel marketing advisory and digital platforms.",
+    "Understand how One World Global Travel collects, governs, and safeguards personal data supporting our travel marketing advisory and digital platforms.",
 };
 
 export default function PrivacyPolicy() {
@@ -42,7 +42,7 @@ export default function PrivacyPolicy() {
                 <p>
                   This Policy applies to personal data processed by {SHORT_NAME} in connection with
                   our marketing campaigns, content production, events, and platforms located at
-                  wanderads.studio. {COMPANY_NAME}, headquartered at {STREET_ADDRESS}, {CITY_ADDRESS},
+                  iglobaltravel.top. {COMPANY_NAME}, headquartered at {STREET_ADDRESS}, {CITY_ADDRESS},
                   acts as the data controller unless we state otherwise.
                 </p>
                 <p>

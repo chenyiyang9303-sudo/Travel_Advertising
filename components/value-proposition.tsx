@@ -54,7 +54,7 @@ export function ValueProposition() {
             Making travel brands warmer and easier to discover
           </h2>
           <p className="text-lg text-muted mt-4 leading-relaxed">
-            WanderAds combines creative content, data-driven advertising, creator alliances, and AI tools to create immersive experiential advertising, helping destinations, hotels, travel agencies, and tourism brands generate continuous traffic.
+            One World Global Travel combines creative content, data-driven advertising, creator alliances, and AI tools to create immersive experiential advertising, helping destinations, hotels, travel agencies, and tourism brands generate continuous traffic.
           </p>
         </div>
 

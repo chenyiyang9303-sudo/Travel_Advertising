@@ -40,7 +40,7 @@ export default function AboutPage() {
               transition={{ delay: 0.1 }}
               className="text-xl text-white/70 mb-8 leading-relaxed"
             >
-              WanderAds is a creative + data studio for travel brands. We help destinations be seen on the global stage through magazine-grade content, creator alliances, AI tools, and media strategy. We bridge the gap between inspiration and booking.
+              One World Global Travel is a creative + data studio for travel brands. We help destinations be seen on the global stage through magazine-grade content, creator alliances, AI tools, and media strategy. We bridge the gap between inspiration and booking.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -49,7 +49,7 @@ export default function AboutPage() {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <Link
-                href="mailto:hello@wanderads.studio"
+                href="mailto:hello@iglobaltravel.top"
                 className="inline-flex items-center gap-2 rounded-full bg-primary-500 px-8 py-3 font-medium text-black shadow-lg transition-colors hover:bg-primary-400"
               >
                 Work With Us
@@ -200,7 +200,7 @@ export default function AboutPage() {
                 expertise: "Global Marketing Strategy & Destination Branding",
                 bio: "15+ years in travel marketing. Former VP at a major OTA, led campaigns for 50+ national tourism boards.",
                 image: "/avatars/liao-zhihua.svg",
-                email: "jun.tian@wanderads.studio"
+                email: "jun.tian@iglobaltravel.top"
               },
               {
                 name: "Siyuan Han",
@@ -208,7 +208,7 @@ export default function AboutPage() {
                 expertise: "Creative Direction & Viral Content Production",
                 bio: "Award-winning creative director. Expert in crafting viral travel content that captures the imagination of Gen Z.",
                 image: "/avatars/lin-zhihua.svg",
-                email: "siyuan.han@wanderads.studio"
+                email: "siyuan.han@iglobaltravel.top"
               },
               {
                 name: "Yutong Li",
@@ -216,7 +216,7 @@ export default function AboutPage() {
                 expertise: "Creator Networks & Cross-Border Collaboration",
                 bio: "Manages our network of 5,000+ travel creators across 20 countries. Specialist in influencer marketing strategy.",
                 image: "/avatars/chen-jiayin.svg",
-                email: "yutong.li@wanderads.studio"
+                email: "yutong.li@iglobaltravel.top"
               }
             ].map((member, index) => (
               <motion.div
@@ -350,7 +350,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="mailto:hello@wanderads.studio"
+              href="mailto:hello@iglobaltravel.top"
               className="inline-flex items-center gap-2 rounded-full bg-primary-500 px-8 py-3 font-medium text-black shadow-lg transition-colors hover:bg-primary-400"
             >
               Get Started Today

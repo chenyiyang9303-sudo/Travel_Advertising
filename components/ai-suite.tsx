@@ -45,7 +45,7 @@ export function AISuite() {
               AI Tools
             </p>
             <h2 className="font-display text-4xl md:text-5xl text-fg">
-              WanderAds AI Studio
+              One World Global Travel AI Studio
             </h2>
             <p className="text-lg text-muted">
               Connecting creativity, production, advertising, and data—enabling teams to launch campaigns anytime, anywhere. Each tool works standalone or integrates with your existing workflows.

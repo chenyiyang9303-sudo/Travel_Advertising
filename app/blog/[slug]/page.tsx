@@ -203,13 +203,13 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               Need A Custom Playbook?
             </h3>
             <p className="text-sm text-neutral-300">
-              Discuss your destination, hotel, or event needs with the WanderAds team, and we will customize an integrated content + creator + advertising solution for you.
+              Discuss your destination, hotel, or event needs with the One World Global Travel team, and we will customize an integrated content + creator + advertising solution for you.
             </p>
             <Link
               href="/#contact"
               className="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-white transition-colors duration-200 hover:border-primary-400"
             >
-              Contact WanderAds
+              Contact One World Global Travel
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

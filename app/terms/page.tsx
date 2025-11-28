@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-const COMPANY_NAME = "WanderAds Studio";
-const SHORT_NAME = "WanderAds";
-const CONTACT_EMAIL = "legal@wanderads.studio";
+const COMPANY_NAME = "One World Global Travel Inc";
+const SHORT_NAME = "One World Global Travel";
+const CONTACT_EMAIL = "legal@iglobaltravel.top";
 const STREET_ADDRESS = "8 Wyndham Street, Level 22";
 const CITY_ADDRESS = "Hong Kong";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | WanderAds",
+  title: "Terms of Service | One World Global Travel",
   description:
-    "Review the engagement terms governing access to WanderAds marketing services, research, and digital platforms.",
+    "Review the engagement terms governing access to One World Global Travel marketing services, research, and digital platforms.",
 };
 
 export default function TermsOfService() {

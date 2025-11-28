@@ -12,11 +12,11 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "WanderAds | Travel Marketing Studio & Smart Promotion",
+  title: "One World Global Travel | Travel Marketing Studio & Smart Promotion",
   description:
-    "WanderAds helps destinations, hotels, and travel brands win more bookings through AI-powered content, creator activations, and full-funnel media. Explore services, case studies, and tools built for tourism growth.",
+    "One World Global Travel helps destinations, hotels, and travel brands win more bookings through AI-powered content, creator activations, and full-funnel media. Explore services, case studies, and tools built for tourism growth.",
   keywords:
-    "WanderAds, travel marketing, tourism advertising, destination campaign, KOL marketing, travel content studio, AI travel ads, tourism digitalization",
+    "One World Global Travel, travel marketing, tourism advertising, destination campaign, KOL marketing, travel content studio, AI travel ads, tourism digitalization",
 };
 
 export default function RootLayout({

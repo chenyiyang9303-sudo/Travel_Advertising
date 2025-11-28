@@ -52,7 +52,7 @@ export function CTAWithDashedGridLines() {
             </svg>
           </div>
           <p className="text-lg text-fg leading-relaxed font-medium">
-            &quot;With WanderAds, we completed a comprehensive upgrade of our night tour brand. From travel content to creators to private domain system—seamlessly integrated. Opening month welcomed 180K visitors.&quot;
+            &quot;With One World Global Travel, we completed a comprehensive upgrade of our night tour brand. From travel content to creators to private domain system—seamlessly integrated. Opening month welcomed 180K visitors.&quot;
           </p>
           <div className="flex flex-col text-sm items-start mt-6 gap-1">
             <p className="font-bold text-fg">

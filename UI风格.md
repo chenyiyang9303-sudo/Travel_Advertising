@@ -114,7 +114,7 @@
 	•	IG / TikTok / YouTube…
 
 底部加一条
-© 2025 WanderAds — Travel Inspiration & Smart Promotion
+© 2025 One World Global Travel — Travel Inspiration & Smart Promotion
 
 （背景可用深色 #1A1A1A + 白文字，让层次变化更强）
 

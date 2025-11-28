@@ -15,7 +15,7 @@ export const Logo = ({ showText = true }: LogoProps) => {
       <div className="flex items-center gap-3">
         <Image
           src="/logo.png"
-          alt="WanderAds travel marketing logo"
+          alt="One World Global Travel travel marketing logo"
           width={952}
           height={280}
           className="h-8 w-auto md:h-10"
@@ -23,7 +23,7 @@ export const Logo = ({ showText = true }: LogoProps) => {
         />
         {showText && (
           <span className="text-lg md:text-xl font-bold tracking-wide">
-            WanderAds
+            One World Global Travel
           </span>
         )}
       </div>

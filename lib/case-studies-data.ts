@@ -56,7 +56,7 @@ export const caseStudies: CaseStudy[] = [
     approach: [
       "Designed 4 storylines around 'golden moments' covering sunrise, afternoon tea, sunset, and midnight party scenes",
       "Established creator residency program, inviting 16 travel photographers and lifestyle bloggers for co-creation",
-      "Leveraged WanderAds AI Studio to generate multilingual copy, asset scoring, and intelligent ad recommendations",
+      "Leveraged One World Global Travel AI Studio to generate multilingual copy, asset scoring, and intelligent ad recommendations",
       "Synchronized launch across Douyin, Xiaohongshu, Instagram, YouTube, and OTA spotlight placements",
       "Deployed immersive experience routes and photo-ready installations within the resort to extend dwell time",
     ],
@@ -133,12 +133,12 @@ export const caseStudies: CaseStudy[] = [
     ],
     testimonial: {
       quote:
-        "WanderAds seamlessly integrated photography, creators, and advertising. For the first time, we saw hotel content that looked like a fashion editorial while driving real booking data.",
+        "One World Global Travel seamlessly integrated photography, creators, and advertising. For the first time, we saw hotel content that looked like a fashion editorial while driving real booking data.",
       author: "Lina Ortega",
       position: "General Manager, Sunrise Bay Resort",
     },
     technologies: [
-      "WanderAds AI Studio",
+      "One World Global Travel AI Studio",
       "Creator CRM",
       "Content Asset Cloud",
       "Real-time Marketing Dashboard",
@@ -258,7 +258,7 @@ export const caseStudies: CaseStudy[] = [
       position: "Brand Director, Prague Old Town Tourism Board",
     },
     technologies: [
-      "WanderAds Live Monitor",
+      "One World Global Travel Live Monitor",
       "AR Navigation App",
       "AI Copywriting Assistant",
       "Scenario Data Platform",
@@ -375,7 +375,7 @@ export const caseStudies: CaseStudy[] = [
     },
     technologies: [
       "Mobile 5G Livestream Pod",
-      "WanderAds AI Studio",
+      "One World Global Travel AI Studio",
       "OTA Data API",
       "Creator Collaboration Kit",
     ],
@@ -394,7 +394,7 @@ export const caseStudies: CaseStudy[] = [
     challenge:
       "Coral Isles wanted to build an AI marketing hub covering Southeast Asia and key international markets, unifying content, creators, and media resources while training internal teams to enable year-round campaign coordination.",
     solution:
-      "Built WanderAds Destination Lab, including data platform, AI copywriting and asset scoring, creator CRM, and multilingual content production line, supported by quarterly co-creation workshops and on-ground events.",
+      "Built One World Global Travel Destination Lab, including data platform, AI copywriting and asset scoring, creator CRM, and multilingual content production line, supported by quarterly co-creation workshops and on-ground events.",
     results: [
       { metric: "Market Coordination", value: "6 markets unified launch" },
       { metric: "Potential Leads", value: "34K+ brand inquiries" },
@@ -490,7 +490,7 @@ export const caseStudies: CaseStudy[] = [
     },
     technologies: [
       "Destination Lab Data Platform",
-      "WanderAds AI Studio",
+      "One World Global Travel AI Studio",
       "Creator CRM",
       "Media Intelligence Dashboard",
     ],

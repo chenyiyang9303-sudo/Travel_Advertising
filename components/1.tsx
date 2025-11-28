@@ -18,7 +18,7 @@ export function SimpleBlogWithGrid() {
             Travel Brand Inspiration
           </h2>
           <p className="text-lg text-muted max-w-3xl mx-auto">
-            The WanderAds team records destination content trends, creator tactics, and AI tool tips weekly, helping you quickly find inspiration for your next campaign.
+            The One World Global Travel team records destination content trends, creator tactics, and AI tool tips weekly, helping you quickly find inspiration for your next campaign.
           </p>
         </div>
       </div>

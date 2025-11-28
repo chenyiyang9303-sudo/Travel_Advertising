@@ -41,7 +41,13 @@ const RESOURCE_LINKS = [
   { title: "Case Studies", href: "/#case-studies" },
   { title: "Blog", href: "/blog" },
   { title: "Reports", href: "/reports" },
-  { title: "Contact Us", href: "mailto:hello@wanderads.studio" },
+  { title: "Contact Us", href: "mailto:Executive@iglobaltravel.top" },
+];
+
+const LEGAL_LINKS = [
+  { title: "Privacy Policy", href: "/privacy" },
+  { title: "Terms of Service", href: "/terms" },
+  { title: "Cookie Policy", href: "/cookies" },
 ];
 
 const SOCIAL_LINKS = [
@@ -55,15 +61,15 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#111111] text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,107,74,0.18),transparent_50%),radial-gradient(circle_at_bottom,_rgba(74,143,255,0.18),transparent_45%)] opacity-70" />
-      <div className="relative mx-auto max-w-6xl px-6 py-20 md:px-10 space-y-12">
-        <div className="grid gap-10 lg:grid-cols-6">
+      <div className="relative mx-auto max-w-7xl px-6 py-20 md:px-10 space-y-12">
+        <div className="grid gap-12 lg:grid-cols-7">
           <div className="lg:col-span-2 space-y-6">
             <Logo showText />
             <p className="text-sm leading-relaxed text-white/70 max-w-sm">
-              WanderAds is a creative + data studio for travel brands. We help destinations be seen on the global stage through magazine-grade content, creator alliances, AI tools, and media strategy.
+              One World Global Travel is a creative + data studio for travel brands. We help destinations be seen on the global stage through magazine-grade content, creator alliances, AI tools, and media strategy.
             </p>
             <p className="text-xs uppercase tracking-[0.4em] text-white/50">
-              hello@wanderads.studio
+              Executive@iglobaltravel.top
             </p>
           </div>
 
@@ -71,6 +77,7 @@ export function Footer() {
           <FooterColumn title="Advertising & Services" links={SERVICE_LINKS} />
           <FooterColumn title="Solutions" links={SOLUTION_LINKS} />
           <FooterColumn title="Resources" links={RESOURCE_LINKS} />
+          <FooterColumn title="Legal" links={LEGAL_LINKS} />
         </div>
 
         <div className="flex flex-col gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-between">
@@ -87,7 +94,7 @@ export function Footer() {
             ))}
           </div>
           <p className="text-xs uppercase tracking-[0.4em] text-white/50">
-            © 2025 WanderAds — Travel Inspiration & Smart Promotion
+            © 2025 One World Global Travel Inc — Travel Inspiration & Smart Promotion
           </p>
         </div>
       </div>

@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-const COMPANY_NAME = "WanderAds Studio";
-const SHORT_NAME = "WanderAds";
-const CONTACT_EMAIL = "privacy@wanderads.studio";
+const COMPANY_NAME = "One World Global Travel Inc";
+const SHORT_NAME = "One World Global Travel";
+const CONTACT_EMAIL = "privacy@iglobaltravel.top";
 const STREET_ADDRESS = "8 Wyndham Street, Level 22";
 const CITY_ADDRESS = "Hong Kong";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | WanderAds",
+  title: "Cookie Policy | One World Global Travel",
   description:
-    "Learn how WanderAds uses cookies and similar technologies to help travel brands gain better content experiences and data insights, and manage your privacy preferences.",
+    "Learn how One World Global Travel uses cookies and similar technologies to help travel brands gain better content experiences and data insights, and manage your privacy preferences.",
 };
 
 export default function CookiePolicy() {

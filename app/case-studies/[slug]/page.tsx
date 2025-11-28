@@ -268,7 +268,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             Want your destination to be the next trending case study?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-muted">
-            Book a strategy session with WanderAds, and we will design the next steps for content + creators + advertising based on your brand, audience, and budget.
+            Book a strategy session with One World Global Travel, and we will design the next steps for content + creators + advertising based on your brand, audience, and budget.
           </p>
           <Link
             href="/#contact"

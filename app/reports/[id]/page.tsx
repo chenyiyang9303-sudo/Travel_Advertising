@@ -212,7 +212,7 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
                   {report.author.title}
                 </p>
                 <p className="text-sm leading-relaxed text-neutral-300">
-                  The WanderAds research team tracks traveler behavior, content trends, and channel models long-term to provide actionable growth insights for destinations and travel brands.
+                  The One World Global Travel research team tracks traveler behavior, content trends, and channel models long-term to provide actionable growth insights for destinations and travel brands.
                 </p>
               </div>
             </div>
@@ -269,7 +269,7 @@ export default function ReportDetailPage({ params }: ReportPageProps) {
               Need Custom Research?
             </h3>
             <p className="mt-4 text-sm text-primary-50/80">
-              Invite the WanderAds research team to formulate destination strategies, creator matrices, or AI advertising plans that match your market rhythm.
+              Invite the One World Global Travel research team to formulate destination strategies, creator matrices, or AI advertising plans that match your market rhythm.
             </p>
             <Link
               href="/#contact"

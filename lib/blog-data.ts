@@ -36,7 +36,7 @@ const blogPosts: BlogPost[] = [
     slug: "destination-marketing-playbook-2025",
     title: "2025 Destination Marketing Playbook: Three-Layer Experience, Dual Narratives, One Data Hub",
     excerpt:
-      "Redesigning content, creator, and media strategies with an 'experience stack' to help travel brands rise to the top in 2025. This article breaks down the 6 key actions WanderAds uses to serve destinations, hotels, and tourism boards.",
+      "Redesigning content, creator, and media strategies with an 'experience stack' to help travel brands rise to the top in 2025. This article breaks down the 6 key actions One World Global Travel uses to serve destinations, hotels, and tourism boards.",
     content: `
 # 2025 Destination Marketing Playbook
 
@@ -80,16 +80,16 @@ Once this data is integrated into dashboards, you can complete the "content-adve
       name: "Sophie Wang",
       title: "Head of Destination Strategy",
       avatar: "/avatars/liao-zhihua.svg",
-      bio: "Leads WanderAds destination strategy and experience innovation, with extensive experience across Southeast Asia and Pacific regions.",
+      bio: "Leads One World Global Travel destination strategy and experience innovation, with extensive experience across Southeast Asia and Pacific regions.",
     },
     tags: ["Destination", "Experience Design", "Campaign"],
     coverImage:
       "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1600&h=900&fit=crop&auto=format",
     seo: {
-      metaTitle: "2025 Destination Marketing Playbook | WanderAds",
+      metaTitle: "2025 Destination Marketing Playbook | One World Global Travel",
       metaDescription:
-        "Learn how WanderAds uses experience stacks, dual narratives, and data hubs to help destinations create breakthrough campaigns in 2025.",
-      keywords: ["destination marketing", "travel brands", "WanderAds", "experience design"],
+        "Learn how One World Global Travel uses experience stacks, dual narratives, and data hubs to help destinations create breakthrough campaigns in 2025.",
+      keywords: ["destination marketing", "travel brands", "One World Global Travel", "experience design"],
     },
     relatedPosts: [
       "ai-powered-travel-content-factory",
@@ -131,13 +131,13 @@ After deployment, Sunrise Bay Resort reduced asset delivery time from 72 hours t
       name: "Alex Chen",
       title: "AI Product Lead",
       avatar: "/avatars/lin-zhihua.svg",
-      bio: "Leads the WanderAds AI Studio team, responsible for copywriting, asset scoring, and advertising recommendation modules.",
+      bio: "Leads the One World Global Travel AI Studio team, responsible for copywriting, asset scoring, and advertising recommendation modules.",
     },
     tags: ["AI Studio", "Content Ops", "Automation"],
     coverImage:
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&h=900&fit=crop&auto=format",
     seo: {
-      metaTitle: "AI Travel Content Factory | WanderAds",
+      metaTitle: "AI Travel Content Factory | One World Global Travel",
       metaDescription:
         "Learn how to build an AI content pipeline covering inspiration, scripts, travel shoots, and deployment.",
       keywords: ["AI content", "travel marketing automation", "travel scripts"],
@@ -177,13 +177,13 @@ Livestreaming is "dynamic content asset." A good livestream continues producing 
       name: "Yuki Yamada",
       title: "Creator Partnership Director",
       avatar: "/avatars/chen-jiayin.svg",
-      bio: "Manages WanderAds' global creator network, specializing in cross-border livestreams and creator collaborations.",
+      bio: "Manages One World Global Travel' global creator network, specializing in cross-border livestreams and creator collaborations.",
     },
     tags: ["Livestream", "Creators", "Commerce"],
     coverImage:
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1600&h=900&fit=crop&auto=format",
     seo: {
-      metaTitle: "High-Converting Travel Livestream Guide | WanderAds",
+      metaTitle: "High-Converting Travel Livestream Guide | One World Global Travel",
       metaDescription:
         "Analyze the 12 key details needed for a high-converting travel livestream, helping destinations and brands master content rhythm.",
       keywords: ["travel livestream", "creator marketing", "OTA integration"],

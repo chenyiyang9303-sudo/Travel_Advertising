@@ -34,7 +34,7 @@ export function Hero() {
         <div className="flex flex-wrap items-center gap-3 text-xs font-semibold tracking-[0.35em] text-white/70 uppercase">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-[0.65rem] tracking-[0.3em]">
             <Sparkles className="h-3.5 w-3.5 text-primary-200" />
-            WanderAds
+            One World Global Travel
           </span>
           <span>Travel marketing studio</span>
         </div>
