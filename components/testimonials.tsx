@@ -225,14 +225,14 @@ interface Testimonial {
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Jing Wang",
+    name: "Jennifer Liu",
     quote:
-      "After repositioning our hot spring resort's narrative, our first content wave topped the Xiaohongshu local trending list. Livestream + creator seeding brought 4.6x booking growth.",
+      "After repositioning our hot spring resort's narrative, our first content wave topped the Instagram local trending list. Livestream + creator seeding brought 4.6x booking growth.",
     src: "https://i.pravatar.cc/150?img=1",
     designation: "Marketing Director · Yunjing Hot Spring Resort",
   },
   {
-    name: "Marco Chen",
+    name: "David Martinez",
     quote:
       "One World Global Travel' travel content team works like a film crew—shot ten short films in three days, delivered edits overnight. We launched our peak season two weeks ahead of schedule.",
     src: "https://i.pravatar.cc/150?img=2",
@@ -264,12 +264,12 @@ export const testimonials: Testimonial[] = [
     quote:
       "Our city renewal campaign went from script to execution in just 21 days. The night tour routes and AR navigation also became highlights in visitor reviews.",
     src: "https://i.pravatar.cc/150?img=6",
-    designation: "Brand Lead · Chengdu Culture & Tourism Group",
+    designation: "Brand Lead · Los Angeles Culture & Tourism Group",
   },
   {
-    name: "Yuki Yamada",
+    name: "Sakura Tanaka",
     quote:
-      "They orchestrated our sakura season livestream marathon across TikTok, Douyin, and LINE. Merch sell-through hit 95% in 48 hours.",
+      "They orchestrated our sakura season livestream marathon across TikTok, TikTok, and LINE. Merch sell-through hit 95% in 48 hours.",
     src: "https://i.pravatar.cc/150?img=7",
     designation: "Digital Director · Kyoto Moments",
   },
@@ -297,7 +297,7 @@ export const testimonials: Testimonial[] = [
   {
     name: "Isabelle Perrot",
     quote:
-      "The AI media cockpit alerted us when Paris bookings spiked; we redirected budget to focus on Shanghai travelers and doubled ROI.",
+      "The AI media cockpit alerted us when Paris bookings spiked; we redirected budget to focus on New York travelers and doubled ROI.",
     src: "https://i.pravatar.cc/150?img=11",
     designation: "Head of Growth · Voyage Lumière",
   },

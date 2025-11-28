@@ -29,7 +29,7 @@ const aiTools = [
   {
     title: "Smart Ad Recommendations",
     description:
-      "Real-time data-driven budget recommendations, audience expansion, and creative fatigue alerts for Douyin, Bytedance, Kuaishou, WeChat ads, and more.",
+      "Real-time data-driven budget recommendations, audience expansion, and creative fatigue alerts for TikTok, YouTube, Facebook, Instagram ads, and more.",
     icon: <GaugeCircle className="h-5 w-5" />,
     metrics: "32% average ROI increase",
   },
@@ -116,7 +116,7 @@ export function AISuite() {
                 <p className="text-[0.7rem] uppercase tracking-[0.3em] text-primary-500">
                   Top Source Cities
                 </p>
-                <p className="text-xl font-semibold text-fg mt-2">Shanghai · Chengdu · Bangkok</p>
+                <p className="text-xl font-semibold text-fg mt-2">New York · Los Angeles · London</p>
                 <p className="text-xs text-muted mt-1">Auto-increased budget by 15%</p>
               </div>
             </div>

@@ -4,8 +4,8 @@ import type { ReactNode } from "react";
 const COMPANY_NAME = "One World Global Travel Inc";
 const SHORT_NAME = "One World Global Travel";
 const CONTACT_EMAIL = "privacy@iglobaltravel.top";
-const STREET_ADDRESS = "8 Wyndham Street, Level 22";
-const CITY_ADDRESS = "Hong Kong";
+const STREET_ADDRESS = "1270 Avenue of the Americas, Suite 2200";
+const CITY_ADDRESS = "New York, NY 10020";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | One World Global Travel",

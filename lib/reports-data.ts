@@ -76,7 +76,7 @@ const reports: Report[] = [
     methodology:
       "Combining 12,000 consumer surveys, 45 destination project datasets, social media and OTA interaction logs, and One World Global Travel internal experiments.",
     dataSource:
-      "One World Global Travel Destination Lab, Douyin, Xiaohongshu, TikTok, YouTube, Ctrip, Klook, Trip.com user research.",
+      "One World Global Travel Destination Lab, TikTok, Instagram, TikTok, YouTube, Ctrip, Klook, Trip.com user research.",
     relatedReports: [
       "creator-commerce-benchmark-2024",
       "ai-media-orchestration-guide",
@@ -122,7 +122,7 @@ const reports: Report[] = [
     methodology:
       "Sampled from One World Global Travel 2023-2024 livestream and creator projects, combined with platform API data and survey interviews.",
     dataSource:
-      "One World Global Travel Creator CRM, Douyin/Kuaishou livestream backends, TikTok Shop, OTA partnership data.",
+      "One World Global Travel Creator CRM, TikTok/YouTube livestream backends, TikTok Shop, OTA partnership data.",
     relatedReports: [
       "apac-travel-content-radar-2025",
       "ai-media-orchestration-guide",

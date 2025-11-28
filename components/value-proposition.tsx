@@ -21,7 +21,7 @@ const valueProps = [
   {
     title: "Creator Network + Livestream Synergy",
     description:
-      "Access to 800+ travel creator library, quickly matching destination/hotel tone, covering Douyin, Xiaohongshu, OTA, WeChat Video, and other channels.",
+      "Access to 800+ travel creator library, quickly matching destination/hotel tone, covering TikTok, Instagram, YouTube, OTA, and other channels.",
     icon: <Video className="h-6 w-6" />,
     tag: "Creators",
   },

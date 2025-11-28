@@ -15,7 +15,7 @@ const services = [
     icon: <Megaphone className="h-6 w-6" />,
     title: "Full-Funnel Advertising",
     description:
-      "Integrate Douyin, Bytedance, WeChat ecosystem, OTA, search, and programmatic channels, targeting by traveler interests and journey stages to optimize exposure, leads, and conversion across the full funnel.",
+      "Integrate TikTok, YouTube, Facebook, Instagram, OTA, search, and programmatic channels, targeting by traveler interests and journey stages to optimize exposure, leads, and conversion across the full funnel.",
     features: [
       "Budget planning & cross-channel pacing design",
       "Audience/geography/theme segmentation strategy",
@@ -45,7 +45,7 @@ const services = [
     features: [
       "Creator screening, negotiation & scheduling management",
       "Livestream scripts & product mix recommendations",
-      "Xiaohongshu + Douyin dual-platform matrix",
+      "Instagram + TikTok dual-platform matrix",
       "Brand partnership media PR solutions",
     ],
     disclaimer: "Coordinating with official organizational accounts, supporting city/regional tourism themed promotions.",

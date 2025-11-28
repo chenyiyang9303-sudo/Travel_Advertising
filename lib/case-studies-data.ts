@@ -57,7 +57,7 @@ export const caseStudies: CaseStudy[] = [
       "Designed 4 storylines around 'golden moments' covering sunrise, afternoon tea, sunset, and midnight party scenes",
       "Established creator residency program, inviting 16 travel photographers and lifestyle bloggers for co-creation",
       "Leveraged One World Global Travel AI Studio to generate multilingual copy, asset scoring, and intelligent ad recommendations",
-      "Synchronized launch across Douyin, Xiaohongshu, Instagram, YouTube, and OTA spotlight placements",
+      "Synchronized launch across TikTok, Instagram, Instagram, YouTube, and OTA spotlight placements",
       "Deployed immersive experience routes and photo-ready installations within the resort to extend dwell time",
     ],
     implementation: [
@@ -95,7 +95,7 @@ export const caseStudies: CaseStudy[] = [
         phase: "Media & Data Operations",
         duration: "3 weeks",
         activities: [
-          "Synchronized launch across Douyin, Xiaohongshu, Instagram, YouTube, OTA spotlight",
+          "Synchronized launch across TikTok, Instagram, Instagram, YouTube, OTA spotlight",
           "AI ad recommendations dynamically adjusted budget and targeting",
           "Integrated CRM & membership system to track booking behavior",
           "Daily briefs + weekly reviews to guide secondary distribution",
@@ -208,7 +208,7 @@ export const caseStudies: CaseStudy[] = [
           "Invited creators in batches for experiences with lighting and camera setups",
           "Livestream rooms featured interactive games and offers",
           "AI copywriting tools helped creators publish in multiple languages",
-          "Synchronized deployment with OTAs, video platforms, Douyin, Xiaohongshu",
+          "Synchronized deployment with OTAs, video platforms, TikTok, Instagram",
         ],
       },
       {
@@ -296,7 +296,7 @@ export const caseStudies: CaseStudy[] = [
       "Built mobile 5G outdoor livestreaming system, combining on-board and route-side camera positions",
       "Co-created with 12 outdoor and tech creators, providing exclusive routes and scripts",
       "AI asset scoring system real-time identifies best shots to guide secondary editing",
-      "OTA, video platforms, and Douyin synchronized sales, bundling new packages with commemorative merchandise",
+      "OTA, video platforms, and TikTok synchronized sales, bundling new packages with commemorative merchandise",
       "Used journey data to monitor ticket buyer demographics and dynamic pricing",
     ],
     implementation: [
@@ -405,7 +405,7 @@ export const caseStudies: CaseStudy[] = [
     overview:
       "Coral Isles is an emerging island destination with 8 major islands and 120 luxury hotels, needing to rapidly build international recognition in the post-pandemic phase.",
     clientBackground:
-      "Team spread across Jakarta, Singapore, Shanghai, and Sydney, using different agencies and tools with inconsistent content and no data sharing, affecting efficiency and brand consistency.",
+      "Team spread across Jakarta, Singapore, New York, and Sydney, using different agencies and tools with inconsistent content and no data sharing, affecting efficiency and brand consistency.",
     detailedChallenge:
       "Needed to build a unified marketing operating system in a short time, serving both brand teams and hotel/attraction partners.\n- Lacked unified content guidelines and asset center\n- Creator collaborations were fragmented without performance data\n- Media budgets dispersed, unable to adjust in real-time\n- Needed to deliver visualization reports to government level\n- Simultaneously needed to train internal team to master new tools",
     approach: [
@@ -439,7 +439,7 @@ export const caseStudies: CaseStudy[] = [
         duration: "4 weeks",
         activities: [
           "Ran '72-Hour Island Stay' theme, inviting 24 creators",
-          "Multilingual media mix: Douyin, Xiaohongshu, TikTok, YouTube, Meta",
+          "Multilingual media mix: TikTok, Instagram, TikTok, YouTube, Meta",
           "AI deployment console real-time optimized budget and targeting",
         ],
       },

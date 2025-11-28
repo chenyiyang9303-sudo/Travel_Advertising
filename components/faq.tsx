@@ -201,7 +201,7 @@ const faqGroups: FAQGroup[] = [
       {
         question: "Can we select specific creators or platforms?",
         answer:
-          "Yes. We have a database of 800+ creators, filtered by destination tone, audience demographics, and historical performance. Platform-wise, we support combinations of Douyin, Xiaohongshu, Kuaishou, Video Account, OTA, and programmatic media.",
+          "Yes. We have a database of 800+ creators, filtered by destination tone, audience demographics, and historical performance. Platform-wise, we support combinations of TikTok, Instagram, YouTube, Facebook, OTA, and programmatic media.",
       },
       {
         question: "How do you manage livestreams or large offline events?",

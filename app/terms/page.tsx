@@ -4,8 +4,8 @@ import type { ReactNode } from "react";
 const COMPANY_NAME = "One World Global Travel Inc";
 const SHORT_NAME = "One World Global Travel";
 const CONTACT_EMAIL = "legal@iglobaltravel.top";
-const STREET_ADDRESS = "8 Wyndham Street, Level 22";
-const CITY_ADDRESS = "Hong Kong";
+const STREET_ADDRESS = "1270 Avenue of the Americas, Suite 2200";
+const CITY_ADDRESS = "New York, NY 10020";
 
 export const metadata: Metadata = {
   title: "Terms of Service | One World Global Travel",
@@ -208,8 +208,8 @@ export default function TermsOfService() {
             body={
               <>
                 <p>
-                  These Terms are governed by the laws of Hong Kong, without regard to its
-                  conflict-of-laws rules. The parties consent to the exclusive jurisdiction of courts located in Hong Kong for disputes arising from these Terms,
+                  These Terms are governed by the laws of New York State, without regard to its
+                  conflict-of-laws rules. The parties consent to the exclusive jurisdiction of courts located in New York for disputes arising from these Terms,
                   subject to any alternative dispute resolution process set forth in the applicable
                   engagement agreement.
                 </p>

@@ -78,7 +78,7 @@ export function Process() {
               description="Creator seeding + brand accounts + paid advertising work in concert, using audience/scenario-based tactics to amplify reach and conversion simultaneously."
               details={[
                 "Creator outreach, livestream scripts & scheduling",
-                "Xiaohongshu/Douyin/OTA coordinated launches",
+                "Instagram/TikTok/OTA coordinated launches",
                 "Smart ad recommendations, asset A/B testing",
                 "On-ground activations + private domain touchpoints",
               ]}
