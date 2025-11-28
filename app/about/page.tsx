@@ -195,12 +195,12 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "Jun Tian",
+                name: "FUYING YAN",
                 role: "Founder & CEO",
                 expertise: "Global Marketing Strategy & Destination Branding",
                 bio: "15+ years in travel marketing. Former VP at a major OTA, led campaigns for 50+ national tourism boards.",
                 image: "/avatars/liao-zhihua.svg",
-                email: "jun.tian@iglobaltravel.top"
+                email: "fuying.yan@iglobaltravel.top"
               },
               {
                 name: "Siyuan Han",
