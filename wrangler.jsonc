@@ -1,0 +1,9 @@
+{
+  "name": "travel-advertising",
+  "compatibility_date": "2025-03-25",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
